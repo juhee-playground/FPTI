@@ -6,12 +6,23 @@
   height: calc(1vh * 100);
 }
 
-header .links {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+html {
+  font-size: 100%;
 }
 
-.card {
-  padding: 1em;
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  background-color: black;
+}
+
+main {
+  max-width: 375px; /* 모바일 디바이스의 너비로 설정 (예: iPhone X) */
+  margin: 0 auto; /* 화면 중앙에 정렬 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자를 추가해 입체감 부여 */
+  height: calc(1vh * 100);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
