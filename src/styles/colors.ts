@@ -6,7 +6,7 @@ export const colors = {
   primaryOpacity: 'rgba(34, 139, 34, 0.5)',
   secondary: '#FF4500',
   secondaryDark: '#CC3700',
-  secondaryLight: '#FF7A3D',
+  secondaryLight: '#fd9363',
   secondaryOpacity: 'rgba(255, 69, 0, 0.5)',
   background: '#FFFFFF',
 

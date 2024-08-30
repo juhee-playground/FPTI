@@ -1,51 +1,82 @@
+import { useNavigate } from 'react-router-dom';
+
 import PercentageBar from './PercentageBar';
-import { ResultContainer, ResultItem } from './Result.styles';
+import { ResultContainer, ResultItem, Button } from './Result.styles';
 
 interface IResultProps {
   finalResult: IPersonalityTypeScores;
+  onRetry: () => void; // 검사 다시하기를 위한 함수
 }
 
 const getTopTypesSorted = (finalResult: IPersonalityTypeScores) => {
-  const allTypes: { type: string; percentage: number }[] = [];
+  const selectedTypes: { type: string; group: string }[] = [];
 
-  // 각 그룹의 성향을 배열로 모은다
-  Object.values(finalResult).forEach(group => {
-    Object.entries(group).forEach(([type, percentage]) => {
-      allTypes.push({ type, percentage });
-    });
-  });
+  // 각 그룹의 성향 중 퍼센트가 더 큰 타입만 선택
+  Object.entries(finalResult).forEach(([group, values]) => {
+    const [type1, percentage1] = Object.entries(values)[0];
+    const [type2, percentage2] = Object.entries(values)[1];
 
-  // 우선순위 배열 정의
-  const priorityOrder = ['L', 'S', 'A', 'G', 'P', 'D', 'C', 'E'];
-
-  // 우선순위와 퍼센테이지에 따라 정렬
-  allTypes.sort((a, b) => {
-    const aPriority = priorityOrder.indexOf(a.type);
-    const bPriority = priorityOrder.indexOf(b.type);
-
-    if (aPriority === bPriority) {
-      return b.percentage - a.percentage; // 우선순위가 같으면 퍼센테이지로 정렬
+    // 더 큰 퍼센트 값을 가진 타입을 선택
+    if (percentage1 >= percentage2) {
+      selectedTypes.push({ type: type1, group });
+    } else {
+      selectedTypes.push({ type: type2, group });
     }
-
-    return aPriority - bPriority; // 우선순위가 다르면 우선순위로 정렬
   });
 
-  // 상위 4개의 성향만 추출하고, type만 뽑아서 문자열로 반환
-  return allTypes
-    .slice(0, 4)
-    .map(item => item.type)
-    .join('');
+  // 그룹 우선순위 배열 정의
+  const groupPriorityOrder = [
+    'Leader vs Supporter',
+    'Attacker vs Guardian',
+    'Dribbler vs Playmaker',
+    'Competitor vs Entertainer',
+  ];
+
+  // 선택된 타입들을 그룹 우선순위에 따라 정렬
+  const sortedTypes = selectedTypes.sort(
+    (a, b) => groupPriorityOrder.indexOf(a.group) - groupPriorityOrder.indexOf(b.group),
+  );
+
+  // 정렬된 타입들을 문자열로 반환
+  return sortedTypes.map(item => item.type).join('');
 };
 
-const Result = ({ finalResult }: IResultProps) => {
-  const topTypes = getTopTypesSorted(finalResult);
+const sortFinalResult = (finalResult: IPersonalityTypeScores) => {
+  // 그룹 우선순위 배열 정의
+  const groupPriorityOrder = [
+    'Leader vs Supporter',
+    'Attacker vs Guardian',
+    'Dribbler vs Playmaker',
+    'Competitor vs Entertainer',
+  ];
 
-  console.log(finalResult);
+  // Object.entries를 사용해 finalResult의 키-값 쌍을 배열로 변환
+  const sortedEntries = Object.entries(finalResult).sort(([groupA], [groupB]) => {
+    const indexA = groupPriorityOrder.indexOf(groupA);
+    const indexB = groupPriorityOrder.indexOf(groupB);
+    return indexA - indexB;
+  });
+
+  // 정렬된 엔트리를 다시 객체로 변환하여 반환
+  const sortedFinalResult = Object.fromEntries(sortedEntries);
+  return sortedFinalResult;
+};
+
+const Result = ({ finalResult, onRetry }: IResultProps) => {
+  const navigate = useNavigate();
+
+  const topTypes = getTopTypesSorted(finalResult);
+  const sortedFinalResult = sortFinalResult(finalResult);
+
+  const handleRetry = () => {
+    onRetry(); // 퀴즈 데이터 초기화
+    navigate('/quiz'); // 퀴즈 페이지로 이동
+  };
 
   return (
     <ResultContainer>
-      <h2>{topTypes}</h2>
-      {Object.entries(finalResult).map(([group, values]) => {
+      <h2>너의 타입은 : {topTypes}</h2>
+      {Object.entries(sortedFinalResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];
         const [type2, percentage2] = Object.entries(values)[1];
 
@@ -61,6 +92,7 @@ const Result = ({ finalResult }: IResultProps) => {
           </div>
         );
       })}
+      <Button onClick={handleRetry}>검사 다시하기</Button> {/* 검사 다시하기 버튼 */}
     </ResultContainer>
   );
 };

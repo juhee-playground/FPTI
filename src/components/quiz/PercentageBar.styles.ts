@@ -14,7 +14,7 @@ export const PercentageBarContainer = styled.div`
 export const Label = styled.span<{ $isStart?: boolean }>`
   font-size: 1rem;
   font-weight: bold;
-  color: ${colors.black};
+  color: ${colors.white};
   /* color: ${({ $isStart }) => ($isStart ? '#FFFFFF' : '#000000')}; */
   margin: 0 8px;
 `;
@@ -58,7 +58,7 @@ const getColorByType = (type: string) => {
 export const PercentageText = styled.span<{ $percentage: number; $isReverse: boolean }>`
   font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
+  color: ${colors.black};
   position: absolute;
   right: ${({ $isReverse, $percentage }) => {
     const text = `${parseFloat($percentage.toFixed(2))}%`;

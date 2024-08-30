@@ -48,10 +48,10 @@ const Quiz = () => {
 
   const getGroupByKey = (key: string) => {
     const groupMap: { [key: string]: string } = {
-      A: 'Attacker vs Guardian',
-      G: 'Attacker vs Guardian',
       L: 'Leader vs Supporter',
       S: 'Leader vs Supporter',
+      A: 'Attacker vs Guardian',
+      G: 'Attacker vs Guardian',
       D: 'Dribbler vs Playmaker',
       P: 'Dribbler vs Playmaker',
       C: 'Competitor vs Entertainer',
@@ -92,10 +92,16 @@ const Quiz = () => {
     return finalScale; // 최종 성향 비율 반환
   };
 
+  const resetQuiz = () => {
+    setQuizResult({ answers: [] });
+    setCurrentQuestionIndex(0);
+    setFinalResult({}); // 결과 초기화
+  };
+
   return (
     <React.Fragment>
       {finalResult ? (
-        <Result finalResult={finalResult} />
+        <Result finalResult={finalResult} onRetry={resetQuiz} />
       ) : (
         <Question
           questionId={questions[currentQuestionIndex].id}
