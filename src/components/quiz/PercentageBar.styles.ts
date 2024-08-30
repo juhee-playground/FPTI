@@ -42,14 +42,14 @@ export const Progress = styled.div<{ $percentage: number; $type: string; $isReve
 // 타입별 색상을 반환하는 함수
 const getColorByType = (type: string) => {
   const typeColors: { [key: string]: string } = {
-    A: '#A1C6EA', // 부드러운 파란색
-    G: '#FFD1BA', // 파스텔 오렌지
-    L: '#F7D6E0', // 연한 핑크색
-    S: '#C8E6C9', // 연한 녹색
-    D: '#D3C2E6', // 라벤더색
-    P: '#FFE1A8', // 밝은 황토색
-    C: '#B2DFDB', // 파스텔 민트
-    E: '#FFECB3', // 밝은 레몬색
+    A: '#7BA8CE', // 더 진한 파란색
+    G: '#FFAB85', // 더 진한 오렌지색
+    L: '#F5A3B3', // 더 진한 핑크색
+    S: '#8BBF9F', // 더 진한 녹색
+    D: '#B394D3', // 진한 라벤더색
+    P: '#FFC560', // 더 진한 황토색
+    C: '#80CBC4', // 더 진한 민트색
+    E: '#FFD95A', // 진한 레몬색
   };
 
   return typeColors[type] || colors.black; // 기본값은 검정색
