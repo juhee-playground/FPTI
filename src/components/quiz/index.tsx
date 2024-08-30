@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Question from '@/components/quiz/Question';
+import Result from '@/components/quiz/Result';
 import QUESTIONS from '@/data/DB_QUESTIONS.json';
 
 const questions = QUESTIONS;
@@ -8,6 +9,24 @@ const questions = QUESTIONS;
 const Quiz = () => {
   const [quizResult, setQuizResult] = useState<IQuizResult>({ answers: [] });
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores>({
+    'Dribbler vs Playmaker': {
+      D: 60,
+      P: 40,
+    },
+    'Competitor vs Entertainer': {
+      C: 26.67,
+      E: 73.33,
+    },
+    'Leader vs Supporter': {
+      L: 80,
+      S: 20,
+    },
+    'Attacker vs Guardian': {
+      A: 70.83,
+      G: 29.17,
+    },
+  });
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
     setQuizResult(prevResult => ({
@@ -18,30 +37,56 @@ const Quiz = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // 퀴즈 완료
-      console.log('Quiz Finished', quizResult);
-      // 결과 계산 로직 실행 가능
-      const finalResult = calculateFinalResult(quizResult);
-      console.log(finalResult); // 예: { D: 65, P: 35 }
+      // 마지막 질문에 도달한 경우 결과 계산
+      const result = calculateFinalResult({
+        ...quizResult,
+        answers: [...quizResult.answers, { questionId, scale: scaleValue }],
+      });
+      setFinalResult(result);
     }
   };
 
+  const getGroupByKey = (key: string) => {
+    const groupMap: { [key: string]: string } = {
+      A: 'Attacker vs Guardian',
+      G: 'Attacker vs Guardian',
+      L: 'Leader vs Supporter',
+      S: 'Leader vs Supporter',
+      D: 'Dribbler vs Playmaker',
+      P: 'Dribbler vs Playmaker',
+      C: 'Competitor vs Entertainer',
+      E: 'Competitor vs Entertainer',
+    };
+
+    return groupMap[key] || 'Unknown';
+  };
+
   const calculateFinalResult = (quizResult: IQuizResult) => {
-    const finalScale: IScaleValue = {};
+    const finalScale: { [group: string]: IScaleValue } = {};
 
     quizResult.answers.forEach(answer => {
       for (const [key, value] of Object.entries(answer.scale)) {
-        if (finalScale[key]) {
-          finalScale[key] += value;
+        const group = getGroupByKey(key); // 성향 키(key)로부터 그룹을 얻음
+
+        if (!finalScale[group]) {
+          finalScale[group] = { [key]: 0 };
+        }
+
+        if (finalScale[group][key]) {
+          finalScale[group][key] += value;
         } else {
-          finalScale[key] = value;
+          finalScale[group][key] = value;
         }
       }
     });
 
-    // 성향 비율 계산 (전체 질문 수에 따라 평균 내기)
-    for (const key in finalScale) {
-      finalScale[key] = finalScale[key] / quizResult.answers.length;
+    // 그룹별로 성향 비율 계산 (100%로 정규화)
+    for (const group in finalScale) {
+      const total = Object.values(finalScale[group]).reduce((acc, curr) => acc + curr, 0);
+
+      for (const key in finalScale[group]) {
+        finalScale[group][key] = (finalScale[group][key] / total) * 100;
+      }
     }
 
     return finalScale; // 최종 성향 비율 반환
@@ -49,7 +94,9 @@ const Quiz = () => {
 
   return (
     <React.Fragment>
-      {currentQuestionIndex < questions.length ? (
+      {finalResult ? (
+        <Result finalResult={finalResult} />
+      ) : (
         <Question
           questionId={questions[currentQuestionIndex].id}
           questionText={questions[currentQuestionIndex].situation}
@@ -57,8 +104,6 @@ const Quiz = () => {
           scale={questions[currentQuestionIndex].scale}
           onAnswer={handleAnswer}
         />
-      ) : (
-        <div>결과가 여기에 표시됩니다.</div>
       )}
     </React.Fragment>
   );
