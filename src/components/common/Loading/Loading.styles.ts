@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { dotPulse } from '@/styles/animations';
 import { colors } from '@/styles/colors';
 
@@ -12,7 +13,7 @@ export const Dot = styled.div`
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: ${colors.primary};
+  background-color: ${colors.secondary};
   margin: 0 5px;
   animation: ${dotPulse} 2s infinite ease-in-out;
 
