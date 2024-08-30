@@ -1,3 +1,7 @@
+import { QuestionContainer, QuestionText, ButtonContainer, Button } from './Question.styles';
+
+import backgroundImg from '@/assets/bg_field.png'; // 배경 이미지 경로
+
 type QuestionProps = {
   questionText: string;
   onAnswer: (answer: boolean) => void;
@@ -5,17 +9,13 @@ type QuestionProps = {
 
 const Question = ({ questionText, onAnswer }: QuestionProps) => {
   return (
-    <div className='p-4'>
-      <h3 className='text-lg font-bold mb-4'>{questionText}</h3>
-      <div>
-        <button onClick={() => onAnswer(true)} className='bg-blue-500 text-white py-2 px-4 rounded mr-2'>
-          Yes
-        </button>
-        <button onClick={() => onAnswer(false)} className='bg-red-500 text-white py-2 px-4 rounded'>
-          No
-        </button>
-      </div>
-    </div>
+    <QuestionContainer $backgroundImage={backgroundImg}>
+      <QuestionText>{questionText}</QuestionText>
+      <ButtonContainer>
+        <Button onClick={() => onAnswer(true)}>Yes</Button>
+        <Button onClick={() => onAnswer(false)}>No</Button>
+      </ButtonContainer>
+    </QuestionContainer>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import Question from './Question';
 
@@ -22,13 +22,13 @@ const Quiz = () => {
   };
 
   return (
-    <div className='max-w-xl mx-auto mt-10'>
+    <React.Fragment>
       {currentQuestion < questions.length ? (
         <Question questionText={questions[currentQuestion].text} onAnswer={handleAnswer} />
       ) : (
         <div>결과가 여기에 표시됩니다.</div>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 
