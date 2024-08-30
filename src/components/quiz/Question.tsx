@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import {
   QuestionContainer,
   QuestionBox,
@@ -10,30 +12,39 @@ import {
 
 import backgroundImg from '@/assets/bg-soccer-field.png';
 import CircleSelector from '@/components/quiz/CircleSelector';
-import { useState } from 'react';
 
 interface IQuestionProps {
+  questionId: number;
   questionText: string;
   options: { type: string; text: string }[];
   scale: { min: string; max: string };
-  onAnswer: (scaleValue: { [key: string]: number }) => void;
+  onAnswer: (questionId: number, scaleValue: IScaleValue) => void;
 }
 
-const Question = ({ questionText, scale, options, onAnswer }: IQuestionProps) => {
-  const [selectedValue, setSelectedValue] = useState<number | null>(); // 초기 값은 중앙
+const Question = ({ questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
+  const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
 
   const handleSelect = (value: number) => {
-    setSelectedValue(value);
+    setCurrentSelectedValue(value);
   };
 
   const handleSubmit = () => {
-    if (selectedValue)
+    if (currentSelectedValue !== null) {
       const scaleValue = {
-        [scale.min]: 100 - selectedValue,
-        [scale.max]: selectedValue,
+        [scale.min]: 100 - currentSelectedValue,
+        [scale.max]: currentSelectedValue,
       };
-    onAnswer(scaleValue);
+      onAnswer(questionId, scaleValue);
+    } else {
+      console.log('Please select a value before submitting.');
+      // 선택하지 않았을 때 사용자에게 알림
+    }
   };
+
+  useEffect(() => {
+    // 질문이 바뀔 때마다 selectedValue를 초기화
+    setCurrentSelectedValue(null);
+  }, [questionId]);
 
   return (
     <QuestionContainer $backgroundImage={backgroundImg}>
@@ -41,7 +52,7 @@ const Question = ({ questionText, scale, options, onAnswer }: IQuestionProps) =>
         <QuestionText>{questionText}</QuestionText>
       </QuestionBox>
       <SelectContainer>
-        <CircleSelector onSelect={handleSelect} />
+        <CircleSelector selectedValue={currentSelectedValue} onSelect={handleSelect} />
         <TextContainer>
           <OptionText>{options[0].text}</OptionText>
           <OptionText>{options[1].text}</OptionText>

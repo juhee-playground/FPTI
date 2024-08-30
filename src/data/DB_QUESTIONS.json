@@ -5,7 +5,7 @@
     "situation": "상대 수비수와 맞닥뜨렸을 때",
     "options": [
       { "type": "D", "text": "개인기로 돌파한다" },
-      { "type": "P", "text": "뒤로 패스한다" }
+      { "type": "P", "text": "다른 곳으로 패스한다" }
     ],
     "scale": {
       "min": "D",

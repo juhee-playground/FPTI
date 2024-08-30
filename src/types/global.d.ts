@@ -41,7 +41,7 @@ declare global {
     scale: IScaleValue;
   }
 
-  interface QuizResult {
+  interface IQuizResult {
     answers: IAnswer[];
   }
 }
