@@ -9,24 +9,7 @@ const questions = QUESTIONS;
 const Quiz = () => {
   const [quizResult, setQuizResult] = useState<IQuizResult>({ answers: [] });
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores>({
-    'Dribbler vs Playmaker': {
-      D: 60,
-      P: 40,
-    },
-    'Competitor vs Entertainer': {
-      C: 26.67,
-      E: 73.33,
-    },
-    'Leader vs Supporter': {
-      L: 80,
-      S: 20,
-    },
-    'Attacker vs Guardian': {
-      A: 70.83,
-      G: 29.17,
-    },
-  });
+  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores>();
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
     setQuizResult(prevResult => ({
