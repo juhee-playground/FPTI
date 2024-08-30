@@ -27,3 +27,10 @@ export const flexPowerCenter = css`
   justify-content: center;
   align-items: center;
 `;
+
+export const TextNoneDrag = css`
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+`;
