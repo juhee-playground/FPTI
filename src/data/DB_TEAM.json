@@ -1,0 +1,66 @@
+{
+  "bestTeams": [
+    {
+      "teamName": "균형 잡힌 팀",
+      "players": [
+        "Allosaurus (전략적 스트라이커)",
+        "Brachiosaurus (조율형 수비수)",
+        "Spinosaurus (기술적 크리에이터)",
+        "Maiasaura (안정적 지원자)"
+      ],
+      "description": "공격, 수비, 중원, 지원 역할의 균형이 잘 잡힌 팀으로, 각 포지션에서 높은 시너지를 발휘함."
+    },
+    {
+      "teamName": "공격 중심 팀",
+      "players": [
+        "Tyrannosaurus Rex (전투의 챔피언형)",
+        "Velociraptor (쇼맨 리더형)",
+        "Maiasaura (협력적 스트라이커)",
+        "Carcharodontosaurus (테크니컬 리더형)"
+      ],
+      "description": "공격적인 성향이 강한 팀으로, 득점력과 화려한 플레이를 바탕으로 상대를 압도함."
+    },
+    {
+      "teamName": "수비 중심 팀",
+      "players": [
+        "Triceratops (방어의 리더형)",
+        "Ankylosaurus (전략적 방패)",
+        "Gallimimus (협력적 수비수)",
+        "Iguanodon (지원형 크리에이터)"
+      ],
+      "description": "수비에 중점을 둔 팀으로, 상대의 공격을 효과적으로 막아내며 안정적인 경기를 펼침."
+    }
+  ],
+  "worstTeams": [
+    {
+      "teamName": "공격만 하는 팀",
+      "players": [
+        "Tyrannosaurus Rex (전투의 챔피언형)",
+        "Dilophosaurus (전투형)",
+        "Velociraptor (쇼맨 리더형)",
+        "Spinosaurus (기술적 크리에이터)"
+      ],
+      "description": "모두가 공격에만 집중하는 팀으로, 수비와 팀워크가 부족해 상대에게 허점을 쉽게 노출."
+    },
+    {
+      "teamName": "개인기 과잉 팀",
+      "players": [
+        "Velociraptor (쇼맨 리더형)",
+        "Spinosaurus (기술적 크리에이터)",
+        "Deinonychus (방어적 디펜더)",
+        "Parasaurolophus (크리에이티브 리더)"
+      ],
+      "description": "모두가 개인기에 집중하는 팀으로, 팀워크가 부족해 경기 전략이 흐트러지기 쉬움."
+    },
+    {
+      "teamName": "균형이 없는 팀",
+      "players": [
+        "Tyrannosaurus Rex (전투의 챔피언형)",
+        "Dilophosaurus (전투형)",
+        "Triceratops (방어의 리더형)",
+        "Carcharodontosaurus (테크니컬 리더형)"
+      ],
+      "description": "공격과 수비에만 집중하고, 중원과 지원 역할이 없어 전체적인 경기 조율이 힘든 팀."
+    }
+  ]
+}
