@@ -14,7 +14,7 @@ const Header = ({ showBackButton = false }: HeaderProps) => {
   return (
     <HeaderWrapper>
       {showBackButton && <BackButton onClick={() => navigate(-1)}>←</BackButton>}
-      <Logo>FPTI</Logo>
+      <Logo>FPTI TEST</Logo>
       <MenuButton onClick={() => alert('Menu clicked!')}>☰</MenuButton>
     </HeaderWrapper>
   );
