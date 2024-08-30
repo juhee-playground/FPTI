@@ -1,14 +1,16 @@
 // colors.ts
 export const colors = {
-  primary: '#4A56E2',
-  primaryLight: '#e6e3fc',
-  primaryOpacity: '#4A56E226',
-  primaryDark: '#3741b6',
-  secondaryDark: '#1F1B45',
-  secondaryLight: '#F4B400',
+  primary: '#228B22',
+  primaryLight: '#66C266',
+  primaryDark: '#1A661A',
+  primaryOpacity: 'rgba(34, 139, 34, 0.5)',
+  secondary: '#FF4500',
+  secondaryDark: '#CC3700',
+  secondaryLight: '#FF7A3D',
+  secondaryOpacity: 'rgba(255, 69, 0, 0.5)',
   background: '#FFFFFF',
 
-  hover: '#e8e8e83d',
+  hover: 'rgba(34, 139, 34, 0.7)',
   disabled: {
     border: '#cccccc',
     color: '#999999',
