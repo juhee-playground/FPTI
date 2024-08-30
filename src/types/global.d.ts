@@ -44,5 +44,11 @@ declare global {
   interface IQuizResult {
     answers: IAnswer[];
   }
+
+  interface IPersonalityTypeScores {
+    [group: string]: {
+      [type: string]: number;
+    };
+  }
 }
 export {};
