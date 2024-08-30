@@ -9,7 +9,7 @@ const questions = QUESTIONS;
 const Quiz = () => {
   const [quizResult, setQuizResult] = useState<IQuizResult>({ answers: [] });
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores>();
+  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
     setQuizResult(prevResult => ({
@@ -78,7 +78,7 @@ const Quiz = () => {
   const resetQuiz = () => {
     setQuizResult({ answers: [] });
     setCurrentQuestionIndex(0);
-    setFinalResult({}); // 결과 초기화
+    setFinalResult(null);
   };
 
   return (
