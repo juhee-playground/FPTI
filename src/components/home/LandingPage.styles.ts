@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import landingBg from '@/assets/landing-bg.png';
+import landingBg from '@/assets/bg-landing.png';
 import { colors } from '@/styles/colors';
 
 // Wrapper: 전체 화면을 차지하는 컨테이너
