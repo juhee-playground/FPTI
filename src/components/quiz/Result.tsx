@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import PercentageBar from './PercentageBar';
 import { ResultContainer, ResultItem, Button } from './Result.styles';
+import ImageBox from '../common/imageBox';
 
 interface IResultProps {
   finalResult: IPersonalityTypeScores;
@@ -63,6 +64,7 @@ const sortFinalResult = (finalResult: IPersonalityTypeScores) => {
 };
 
 const Result = ({ finalResult, onRetry }: IResultProps) => {
+  console.log(finalResult);
   const navigate = useNavigate();
 
   const topTypes = getTopTypesSorted(finalResult);
@@ -70,7 +72,7 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
 
   const handleRetry = () => {
     onRetry(); // 퀴즈 데이터 초기화
-    navigate('/quiz'); // 퀴즈 페이지로 이동
+    navigate('/landing'); // 퀴즈 페이지로 이동
   };
 
   return (
@@ -92,6 +94,7 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
           </div>
         );
       })}
+      <ImageBox topTypes={topTypes} />
       <Button onClick={handleRetry}>검사 다시하기</Button> {/* 검사 다시하기 버튼 */}
     </ResultContainer>
   );
