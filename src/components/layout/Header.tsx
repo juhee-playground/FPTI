@@ -1,15 +1,22 @@
-const Header = () => {
+import { useNavigate } from 'react-router-dom';
+
+import { HeaderWrapper, Logo, MenuButton, BackButton } from './Header.styles';
+
+// 타입 정의
+interface HeaderProps {
+  showBackButton?: boolean;
+}
+
+// 컴포넌트 정의
+const Header = ({ showBackButton = false }: HeaderProps) => {
+  const navigate = useNavigate();
+
   return (
-    <header>
-      <div className='links'>
-        <a href='/home' rel='noreferrer'>
-          Home
-        </a>
-        <a href='/basic' rel='noreferrer'>
-          basic page
-        </a>
-      </div>
-    </header>
+    <HeaderWrapper>
+      {showBackButton && <BackButton onClick={() => navigate(-1)}>←</BackButton>}
+      <Logo>FPTI</Logo>
+      <MenuButton onClick={() => alert('Menu clicked!')}>☰</MenuButton>
+    </HeaderWrapper>
   );
 };
 
