@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { HeaderWrapper, Logo, MenuButton, BackButton } from './Header.styles';
+import { HeaderWrapper, Logo, BackButton } from './Header.styles';
 
 // 타입 정의
 interface HeaderProps {
@@ -14,8 +14,8 @@ const Header = ({ showBackButton = false }: HeaderProps) => {
   return (
     <HeaderWrapper>
       {showBackButton && <BackButton onClick={() => navigate(-1)}>←</BackButton>}
-      <Logo>FPTI TEST</Logo>
-      <MenuButton onClick={() => alert('Menu clicked!')}>☰</MenuButton>
+      <Logo onClick={() => navigate('/landing')}>FPTI TEST</Logo>
+      {/* <MenuButton onClick={() => alert('Menu clicked!')}>☰</MenuButton> */}
     </HeaderWrapper>
   );
 };

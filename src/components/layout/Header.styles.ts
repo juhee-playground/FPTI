@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.header`
 export const Logo = styled.div`
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 export const MenuButton = styled.button`
