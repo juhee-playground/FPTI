@@ -9,6 +9,7 @@ const questions = QUESTIONS;
 const Quiz = () => {
   const [quizResult, setQuizResult] = useState<IQuizResult>({ answers: [] });
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentPercentage, setCurrentPercentage] = useState<number>(0);
   const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
@@ -19,6 +20,8 @@ const Quiz = () => {
     // 다음 질문으로 이동
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+      const percent = (currentQuestionIndex + 1 / questions.length) * 100;
+      setCurrentPercentage(percent);
     } else {
       // 마지막 질문에 도달한 경우 결과 계산
       const result = calculateFinalResult({
@@ -31,14 +34,14 @@ const Quiz = () => {
 
   const getGroupByKey = (key: string) => {
     const groupMap: { [key: string]: string } = {
-      L: 'Leader vs Supporter',
-      S: 'Leader vs Supporter',
-      A: 'Attacker vs Guardian',
-      G: 'Attacker vs Guardian',
-      D: 'Dribbler vs Playmaker',
-      P: 'Dribbler vs Playmaker',
-      C: 'Competitor vs Entertainer',
-      E: 'Competitor vs Entertainer',
+      L: '주도형 vs 서포터형',
+      S: '주도형 vs 서포터형',
+      A: '공격형 vs 수비형',
+      G: '공격형 vs 수비형',
+      D: '개인기형 vs 패스형',
+      P: '개인기형 vs 패스형',
+      C: '승부추구형 vs 재미추구형',
+      E: '승부추구형 vs 재미추구형',
     };
 
     return groupMap[key] || 'Unknown';
@@ -89,6 +92,7 @@ const Quiz = () => {
         <Question
           questionId={questions[currentQuestionIndex].id}
           questionText={questions[currentQuestionIndex].situation}
+          percentage={currentPercentage}
           options={questions[currentQuestionIndex].options}
           scale={questions[currentQuestionIndex].scale}
           onAnswer={handleAnswer}

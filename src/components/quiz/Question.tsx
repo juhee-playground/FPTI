@@ -15,6 +15,7 @@ import Progress from '@/components/common/progressBar';
 import CircleSelector from '@/components/quiz/CircleSelector';
 
 interface IQuestionProps {
+  percentage: number;
   questionId: number;
   questionText: string;
   options: { type: string; text: string }[];
@@ -22,7 +23,7 @@ interface IQuestionProps {
   onAnswer: (questionId: number, scaleValue: IScaleValue) => void;
 }
 
-const Question = ({ questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
+const Question = ({ percentage, questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
   const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
 
   const handleSelect = (value: number) => {
@@ -49,7 +50,7 @@ const Question = ({ questionId, questionText, scale, options, onAnswer }: IQuest
 
   return (
     <QuestionContainer $backgroundImage={backgroundImg}>
-      <Progress percentage={40} />
+      <Progress percentage={percentage} />
       <QuestionBox>
         <QuestionText>{questionText}</QuestionText>
       </QuestionBox>
