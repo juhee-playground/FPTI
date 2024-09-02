@@ -7,10 +7,10 @@ import {
   SelectContainer,
   TextContainer,
   OptionText,
-  Button,
 } from './Question.styles';
 
 import backgroundImg from '@/assets/bg_field.png';
+import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
 import CircleSelector from '@/components/quiz/CircleSelector';
 
@@ -25,13 +25,13 @@ interface IQuestionProps {
 
 const Question = ({ percentage, questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
   const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
-
+  const isNotSelected = currentSelectedValue === null;
   const handleSelect = (value: number) => {
     setCurrentSelectedValue(value);
   };
 
   const handleSubmit = () => {
-    if (currentSelectedValue !== null) {
+    if (!isNotSelected) {
       const scaleValue = {
         [scale.min]: 100 - currentSelectedValue,
         [scale.max]: currentSelectedValue,
@@ -61,7 +61,9 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
           <OptionText>{options[1].text}</OptionText>
         </TextContainer>
       </SelectContainer>
-      <Button onClick={handleSubmit}>다음</Button>
+      <Button disabled={isNotSelected} onClick={handleSubmit}>
+        다음
+      </Button>
     </QuestionContainer>
   );
 };
