@@ -1,15 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+
 import { colors } from './colors';
 import { typography } from './typography';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize},
   :root {
-    /* ...example */
     --mui-palette-primary-main: ${colors.primary};
     --mui-palette-primary-contrast-text: ${colors.black};
-    /* ...other variables */
   
     --border-color:  ${colors.border};
     --white-text:  ${colors.cancel.default};
@@ -19,15 +18,18 @@ const GlobalStyle = createGlobalStyle`
     --gnb-width: 64px;
   }
 
-  html { font-size: 100%; }
   body {
     font-family: ${typography.fontFamily};
     font-size: 16px;
     color: ${colors.black};
     background-color: ${colors.background};
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
   }
+
+  main {
+    height: calc(var(--vh, 1vh) * 100 - 44px);
+}
+
   
   :is(.select-none) {
     -webkit-user-select: none;

@@ -11,27 +11,5 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  width: 375px; /* 모바일 장치의 너비 (예: iPhone X) */
-  height: 667px; /* 모바일 장치의 높이 (예: iPhone X) */
-  border: 1px solid #ccc; /* 모바일 화면처럼 보이도록 테두리 추가 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
-  overflow-y: auto; /* 내용이 많을 때 스크롤 가능하게 설정 */
-  margin: 0 auto;
+  height: calc(var(--vh, 1vh) * 100);
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(1vh * 100);
-  background-color: #f8f9fa;
-  box-sizing: border-box;
-}
-
-/* .container-mobile {
-  margin: 0 auto;
-  max-width: 375px;
-} */

@@ -10,7 +10,8 @@ import {
   Button,
 } from './Question.styles';
 
-import backgroundImg from '@/assets/bg-soccer-field.png';
+import backgroundImg from '@/assets/bg_field.png';
+import Progress from '@/components/common/progressBar';
 import CircleSelector from '@/components/quiz/CircleSelector';
 
 interface IQuestionProps {
@@ -48,6 +49,7 @@ const Question = ({ questionId, questionText, scale, options, onAnswer }: IQuest
 
   return (
     <QuestionContainer $backgroundImage={backgroundImg}>
+      <Progress percentage={40} />
       <QuestionBox>
         <QuestionText>{questionText}</QuestionText>
       </QuestionBox>

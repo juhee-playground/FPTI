@@ -4,23 +4,28 @@ import { colors } from '@/styles/colors';
 import { TextNoneDrag } from '@/styles/mixins';
 
 export const QuestionContainer = styled.div<{ $backgroundImage: string }>`
-  padding: 2.4rem;
-  height: 100%;
+  /* padding: 2.4rem; */
+  width: 100%; /* 컨테이너 너비 */
+  height: 100%; /* 컨테이너 높이 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url(${props => props.$backgroundImage});
   background-size: cover;
   background-position: center;
-  color: ${colors.white}; /* 텍스트 색상을 흰색으로 설정하여 가독성 향상 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 그림자를 추가해 입체감 부여 */
+  background-repeat: no-repeat;
+  color: ${colors.white};
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */
 `;
 
 export const QuestionBox = styled.div`
   color: white;
   border: 2px solid white;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
+  margin: 1.5rem;
 `;
 
 export const QuestionText = styled.h3`
@@ -31,6 +36,7 @@ export const QuestionText = styled.h3`
 `;
 
 export const Button = styled.button`
+  margin: 1rem;
   background-color: #ffffff80;
   color: ${colors.black};
   padding: 1rem 1.6rem;
@@ -49,7 +55,7 @@ export const SelectContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  margin: 0 1.5rem;
 `;
 
 export const TextContainer = styled.div`

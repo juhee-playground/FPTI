@@ -4,10 +4,10 @@ import { colors } from '@/styles/colors';
 
 // 진행도 바 스타일
 export const ProgressBar = styled.div`
-  width: calc(100% - 6px);
+  width: 100%;
   height: 8px;
   background-color: #efefef;
-  margin: 0 3px;
+  margin: 0;
   position: relative;
 `;
 
