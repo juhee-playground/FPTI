@@ -6,7 +6,7 @@ interface IProgressBarProps {
 
 const Progress = ({ percentage }: IProgressBarProps) => (
   <ProgressBar>
-    <ProgressFill percentage={percentage} />
+    <ProgressFill $percentage={percentage} />
   </ProgressBar>
 );
 

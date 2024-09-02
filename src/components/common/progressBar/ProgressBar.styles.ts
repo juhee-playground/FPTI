@@ -11,9 +11,9 @@ export const ProgressBar = styled.div`
   position: relative;
 `;
 
-export const ProgressFill = styled.div<{ percentage: number }>`
+export const ProgressFill = styled.div<{ $percentage: number }>`
   height: 100%;
-  width: ${({ percentage }) => `${percentage}%`};
+  width: ${({ $percentage }) => `${$percentage}%`};
   background-color: ${colors.secondaryLight};
   transition: width 0.3s ease-in-out;
 `;
