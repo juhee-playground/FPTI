@@ -27,10 +27,10 @@ const getTopTypesSorted = (finalResult: IPersonalityTypeScores) => {
 
   // 그룹 우선순위 배열 정의
   const groupPriorityOrder = [
-    'Leader vs Supporter',
-    'Attacker vs Guardian',
-    'Dribbler vs Playmaker',
-    'Competitor vs Entertainer',
+    '주도형 vs 서포터형',
+    '공격형 vs 수비형',
+    '개인기형 vs 패스형',
+    '승부추구형 vs 재미추구형',
   ];
 
   // 선택된 타입들을 그룹 우선순위에 따라 정렬
@@ -45,10 +45,10 @@ const getTopTypesSorted = (finalResult: IPersonalityTypeScores) => {
 const sortFinalResult = (finalResult: IPersonalityTypeScores) => {
   // 그룹 우선순위 배열 정의
   const groupPriorityOrder = [
-    'Leader vs Supporter',
-    'Attacker vs Guardian',
-    'Dribbler vs Playmaker',
-    'Competitor vs Entertainer',
+    '주도형 vs 서포터형',
+    '공격형 vs 수비형',
+    '개인기형 vs 패스형',
+    '승부추구형 vs 재미추구형',
   ];
 
   // Object.entries를 사용해 finalResult의 키-값 쌍을 배열로 변환
