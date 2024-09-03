@@ -81,3 +81,8 @@ export const OptionText = styled.h4`
     text-align: right;
   }
 `;
+
+export const WarningText = styled.div`
+  color: red;
+  font-size: 14px;
+`;

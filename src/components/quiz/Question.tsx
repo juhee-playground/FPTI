@@ -7,6 +7,7 @@ import {
   SelectContainer,
   TextContainer,
   OptionText,
+  WarningText,
 } from './Question.styles';
 
 import backgroundImg from '@/assets/bg_field.png';
@@ -25,9 +26,12 @@ interface IQuestionProps {
 
 const Question = ({ percentage, questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
   const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
+  const [showWarning, setShowWarning] = useState(false);
   const isNotSelected = currentSelectedValue === null;
+
   const handleSelect = (value: number) => {
     setCurrentSelectedValue(value);
+    setShowWarning(false);
   };
 
   const handleSubmit = () => {
@@ -37,15 +41,15 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
         [scale.max]: currentSelectedValue,
       };
       onAnswer(questionId, scaleValue);
+      setShowWarning(false);
     } else {
-      console.log('Please select a value before submitting.');
-      // 선택하지 않았을 때 사용자에게 알림
+      setShowWarning(true);
     }
   };
 
   useEffect(() => {
-    // 질문이 바뀔 때마다 selectedValue를 초기화
     setCurrentSelectedValue(null);
+    setShowWarning(false);
   }, [questionId]);
 
   return (
@@ -61,6 +65,7 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
           <OptionText>{options[1].text}</OptionText>
         </TextContainer>
       </SelectContainer>
+      {showWarning && <WarningText>값을 선택해 주세요!</WarningText>} {/* 경고 메시지 추가 */}
       <Button disabled={isNotSelected} onClick={handleSubmit}>
         다음
       </Button>
