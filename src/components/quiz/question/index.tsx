@@ -14,8 +14,9 @@ interface IQuestionProps {
   questionText: string;
   options: { type: string; text: string }[];
   scale: { min: string; max: string };
-  isFirstQuestion: boolean; // 첫 번째 질문인지 여부
-  onPrevious: () => void; // 이전 버튼 클릭 시 호출되는 함수
+  isFirstQuestion: boolean;
+  selectedValue: IScaleValue | null;
+  onPrevious: () => void;
   onAnswer: (questionId: number, scaleValue: IScaleValue) => void;
 }
 
@@ -26,6 +27,7 @@ const Question = ({
   scale,
   isFirstQuestion,
   options,
+  selectedValue,
   onPrevious,
   onAnswer,
 }: IQuestionProps) => {
@@ -47,8 +49,13 @@ const Question = ({
   };
 
   useEffect(() => {
-    setCurrentSelectedValue(null);
-  }, [questionId]);
+    if (selectedValue) {
+      const value = selectedValue[scale.max];
+      setCurrentSelectedValue(value);
+    } else {
+      setCurrentSelectedValue(null);
+    }
+  }, [questionId, selectedValue, scale.max]);
 
   return (
     <QuestionContainer $backgroundImage={backgroundImg}>

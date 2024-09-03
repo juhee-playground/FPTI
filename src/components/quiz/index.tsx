@@ -13,11 +13,11 @@ const Quiz = () => {
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
   const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
-  const updateQuizResult = (questionId: number, scaleValue: IScaleValue, quizResult: IQuizResult) => {
-    return {
-      answers: [...quizResult.answers, { questionId, scale: scaleValue }],
-    };
-  };
+  // const updateQuizResult = (questionId: number, scaleValue: IScaleValue, quizResult: IQuizResult) => {
+  //   return {
+  //     answers: [...quizResult.answers, { questionId, scale: scaleValue }],
+  //   };
+  // };
 
   const calculatePercentage = (currentIndex: number, totalQuestions: number) => {
     const rawPercentage = ((currentIndex + 1) / totalQuestions) * 100;
@@ -40,15 +40,17 @@ const Quiz = () => {
   };
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
-    const updatedQuizResult = updateQuizResult(questionId, scaleValue, quizResult);
-    setQuizResult(updatedQuizResult);
+    const newAnswers = [...quizResult.answers];
+    newAnswers[currentQuestionIndex] = { questionId, scale: scaleValue }; // 현재 인덱스에 답변 저장
+
+    setQuizResult({ answers: newAnswers });
 
     if (currentQuestionIndex < questions.length - 1) {
       const newIndex = currentQuestionIndex + 1;
       const finalPercentage = calculatePercentage(currentQuestionIndex, questions.length);
       moveToNextQuestion(newIndex, finalPercentage);
     } else {
-      const result = calculateFinalResult(updatedQuizResult);
+      const result = calculateFinalResult({ answers: newAnswers });
       setFinalResult(result);
     }
   };
@@ -73,6 +75,7 @@ const Quiz = () => {
           onAnswer={handleAnswer}
           onPrevious={handlePrevious}
           isFirstQuestion={currentQuestionIndex === 0}
+          selectedValue={quizResult.answers[currentQuestionIndex]?.scale || null}
         />
       )}
     </React.Fragment>
