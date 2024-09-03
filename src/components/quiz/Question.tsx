@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import {
-  QuestionContainer,
-  QuestionBox,
-  QuestionText,
-  SelectContainer,
-  TextContainer,
-  OptionText,
-  WarningText,
-} from './Question.styles';
+import { QuestionContainer, QuestionBox, SelectContainer } from './Question.styles';
 
 import backgroundImg from '@/assets/bg_field.png';
 import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
-import CircleSelector from '@/components/quiz/CircleSelector';
+import OptionSelector from '@/components/quiz/OptionSelector';
+import QuestionHeader from '@/components/quiz/QuestionHeader';
+import WarningMessage from '@/components/quiz/WarningMessage';
 
 interface IQuestionProps {
   percentage: number;
@@ -56,16 +50,12 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
     <QuestionContainer $backgroundImage={backgroundImg}>
       <Progress percentage={percentage} />
       <QuestionBox>
-        <QuestionText>{questionText}</QuestionText>
+        <QuestionHeader questionText={questionText} />
       </QuestionBox>
       <SelectContainer>
-        <CircleSelector selectedValue={currentSelectedValue} onSelect={handleSelect} />
-        <TextContainer>
-          <OptionText>{options[0].text}</OptionText>
-          <OptionText>{options[1].text}</OptionText>
-        </TextContainer>
+        <OptionSelector selectedValue={currentSelectedValue} onSelect={handleSelect} options={options} />{' '}
       </SelectContainer>
-      {showWarning && <WarningText>값을 선택해 주세요!</WarningText>} {/* 경고 메시지 추가 */}
+      {showWarning && <WarningMessage message='값을 선택해 주세요!'></WarningMessage>}
       <Button disabled={isNotSelected} onClick={handleSubmit}>
         다음
       </Button>
