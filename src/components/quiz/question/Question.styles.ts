@@ -86,3 +86,9 @@ export const WarningText = styled.div`
   color: red;
   font-size: 14px;
 `;
+
+export const ButtonContainer = styled.div<{ $isSingleButton: boolean }>`
+  display: flex;
+  justify-content: ${({ $isSingleButton }) => ($isSingleButton ? 'flex-end' : 'space-between')};
+  margin-top: 20px;
+`;

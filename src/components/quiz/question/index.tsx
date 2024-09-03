@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { QuestionContainer, QuestionBox, SelectContainer } from './Question.styles';
+import { QuestionContainer, QuestionBox, SelectContainer, ButtonContainer } from './Question.styles';
 
 import backgroundImg from '@/assets/bg_field.png';
 import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
 import OptionSelector from '@/components/quiz/question/OptionSelector';
 import QuestionHeader from '@/components/quiz/question/QuestionHeader';
-import WarningMessage from '@/components/quiz/question/WarningMessage';
 
 interface IQuestionProps {
   percentage: number;
@@ -15,17 +14,26 @@ interface IQuestionProps {
   questionText: string;
   options: { type: string; text: string }[];
   scale: { min: string; max: string };
+  isFirstQuestion: boolean; // 첫 번째 질문인지 여부
+  onPrevious: () => void; // 이전 버튼 클릭 시 호출되는 함수
   onAnswer: (questionId: number, scaleValue: IScaleValue) => void;
 }
 
-const Question = ({ percentage, questionId, questionText, scale, options, onAnswer }: IQuestionProps) => {
+const Question = ({
+  percentage,
+  questionId,
+  questionText,
+  scale,
+  isFirstQuestion,
+  options,
+  onPrevious,
+  onAnswer,
+}: IQuestionProps) => {
   const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
-  const [showWarning, setShowWarning] = useState(false);
   const isNotSelected = currentSelectedValue === null;
 
   const handleSelect = (value: number) => {
     setCurrentSelectedValue(value);
-    setShowWarning(false);
   };
 
   const handleSubmit = () => {
@@ -35,15 +43,11 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
         [scale.max]: currentSelectedValue,
       };
       onAnswer(questionId, scaleValue);
-      setShowWarning(false);
-    } else {
-      setShowWarning(true);
     }
   };
 
   useEffect(() => {
     setCurrentSelectedValue(null);
-    setShowWarning(false);
   }, [questionId]);
 
   return (
@@ -55,10 +59,12 @@ const Question = ({ percentage, questionId, questionText, scale, options, onAnsw
       <SelectContainer>
         <OptionSelector selectedValue={currentSelectedValue} onSelect={handleSelect} options={options} />{' '}
       </SelectContainer>
-      {showWarning && <WarningMessage message='값을 선택해 주세요!'></WarningMessage>}
-      <Button disabled={isNotSelected} onClick={handleSubmit}>
-        다음
-      </Button>
+      <ButtonContainer $isSingleButton={isFirstQuestion}>
+        {!isFirstQuestion && <Button onClick={onPrevious}>이전</Button>}
+        <Button disabled={isNotSelected} onClick={handleSubmit}>
+          다음
+        </Button>
+      </ButtonContainer>
     </QuestionContainer>
   );
 };

@@ -30,6 +30,15 @@ const Quiz = () => {
     setCurrentPercentage(percentage);
   };
 
+  const handlePrevious = () => {
+    if (currentQuestionIndex > 0) {
+      const previousIndex = currentQuestionIndex - 1;
+      const previousPercentage = calculatePercentage(previousIndex, questions.length);
+      setCurrentQuestionIndex(previousIndex);
+      setCurrentPercentage(previousPercentage);
+    }
+  };
+
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
     const updatedQuizResult = updateQuizResult(questionId, scaleValue, quizResult);
     setQuizResult(updatedQuizResult);
@@ -62,6 +71,8 @@ const Quiz = () => {
           options={questions[currentQuestionIndex].options}
           scale={questions[currentQuestionIndex].scale}
           onAnswer={handleAnswer}
+          onPrevious={handlePrevious}
+          isFirstQuestion={currentQuestionIndex === 0}
         />
       )}
     </React.Fragment>
