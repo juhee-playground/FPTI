@@ -5,9 +5,9 @@ import { QuestionContainer, QuestionBox, SelectContainer } from './Question.styl
 import backgroundImg from '@/assets/bg_field.png';
 import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
-import OptionSelector from '@/components/quiz/OptionSelector';
-import QuestionHeader from '@/components/quiz/QuestionHeader';
-import WarningMessage from '@/components/quiz/WarningMessage';
+import OptionSelector from '@/components/quiz/question/OptionSelector';
+import QuestionHeader from '@/components/quiz/question/QuestionHeader';
+import WarningMessage from '@/components/quiz/question/WarningMessage';
 
 interface IQuestionProps {
   percentage: number;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Question from '@/components/quiz/Question';
-import Result from '@/components/quiz/Result';
+import Question from '@/components/quiz/question';
+import Result from '@/components/quiz/result';
 import QUESTIONS from '@/data/DB_QUESTIONS.json';
 import { calculateFinalResult } from '@/utils/calculateResult';
 

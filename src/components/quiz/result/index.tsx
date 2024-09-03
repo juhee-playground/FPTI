@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import PercentageBar from './PercentageBar';
 import { ResultContainer, ResultItem, Button } from './Result.styles';
-import ImageBox from '../common/imageBox';
+import ImageBox from '../../common/imageBox';
 
 interface IResultProps {
   finalResult: IPersonalityTypeScores;
