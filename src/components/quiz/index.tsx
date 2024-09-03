@@ -13,22 +13,33 @@ const Quiz = () => {
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
   const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
-  const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
-    setQuizResult(prevResult => ({
-      answers: [...prevResult.answers, { questionId, scale: scaleValue }],
-    }));
+  const updateQuizResult = (questionId: number, scaleValue: IScaleValue, quizResult: IQuizResult) => {
+    return {
+      answers: [...quizResult.answers, { questionId, scale: scaleValue }],
+    };
+  };
 
-    // 다음 질문으로 이동
+  const calculatePercentage = (currentIndex: number, totalQuestions: number) => {
+    const rawPercentage = ((currentIndex + 1) / totalQuestions) * 100;
+    const adjustedPercentage = Math.round(rawPercentage * 10) / 10;
+    return adjustedPercentage === 50 ? 50.1 : adjustedPercentage;
+  };
+
+  const moveToNextQuestion = (newIndex: number, percentage: number) => {
+    setCurrentQuestionIndex(newIndex);
+    setCurrentPercentage(percentage);
+  };
+
+  const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
+    const updatedQuizResult = updateQuizResult(questionId, scaleValue, quizResult);
+    setQuizResult(updatedQuizResult);
+
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      const percent = ((currentQuestionIndex + 1) / questions.length) * 100; // 퍼센트 계산 명확히 수정
-      setCurrentPercentage(percent);
+      const newIndex = currentQuestionIndex + 1;
+      const finalPercentage = calculatePercentage(currentQuestionIndex, questions.length);
+      moveToNextQuestion(newIndex, finalPercentage);
     } else {
-      // 마지막 질문에 도달한 경우 결과 계산
-      const result = calculateFinalResult({
-        ...quizResult,
-        answers: [...quizResult.answers, { questionId, scale: scaleValue }],
-      });
+      const result = calculateFinalResult(updatedQuizResult);
       setFinalResult(result);
     }
   };
