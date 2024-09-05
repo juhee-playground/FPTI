@@ -68,12 +68,12 @@ export const TypeLabel = styled.h2<{ $isMain: boolean }>`
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: ${({ $isMain }) => ($isMain ? colors.white : colors.black)};
 `;
 
 export const TypeDescription = styled.p<{ $isMain: boolean }>`
-  font-size: 1rem;
+  font-size: 0.8125rem;
   font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'noraml')};
   color: #000;
 `;
