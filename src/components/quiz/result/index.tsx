@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 
-import { ResultContainer, ResultItem, Button } from './Result.styles';
+import { ResultContainer, Title, ResultItem, Button } from './Result.styles';
 
+import { findResultById } from '@/api/result';
 import ImageBox from '@/components/common/imageBox';
 import TypeComparisonBar from '@/components/quiz/result/TypeComparisonBar';
+import TypeDescription from '@/components/quiz/result/TypeDescription';
 
 interface IResultProps {
   finalResult: IPersonalityTypeScores;
@@ -38,21 +40,23 @@ const sortFinalResult = (finalResult: IPersonalityTypeScores): IPersonalityTypeS
 };
 
 const Result = ({ finalResult, onRetry }: IResultProps) => {
-  console.log(finalResult);
   const navigate = useNavigate();
 
   const topTypes = getTopTypesSorted(finalResult);
   const sortedFinalResult = sortFinalResult(finalResult);
 
+  const resultDescription = findResultById(topTypes) || null;
+  console.log(resultDescription);
+
   const handleRetry = () => {
-    onRetry(); // 퀴즈 데이터 초기화
-    navigate('/landing'); // 퀴즈 페이지로 이동
+    onRetry();
+    navigate('/landing');
   };
 
   return (
     <ResultContainer>
-      <h2>너의 타입은 : {topTypes}</h2>
       <ImageBox topTypes={topTypes} />
+      <Title>너의 타입은 : {topTypes}</Title>
       {Object.entries(sortedFinalResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];
         const [type2, percentage2] = Object.entries(values)[1];
@@ -68,6 +72,7 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
           </ResultItem>
         );
       })}
+      <TypeDescription content={resultDescription} />
       <Button onClick={handleRetry}>검사 다시하기</Button> {/* 검사 다시하기 버튼 */}
     </ResultContainer>
   );
