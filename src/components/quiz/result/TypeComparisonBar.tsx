@@ -1,12 +1,14 @@
 import {
   TypeComparisonBarContainer,
-  LabelContainer,
-  Label,
+  TypeContainer,
+  TypeLabel,
+  TypeDescription,
   BarWrapper,
   Progress,
   PercentageText,
-  MainLabelContainer,
 } from './TypeComparisonBar.styles';
+
+import { PERSONALITY_TYPES } from '@/constants/PersonalityType';
 
 interface ITypeComparisonBarProps {
   startLabel: string;
@@ -15,33 +17,42 @@ interface ITypeComparisonBarProps {
   isReverse: boolean;
 }
 
+const getPersonalityName = (id: string) => {
+  const item = PERSONALITY_TYPES[id];
+  return item ? item.type : 'Unknown';
+};
+
 const TypeComparisonBar = ({ startLabel, endLabel, percentage, isReverse }: ITypeComparisonBarProps) => {
   const mainLabel = isReverse ? endLabel : startLabel;
-  // const secondaryLabel = isReverse ? startLabel : endLabel;
+  const isStartLabelMain = startLabel === mainLabel;
+  const isEndLabelMain = endLabel === mainLabel;
+
+  // 사용 예시
+  const startTypeInfo = getPersonalityName(startLabel);
+  const endTypeInfo = getPersonalityName(endLabel);
 
   return (
     <TypeComparisonBarContainer>
-      {/* 상단에 주요 레이블과 퍼센트 표시 */}
-      <MainLabelContainer>
-        <PercentageText $isMain $percentage={percentage} $isReverse>
-          {parseFloat(percentage.toFixed(2))}% {mainLabel}
-        </PercentageText>
-      </MainLabelContainer>
+      {/* <LabelContainer> */}
+      <TypeContainer>
+        <TypeLabel $isMain={isStartLabelMain}>{startLabel}</TypeLabel>
+        <TypeDescription $isMain={isStartLabelMain}>{startTypeInfo}</TypeDescription>
+      </TypeContainer>
 
-      {/* ProgressBar */}
+      {/* 프로그레스 바 */}
       <BarWrapper $isReverse={isReverse}>
-        <Progress $percentage={percentage} $type={isReverse ? endLabel : startLabel} $isReverse={isReverse} />
+        <Progress $percentage={percentage} $type={isReverse ? endLabel : startLabel} $isReverse={isReverse}>
+          <PercentageText $isMain $percentage={percentage} $isReverse={isReverse}>
+            {`${percentage.toFixed(0)}%`}
+          </PercentageText>
+        </Progress>
       </BarWrapper>
 
-      {/* 하단에 각각의 퍼센트와 레이블 표시 */}
-      <LabelContainer>
-        <Label $isMain>
-          {percentage.toFixed(2)}% {startLabel}
-        </Label>
-        <Label>
-          {(100 - percentage).toFixed(2)}% {endLabel}
-        </Label>
-      </LabelContainer>
+      <TypeContainer>
+        <TypeLabel $isMain={isEndLabelMain}>{endLabel}</TypeLabel>
+        <TypeDescription $isMain={isEndLabelMain}>{endTypeInfo}</TypeDescription>
+      </TypeContainer>
+      {/* </LabelContainer> */}
     </TypeComparisonBarContainer>
   );
 };

@@ -7,15 +7,9 @@ const CHAR_WIDTH = 3;
 
 export const TypeComparisonBarContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
-`;
-
-export const MainLabelContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 8px;
 `;
 
 export const BarWrapper = styled.div<{ $isReverse: boolean }>`
@@ -58,11 +52,28 @@ export const PercentageText = styled.span<{ $isMain: boolean; $percentage: numbe
 export const LabelContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 `;
 
-export const Label = styled.span<{ $isMain?: boolean }>`
-  font-size: 1rem;
-  font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'normal')};
+export const TypeContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36%;
+`;
+
+export const TypeLabel = styled.h2<{ $isMain: boolean }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
   color: ${({ $isMain }) => ($isMain ? colors.white : colors.black)};
+`;
+
+export const TypeDescription = styled.p<{ $isMain: boolean }>`
+  font-size: 1rem;
+  font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'noraml')};
+  color: #000;
 `;
