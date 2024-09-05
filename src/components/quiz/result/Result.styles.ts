@@ -18,7 +18,7 @@ export const ResultContainer = styled.div`
 export const ResultItem = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 16px 0;
 `;
 
 export const Button = styled.button`
