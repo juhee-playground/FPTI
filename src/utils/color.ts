@@ -53,3 +53,18 @@ export const getRgbaColor = (hex: string, opacity: number) => {
   const { r, g, b } = hexToRgb(hex);
   return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
+
+export const getColorByType = (type: string) => {
+  const typeColors: { [key: string]: string } = {
+    A: '#7BA8CE', // 더 진한 파란색
+    G: '#FFAB85', // 더 진한 오렌지색
+    L: '#F5A3B3', // 더 진한 핑크색
+    S: '#8BBF9F', // 더 진한 녹색
+    D: '#B394D3', // 진한 라벤더색
+    P: '#FFC560', // 더 진한 황토색
+    C: '#80CBC4', // 더 진한 민트색
+    E: '#FFD95A', // 진한 레몬색
+  };
+
+  return typeColors[type] || colors.black; // 기본값은 검정색
+};
