@@ -12,12 +12,7 @@ interface IResultProps {
   onRetry: () => void;
 }
 
-const GROUP_PRIORITY_ORDER = [
-  '주도형 vs 서포터형',
-  '공격형 vs 수비형',
-  '개인기형 vs 패스형',
-  '승부추구형 vs 재미추구형',
-];
+const GROUP_PRIORITY_ORDER = ['책임감과 주도성', '팀에서의 역할', '플레이 스타일', '목표와 우선순위'];
 
 const getTopTypesSorted = (finalResult: IPersonalityTypeScores): string => {
   const selectedTypes = Object.entries(finalResult).map(([group, values]) => {

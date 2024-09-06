@@ -1,16 +1,15 @@
-// calculateResult.ts
-
 // 그룹을 키로 매핑하는 유틸리티 함수
 const getGroupByKey = (key: string): string => {
   const groupMap: { [key: string]: string } = {
-    L: '주도형 vs 서포터형',
-    S: '주도형 vs 서포터형',
-    A: '공격형 vs 수비형',
-    G: '공격형 vs 수비형',
-    D: '개인기형 vs 패스형',
-    P: '개인기형 vs 패스형',
-    C: '승부추구형 vs 재미추구형',
-    E: '승부추구형 vs 재미추구형',
+    L: '책임감과 주도성',
+    S: '책임감과 주도성',
+    A: '팀에서의 역할',
+    D: '팀에서의 역할',
+    M: '팀에서의 역할',
+    T: '플레이 스타일',
+    P: '플레이 스타일',
+    C: '목표와 우선순위',
+    E: '목표와 우선순위',
   };
 
   return groupMap[key] || 'Unknown';
