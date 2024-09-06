@@ -1,7 +1,7 @@
 [
   {
-    "name": "Tyrannosaurus Rex",
-    "koreaName": "티라노사우루스 렉스",
+    "name": "Tyrannosaurus",
+    "koreaName": "티라노사우루스",
     "type": "전투의 챔피언형",
     "alias": "무적의 전사",
     "summary": "공격적인 플레이를 주도하며, 개인기로 승부를 걸어 이기려는 전투적인 리더",
@@ -12,46 +12,46 @@
     "fit": [
       {
         "koreaName": "딜로포사우루스",
-        "type": "지능형 스트라이커",
-        "fpti": "SADC"
+        "type": "전략적 스프린터형",
+        "fpti": "SATC"
       },
       {
         "koreaName": "벨로시랩터",
         "type": "쇼맨 리더형",
-        "fpti": "LADE"
+        "fpti": "LATE"
       }
     ],
     "doNotFit": [
       {
         "koreaName": "프테라노돈",
-        "type": "안정적 지원자",
+        "type": "안정적 지원형",
         "fpti": "SGPE"
       },
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       }
     ],
     "compatibility": "공격적이고 승부욕이 강한 팀과 잘 어울리며, 수비적인 팀과는 상호작용이 어려울 수 있음.",
-    "fpti": "LADC",
+    "fpti": "LATC",
     "id": "FTI-1"
   },
   {
     "name": "Dilophosaurus",
     "koreaName": "딜로포사우루스",
-    "type": "지능형 스트라이커",
-    "alias": "전략적 공격수",
+    "type": "전략적 스프린터형",
+    "alias": "지능형 스트라이커",
     "summary": "승부를 걸어 이기려 하지만, 팀을 지원하며 전략적으로 움직이는 공격수",
-    "description": "딜로포사우루스는 빠르고 날렵한 공룡으로, 뛰어난 속도와 기동성을 자랑해. 지능형 스트라이커는 개인기를 활용해 상대를 돌파하며, 팀과의 협력으로 승리를 목표로 해.",
+    "description": "딜로포사우루스는 빠르고 날렵한 공룡으로, 뛰어난 속도와 기동성을 자랑해. 전략적 스프린터형은 개인기를 활용해 상대를 돌파하며, 팀과의 협력으로 승리를 목표로 해.",
     "roleWithinTeam": "공격과 팀워크의 균형을 맞추며, 팀의 전략적 목표를 달성하는 역할을 함.",
     "recommendedTactics": "적절한 타이밍의 움직임과 패스를 통해 상대 수비를 무너뜨리는 전략이 효과적.",
     "roleModel": "카림 벤제마 - 뛰어난 포지셔닝과 지능적인 플레이로 팀의 득점을 책임지는 스트라이커.",
     "fit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "알로사우루스",
@@ -63,16 +63,16 @@
       {
         "koreaName": "카르카로돈토사우루스",
         "type": "테크니컬 리더형",
-        "fpti": "LGDE"
+        "fpti": "LDTE"
       },
       {
         "koreaName": "프테라노돈",
-        "type": "안정적 지원자",
+        "type": "안정적 지원형",
         "fpti": "SGPE"
       }
     ],
     "compatibility": "전술적 사고가 뛰어난 팀과 잘 어울리며, 높은 수준의 협력이 필요한 상황에서 강점을 발휘함.",
-    "fpti": "SADC",
+    "fpti": "SATC",
     "id": "FTI-2"
   },
   {
@@ -88,38 +88,38 @@
     "fit": [
       {
         "koreaName": "스피노사우루스",
-        "type": "기술적 크리에이터",
-        "fpti": "SADE"
+        "type": "기술적 크리에이터형",
+        "fpti": "SATE"
       },
       {
         "koreaName": "브라키오사우루스",
-        "type": "조율형 수비수",
+        "type": "조율하는 수비형",
         "fpti": "LGPE"
       }
     ],
     "doNotFit": [
       {
         "koreaName": "케라토사우루스",
-        "type": "방어적 디펜더",
-        "fpti": "SGDC"
+        "type": "기술적 수비형",
+        "fpti": "SDTC"
       },
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       }
     ],
     "compatibility": "공격적이고 창의적인 팀 환경에서 빛을 발하며, 정적이고 수비적인 팀과는 조화가 어려울 수 있음.",
-    "fpti": "LADE",
+    "fpti": "LATE",
     "id": "FTI-3"
   },
   {
     "name": "Spinosaurus",
     "koreaName": "스피노사우루스",
-    "type": "기술적 크리에이터",
+    "type": "기술적 크리에이터형",
     "alias": "창의적 기술가",
     "summary": "개인기를 활용하여 팀을 지원하고 경기를 창의적으로 이끄는 플레이어",
-    "description": "스피노사우루스는 강력한 발톱과 민첩함을 자랑하는 공룡이야. 기술적 크리에이터는 창의적인 플레이와 개인기로 경기를 이끌어가는 역할을 해.",
+    "description": "스피노사우루스는 강력한 발톱과 민첩함을 자랑하는 공룡이야. 기술적 크리에이터형은 창의적인 플레이와 개인기로 경기를 이끌어가는 역할을 해.",
     "roleWithinTeam": "공격과 중원에서의 창의적인 연결고리로, 팀의 전술을 다채롭게 만드는 역할을 함.",
     "recommendedTactics": "기술적인 플레이를 바탕으로 상대 수비를 흔드는 창의적인 전개가 효과적.",
     "roleModel": "리오넬 메시 - 뛰어난 개인기와 창의성으로 팀의 공격을 이끄는 플레이메이커.",
@@ -127,28 +127,28 @@
       {
         "koreaName": "벨로시랩터",
         "type": "쇼맨 리더형",
-        "fpti": "LADE"
+        "fpti": "LATE"
       },
       {
         "koreaName": "브라키오사우루스",
-        "type": "조율형 수비수",
+        "type": "조율하는 수비형",
         "fpti": "LGPE"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "케라토사우루스",
-        "type": "방어적 디펜더",
-        "fpti": "SGDC"
+        "type": "기술적 수비형",
+        "fpti": "SDTC"
       }
     ],
     "compatibility": "공격적인 팀과의 시너지 효과가 크며, 개인 플레이를 중시하는 환경에서 더욱 빛을 발함.",
-    "fpti": "SADE",
+    "fpti": "SATE",
     "id": "FTI-4"
   },
   {
@@ -164,25 +164,25 @@
     "fit": [
       {
         "koreaName": "브라키오사우루스",
-        "type": "조율형 수비수",
+        "type": "조율하는 수비형",
         "fpti": "LGPE"
       },
       {
         "koreaName": "딜로포사우루스",
-        "type": "지능형 스트라이커",
-        "fpti": "SADC"
+        "type": "전략적 스프린터형",
+        "fpti": "SATC"
       }
     ],
     "doNotFit": [
       {
         "koreaName": "프테라노돈",
-        "type": "안정적 지원자",
+        "type": "안정적 지원형",
         "fpti": "SGPE"
       },
       {
         "koreaName": "스테고사우루스",
         "type": "즐기는 디펜더",
-        "fpti": "SGDE"
+        "fpti": "SDTE"
       }
     ],
     "compatibility": "전략적인 팀과 잘 어울리며, 팀플레이가 강조된 전술에서 최고의 성과를 냄.",
@@ -192,7 +192,7 @@
   {
     "name": "Pachycephalosaurus",
     "koreaName": "파키케팔로사우루스",
-    "type": "협력적 스트라이커",
+    "type": "협력적 공격형",
     "alias": "팀워크 중심 공격수",
     "summary": "공격과 승리를 목표로 하지만, 팀원들과 협력하여 기회를 창출하는 플레이어",
     "description": "파키케팔로사우루스는 두꺼운 두개골을 가진 소형 공룡으로, 팀워크와 협력을 통해 경기를 이끌어가는 성향을 가진 플레이어입니다. 협력적 스트라이커는 팀과의 조화를 통해 최적의 득점 기회를 만들어냅니다.",
@@ -202,12 +202,12 @@
     "fit": [
       {
         "koreaName": "브라키오사우루스",
-        "type": "조율형 수비수",
+        "type": "조율하는 수비형",
         "fpti": "LGPE"
       },
       {
         "koreaName": "프테라노돈",
-        "type": "안정적 지원자",
+        "type": "안정적 지원형",
         "fpti": "SGPE"
       }
     ],
@@ -215,12 +215,12 @@
       {
         "koreaName": "벨로시랩터",
         "type": "쇼맨 리더형",
-        "fpti": "LADE"
+        "fpti": "LATE"
       },
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       }
     ],
     "compatibility": "팀워크를 중시하는 환경에서 뛰어난 성과를 보이며, 개인 플레이 위주의 팀에서는 부적합함.",
@@ -240,25 +240,25 @@
     "fit": [
       {
         "koreaName": "스피노사우루스",
-        "type": "기술적 크리에이터",
-        "fpti": "SADE"
+        "type": "기술적 크리에이터형",
+        "fpti": "SATE"
       },
       {
         "koreaName": "스테고케라스",
-        "type": "협력적 스트라이커",
+        "type": "협력적 공격형",
         "fpti": "SAPC"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "케라토사우루스",
-        "type": "방어적 디펜더",
-        "fpti": "SGDC"
+        "type": "기술적 수비형",
+        "fpti": "SDTC"
       }
     ],
     "compatibility": "공격적이고 창의적인 팀과 시너지를 발휘하며, 정적이고 수비적인 팀과는 조화가 어려울 수 있음.",
@@ -278,20 +278,20 @@
     "fit": [
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       },
       {
         "koreaName": "프테라노돈",
-        "type": "안정적 지원자",
+        "type": "안정적 지원형",
         "fpti": "SGPE"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "알로사우루스",
@@ -316,67 +316,67 @@
     "fit": [
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       },
       {
         "koreaName": "안킬로사우루스",
-        "type": "전략적 방패",
-        "fpti": "LGPC"
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
       }
     ],
     "doNotFit": [
       {
         "koreaName": "벨로시랩터",
         "type": "쇼맨 리더형",
-        "fpti": "LADE"
+        "fpti": "LATE"
       },
       {
         "koreaName": "스테고사우루스",
         "type": "즐기는 디펜더",
-        "fpti": "SGDE"
+        "fpti": "SDTE"
       }
     ],
     "compatibility": "조직적이고 방어적인 팀에서 뛰어난 성과를 보이며, 공격 위주의 팀과는 조화가 어려울 수 있음.",
-    "fpti": "LGDC",
+    "fpti": "LDTC",
     "id": "FTI-9"
   },
   {
     "name": "Ceratosaurus",
     "koreaName": "케라토사우루스",
-    "type": "방어적 디펜더",
-    "alias": "강력한 수비수",
+    "type": "기술적 수비형",
+    "alias": "화려한 수비수",
     "summary": "수비에서 개인기를 활용하여 팀을 지원하고 승리를 추구하는 플레이어",
-    "description": "케라토사우루스는 육식 공룡으로, 강력한 턱과 발톱을 자랑해. 방어적 디펜더는 수비에서 개인기를 발휘하여 팀을 지원하고 상대의 공격을 막아.",
-    "roleWithinTeam": "강력한 수비로 팀을 지키며, 빠른 대응력으로 상대의 공격을 차단함.",
+    "description": "케라토사우루스는 육식 공룡으로, 강력한 턱과 발톱을 자랑해. 기술적 수비형은 수비에서 개인기를 발휘하여 팀을 지원하고 상대의 공격을 막아.",
+    "roleWithinTeam": "강력하고 화려한 수비로 팀을 지키며, 빠른 대응력으로 상대의 공격을 차단함.",
     "recommendedTactics": "개인기를 활용해 상대 공격을 차단하고, 역습을 통해 빠르게 공격으로 전환하는 전술이 효과적.",
-    "roleModel": "카를레스 푸욜 - 강력한 태클과 수비력으로 상대 공격을 막아내는 수비수.",
+    "roleModel": "카를레스 푸욜 - 강력한 태클과 화려한 수비력으로 상대 공격을 막아내는 수비수.",
     "fit": [
       {
         "koreaName": "안킬로사우루스",
-        "type": "전략적 방패",
-        "fpti": "LGPC"
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
       },
       {
         "koreaName": "트리케라톱스",
         "type": "방어의 리더형",
-        "fpti": "LGDC"
+        "fpti": "LDTC"
       }
     ],
     "doNotFit": [
       {
         "koreaName": "벨로시랩터",
         "type": "쇼맨 리더형",
-        "fpti": "LADE"
+        "fpti": "LATE"
       },
       {
         "koreaName": "스피노사우루스",
-        "type": "기술적 크리에이터",
-        "fpti": "SADE"
+        "type": "기술적 크리에이터형",
+        "fpti": "SATE"
       }
     ],
     "compatibility": "강력한 수비 라인을 구축하는 팀에서 최상의 성과를 보이며, 창의적인 플레이를 중시하는 팀과는 조화가 어려울 수 있음.",
-    "fpti": "SGDC",
+    "fpti": "SDTC",
     "id": "FTI-10"
   },
   {
@@ -393,28 +393,28 @@
       {
         "koreaName": "스테고사우루스",
         "type": "즐기는 디펜더",
-        "fpti": "SGDE"
+        "fpti": "SDTE"
       },
       {
         "koreaName": "트리케라톱스",
         "type": "방어의 리더형",
-        "fpti": "LGDC"
+        "fpti": "LDTC"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "딜로포사우루스",
-        "type": "지능형 스트라이커",
-        "fpti": "SADC"
+        "type": "전략적 스프린터형",
+        "fpti": "SATC"
       }
     ],
     "compatibility": "기술적인 팀과 잘 어울리며, 공격과 수비를 연결하는 전술에 적합함.",
-    "fpti": "LGDE",
+    "fpti": "LDTE",
     "id": "FTI-11"
   },
   {
@@ -431,7 +431,7 @@
       {
         "koreaName": "카르카로돈토사우루스",
         "type": "테크니컬 리더형",
-        "fpti": "LGDE"
+        "fpti": "LDTE"
       },
       {
         "koreaName": "이구아노돈",
@@ -441,9 +441,9 @@
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "알로사우루스",
@@ -452,54 +452,54 @@
       }
     ],
     "compatibility": "조직적이고 안정적인 수비를 구축하는 팀에서 최상의 성과를 보이며, 공격 위주의 팀과는 조화가 어려울 수 있음.",
-    "fpti": "SGDE",
+    "fpti": "SDTE",
     "id": "FTI-12"
   },
   {
     "name": "Ankylosaurus",
     "koreaName": "안킬로사우루스",
-    "type": "전략적 방패",
+    "type": "전략적 수비형",
     "alias": "철벽 수비수",
     "summary": "철저한 수비와 패스를 통해 팀의 승리를 이끄는 리더",
-    "description": "안킬로사우루스는 견고한 갑옷과 강력한 방어력으로 적에게 저항하는 공룡이야. 전략적 방패는 수비를 철저히 하며, 패스를 통해 팀의 경기를 조율해.",
+    "description": "안킬로사우루스는 견고한 갑옷과 강력한 방어력으로 적에게 저항하는 공룡이야. 전략적 수비형은 수비를 철저히 하며, 패스를 통해 팀의 경기를 조율해.",
     "roleWithinTeam": "팀의 수비를 책임지고, 강력한 수비력으로 상대 공격을 차단함.",
     "recommendedTactics": "견고한 수비와 빠른 패스 전개를 통해 상대 공격을 차단하고, 반격을 준비하는 전술이 효과적.",
     "roleModel": "조르조 키엘리니 - 강력한 수비력으로 상대 공격을 무력화하는 철벽 수비수.",
     "fit": [
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       },
       {
         "koreaName": "트리케라톱스",
         "type": "방어의 리더형",
-        "fpti": "LGDC"
+        "fpti": "LDTC"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "스피노사우루스",
-        "type": "기술적 크리에이터",
-        "fpti": "SADE"
+        "type": "기술적 크리에이터형",
+        "fpti": "SATE"
       }
     ],
     "compatibility": "수비 중심의 팀에서 최상의 성과를 보이며, 공격적인 팀과는 조화가 어려울 수 있음.",
-    "fpti": "LGPC",
+    "fpti": "LDPC",
     "id": "FTI-13"
   },
   {
     "name": "Plesiosaurus",
     "koreaName": "플레시오사우루스",
-    "type": "협력적 수비수",
+    "type": "협력적 수비형",
     "alias": "신속한 협력자",
     "summary": "수비와 패스를 통해 팀의 승리를 도우며 협력하는 플레이어",
-    "description": "플레시오사우루스는 긴 목과 유선형의 몸을 가진 해양 파충류로, 민첩한 수영과 기민한 사냥 능력을 자랑해. 협력적 수비수는 빠른 수비와 패스로 팀을 지원해.",
+    "description": "플레시오사우루스는 긴 목과 유선형의 몸을 가진 해양 파충류로, 민첩한 수영과 기민한 사냥 능력을 자랑해. 협력적 수비형은 빠른 수비와 패스로 팀을 지원해.",
     "roleWithinTeam": "수비와 중원에서 신속한 움직임과 협력을 통해 팀의 수비를 강화하고, 빠른 전환 플레이를 지원함.",
     "recommendedTactics": "민첩한 움직임과 협력적인 수비를 통해 상대의 공격을 차단하고, 빠르게 공격으로 전환하는 전술이 효과적.",
     "roleModel": "카일 워커 - 뛰어난 속도와 협력적인 플레이로 팀의 수비와 공격을 지원하는 수비수.",
@@ -511,20 +511,20 @@
       },
       {
         "koreaName": "안킬로사우루스",
-        "type": "전략적 방패",
-        "fpti": "LGPC"
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
       }
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "케라토사우루스",
-        "type": "방어적 디펜더",
-        "fpti": "SGDC"
+        "type": "기술적 수비형",
+        "fpti": "SDTC"
       }
     ],
     "compatibility": "속도와 민첩성을 중시하는 팀에서 최고의 성과를 보이며, 느리고 수비적인 팀과는 조화가 어려울 수 있음.",
@@ -534,7 +534,7 @@
   {
     "name": "Brachiosaurus",
     "koreaName": "브라키오사우루스",
-    "type": "조율형 수비수",
+    "type": "조율하는 수비형",
     "alias": "높이 보는 전략가",
     "summary": "안정적인 수비와 패스로 팀을 조율하며, 경기를 즐기는 리더",
     "description": "브라키오사우루스는 긴 목을 가지고 있으며, 넓은 시야로 팀의 흐름을 조율해. 조율형 수비수는 수비를 안정적으로 유지하며 팀을 조율하는 역할을 해.",
@@ -555,14 +555,14 @@
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "딜로포사우루스",
-        "type": "지능형 스트라이커",
-        "fpti": "SADC"
+        "type": "전략적 스프린터형",
+        "fpti": "SATC"
       }
     ],
     "compatibility": "수비적이고 조직적인 팀에서 뛰어난 성과를 보이며, 공을 점유하는 전술에 적합함.",
@@ -572,7 +572,7 @@
   {
     "name": "Pteranodon",
     "koreaName": "프테라노돈",
-    "type": "안정적 지원자",
+    "type": "안정적 지원형",
     "alias": "하늘의 조율자",
     "summary": "수비와 패스를 통해 팀의 안정감을 제공하며, 전술적 유연성을 지닌 플레이어",
     "description": "프테라노돈은 날개를 펼치면 매우 큰 크기를 자랑하는 익룡으로, 넓은 시야와 민첩함으로 팀을 지원해. 안정적 지원자는 팀의 안정감을 유지하며, 전술적 유연성을 통해 팀을 돕는 역할을 해.",
@@ -582,7 +582,7 @@
     "fit": [
       {
         "koreaName": "플레시오사우루스",
-        "type": "협력적 수비수",
+        "type": "협력적 수비형",
         "fpti": "SGPC"
       },
       {
@@ -593,18 +593,257 @@
     ],
     "doNotFit": [
       {
-        "koreaName": "티라노사우루스 렉스",
+        "koreaName": "티라노사우루스",
         "type": "전투의 챔피언형",
-        "fpti": "LADC"
+        "fpti": "LATC"
       },
       {
         "koreaName": "딜로포사우루스",
-        "type": "지능형 스트라이커",
-        "fpti": "SADC"
+        "type": "전략적 스프린터형",
+        "fpti": "SATC"
       }
     ],
     "compatibility": "팀워크를 중시하는 플레이어들과의 협업에서 강점을 발휘하며, 패스 플레이를 중시하는 전술에 적합함.",
     "fpti": "SGPE",
     "id": "FTI-16"
+  },
+  {
+    "name": "Therizinosaurus",
+    "koreaName": "테리지노사우루스",
+    "type": "창의적 조율형",
+    "alias": "전장의 지휘관",
+    "summary": "팀의 중심에서 창의적이고 유연한 플레이로 경기를 조율하며, 승리를 향한 열정이 강한 선수.",
+    "description": "테리지노사우루스는 긴 앞다리와 날카로운 발톱을 가진 대형 공룡으로, 유연하고 창의적인 플레이 스타일을 보여줍니다. 중원의 중심에서 팀을 조율하며, 공격과 수비의 균형을 맞춥니다.",
+    "roleWithinTeam": "팀의 핵심으로 경기의 흐름을 조율하고, 창의적인 공격 전개를 이끕니다.",
+    "recommendedTactics": "빠르고 정확한 패스 플레이와 창의적인 전개를 통해 상대 수비를 무너뜨리는 전술이 효과적",
+    "roleModel": "케빈 더 브라위너 – EPL 맨체스터 시티의 플레이메이커로 중원에서 창의적이고 유연한 플레이로 팀을 이끌고, 경기의 흐름을 지배하는 선수.",
+    "fit": [
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 전략가형",
+        "fpti": "LAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "type": "전투의 챔피언형",
+        "fpti": "LATC"
+      }
+    ],
+    "compatibility": "창의적이고 팀 중심의 플레이를 선호하는 팀에서 뛰어난 성과를 발휘하며, 수비에 집중하는 팀과는 조화가 어려울 수 있습니다",
+    "fpti": "LMTC",
+    "id": "FTI-17"
+  },
+  {
+    "name": "Ornitholestes",
+    "koreaName": "오르니톨레스테스",
+    "type": "창의적 엔터테이너형",
+    "alias": "유연한 엔터테이너",
+    "summary": "중원에서 창의적인 개인기를 통해 팀을 이끌며, 경기에서 즐거움을 추구하는 엔터테이너.",
+    "description": "오르니톨레스테스는 날렵하고 빠른 움직임을 자랑하며, 창의적인 개인기로 팀을 이끄는 선수입니다.",
+    "roleWithinTeam": "중원에서 창의적인 드리블과 개인기로 팀을 공격적으로 이끌며 경기를 즐깁니다.",
+    "recommendedTactics": "유연한 움직임과 창의적인 개인기로 상대 수비를 돌파하는 전술이 효과적입니다.",
+    "roleModel": "부카요 사카 – EPL 아스널의 윙어로 창의적이고 화려한 플레이로 팬들을 즐겁게 하는 선수.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨 리더형",
+        "fpti": "LATE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
+      }
+    ],
+    "compatibility": "창의적이고 공격적인 팀에서 활약하며, 수비에 집중하는 팀에서는 성과를 내기 어려울 수 있습니다.",
+    "fpti": "LMTE",
+    "id": "FTI-18"
+  },
+  {
+    "name": "Compsognathus",
+    "koreaName": "콤프소그나투스",
+    "type": "패스 마스터형",
+    "alias": "패스의 마스터",
+    "summary": "작지만 민첩하게 움직이며, 정확한 패스로 중원에서 팀을 조율하는 선수.",
+    "description": "콤프소그나투스는 작은 크기에도 불구하고 빠르고 민첩하게 움직이며, 중원에서 정확한 패스로 팀을 이끄는 플레이어입니다.",
+    "roleWithinTeam": "정확한 패스로 팀의 공격을 전개하며, 중원의 중심에서 경기를 조율합니다.",
+    "recommendedTactics": "빠르고 정확한 패스를 통해 공격을 전개하고 상대의 허점을 공략하는 전술이 효과적입니다.",
+    "roleModel": "마르틴 외데고르 – EPL 아스널의 미드필더로 넓은 시야와 정확한 패스로 팀을 조율하는 동시에 강한 승부욕을 발휘하는 선수.",
+    "fit": [
+      {
+        "koreaName": "알로사우루스",
+        "name": "Allosaurus",
+        "type": "전략적 스트라이커형",
+        "fpti": "LAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 챔피언형",
+        "fpti": "LATC"
+      }
+    ],
+    "compatibility": "팀워크 중심의 플레이를 선호하는 팀과 잘 어울리며, 공격 중심의 전술에서 빛을 발합니다.",
+    "fpti": "LMPC",
+    "id": "FTI-19"
+  },
+  {
+    "name": "Archaeopteryx",
+    "koreaName": "아르카이옵테릭스",
+    "type": "조율형 플레이메이커",
+    "alias": "조율하는 플레이메이커",
+    "summary": "팀의 중심에서 정확한 패스를 통해 팀을 조율하고, 창의적인 플레이로 경기를 즐기는 선수.",
+    "description": "아르카이옵테릭스는 공중과 지상 모두에서 활동 가능한 유연한 플레이어로, 정확한 패스로 팀을 조율합니다.",
+    "roleWithinTeam": "중원에서 창의적인 패스로 팀의 흐름을 주도하며, 경기 템포를 조절합니다.",
+    "recommendedTactics": "빠르고 정확한 패스를 활용해 상대의 수비를 공략하고, 공격을 이끄는 전술이 효과적입니다.",
+    "roleModel": "브루노 페르난데스 – EPL 맨체스터 유나이티드의 미드필더로 창의적이고 유쾌한 플레이로 팀을 조율하는 선수.",
+    "fit": [
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 전략가형",
+        "fpti": "LAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "케라토사우루스",
+        "name": "Ceratosaurus",
+        "type": "기술적 수비형",
+        "fpti": "SDTC"
+      }
+    ],
+    "compatibility": "중원에서 팀을 조율하는 역할이 필요할 때 빛을 발휘하며, 공격적인 팀에 적합합니다.",
+    "fpti": "LMPE",
+    "id": "FTI-20"
+  },
+  {
+    "name": "Gallimimus",
+    "koreaName": "갈리미무스",
+    "type": "민첩한 조율형",
+    "alias": "민첩한 조율자",
+    "summary": "팀을 지원하며 창의적인 개인기로 상대를 돌파하고 승리를 목표로 하는 선수.",
+    "description": "갈리미무스는 빠르고 민첩한 움직임으로 팀을 조율하며, 중원에서의 활약을 통해 경기를 이끄는 선수입니다.",
+    "roleWithinTeam": "창의적인 개인기와 민첩한 움직임으로 팀의 공격을 주도합니다.",
+    "recommendedTactics": "상대 수비를 민첩하게 돌파하고, 빠른 속도로 공격을 전개하는 전술이 효과적입니다.",
+    "roleModel": "카이 하베르츠 – EPL 아스널의 미드필더로 창의적인 개인기와 유연한 플레이로 팀을 지원하는 선수.",
+    "fit": [
+      {
+        "koreaName": "콤프소그나투스",
+        "name": "Compsognathus",
+        "type": "패스 마스터형",
+        "fpti": "LMPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
+      }
+    ],
+    "compatibility": "창의적이고 공격적인 팀 환경에서 빛을 발휘하며, 수비 중심의 전술과는 조화가 어렵습니다.",
+    "fpti": "SMTC",
+    "id": "FTI-21"
+  },
+  {
+    "name": "Struthiomimus",
+    "koreaName": "스트루티오미무스",
+    "type": "유연한 엔터테이너형",
+    "alias": "속도와 유연성의 마법사",
+    "summary": "중원에서 창의적이고 유연한 플레이로 팀을 지원하며, 관중을 즐겁게 하는 선수.",
+    "description": "스트루티오미무스는 속도와 민첩성을 활용하여 팀의 공격을 주도하며, 중원에서 창의적인 플레이를 선보입니다.",
+    "roleWithinTeam": "빠르고 창의적인 드리블과 개인기로 팀의 공격을 지원합니다.",
+    "recommendedTactics": "속도를 활용한 빠른 전환 플레이와 민첩한 드리블로 상대 수비를 공략하는 전술이 효과적입니다.",
+    "roleModel": "필 포든 – EPL 맨체스터 시티의 미드필더로 창의적인 개인기와 즐거운 플레이로 팀을 이끄는 선수.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨 리더형",
+        "fpti": "LATE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "fpti": "LDPC"
+      }
+    ],
+    "compatibility": "공격적인 전술을 선호하는 팀에서 성과를 발휘하며, 방어 중심의 팀에서는 효과적이지 않을 수 있습니다.",
+    "fpti": "SMTE",
+    "id": "FTI-22"
+  },
+  {
+    "name": "Hypsilophodon",
+    "koreaName": "히프실로포돈",
+    "type": "패스 마법사형",
+    "alias": "패스의 마법사",
+    "summary": "정확한 패스로 중원에서 팀을 지원하며, 강한 승부욕으로 경기를 이끄는 선수.",
+    "description": "히프실로포돈은 빠르고 정확한 패스로 중원에서 팀을 지원하며, 승리를 위해 헌신하는 플레이어입니다.",
+    "roleWithinTeam": "중원에서 정확한 패스로 팀을 지원하며, 경기를 조율하는 역할을 수행합니다.",
+    "recommendedTactics": "정확한 패스를 통해 상대의 수비를 흔들고, 빠른 공격 전개를 이끄는 전술이 효과적입니다.",
+    "roleModel": "로드리 – EPL 맨체스터 시티의 미드필더로 패스와 강한 승부욕으로 팀을 이끄는 선수.",
+    "fit": [
+      {
+        "koreaName": "알로사우루스",
+        "name": "Allosaurus",
+        "type": "전략적 스트라이커형",
+        "fpti": "LAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 챔피언형",
+        "fpti": "LATC"
+      }
+    ],
+    "compatibility": "창의적이고 패스를 중시하는 전술을 선호하는 팀에서 빛을 발휘하며, 공격 중심의 팀에 적합합니다.",
+    "fpti": "SMPC",
+    "id": "FTI-23"
+  },
+  {
+    "name": "Maiasaura",
+    "koreaName": "마이아사우라",
+    "type": "조율의 달인형",
+    "alias": "조율의 달인",
+    "summary": "팀을 지원하며 정확한 패스 플레이로 경기를 조율하고, 창의적인 플레이를 즐기는 선수.",
+    "description": "마이아사우라는 공동체적 성향을 지닌 공룡으로, 팀을 지원하고 정확한 패스 플레이로 경기를 조율합니다.",
+    "roleWithinTeam": "중원에서 팀의 흐름을 조율하고, 창의적인 패스로 공격을 이끌어갑니다.",
+    "recommendedTactics": "패스 플레이와 유연한 전술을 통해 상대 수비를 무너뜨리는 전술이 효과적입니다.",
+    "roleModel": "메이슨 마운트 – EPL 맨체스터 유나이티드의 미드필더로 창의적인 패스와 즐거운 플레이로 팀을 지원하는 선수.",
+    "fit": [
+      {
+        "koreaName": "이구아노돈",
+        "name": "Iguanodon",
+        "type": "지원형 크리에이터형",
+        "fpti": "SAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 챔피언형",
+        "fpti": "LATC"
+      }
+    ],
+    "compatibility": "팀워크 중심의 플레이를 중시하는 팀에서 뛰어난 성과를 발휘하며, 창의적인 패스를 선호하는 팀에 적합합니다.",
+    "fpti": "SMPE",
+    "id": "FTI-24"
   }
 ]
