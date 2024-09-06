@@ -226,7 +226,7 @@
     "situation": "더 자신 있다고 느끼는 것은?",
     "options": [
       { "type": "A", "text": "슛팅" },
-      { "type": "G", "text": "패스/슛팅 차단" }
+      { "type": "G", "text": "슛팅 차단" }
     ],
     "scale": {
       "min": "A",
