@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "category": "Dribbler vs. Playmaker",
+    "category": "플레이 스타일",
     "situation": "상대 수비수와 맞닥뜨렸을 때",
     "options": [
-      { "type": "D", "text": "개인기로 돌파한다" },
+      { "type": "T", "text": "개인기로 돌파한다" },
       { "type": "P", "text": "다른 곳으로 패스한다" }
     ],
     "scale": {
-      "min": "D",
+      "min": "T",
       "max": "P"
     }
   },
   {
     "id": 2,
-    "category": "Dribbler vs. Playmaker",
+    "category": "플레이 스타일",
     "situation": "하루의 경기를 돌아봤을 때 더 뿌듯한 것은?",
     "options": [
-      { "type": "D", "text": "개인기로 90% 이상 돌파에 성공했을 때" },
+      { "type": "T", "text": "개인기로 90% 이상 돌파에 성공했을 때" },
       { "type": "P", "text": "패스 정확성이 90% 이상이었을 때" }
     ],
     "scale": {
-      "min": "D",
+      "min": "T",
       "max": "P"
     }
   },
   {
     "id": 3,
-    "category": "Dribbler vs. Playmaker",
+    "category": "플레이 스타일",
     "situation": "하프라인 밑에서 공을 점유했을 때",
     "options": [
-      { "type": "D", "text": "치고 달려 돌파한다" },
+      { "type": "T", "text": "치고 달려 돌파한다" },
       { "type": "P", "text": "천천히 빌드업한다" }
     ],
     "scale": {
-      "min": "D",
+      "min": "T",
       "max": "P"
     }
   },
   {
     "id": 4,
-    "category": "Dribbler vs. Playmaker",
+    "category": "플레이 스타일",
     "situation": "경기에 임하기 전에",
     "options": [
-      { "type": "D", "text": "연습한 개인기를 실전에서 사용하겠다고 다짐한다" },
+      { "type": "T", "text": "연습한 개인기를 실전에서 사용하겠다고 다짐한다" },
       { "type": "P", "text": "고개를 들고 정확하게 패스하겠다고 다짐한다" }
     ],
     "scale": {
-      "min": "D",
+      "min": "T",
       "max": "P"
     }
   },
   {
     "id": 5,
-    "category": "Dribbler vs. Playmaker",
+    "category": "플레이 스타일",
     "situation": "노마크 찬스로 상대 골키퍼가 앞에 있을 때",
     "options": [
-      { "type": "D", "text": "골키퍼를 제치고 직접 슛한다" },
+      { "type": "T", "text": "골키퍼를 제치고 직접 슛한다" },
       { "type": "P", "text": "뒤에서 쇄도하는 팀원에게 패스한다" }
     ],
     "scale": {
-      "min": "D",
+      "min": "T",
       "max": "P"
     }
   },
   {
     "id": 6,
-    "category": "Competitor vs. Entertainer",
+    "category": "목표와 우선순위",
     "situation": "친선경기에서 가장 중요한 것은?",
     "options": [
       { "type": "C", "text": "이기는 것이 중요하다" },
@@ -79,7 +79,7 @@
   },
   {
     "id": 7,
-    "category": "Competitor vs. Entertainer",
+    "category": "목표와 우선순위",
     "situation": "실점할 상황이 생겼을 때, 파울로 끊는 것이 중요한가?",
     "options": [
       { "type": "C", "text": "그렇다" },
@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "category": "Competitor vs. Entertainer",
+    "category": "목표와 우선순위",
     "situation": "경기 중 심판이 부당한 판정을 내렸을 때",
     "options": [
       { "type": "C", "text": "적극적으로 이의를 제기한다" },
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "category": "Competitor vs. Entertainer",
+    "category": "목표와 우선순위",
     "situation": "팀원이 실수를 반복할 때",
     "options": [
       { "type": "C", "text": "매우 화가 난다" },
@@ -118,7 +118,7 @@
   },
   {
     "id": 10,
-    "category": "Competitor vs. Entertainer",
+    "category": "목표와 우선순위",
     "situation": "대회에 참가하는 목적은?",
     "options": [
       { "type": "C", "text": "결과가 중요하다" },
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "category": "Leader vs. Supporter",
+    "category": "팀에서의 역할",
     "situation": "다른 팀원의 플레이에 개선이 필요할 때",
     "options": [
       { "type": "L", "text": "직접 피드백을 준다" },
@@ -144,7 +144,7 @@
   },
   {
     "id": 12,
-    "category": "Leader vs. Supporter",
+    "category": "팀에서의 역할",
     "situation": "우리 팀의 플레이가 잘 안 풀릴 때",
     "options": [
       { "type": "L", "text": "나서서 경기를 이끌어 간다" },
@@ -157,7 +157,7 @@
   },
   {
     "id": 13,
-    "category": "Leader vs. Supporter",
+    "category": "팀에서의 역할",
     "situation": "내가 더 같이 플레이하고 싶은 사람은?",
     "options": [
       { "type": "L", "text": "조용히 보조를 잘 해주는 사람" },
@@ -170,7 +170,7 @@
   },
   {
     "id": 14,
-    "category": "Leader vs. Supporter",
+    "category": "팀에서의 역할",
     "situation": "팀원들이 나를 어떤 플레이어로 기억해주었으면 좋겠는가?",
     "options": [
       { "type": "L", "text": "해결사, 골잡이" },
@@ -183,7 +183,7 @@
   },
   {
     "id": 15,
-    "category": "Leader vs. Supporter",
+    "category": "팀에서의 역할",
     "situation": "내가 교체 투입될 때, 코치진이 나에게 기대하는 역할은?",
     "options": [
       { "type": "L", "text": "경기의 흐름을 바꿔주는 역할" },
@@ -196,67 +196,67 @@
   },
   {
     "id": 16,
-    "category": "Attacker vs. Guardian",
+    "category": "팀에서의 역할",
     "situation": "강한 상대팀을 만났을 때",
     "options": [
       { "type": "A", "text": "골 득점이 핵심 목표이다" },
-      { "type": "G", "text": "무실점이 핵심 목표이다" }
+      { "type": "D", "text": "무실점이 핵심 목표이다" }
     ],
     "scale": {
       "min": "A",
-      "max": "G"
+      "max": "D"
     }
   },
   {
     "id": 17,
-    "category": "Attacker vs. Guardian",
+    "category": "팀에서의 역할",
     "situation": "우리 팀원이 상대의 공격을 차단했을 때",
     "options": [
       { "type": "A", "text": "전방으로 뛰어나가 상대의 뒷공간을 점유한다" },
-      { "type": "G", "text": "뒤로 빠져서 안전하게 패스를 받아준다" }
+      { "type": "D", "text": "뒤로 빠져서 안전하게 패스를 받아준다" }
     ],
     "scale": {
       "min": "A",
-      "max": "G"
+      "max": "D"
     }
   },
   {
     "id": 18,
-    "category": "Attacker vs. Guardian",
+    "category": "팀에서의 역할",
     "situation": "더 자신 있다고 느끼는 것은?",
     "options": [
       { "type": "A", "text": "슛팅" },
-      { "type": "G", "text": "슛팅 차단" }
+      { "type": "D", "text": "슛팅 차단" }
     ],
     "scale": {
       "min": "A",
-      "max": "G"
+      "max": "D"
     }
   },
   {
     "id": 19,
-    "category": "Attacker vs. Guardian",
+    "category": "팀에서의 역할",
     "situation": "우리 팀 공격 상황에서 공을 빼앗겼을 때",
     "options": [
       { "type": "A", "text": "전방 압박으로 다시 공을 탈환한다" },
-      { "type": "G", "text": "수비 위치로 복귀한다" }
+      { "type": "D", "text": "수비 위치로 복귀한다" }
     ],
     "scale": {
       "min": "A",
-      "max": "G"
+      "max": "D"
     }
   },
   {
     "id": 20,
-    "category": "Attacker vs. Guardian",
+    "category": "팀에서의 역할",
     "situation": "하루의 플레이를 돌이켜봤을 때",
     "options": [
       { "type": "A", "text": "골 찬스를 놓친 게 더 속상하다" },
-      { "type": "G", "text": "내 실책으로 위기 상황이 왔던 것이 더 속상하다" }
+      { "type": "D", "text": "내 실책으로 위기 상황이 왔던 것이 더 속상하다" }
     ],
     "scale": {
       "min": "A",
-      "max": "G"
+      "max": "D"
     }
   }
 ]
