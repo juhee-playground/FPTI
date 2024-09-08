@@ -1,5 +1,5 @@
 declare global {
-  type TPersonalityType = 'D' | 'P' | 'C' | 'E' | 'L' | 'S' | 'A' | 'G';
+  type TPersonalityType = 'T' | 'P' | 'C' | 'E' | 'L' | 'S' | 'A' | 'M' | 'D';
   type TButtonVariant = 'text' | 'contained' | 'outlined' | 'fab';
   type TPersonalityType = {
     id: number;

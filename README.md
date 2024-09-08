@@ -14,12 +14,12 @@ yarn run dev
 
     1.	Offensive (공격형) vs. Defensive (수비형)
     •	Offensive: Attacker (A)
-    •	Defensive: Guardian (G)
-    •	“Guardian”은 수비적인 역할을 강조하며, 첫 글자 “G”로 “A”와 겹치지 않도록 선택했습니다.
-    2.	Dribbling (개인기형) vs. Passing (패스형)
-    •	Dribbling: Dribbler (D)
+    •	Defensive: Defenser (D)
+    •	Defenser 수비적인 역할을 강조하며, 첫 글자 “D”로 “A”와 겹치지 않도록 선택했습니다.
+    2.	Trickster (개인기형) vs. Passing (패스형)
+    •	Dribbling: Trickster (T)
     •	Passing: Playmaker (P)
-    •	“Playmaker”는 패스를 중시하는 역할을 의미하며, 첫 글자 “P”로 “S”와 겹치지 않도록 선택했습니다.
+    •	Passer 패스를 중시하는 역할을 의미하며, 첫 글자 “P”로 “S”와 겹치지 않도록 선택했습니다.
     3.	Winning (승부추구형) vs. Fun (재미추구형)
     •	Winning: Competitor (C)
     •	Fun: Entertainer (E)
@@ -40,10 +40,10 @@ type TPersonalityType = {
 };
 ```
 
-• Dribbler (D): 개인기를 통해 상대를 돌파하는 플레이어를 의미합니다.
+• Trickster (T): 개인기를 통해 상대를 돌파하는 플레이어를 의미합니다.
 • Playmaker (P): 패스와 경기 운영을 통해 팀을 조율하는 플레이어를 의미합니다.
 • Attacker (A): 공격에 집중하여 득점을 목표로 하는 플레이어를 의미합니다.
-• Guardian (G): 수비에 집중하여 무실점을 목표로 하는 플레이어를 의미합니다.
+• Defenser (D): 수비에 집중하여 무실점을 목표로 하는 플레이어를 의미합니다.
 • Competitor (C): 승부욕이 강하고 경기에서 이기는 것을 중시하는 플레이어를 의미합니다.
 • Entertainer (E): 경기의 재미와 즐거움을 추구하는 플레이어를 의미합니다.
 • Leader (L): 팀을 이끌고 주도하는 역할을 맡는 플레이어를 의미합니다.
