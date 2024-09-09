@@ -23,7 +23,9 @@ const ResultPage = () => {
 
   const handleCopyLink = () => {
     const currentUrl = window.location.origin;
-    const shareableUrl = `${currentUrl}/result${fpti}?${queryString}`;
+    const shareableUrl = `${currentUrl}/result/${fpti}?finalResult=${queryString}`;
+
+    console.log(shareableUrl);
 
     navigator.clipboard.writeText(shareableUrl).then(() => {
       alert('링크가 클립보드에 복사되었습니다!');
