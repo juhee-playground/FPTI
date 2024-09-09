@@ -9,7 +9,7 @@ export const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #4ac390;
+  background-color: ${colors.background};
   color: ${colors.white};
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto;

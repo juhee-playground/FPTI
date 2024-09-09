@@ -11,18 +11,18 @@ export const ResultContainer = styled.div`
   background-color: ${colors.background};
   color: ${colors.white};
   overflow-y: auto;
-  max-height: calc(100vh - 44px);
+  max-height: calc(100vh - 92px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   gap: 16px;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h3`
   margin: 0;
-`;
-
-export const ResultItem = styled.div`
-  display: flex;
-  align-items: center;
+  span {
+    &:nth-child(2) {
+      color: #0128ff;
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`

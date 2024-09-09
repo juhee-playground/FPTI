@@ -5,7 +5,7 @@ import { getColorByType } from '@/utils/color';
 
 const CHAR_WIDTH = 3;
 
-export const TypeComparisonBarContainer = styled.div`
+export const TypeComparisonBarContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +33,7 @@ export const Progress = styled.div<{ $percentage: number; $type: string; $isReve
 `;
 
 export const PercentageText = styled.span<{ $isMain: boolean; $percentage: number; $isReverse: boolean }>`
-  font-weight: bold;
-  color: ${colors.black};
-  font-size: ${({ $isMain }) => ($isMain ? '1rem' : '0.8125rem')};
+  font-size: ${({ $isMain }) => ($isMain ? '0.875rem' : '0.8125rem')};
   font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'normal')};
   color: ${({ $isMain }) => ($isMain ? colors.black : colors.border.darken)};
   position: absolute;
@@ -68,12 +66,12 @@ export const TypeLabel = styled.h2<{ $isMain: boolean }>`
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: ${({ $isMain }) => ($isMain ? colors.white : colors.black)};
 `;
 
 export const TypeDescription = styled.p<{ $isMain: boolean }>`
-  font-size: 0.8125rem;
-  font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'noraml')};
+  font-size: 0.75rem;
+  font-weight: ${({ $isMain }) => ($isMain ? 'bold' : 'normal')};
   color: #000;
 `;

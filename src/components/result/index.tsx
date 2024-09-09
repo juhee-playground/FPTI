@@ -1,6 +1,7 @@
+import React from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import { ResultContainer, Title, ResultItem, ButtonContainer } from './Result.styles';
+import { ResultContainer, Title, ButtonContainer } from './Result.styles';
 
 import { findResultById } from '@/api/result';
 import Button from '@/components/common/button';
@@ -34,8 +35,15 @@ const ResultPage = () => {
 
   return (
     <ResultContainer>
-      <ImageBox topTypes={fpti} />
-      <Title>너의 타입은 : {fpti}</Title>
+      <div>
+        <ImageBox topTypes={fpti} width={300} height={300} />
+        <Title>
+          <span>너의 타입은 </span>
+          <span>
+            {fpti} ({resultDescription?.type})
+          </span>
+        </Title>
+      </div>
       {Object.entries(reconstructedResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];
         const [type2, percentage2] = Object.entries(values)[1];
@@ -43,7 +51,7 @@ const ResultPage = () => {
         const midLabel = values.M ? 'M' : undefined;
         const isReverse = percentage2 > percentage1;
         return (
-          <ResultItem key={group}>
+          <React.Fragment key={group}>
             <TypeComparisonBar
               startLabel={type1}
               midLabel={midLabel}
@@ -51,7 +59,7 @@ const ResultPage = () => {
               percentage={Math.max(percentage1, percentage2)}
               isReverse={isReverse}
             />
-          </ResultItem>
+          </React.Fragment>
         );
       })}
       <TypeDescription content={resultDescription} />

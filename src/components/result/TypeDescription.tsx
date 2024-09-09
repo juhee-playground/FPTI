@@ -1,19 +1,19 @@
 interface ITypeDescriptionProps {}
 import {
   ArticleContainer,
-  DinosaurHeader,
-  FlexDiv,
-  DinosaurKoreanName,
-  DinosaurType,
+  Content,
+  DescriptionTitle,
   DescriptionText,
   List,
   ListItem,
+  ListItemColumn,
 } from './TypeDescription.styles';
 
 interface IFitOrNotFitType {
   type: string;
   fpti: string;
   koreaName: string;
+  reason: string;
 }
 
 interface ITraining {
@@ -29,6 +29,7 @@ interface IContent {
   roleWithinTeam: string;
   recommendedTactics: string;
   roleModel: string;
+  compatibility: string;
   fit: IFitOrNotFitType[];
   doNotFit: IFitOrNotFitType[];
   training: {
@@ -44,81 +45,77 @@ interface ITypeDescriptionProps {
 const TypeDescription = ({ content }: ITypeDescriptionProps) => {
   return (
     <ArticleContainer>
-      <DinosaurHeader>
-        <FlexDiv>
-          <DinosaurType>{content?.type}</DinosaurType>
-          <DinosaurKoreanName>{content?.koreaName}</DinosaurKoreanName>
-        </FlexDiv>
-      </DinosaurHeader>
-
-      <section>
+      <Content>
         <DescriptionText>{content?.description}</DescriptionText>
-      </section>
+      </Content>
 
-      <section>
-        <h3>팀 내 역할</h3>
+      <Content>
+        <DescriptionTitle>팀 내 역할</DescriptionTitle>
         <DescriptionText>{content?.roleWithinTeam}</DescriptionText>
-      </section>
+      </Content>
 
-      <section>
-        <h3>추천 전술</h3>
+      <Content>
+        <DescriptionTitle>추천 전술</DescriptionTitle>
         <DescriptionText>{content?.recommendedTactics}</DescriptionText>
-      </section>
+      </Content>
 
-      <section>
-        <h3>비슷한 유형의 선수</h3>
+      <Content>
+        <DescriptionTitle>잘 맞는 팀</DescriptionTitle>
+        <DescriptionText>{content?.compatibility}</DescriptionText>
+      </Content>
+
+      <Content>
+        <DescriptionTitle>비슷한 유형의 선수</DescriptionTitle>
         <DescriptionText>{content?.roleModel}</DescriptionText>
-      </section>
+      </Content>
 
-      <section>
-        <h3>어울리는 유형</h3>
+      <Content>
+        <DescriptionTitle>어울리는 유형</DescriptionTitle>
         <List>
           {content?.fit.map((item, index) => (
-            <ListItem key={index}>
-              <span>
-                {item.type}({item.fpti})
-              </span>
-              <span>{` - ${item.koreaName}`}</span>
-            </ListItem>
+            <ListItemColumn key={index}>
+              <span>{`${item.type}(${item.fpti}) - ${item.koreaName}`}</span>
+              <span>{item.reason}</span>
+            </ListItemColumn>
           ))}
         </List>
-      </section>
+      </Content>
 
-      <section>
-        <h3>어울리지 않는 유형</h3>
+      <Content>
+        <DescriptionTitle>어울리지 않는 유형</DescriptionTitle>
         <List>
           {content?.doNotFit.map((item, index) => (
-            <ListItem key={index}>
-              <span>
-                {item.type}({item.fpti})
-              </span>
-              <span>{` - ${item.koreaName}`}</span>
-            </ListItem>
+            <ListItemColumn key={index}>
+              <span>{`${item.type}(${item.fpti}) - ${item.koreaName}`}</span>
+              <span>{item.reason}</span>
+            </ListItemColumn>
           ))}
         </List>
-      </section>
+      </Content>
 
-      <section>
-        <h3>강점 강화 훈련</h3>
+      <Content>
+        <DescriptionTitle>강점 강화 훈련</DescriptionTitle>
         <List>
           {content?.training?.strengthen.map((tarining, index) => (
             <ListItem key={index}>
-              <span>{tarining.name}</span> <span>{` - ${tarining.description}`}</span>
+              <span>{tarining.name}</span>
+              <span> - {tarining.description}</span>
             </ListItem>
           ))}
         </List>
-      </section>
+      </Content>
 
-      <section>
-        <h3>약점 보완 훈련</h3>
+      <Content>
+        <DescriptionTitle>약점 보완 훈련</DescriptionTitle>
         <List>
           {content?.training?.supplement.map((tarining, index) => (
             <ListItem key={index}>
-              <span>{tarining.name}</span> <span>{` - ${tarining.description}`}</span>
+              <span>{tarining.name}</span>
+              <span> - {tarining.description}</span>
             </ListItem>
           ))}
         </List>
-      </section>
+      </Content>
     </ArticleContainer>
   );
 };
