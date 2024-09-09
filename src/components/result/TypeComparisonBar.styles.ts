@@ -38,7 +38,7 @@ export const PercentageText = styled.span<{ $isMain: boolean; $percentage: numbe
   color: ${({ $isMain }) => ($isMain ? colors.black : colors.border.darken)};
   position: absolute;
   right: ${({ $isReverse, $percentage }) => {
-    const text = `${parseFloat($percentage.toFixed(2))}%`;
+    const text = `${Math.ceil($percentage)}%`;
     const textWidth = text.length * CHAR_WIDTH;
     const x = $percentage - textWidth;
     return $isReverse ? `${x}%` : `${100 - x}%`;

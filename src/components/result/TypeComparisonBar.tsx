@@ -43,7 +43,7 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
       <BarWrapper $isReverse={isReverse}>
         <Progress $percentage={percentage} $type={isReverse ? endLabel : startLabel} $isReverse={isReverse}>
           <PercentageText $isMain $percentage={percentage} $isReverse={isReverse}>
-            {`${percentage.toFixed(0)}%`}
+            {`${Math.ceil(percentage)}%`}
           </PercentageText>
         </Progress>
       </BarWrapper>

@@ -16,15 +16,6 @@ export const getGroupByKey = (key: string): string => {
   return groupMap[key] || 'Unknown';
 };
 
-const adjustPercentage = (percentage: number, category: string): number => {
-  console.log(percentage, category);
-  if (category === '팀에서의 역할') {
-    return percentage;
-  }
-
-  return percentage === 50 ? 51 : percentage;
-};
-
 // 최종 결과를 계산하는 함수
 export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]: IScaleValue } => {
   const finalScale: { [group: string]: IScaleValue } = {};
@@ -59,8 +50,7 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
     }
 
     for (const key in finalScale[group]) {
-      const rawPercentage = (finalScale[group][key] / total) * 100;
-      finalScale[group][key] = adjustPercentage(rawPercentage, group);
+      finalScale[group][key] = (finalScale[group][key] / total) * 100;
     }
   }
 

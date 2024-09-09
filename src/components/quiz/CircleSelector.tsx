@@ -2,7 +2,7 @@ import { Container, Circle, BallImage } from './CircleSelector.styles';
 
 import ballImage from '@/assets/icon-ball.png';
 
-const circleSizes = [48, 40, 32, 24, 32, 40, 48];
+const circleSizes = [48, 40, 32, 32, 40, 48];
 
 interface ICircleSelectorProps {
   selectedValue: number | null;
