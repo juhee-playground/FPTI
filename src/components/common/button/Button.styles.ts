@@ -11,7 +11,7 @@ const buttonStyles = {
   `,
   outlined: css<{ $color?: string }>`
     background-color: inherit;
-    border: 1px solid ${({ $color }) => getCustomColor($color)};
+    border: 2px solid ${({ $color }) => getCustomColor($color)};
     color: ${({ $color }) => getCustomColor($color)};
   `,
   text: css<{ $color?: string }>`
@@ -37,14 +37,14 @@ export const StyledButton = styled.button<{
 }>`
   border-radius: 4px;
   font-size: ${typography.body.fontSize};
-  font-weight: ${typography.body.fontWeight};
+  font-weight: ${typography.heading2.fontWeight};
   font-family: ${typography.fontFamily};
   cursor: pointer;
   transition: background-color 0.25s;
 
   margin: 1rem;
   color: ${colors.black};
-  padding: 1rem 1.6rem;
+  padding: 1rem;
   border-radius: 0.375rem;
 
   display: flex;

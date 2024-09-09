@@ -8,7 +8,7 @@ export const colors = {
   secondaryDark: '#CC3700',
   secondaryLight: '#fd9363',
   secondaryOpacity: 'rgba(255, 69, 0, 0.5)',
-  background: '#FFFFFF',
+  background: '#4ac390',
 
   hover: 'rgba(34, 139, 34, 0.7)',
   disabled: {
@@ -30,7 +30,6 @@ export const colors = {
     placeholder: '#757575',
     error: '#e91e63',
   },
-
   success: {
     default: '#4caf50',
     lighter: '#d4edda',
