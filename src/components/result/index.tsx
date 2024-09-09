@@ -1,8 +1,9 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import { ResultContainer, Title, ResultItem, Button } from './Result.styles';
+import { ResultContainer, Title, ResultItem, ButtonContainer } from './Result.styles';
 
 import { findResultById } from '@/api/result';
+import Button from '@/components/common/button';
 import ImageBox from '@/components/common/imageBox';
 import TypeComparisonBar from '@/components/result/TypeComparisonBar';
 import TypeDescription from '@/components/result/TypeDescription';
@@ -18,6 +19,15 @@ const ResultPage = () => {
 
   const handleRetry = () => {
     navigate('/landing');
+  };
+
+  const handleCopyLink = () => {
+    const currentUrl = window.location.origin;
+    const shareableUrl = `${currentUrl}/result${fpti}?${queryString}`;
+
+    navigator.clipboard.writeText(shareableUrl).then(() => {
+      alert('링크가 클립보드에 복사되었습니다!');
+    });
   };
 
   return (
@@ -43,7 +53,14 @@ const ResultPage = () => {
         );
       })}
       <TypeDescription content={resultDescription} />
-      <Button onClick={handleRetry}>검사 다시하기</Button>
+      <ButtonContainer>
+        <Button variant='outlined' color='cancel' onClick={handleRetry}>
+          검사 다시하기
+        </Button>
+        <Button variant='outlined' color='cancel' onClick={handleCopyLink}>
+          링크 복사하기
+        </Button>
+      </ButtonContainer>
     </ResultContainer>
   );
 };

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 import { colors } from '@/styles/colors';
+import { flexSpaceBetween } from '@/styles/mixins';
 
 export const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 1.25rem;
-  background-color: #4ac390;
+  background-color: ${colors.background};
   color: ${colors.white};
-  overflow-y: auto; /* 세로 스크롤을 활성화 */
-  max-height: 100vh; /* 화면 높이의 80%로 최대 높이 설정 */
+  overflow-y: auto;
+  max-height: calc(100vh - 44px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   gap: 16px;
 `;
@@ -22,6 +23,10 @@ export const Title = styled.h2`
 export const ResultItem = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const ButtonContainer = styled.div`
+  ${flexSpaceBetween}
 `;
 
 export const Button = styled.button`
