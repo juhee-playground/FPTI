@@ -14,6 +14,8 @@ export const getCustomColor = (color?: string) => {
   switch (color) {
     case 'primary':
       return colors.primary;
+    case 'secondary':
+      return colors.secondary;
     case 'error':
       return colors.error.default;
     case 'warning':
@@ -24,7 +26,7 @@ export const getCustomColor = (color?: string) => {
       return colors.info.default;
     case 'cancel':
     case 'default':
-      return colors.cancel.default;
+      return colors.cancel.lighter;
     default:
       return color || colors.primary;
   }

@@ -28,6 +28,12 @@ export const flexPowerCenter = css`
   align-items: center;
 `;
 
+export const flexSpaceBetween = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const TextNoneDrag = css`
   user-select: none;
   -webkit-user-select: none;

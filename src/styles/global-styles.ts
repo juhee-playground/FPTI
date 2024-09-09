@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${typography.fontFamily};
     font-size: 16px;
     color: ${colors.black};
-    background-color: ${colors.background};
+    background-color: ${colors.white};
     width: 100%;
   }
 
