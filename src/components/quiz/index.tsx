@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Question from '@/components/quiz/question';
-import Result from '@/components/quiz/result';
+import QuestionContainer from '@/components/quiz/QuestionContainer';
 import QUESTIONS from '@/data/DB_QUESTIONS.json';
-import { calculateFinalResult } from '@/utils/calculateResult';
+import { calculateFinalResult, getTopTypesSorted, sortFinalResult } from '@/utils/calculateResult';
+import { generateQueryStringFromNestedResult } from '@/utils/queryString';
 
 const questions = QUESTIONS;
 
 const Quiz = () => {
+  const navigate = useNavigate();
   const [quizResult, setQuizResult] = useState<IQuizResult>({ answers: [] });
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
-  const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
   const calculatePercentage = (currentIndex: number, totalQuestions: number) => {
     const rawPercentage = ((currentIndex + 1) / totalQuestions) * 100;
@@ -45,33 +46,28 @@ const Quiz = () => {
       moveToNextQuestion(newIndex, finalPercentage);
     } else {
       const result = calculateFinalResult({ answers: newAnswers });
-      setFinalResult(result);
+      const fpti = getTopTypesSorted(result); // FPTI 문자열 계산
+      const sortedFinalResult = sortFinalResult(result);
+      const queryString = generateQueryStringFromNestedResult(sortedFinalResult);
+      navigate(`/result/${fpti}?finalResult=${queryString}`);
     }
   };
 
-  const resetQuiz = () => {
-    setQuizResult({ answers: [] });
-    setCurrentQuestionIndex(0);
-    setFinalResult(null);
-  };
+  console.log(questions[currentQuestionIndex]);
 
   return (
     <React.Fragment>
-      {finalResult ? (
-        <Result finalResult={finalResult} onRetry={resetQuiz} />
-      ) : (
-        <Question
-          questionId={questions[currentQuestionIndex].id}
-          questionText={questions[currentQuestionIndex].situation}
-          percentage={currentPercentage}
-          options={questions[currentQuestionIndex].options}
-          scale={questions[currentQuestionIndex].scale}
-          onAnswer={handleAnswer}
-          onPrevious={handlePrevious}
-          isFirstQuestion={currentQuestionIndex === 0}
-          selectedValue={quizResult.answers[currentQuestionIndex]?.scale || null}
-        />
-      )}
+      <QuestionContainer
+        questionId={questions[currentQuestionIndex].id}
+        questionText={questions[currentQuestionIndex].situation}
+        percentage={currentPercentage}
+        options={questions[currentQuestionIndex].options}
+        scale={questions[currentQuestionIndex].scale}
+        onAnswer={handleAnswer}
+        onPrevious={handlePrevious}
+        isFirstQuestion={currentQuestionIndex === 0}
+        selectedValue={quizResult.answers[currentQuestionIndex]?.scale || null}
+      />
     </React.Fragment>
   );
 };
