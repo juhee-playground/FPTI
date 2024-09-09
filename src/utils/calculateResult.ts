@@ -16,6 +16,15 @@ export const getGroupByKey = (key: string): string => {
   return groupMap[key] || 'Unknown';
 };
 
+const adjustPercentage = (percentage: number, category: string): number => {
+  console.log(percentage, category);
+  if (category === '팀에서의 역할') {
+    return percentage;
+  }
+
+  return percentage === 50 ? 51 : percentage;
+};
+
 // 최종 결과를 계산하는 함수
 export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]: IScaleValue } => {
   const finalScale: { [group: string]: IScaleValue } = {};
@@ -46,13 +55,12 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
 
       if (Math.abs(attackerScore - defenderScore) <= balanceThreshold) {
         finalScale[group].M = (attackerScore + defenderScore) / 2;
-        // delete finalScale[group].A;
-        // delete finalScale[group].D;
       }
     }
 
     for (const key in finalScale[group]) {
-      finalScale[group][key] = (finalScale[group][key] / total) * 100;
+      const rawPercentage = (finalScale[group][key] / total) * 100;
+      finalScale[group][key] = adjustPercentage(rawPercentage, group);
     }
   }
 
