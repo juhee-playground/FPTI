@@ -19,8 +19,11 @@ export const ResultContainer = styled.div`
 export const Title = styled.h3`
   margin: 0;
   span {
+    &:nth-child(1) {
+      color: ${colors.black};
+    }
     &:nth-child(2) {
-      color: #0128ff;
+      color: ${colors.white};
     }
   }
 `;

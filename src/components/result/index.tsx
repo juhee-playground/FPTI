@@ -37,7 +37,7 @@ const ResultPage = () => {
     <ResultContainer>
       <ImageBox topTypes={fpti} width={335} height={335} />
       <Title>
-        <span>너의 타입은 </span>
+        <span>나의 타입은 </span>
         <span>
           {fpti} ({resultDescription?.type})
         </span>
