@@ -1,13 +1,14 @@
-const images = import.meta.glob<{ default: string }>('/src/assets/*.png', { eager: true });
-
 interface IimageBoxProps {
   topTypes: string | undefined;
   width: number;
   height: number;
 }
+const images = import.meta.glob<{ default: string }>(`/src/assets/*.webp`, { eager: true });
+
 const ImageBox = ({ topTypes, width, height }: IimageBoxProps) => {
-  const imageName = `/src/assets/${topTypes}.png`;
+  const imageName = `/src/assets/${topTypes}.webp`;
   const imageSrc = images[imageName]?.default;
+  console.log(imageSrc);
 
   if (!imageSrc) {
     return <div>이미지를 찾을 수 없습니다.</div>;
