@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { QuestionContainer, QuestionBox, SelectContainer, ButtonContainer } from './Question.styles';
 
-import backgroundImg from '@/assets/bg_field.png';
 import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
 import OptionSelector from '@/components/quiz/question/OptionSelector';
@@ -72,7 +71,7 @@ const Question = ({
   }, [isNotSelected, currentSelectedValue]); // 의존성 배열에 isNotSelected 추가
 
   return (
-    <QuestionContainer $backgroundImage={backgroundImg}>
+    <QuestionContainer>
       <Progress percentage={percentage} />
       <QuestionBox>
         <QuestionHeader questionText={questionText} />

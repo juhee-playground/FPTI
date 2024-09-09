@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from '@/styles/colors';
 import { TextNoneDrag } from '@/styles/mixins';
 
-export const QuestionContainer = styled.div<{ $backgroundImage: string }>`
+export const QuestionContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
