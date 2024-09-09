@@ -53,8 +53,6 @@ const Quiz = () => {
     }
   };
 
-  console.log(questions[currentQuestionIndex]);
-
   return (
     <React.Fragment>
       <QuestionContainer
