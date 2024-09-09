@@ -13,12 +13,6 @@ const Quiz = () => {
   const [currentPercentage, setCurrentPercentage] = useState<number>(0);
   const [finalResult, setFinalResult] = useState<IPersonalityTypeScores | null>(null);
 
-  // const updateQuizResult = (questionId: number, scaleValue: IScaleValue, quizResult: IQuizResult) => {
-  //   return {
-  //     answers: [...quizResult.answers, { questionId, scale: scaleValue }],
-  //   };
-  // };
-
   const calculatePercentage = (currentIndex: number, totalQuestions: number) => {
     const rawPercentage = ((currentIndex + 1) / totalQuestions) * 100;
     const adjustedPercentage = Math.round(rawPercentage * 10) / 10;

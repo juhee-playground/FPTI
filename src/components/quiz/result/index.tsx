@@ -45,7 +45,6 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
   const sortedFinalResult = sortFinalResult(finalResult);
 
   const resultDescription = findResultById(topTypes) || null;
-  // console.log(resultDescription);
 
   const handleRetry = () => {
     onRetry();
