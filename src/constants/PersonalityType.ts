@@ -91,3 +91,5 @@ export const PERSONALITY_TYPES: { [key: string]: IPersonalityType } = {
     weaknesses: ['게임을 진지하게 받아들이지 않을 수 있음', '승리에 대한 집중력이 떨어질 수 있음'],
   },
 };
+
+export const GROUP_PRIORITY_ORDER = ['책임감과 주도성', '팀에서의 역할', '플레이 스타일', '목표와 우선순위'];

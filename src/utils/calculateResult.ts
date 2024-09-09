@@ -1,5 +1,6 @@
-// 그룹을 키로 매핑하는 유틸리티 함수
-const getGroupByKey = (key: string): string => {
+import { GROUP_PRIORITY_ORDER } from '@/constants/PersonalityType';
+
+export const getGroupByKey = (key: string): string => {
   const groupMap: { [key: string]: string } = {
     L: '책임감과 주도성',
     S: '책임감과 주도성',
@@ -56,4 +57,28 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
   }
 
   return finalScale;
+};
+
+export const getTopTypesSorted = (finalResult: IPersonalityTypeScores): string => {
+  const selectedTypes = Object.entries(finalResult).map(([group, values]) => {
+    if (values.M) {
+      return { type: 'M', group };
+    }
+
+    const [type1, percentage1] = Object.entries(values)[0];
+    const [type2, percentage2] = Object.entries(values)[1];
+    return percentage1 >= percentage2 ? { type: type1, group } : { type: type2, group };
+  });
+
+  selectedTypes.sort((a, b) => GROUP_PRIORITY_ORDER.indexOf(a.group) - GROUP_PRIORITY_ORDER.indexOf(b.group));
+
+  return selectedTypes.map(item => item.type).join('');
+};
+
+export const sortFinalResult = (finalResult: IPersonalityTypeScores): IPersonalityTypeScores => {
+  return Object.fromEntries(
+    Object.entries(finalResult).sort(([groupA], [groupB]) => {
+      return GROUP_PRIORITY_ORDER.indexOf(groupA) - GROUP_PRIORITY_ORDER.indexOf(groupB);
+    }),
+  );
 };

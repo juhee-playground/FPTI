@@ -1,6 +1,6 @@
 const images = import.meta.glob<{ default: string }>('/src/assets/*.png', { eager: true });
 
-const ImageBox = ({ topTypes }: { topTypes: string }) => {
+const ImageBox = ({ topTypes }: { topTypes: string | undefined }) => {
   const imageName = `/src/assets/${topTypes}.png`;
   const imageSrc = images[imageName]?.default;
 
