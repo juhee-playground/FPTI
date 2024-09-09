@@ -35,15 +35,13 @@ const ResultPage = () => {
 
   return (
     <ResultContainer>
-      <div>
-        <ImageBox topTypes={fpti} width={300} height={300} />
-        <Title>
-          <span>너의 타입은 </span>
-          <span>
-            {fpti} ({resultDescription?.type})
-          </span>
-        </Title>
-      </div>
+      <ImageBox topTypes={fpti} width={335} height={335} />
+      <Title>
+        <span>너의 타입은 </span>
+        <span>
+          {fpti} ({resultDescription?.type})
+        </span>
+      </Title>
       {Object.entries(reconstructedResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];
         const [type2, percentage2] = Object.entries(values)[1];
