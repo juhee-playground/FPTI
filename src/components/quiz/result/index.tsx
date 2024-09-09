@@ -16,6 +16,10 @@ const GROUP_PRIORITY_ORDER = ['책임감과 주도성', '팀에서의 역할', '
 
 const getTopTypesSorted = (finalResult: IPersonalityTypeScores): string => {
   const selectedTypes = Object.entries(finalResult).map(([group, values]) => {
+    if (values.M) {
+      return { type: 'M', group };
+    }
+
     const [type1, percentage1] = Object.entries(values)[0];
     const [type2, percentage2] = Object.entries(values)[1];
     return percentage1 >= percentage2 ? { type: type1, group } : { type: type2, group };
@@ -41,7 +45,7 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
   const sortedFinalResult = sortFinalResult(finalResult);
 
   const resultDescription = findResultById(topTypes) || null;
-  console.log(resultDescription);
+  // console.log(resultDescription);
 
   const handleRetry = () => {
     onRetry();
@@ -55,11 +59,14 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
       {Object.entries(sortedFinalResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];
         const [type2, percentage2] = Object.entries(values)[1];
+
+        const midLabel = values.M ? 'M' : undefined;
         const isReverse = percentage2 > percentage1;
         return (
           <ResultItem key={group}>
             <TypeComparisonBar
               startLabel={type1}
+              midLabel={midLabel}
               endLabel={type2}
               percentage={Math.max(percentage1, percentage2)}
               isReverse={isReverse}
@@ -68,7 +75,7 @@ const Result = ({ finalResult, onRetry }: IResultProps) => {
         );
       })}
       <TypeDescription content={resultDescription} />
-      <Button onClick={handleRetry}>검사 다시하기</Button> {/* 검사 다시하기 버튼 */}
+      <Button onClick={handleRetry}>검사 다시하기</Button>
     </ResultContainer>
   );
 };

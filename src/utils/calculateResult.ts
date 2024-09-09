@@ -35,9 +35,20 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
     }
   });
 
-  // 그룹별로 성향 비율을 계산하고 100%로 정규화
   for (const group in finalScale) {
     const total = Object.values(finalScale[group]).reduce((acc, curr) => acc + curr, 0);
+
+    if (group === '팀에서의 역할' && finalScale[group].A && finalScale[group].D) {
+      const attackerScore = finalScale[group].A;
+      const defenderScore = finalScale[group].D;
+      const balanceThreshold = 10;
+
+      if (Math.abs(attackerScore - defenderScore) <= balanceThreshold) {
+        finalScale[group].M = (attackerScore + defenderScore) / 2;
+        // delete finalScale[group].A;
+        // delete finalScale[group].D;
+      }
+    }
 
     for (const key in finalScale[group]) {
       finalScale[group][key] = (finalScale[group][key] / total) * 100;
