@@ -4,16 +4,12 @@ import { colors } from '@/styles/colors';
 import { TextNoneDrag } from '@/styles/mixins';
 
 export const QuestionContainer = styled.div<{ $backgroundImage: string }>`
-  /* padding: 2.4rem; */
-  width: 100%; /* 컨테이너 너비 */
-  height: 100%; /* 컨테이너 높이 */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(${props => props.$backgroundImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #4ac390;
   color: ${colors.white};
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
