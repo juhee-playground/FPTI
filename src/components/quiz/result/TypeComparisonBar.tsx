@@ -24,7 +24,7 @@ const getPersonalityName = (id: string) => {
 };
 
 const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isReverse }: ITypeComparisonBarProps) => {
-  const mainLabel = isReverse ? endLabel : startLabel;
+  const mainLabel = midLabel || (isReverse ? endLabel : startLabel);
 
   const finalStartLabel = midLabel || startLabel;
   const isStartLabelMain = finalStartLabel === mainLabel;

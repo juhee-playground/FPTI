@@ -3,14 +3,9 @@ import {
   ArticleContainer,
   DinosaurHeader,
   FlexDiv,
-  DinosaurName,
   DinosaurKoreanName,
   DinosaurType,
-  DescriptionSection,
   DescriptionText,
-  TeamRoleSection,
-  RecommendedTacticsSection,
-  RoleModelSection,
   List,
   ListItem,
 } from './TypeDescription.styles';
@@ -19,6 +14,11 @@ interface IFitOrNotFitType {
   type: string;
   fpti: string;
   koreaName: string;
+}
+
+interface ITraining {
+  name: string;
+  description: string;
 }
 
 interface IContent {
@@ -31,6 +31,10 @@ interface IContent {
   roleModel: string;
   fit: IFitOrNotFitType[];
   doNotFit: IFitOrNotFitType[];
+  training: {
+    strengthen: ITraining[];
+    supplement: ITraining[];
+  };
 }
 
 interface ITypeDescriptionProps {
@@ -41,38 +45,40 @@ const TypeDescription = ({ content }: ITypeDescriptionProps) => {
   return (
     <ArticleContainer>
       <DinosaurHeader>
-        <DinosaurName>{content?.name}</DinosaurName>
         <FlexDiv>
           <DinosaurType>{content?.type}</DinosaurType>
           <DinosaurKoreanName>{content?.koreaName}</DinosaurKoreanName>
         </FlexDiv>
       </DinosaurHeader>
 
-      <DescriptionSection>
+      <section>
         <DescriptionText>{content?.description}</DescriptionText>
-      </DescriptionSection>
+      </section>
 
-      <TeamRoleSection>
+      <section>
         <h3>팀 내 역할</h3>
         <DescriptionText>{content?.roleWithinTeam}</DescriptionText>
-      </TeamRoleSection>
+      </section>
 
-      <RecommendedTacticsSection>
+      <section>
         <h3>추천 전술</h3>
         <DescriptionText>{content?.recommendedTactics}</DescriptionText>
-      </RecommendedTacticsSection>
+      </section>
 
-      <RoleModelSection>
+      <section>
         <h3>비슷한 유형의 선수</h3>
         <DescriptionText>{content?.roleModel}</DescriptionText>
-      </RoleModelSection>
+      </section>
 
       <section>
         <h3>어울리는 유형</h3>
         <List>
-          {content?.fit.map((fitItem, index) => (
+          {content?.fit.map((item, index) => (
             <ListItem key={index}>
-              ({fitItem.fpti}) {fitItem.type} - {fitItem.koreaName}
+              <span>
+                {item.type}({item.fpti})
+              </span>
+              <span>{` - ${item.koreaName}`}</span>
             </ListItem>
           ))}
         </List>
@@ -81,9 +87,34 @@ const TypeDescription = ({ content }: ITypeDescriptionProps) => {
       <section>
         <h3>어울리지 않는 유형</h3>
         <List>
-          {content?.doNotFit.map((notFitItem, index) => (
+          {content?.doNotFit.map((item, index) => (
             <ListItem key={index}>
-              ({notFitItem.fpti}) {notFitItem.type} - {notFitItem.koreaName}
+              <span>
+                {item.type}({item.fpti})
+              </span>
+              <span>{` - ${item.koreaName}`}</span>
+            </ListItem>
+          ))}
+        </List>
+      </section>
+
+      <section>
+        <h3>강점 강화 훈련</h3>
+        <List>
+          {content?.training?.strengthen.map((tarining, index) => (
+            <ListItem key={index}>
+              <span>{tarining.name}</span> <span>{` - ${tarining.description}`}</span>
+            </ListItem>
+          ))}
+        </List>
+      </section>
+
+      <section>
+        <h3>약점 보완 훈련</h3>
+        <List>
+          {content?.training?.supplement.map((tarining, index) => (
+            <ListItem key={index}>
+              <span>{tarining.name}</span> <span>{` - ${tarining.description}`}</span>
             </ListItem>
           ))}
         </List>
