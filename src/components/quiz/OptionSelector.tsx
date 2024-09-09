@@ -2,7 +2,7 @@ import React from 'react';
 
 import { TextContainer, OptionText } from './Question.styles';
 
-import CircleSelector from '@/components/quiz/question/CircleSelector';
+import CircleSelector from '@/components/quiz/CircleSelector';
 
 interface IOptionSelectorProps {
   selectedValue: number | null;

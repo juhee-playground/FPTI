@@ -4,13 +4,13 @@ import { QuestionContainer, QuestionBox, SelectContainer, ButtonContainer } from
 
 import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
-import OptionSelector from '@/components/quiz/question/OptionSelector';
-import QuestionHeader from '@/components/quiz/question/QuestionHeader';
+import OptionSelector from '@/components/quiz/OptionSelector';
+import QuestionHeader from '@/components/quiz/QuestionHeader';
 
-interface IQuestionProps {
-  percentage: number;
+interface IQuestionContainerProps {
   questionId: number;
   questionText: string;
+  percentage: number;
   options: { type: string; text: string }[];
   scale: { min: string; max: string };
   isFirstQuestion: boolean;
@@ -20,16 +20,16 @@ interface IQuestionProps {
 }
 
 const Question = ({
-  percentage,
   questionId,
   questionText,
+  percentage,
   scale,
   isFirstQuestion,
   options,
   selectedValue,
   onPrevious,
   onAnswer,
-}: IQuestionProps) => {
+}: IQuestionContainerProps) => {
   const [currentSelectedValue, setCurrentSelectedValue] = useState<number | null>(null);
   const isNotSelected = currentSelectedValue === null;
 
