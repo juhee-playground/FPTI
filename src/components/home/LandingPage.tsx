@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Wrapper, Overlay, Title, Subtitle, StartButton } from './LandingPage.styles';
+import { Wrapper, Overlay, Title, Subtitle } from './LandingPage.styles';
+
+import { DefaultButton } from '@/components/common/button/Button.styles';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ const LandingPage = () => {
       <Overlay>
         <Title>FPTI: 풋살 MBTI</Title>
         <Subtitle>풋살스타일로 알아보는 나의 풋살 성향은??</Subtitle>
-        <StartButton onClick={handleStart}>START</StartButton>
+        <DefaultButton onClick={handleStart}>START</DefaultButton>
       </Overlay>
     </Wrapper>
   );

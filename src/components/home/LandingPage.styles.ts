@@ -40,19 +40,3 @@ export const Subtitle = styled.p`
   margin-bottom: 2rem;
   padding: 0 1rem;
 `;
-
-// StartButton: 시작 버튼 스타일
-export const StartButton = styled.button`
-  background-color: ${colors.text.white};
-  color: ${colors.text.basic};
-  padding: 0.625rem 1.5rem;
-  font-size: 1.125rem;
-  border-radius: 1.25rem;
-  transition: background-color 0.3s ease;
-  border: solid 1px ${colors.border.black};
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${colors.primaryLight};
-  }
-`;
