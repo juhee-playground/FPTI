@@ -25,8 +25,9 @@ export const getCustomColor = (color?: string) => {
     case 'info':
       return colors.info.default;
     case 'cancel':
-    case 'default':
       return colors.cancel.lighter;
+    case 'default':
+      return colors.text.basic;
     default:
       return color || colors.primary;
   }

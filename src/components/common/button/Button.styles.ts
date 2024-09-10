@@ -67,7 +67,7 @@ export const StyledButton = styled.button<{
 
   &:hover:not(:disabled) {
     background-color: ${({ $variant, $color }) =>
-      $variant === 'contained' ? darkenColor(getCustomColor($color), 20) : getRgbaColor(getCustomColor($color), 0.1)};
+      $variant === 'contained' ? darkenColor(getCustomColor($color), 20) : getRgbaColor(getCustomColor($color), 0.6)};
     border-color: ${({ $variant, $color }) => $variant === 'outlined' && darkenColor(getCustomColor($color), 20)};
     color: ${({ $variant, $color }) => $variant !== 'contained' && getCustomColor($color)};
   }
@@ -78,4 +78,26 @@ export const StyledButton = styled.button<{
       background-color: ${colors.primary};
       color: ${colors.white};
     `}
+`;
+
+export const DefaultButton = styled.button`
+  background-color: ${colors.button.basic};
+  color: ${colors.text.basic};
+  padding: 0.625rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 1.25rem;
+  min-width: 48%;
+  transition: background-color 0.3s ease;
+  border: solid 1px ${colors.border.black};
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: ${colors.button.hover};
+    opacity: 0.8;
+  }
 `;

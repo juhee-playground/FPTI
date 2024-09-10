@@ -13,8 +13,9 @@ export const Container = styled.div`
 export const Circle = styled.div<{ $size: number; $selected: boolean }>`
   width: ${props => props.$size}px;
   height: ${props => props.$size}px;
-  background-color: ${props => (props.$selected ? 'transparent' : '#455A64')};
+  background-color: ${props => (props.$selected ? 'transparent' : colors.button.basic)};
   border-radius: 50%;
+  border: solid 1px ${colors.border.black};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +23,7 @@ export const Circle = styled.div<{ $size: number; $selected: boolean }>`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #ffffff80;
+    background-color: ${colors.primary};
   }
 `;
 

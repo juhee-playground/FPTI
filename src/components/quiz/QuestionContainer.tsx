@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import { QuestionContainer, QuestionBox, SelectContainer, ButtonContainer } from './Question.styles';
+import { DefaultButton } from '../common/button/Button.styles';
 
-import Button from '@/components/common/button';
 import Progress from '@/components/common/progressBar';
 import OptionSelector from '@/components/quiz/OptionSelector';
 import QuestionHeader from '@/components/quiz/QuestionHeader';
@@ -80,10 +80,10 @@ const Question = ({
         <OptionSelector selectedValue={currentSelectedValue} onSelect={handleSelect} options={options} />{' '}
       </SelectContainer>
       <ButtonContainer $isSingleButton={isFirstQuestion}>
-        {!isFirstQuestion && <Button onClick={onPrevious}>이전</Button>}
-        <Button disabled={isNotSelected} onClick={handleSubmit}>
+        {!isFirstQuestion && <DefaultButton onClick={onPrevious}>이전</DefaultButton>}
+        <DefaultButton disabled={isNotSelected} onClick={handleSubmit}>
           다음
-        </Button>
+        </DefaultButton>
       </ButtonContainer>
     </QuestionContainer>
   );

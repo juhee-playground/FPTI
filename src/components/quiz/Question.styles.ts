@@ -17,17 +17,19 @@ export const QuestionContainer = styled.div`
 `;
 
 export const QuestionBox = styled.div`
-  color: white;
-  border: 2px solid white;
   padding: 1.5rem;
-  text-align: center;
   margin: 1.5rem;
+  background-color: ${colors.primary};
+  color: ${colors.text.basic};
+  border: 2px solid ${colors.border.black};
+  border-radius: 20px;
+  text-align: center;
 `;
 
 export const QuestionText = styled.h3`
   ${TextNoneDrag}
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 1rem;
 `;
 
@@ -56,19 +58,21 @@ export const SelectContainer = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
 `;
 
 export const OptionText = styled.h4`
   ${TextNoneDrag}
-  padding: 0.875rem;
-  color: ${colors.white};
-  font-size: 1rem;
+  padding: .75rem;
+  color: ${colors.text.basic};
+  font-size: 1.125rem;
+  font-weight: 400;
   max-width: 120px;
   min-height: 100px;
   vertical-align: middle;
+  text-align: left;
 
   &:first-child {
     text-align: left;
@@ -86,5 +90,5 @@ export const WarningText = styled.div`
 export const ButtonContainer = styled.div<{ $isSingleButton: boolean }>`
   display: flex;
   justify-content: ${({ $isSingleButton }) => ($isSingleButton ? 'flex-end' : 'space-between')};
-  margin-top: 20px;
+  margin: 20px;
 `;

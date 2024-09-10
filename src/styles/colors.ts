@@ -1,9 +1,7 @@
 // colors.ts
 export const colors = {
-  primary: '#228B22',
-  primaryLight: '#66C266',
-  primaryDark: '#1A661A',
-  primaryOpacity: 'rgba(34, 139, 34, 0.5)',
+  primary: '#97ecbf',
+  primaryOpacity: '#97ecbf94',
   secondary: '#FF4500',
   secondaryDark: '#CC3700',
   secondaryLight: '#fd9363',
@@ -22,6 +20,7 @@ export const colors = {
 
   button: {
     basic: '#F4F4F4',
+    hover: '#cccccc',
   },
 
   border: {
@@ -53,6 +52,6 @@ export const colors = {
   },
   cancel: {
     default: '#bdbdbd',
-    lighter: '#f8f9fa',
+    lighter: '#F4F4F4',
   },
 };
