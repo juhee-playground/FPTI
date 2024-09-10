@@ -6,6 +6,7 @@ import { flexSpaceBetween } from '@/styles/mixins';
 export const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 1.25rem;
   background-color: ${colors.background};
@@ -13,7 +14,7 @@ export const ResultContainer = styled.div`
   overflow-y: auto;
   max-height: calc(100vh - 50px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  gap: 16px;
+  gap: 4px;
 `;
 
 export const Title = styled.h3`
@@ -23,11 +24,9 @@ export const Title = styled.h3`
   gap: 6px;
   font-weight: 400;
   color: ${colors.text.basic};
+  margin: 0;
   span {
     &:nth-child(1) {
-      font-size: 0.75rem;
-    }
-    &:nth-child(2) {
       width: 140px;
       background-color: #97ecbf;
       border-radius: 18px;
@@ -35,7 +34,7 @@ export const Title = styled.h3`
       font-weight: 500;
       border: solid 1px ${colors.border.black};
     }
-    &:nth-child(3) {
+    &:nth-child(2) {
       font-size: 1.5rem;
     }
   }
