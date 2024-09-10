@@ -38,9 +38,8 @@ const ResultPage = () => {
       <ImageBox topTypes={fpti} width={335} height={335} />
       <Title>
         <span>나의 타입은 </span>
-        <span>
-          {fpti} ({resultDescription?.type})
-        </span>
+        <span>{fpti}</span>
+        <span>{resultDescription?.type}</span>
       </Title>
       {Object.entries(reconstructedResult).map(([group, values]) => {
         const [type1, percentage1] = Object.entries(values)[0];

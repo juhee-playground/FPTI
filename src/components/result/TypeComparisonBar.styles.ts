@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { colors } from '@/styles/colors';
 import { getColorByType } from '@/utils/color';
 
-const CHAR_WIDTH = 3;
-
 export const TypeComparisonBarContainer = styled.section`
   display: flex;
   justify-content: center;
@@ -21,6 +19,7 @@ export const BarWrapper = styled.div<{ $isReverse: boolean }>`
   height: 24px;
   background-color: #57a17a;
   border-radius: 12px;
+  margin-bottom: 12px;
 `;
 
 export const Progress = styled.div<{ $percentage: number; $type: string; $isReverse: boolean }>`
