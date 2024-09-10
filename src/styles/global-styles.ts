@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    height: calc(var(--vh, 1vh) * 100 - 44px);
+    height: calc(var(--vh, 1vh) * 100);
 }
 
   

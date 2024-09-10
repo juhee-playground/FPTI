@@ -26,7 +26,7 @@ export const colors = {
     black: '#242424',
   },
   text: {
-    basic: '#242424',
+    basic: '#262626',
     placeholder: '#757575',
     error: '#e91e63',
   },

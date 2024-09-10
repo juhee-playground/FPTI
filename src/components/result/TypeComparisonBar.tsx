@@ -36,8 +36,10 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
   return (
     <TypeComparisonBarContainer>
       <TypeContainer>
-        <TypeLabel $isMain={isStartLabelMain}>{finalStartLabel}</TypeLabel>
-        <TypeDescription $isMain={isStartLabelMain}>{startTypeInfo}</TypeDescription>
+        <TypeLabel $isMain={isStartLabelMain} $type={isReverse ? endLabel : startLabel}>
+          {finalStartLabel}
+        </TypeLabel>
+        <TypeDescription>{startTypeInfo}</TypeDescription>
       </TypeContainer>
 
       <BarWrapper $isReverse={isReverse}>
@@ -49,8 +51,10 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
       </BarWrapper>
 
       <TypeContainer>
-        <TypeLabel $isMain={isEndLabelMain}>{endLabel}</TypeLabel>
-        <TypeDescription $isMain={isEndLabelMain}>{endTypeInfo}</TypeDescription>
+        <TypeLabel $isMain={isEndLabelMain} $type={isReverse ? endLabel : startLabel}>
+          {endLabel}
+        </TypeLabel>
+        <TypeDescription>{endTypeInfo}</TypeDescription>
       </TypeContainer>
     </TypeComparisonBarContainer>
   );
