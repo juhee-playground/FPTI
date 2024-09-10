@@ -12,8 +12,8 @@ const LandingPage = () => {
   return (
     <Wrapper>
       <Overlay>
-        <Title>FPTI: 풋살 엠비티아이</Title>
-        <Subtitle>풋살 스타일로 나의 풋살 성향은?</Subtitle>
+        <Title>FPTI: 풋살 MBTI</Title>
+        <Subtitle>풋살스타일로 알아보는 나의 풋살 성향은??</Subtitle>
         <StartButton onClick={handleStart}>START</StartButton>
       </Overlay>
     </Wrapper>
