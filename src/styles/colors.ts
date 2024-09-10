@@ -20,6 +20,10 @@ export const colors = {
   white: '#FFFFFF',
   black: '#000000',
 
+  button: {
+    basic: '#F4F4F4',
+  },
+
   border: {
     basic: '#efefef',
     darken: '#cccccc',
@@ -27,6 +31,7 @@ export const colors = {
   },
   text: {
     basic: '#262626',
+    white: '#F4F4F4',
     placeholder: '#757575',
     error: '#e91e63',
   },

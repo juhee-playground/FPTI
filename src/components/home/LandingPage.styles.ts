@@ -34,7 +34,8 @@ export const Title = styled.h1`
 // Subtitle: 부제목 스타일
 export const Subtitle = styled.p`
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  color: ${colors.button.basic};
   text-align: center;
   margin-bottom: 2rem;
   padding: 0 1rem;
@@ -42,16 +43,16 @@ export const Subtitle = styled.p`
 
 // StartButton: 시작 버튼 스타일
 export const StartButton = styled.button`
-  background-color: ${colors.primary};
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.375rem;
+  background-color: ${colors.text.white};
+  color: ${colors.text.basic};
+  padding: 0.625rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 1.25rem;
   transition: background-color 0.3s ease;
-  border: none;
+  border: solid 1px ${colors.border.black};
   cursor: pointer;
 
   &:hover {
-    background-color: ${colors.primaryDark};
+    background-color: ${colors.primaryLight};
   }
 `;
