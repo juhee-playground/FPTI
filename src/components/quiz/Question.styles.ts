@@ -21,7 +21,7 @@ export const QuestionBox = styled.div`
   margin: 1.5rem;
   background-color: ${colors.primary};
   color: ${colors.text.basic};
-  border: 2px solid ${colors.border.black};
+  border: 1px solid ${colors.border.black};
   border-radius: 20px;
   text-align: center;
 `;
