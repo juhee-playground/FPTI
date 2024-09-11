@@ -98,6 +98,6 @@ export const DefaultButton = styled.button`
 
   &:hover:not(:disabled) {
     background-color: ${colors.button.hover};
-    opacity: 0.8;
+    color: ${colors.text.white};
   }
 `;
