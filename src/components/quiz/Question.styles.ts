@@ -17,8 +17,12 @@ export const QuestionContainer = styled.div`
 `;
 
 export const QuestionBox = styled.div`
-  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   margin: 1.5rem;
+  min-height: 240px;
   background-color: ${colors.primary};
   color: ${colors.text.basic};
   border: 1px solid ${colors.border.black};
