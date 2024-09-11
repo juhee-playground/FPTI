@@ -22,13 +22,26 @@ const ResultPage = () => {
     navigate('/landing');
   };
 
-  const handleCopyLink = () => {
-    const currentUrl = window.location.origin;
-    const shareableUrl = `${currentUrl}/result/${fpti}?finalResult=${queryString}`;
+  const handleShare = async () => {
+    const currentUrl = window.location.href;
+    // 공유하려는 링크나 내용 정의
+    const shareData = {
+      title: '나의 FPTI를 공유할께~',
+      text: '너의 FPTI도 공유해줘!!',
+      url: currentUrl, // 현재 페이지 링크
+    };
 
-    navigator.clipboard.writeText(shareableUrl).then(() => {
-      alert('링크가 클립보드에 복사되었습니다!');
-    });
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        console.log('성공적으로 공유되었습니다!');
+      } else {
+        navigator.clipboard.writeText(currentUrl);
+        alert('이 브라우저는 공유 기능을 지원하지 않아서 링크를 복사했습니다.');
+      }
+    } catch (error) {
+      console.error('공유 중 오류 발생:', error);
+    }
   };
 
   return (
@@ -61,8 +74,8 @@ const ResultPage = () => {
         <Button variant='outlined' color='cancel' onClick={handleRetry}>
           검사 다시하기
         </Button>
-        <Button variant='outlined' color='cancel' onClick={handleCopyLink}>
-          링크 복사하기
+        <Button variant='outlined' color='cancel' onClick={handleShare}>
+          링크 공유하기
         </Button>
       </ButtonContainer>
     </ResultContainer>
