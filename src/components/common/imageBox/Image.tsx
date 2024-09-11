@@ -1,3 +1,5 @@
+import { ImageContainer } from './Image.styles';
+
 interface IimageBoxProps {
   topTypes: string | undefined;
   width: number;
@@ -14,7 +16,7 @@ const ImageBox = ({ topTypes, width, height }: IimageBoxProps) => {
     return <div>이미지를 찾을 수 없습니다.</div>;
   }
 
-  return <img src={imageSrc} alt={`${topTypes} 공룡 이미지`} width={width} height={height} />;
+  return <ImageContainer src={imageSrc} alt={`${topTypes} 공룡 이미지`} width={width} height={height} />;
 };
 
 export default ImageBox;
