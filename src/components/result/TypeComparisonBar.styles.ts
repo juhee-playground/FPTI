@@ -19,7 +19,7 @@ export const BarWrapper = styled.div<{ $isReverse: boolean }>`
   width: 100%;
   height: 24px;
   background-color: #57a17a;
-  border-radius: 8px;
+  border-radius: 12px;
 `;
 
 export const Progress = styled.div<{ $percentage: number; $type: string; $isReverse: boolean }>`
@@ -53,7 +53,7 @@ export const TypeContainer = styled.div<{ $isReverse: boolean }>`
   display: flex;
   flex-direction: ${({ $isReverse }) => ($isReverse ? 'row-reverse' : 'row')};
   align-items: center;
-  width: 220px;
+  width: 186px;
   gap: 4px;
 `;
 
@@ -62,11 +62,12 @@ export const TypeLabel = styled.h2<{ $isMain: boolean; $type: string }>`
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   border: solid 1px ${colors.border.black};
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: ${colors.text.basic};
   background-color: ${({ $isMain, $type }) => ($isMain ? getColorByType($type) : 'inherit')};
 `;
