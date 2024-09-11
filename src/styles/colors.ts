@@ -1,7 +1,7 @@
 // colors.ts
 export const colors = {
-  primary: '#97ecbf',
-  primaryOpacity: '#97ecbf94',
+  primary: '#73CE9E',
+  primaryOpacity: '##73CE9E94',
   secondary: '#FF4500',
   secondaryDark: '#CC3700',
   secondaryLight: '#fd9363',
@@ -20,7 +20,7 @@ export const colors = {
 
   button: {
     basic: '#F4F4F4',
-    hover: '#cccccc',
+    hover: '#434343',
   },
 
   border: {

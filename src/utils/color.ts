@@ -59,15 +59,15 @@ export const getRgbaColor = (hex: string, opacity: number) => {
 
 export const getColorByType = (type: string) => {
   const typeColors: { [key: string]: string } = {
-    A: '#589EE3', // 더 진한 파란색(고침)
-    D: '#FFAB85', // 더 진한 오렌지색
+    L: '#F7A4A4',
+    S: '#F95959',
+    A: '#1CC5DC',
     M: '#defede',
-    L: '#ECB0BB', // 더 진한 핑크색(고침)
-    S: '#8BBF9F', // 더 진한 녹색
-    T: '#AE95CF', // 진한 라벤더색(고침)
-    P: '#FFC560', // 더 진한 황토색
-    C: '#80CBC4', // 더 진한 민트색
-    E: '#FFD95A', // 진한 레몬색(고침)
+    D: '#14B1AB',
+    T: '#86A7FC',
+    P: '#A63EC5',
+    C: '#FF9F29',
+    E: '#FFD95A',
   };
 
   return typeColors[type] || colors.black; // 기본값은 검정색
