@@ -68,7 +68,7 @@ const Question = ({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isNotSelected, currentSelectedValue]); // 의존성 배열에 isNotSelected 추가
+  }, [isNotSelected, currentSelectedValue]);
 
   return (
     <QuestionContainer>

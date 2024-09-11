@@ -53,7 +53,7 @@ export const TypeContainer = styled.div<{ $isReverse: boolean }>`
   display: flex;
   flex-direction: ${({ $isReverse }) => ($isReverse ? 'row-reverse' : 'row')};
   align-items: center;
-  width: 186px;
+  width: 190px;
   gap: 4px;
 `;
 

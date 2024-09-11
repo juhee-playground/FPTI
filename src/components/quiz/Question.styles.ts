@@ -69,7 +69,6 @@ export const TextContainer = styled.div`
 
 export const OptionText = styled.h4`
   ${TextNoneDrag}
-  padding: .75rem;
   color: ${colors.text.basic};
   font-size: 1.125rem;
   font-weight: 400;
