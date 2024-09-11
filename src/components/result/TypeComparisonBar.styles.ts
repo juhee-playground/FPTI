@@ -9,6 +9,7 @@ export const TypeComparisonBarContainer = styled.section`
   align-items: center;
   width: 100%;
   gap: 12px;
+  padding: 0 15px;
 `;
 
 export const BarWrapper = styled.div<{ $isReverse: boolean }>`
@@ -18,15 +19,15 @@ export const BarWrapper = styled.div<{ $isReverse: boolean }>`
   width: 100%;
   height: 24px;
   background-color: #57a17a;
-  border-radius: 12px;
-  margin-bottom: 12px;
+  border-radius: 8px;
 `;
 
 export const Progress = styled.div<{ $percentage: number; $type: string; $isReverse: boolean }>`
   width: ${({ $percentage }) => `${$percentage}%`};
-  height: 100%;
+  height: 24px;
   display: flex;
-  padding: 12px;
+  align-items: center;
+  padding: 0 12px;
   justify-content: ${({ $isReverse }) => ($isReverse ? 'flex-start' : 'flex-end')};
   align-items: center;
   background-color: ${({ $type }) => getColorByType($type)};
@@ -48,12 +49,12 @@ export const LabelContainer = styled.div`
   width: 100%;
 `;
 
-export const TypeContainer = styled.div`
+export const TypeContainer = styled.div<{ $isReverse: boolean }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ $isReverse }) => ($isReverse ? 'row-reverse' : 'row')};
   align-items: center;
-  width: 84px;
-  gap: 3px;
+  width: 220px;
+  gap: 4px;
 `;
 
 export const TypeLabel = styled.h2<{ $isMain: boolean; $type: string }>`

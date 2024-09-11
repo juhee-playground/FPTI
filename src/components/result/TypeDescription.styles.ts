@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ArticleContainer = styled.article`
-  padding: 0.5rem;
+  padding: 1.25rem;
   border-radius: 8px;
   max-width: 800px;
   margin: 0 auto;
