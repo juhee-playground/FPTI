@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { colors } from '@/styles/colors';
-import { flexSpaceBetween } from '@/styles/mixins';
+import { flexSpaceBetween, TextNoneDrag } from '@/styles/mixins';
 
 export const ResultContainer = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ export const ResultContainer = styled.div`
 `;
 
 export const Title = styled.h3`
+  ${TextNoneDrag}
   display: flex;
   flex-direction: column;
   align-items: center;

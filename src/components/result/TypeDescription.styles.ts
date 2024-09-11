@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+import { TextNoneDrag } from '@/styles/mixins';
+
 export const ArticleContainer = styled.article`
+  ${TextNoneDrag}
   padding: 1.25rem;
   border-radius: 8px;
   max-width: 800px;
