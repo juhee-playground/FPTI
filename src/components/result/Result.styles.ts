@@ -8,13 +8,12 @@ export const ResultContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding: 1.25rem;
+  padding: 24px 0;
   background-color: ${colors.background};
   color: ${colors.white};
   overflow-y: auto;
-  max-height: calc(100vh - 50px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  gap: 4px;
+  gap: 12px;
 `;
 
 export const Title = styled.h3`
@@ -27,11 +26,11 @@ export const Title = styled.h3`
   margin: 0;
   span {
     &:nth-child(1) {
-      width: 140px;
-      background-color: #97ecbf;
+      width: 160px;
+      height: 30px;
+      background-color: ${colors.primary};
       border-radius: 18px;
-      font-size: 2rem;
-      font-weight: 500;
+      font-size: 1.25rem;
       border: solid 1px ${colors.border.black};
     }
     &:nth-child(2) {

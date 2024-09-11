@@ -26,8 +26,6 @@ const ResultPage = () => {
     const currentUrl = window.location.origin;
     const shareableUrl = `${currentUrl}/result/${fpti}?finalResult=${queryString}`;
 
-    console.log(shareableUrl);
-
     navigator.clipboard.writeText(shareableUrl).then(() => {
       alert('링크가 클립보드에 복사되었습니다!');
     });
@@ -35,7 +33,7 @@ const ResultPage = () => {
 
   return (
     <ResultContainer>
-      <ImageBox topTypes={fpti} width={200} height={200} />
+      <ImageBox topTypes={fpti} width={300} height={300} />
       <Title>
         <span>{fpti}</span>
         <span>{resultDescription?.type}</span>
