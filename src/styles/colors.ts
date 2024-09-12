@@ -1,4 +1,3 @@
-// colors.ts
 export const colors = {
   primary: '#73CE9E',
   primaryOpacity: '##73CE9E94',

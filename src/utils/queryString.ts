@@ -9,10 +9,9 @@ export const generateQueryStringFromNestedResult = (result: { [group: string]: {
     });
   });
 
-  return queryParams.toString(); // 쿼리스트링 반환
+  return queryParams.toString();
 };
 
-// 쿼리스트링에서 결과를 다시 객체로 변환하는 함수
 export const reconstructResultFromQueryString = (queryString: string) => {
   const params = new URLSearchParams(queryString);
   const finalResult: { [group: string]: IScaleValue } = {};

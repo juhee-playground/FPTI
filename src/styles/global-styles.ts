@@ -67,7 +67,6 @@ const GlobalStyle = createGlobalStyle`
     border-color: var(--border-color, currentColor)
   }
 
-  // input
   input {
     display: block;
     box-sizing: border-box;

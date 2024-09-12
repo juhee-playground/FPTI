@@ -16,7 +16,6 @@ export const getGroupByKey = (key: string): string => {
   return groupMap[key] || 'Unknown';
 };
 
-// 최종 결과를 계산하는 함수
 export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]: IScaleValue } => {
   const finalScale: { [group: string]: IScaleValue } = {};
 

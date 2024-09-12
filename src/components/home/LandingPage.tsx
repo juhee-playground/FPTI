@@ -8,7 +8,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleStart = (): void => {
-    navigate('/quiz'); // 퀴즈 페이지로 이동
+    navigate('/quiz');
   };
 
   return (

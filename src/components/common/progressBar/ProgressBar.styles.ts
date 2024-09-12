@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { colors } from '@/styles/colors';
 
-// 진행도 바 스타일
 export const ProgressBar = styled.div`
   width: 100%;
   height: 8px;

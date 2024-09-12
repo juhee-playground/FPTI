@@ -36,7 +36,7 @@ const Quiz = () => {
 
   const handleAnswer = (questionId: number, scaleValue: IScaleValue) => {
     const newAnswers = [...quizResult.answers];
-    newAnswers[currentQuestionIndex] = { questionId, scale: scaleValue }; // 현재 인덱스에 답변 저장
+    newAnswers[currentQuestionIndex] = { questionId, scale: scaleValue };
 
     setQuizResult({ answers: newAnswers });
 
@@ -46,7 +46,7 @@ const Quiz = () => {
       moveToNextQuestion(newIndex, finalPercentage);
     } else {
       const result = calculateFinalResult({ answers: newAnswers });
-      const fpti = getTopTypesSorted(result); // FPTI 문자열 계산
+      const fpti = getTopTypesSorted(result);
       const sortedFinalResult = sortFinalResult(result);
       const queryString = generateQueryStringFromNestedResult(sortedFinalResult);
       navigate(`/result/${fpti}?finalResult=${queryString}`);

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import landingBg from '@/assets/bg-landing.webp';
 import { colors } from '@/styles/colors';
 
-// Wrapper: 전체 화면을 차지하는 컨테이너
 export const Wrapper = styled.div`
   height: 100vh;
   background-image: url(${landingBg});
@@ -12,7 +11,6 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 
-// Overlay: 텍스트와 버튼을 중앙에 배치하는 오버레이
 export const Overlay = styled.div`
   position: absolute;
   inset: 0;
@@ -23,7 +21,6 @@ export const Overlay = styled.div`
   justify-content: center;
 `;
 
-// Title: 랜딩 페이지의 주요 제목
 export const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
@@ -31,7 +28,6 @@ export const Title = styled.h1`
   margin-bottom: 1.5rem;
 `;
 
-// Subtitle: 부제목 스타일
 export const Subtitle = styled.p`
   font-size: 1.125rem;
   font-weight: 500;

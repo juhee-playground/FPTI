@@ -70,5 +70,5 @@ export const getColorByType = (type: string) => {
     E: '#FFD95A',
   };
 
-  return typeColors[type] || colors.black; // 기본값은 검정색
+  return typeColors[type] || colors.black;
 };

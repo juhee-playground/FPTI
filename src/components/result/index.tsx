@@ -24,11 +24,10 @@ const ResultPage = () => {
 
   const handleShare = async () => {
     const currentUrl = window.location.href;
-    // 공유하려는 링크나 내용 정의
     const shareData = {
       title: '나의 FPTI를 공유할께~',
       text: '너의 FPTI도 공유해줘!!',
-      url: currentUrl, // 현재 페이지 링크
+      url: currentUrl,
     };
 
     try {
