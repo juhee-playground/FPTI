@@ -1,14 +1,6 @@
 declare global {
   type TPersonalityType = 'T' | 'P' | 'C' | 'E' | 'L' | 'S' | 'A' | 'M' | 'D';
   type TButtonVariant = 'text' | 'contained' | 'outlined' | 'fab';
-  type TPersonalityType = {
-    id: number;
-    name: string;
-    description: string;
-    characteristics: string[];
-    strengths: string[];
-    weaknesses: string[];
-  };
 
   interface IOption {
     type: TPersonalityType;
