@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import landingBg from '@/assets/bg-landing.webp';
-import { colors } from '@/styles/colors';
+import { Image } from '../public/bg-landing.png';
+import { colors } from '../src/styles/colors';
 
 export const Wrapper = styled.div`
   height: 100vh;
-  background-image: url(${landingBg});
+  background-image: url(${Image});
   background-size: cover;
   background-position: center;
   position: relative;
