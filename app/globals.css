@@ -1,0 +1,54 @@
+:root {
+  --max-width: 1280px;
+  --border-radius: 12px;
+
+  --font-size-lg: 2rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1rem;
+  --font-color: rgba(0, 0, 0, 1);
+  /*
+  - xs : mobile min-width(320px)
+  - sm : ipad 세로 ( portrait )
+  - md : ipad 가로 ( landscape ), ipad pro<12.9> 세로 ( portrait )  [ css - media query  ]
+  - lg : mac 15, mac 13, ipad pro<12.9> 가로 ( landscape )
+  - xl : desktop 
+*/
+  --sm-break-point: 600px;
+  --md-break-point: 960px;
+  --lg-break-point: 1264px;
+  --xl-break-point: 1904px;
+}
+
+/* 기본 스타일 */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo";
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.col + .col {
+  margin-left: 4px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex.justify-center {
+  justify-content: center;
+}
