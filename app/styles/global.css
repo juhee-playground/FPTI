@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@import './animations.css';
+
+root {
   --max-width: 1280px;
   --border-radius: 12px;
 
@@ -89,141 +91,6 @@
   --xl-break-point: 1904px;
 }
 
-@layer base {
-  @keyframes bounce {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes jelloHorizontalWebKit {
-    0% {
-      transform: scale3d(1, 1, 1);
-    }
-    30% {
-      transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      transform: scale3d(1, 1, 1);
-    }
-  }
-
-  @keyframes jelloHorizontal {
-    0% {
-      transform: scale3d(1, 1, 1);
-    }
-    30% {
-      transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      transform: scale3d(1, 1, 1);
-    }
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes dotFlashing {
-    0% {
-      content: '';
-    }
-    33% {
-      content: '.';
-    }
-    66% {
-      content: '..';
-    }
-    100% {
-      content: '...';
-    }
-  }
-
-  @keyframes dotPulse {
-    0% {
-      transform: scale(0.8);
-      opacity: 0.7;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0.8);
-      opacity: 0.7;
-    }
-  }
-
-  /* Example usage */
-  .bounce {
-    animation: bounce 2s infinite;
-  }
-
-  .fade-in {
-    animation: fadeIn 1s forwards;
-  }
-
-  .jello-horizontal {
-    animation: jelloHorizontal 0.8s both;
-  }
-
-  .spin {
-    animation: spin 1s linear infinite;
-  }
-
-  .dot-flashing {
-    animation: dotFlashing 1s steps(3) infinite;
-  }
-
-  .dot-pulse {
-    animation: dotPulse 1.5s infinite;
-  }
-}
-
 /* 기본 스타일 */
 * {
   box-sizing: border-box;
@@ -241,6 +108,7 @@ body {
 
 main {
   height: calc(var(--vh, 1vh) * 100);
+  max-width: 375px;
 }
 
 :is(.select-none) {
@@ -450,6 +318,15 @@ button[type='submit'],
 input[type='button'],
 input[type='submit'] {
   -webkit-appearance: none;
+}
+
+@layer components {
+  .button {
+    @apply bg-gray-100 text-gray-900 px-6 py-2.5 text-lg rounded-full min-w-[48%] border border-gray-900 cursor-pointer transition-colors duration-300;
+  }
+  .button:hover {
+    @apply bg-gray-700 text-gray-50;
+  }
 }
 
 /* Media queries */
