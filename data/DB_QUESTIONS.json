@@ -1,0 +1,275 @@
+[
+  {
+    "id": 1,
+    "category": "플레이 스타일",
+    "situation": "공격 상황에서 패스 경로가 막혔을 때 당신은?",
+    "options": [
+      { "type": "T", "text": "드리블로 상대를 제치고 공격을 이어간다." },
+      { "type": "P", "text": "공을 뒤로 돌려 안전하게 팀의 공격을 이어간다." }
+    ],
+    "scale": {
+      "min": "T",
+      "max": "P"
+    }
+  },
+  {
+    "id": 2,
+    "category": "플레이 스타일",
+    "situation": "경기 후 더 뿌듯한 쪽은?",
+    "options": [
+      { "type": "T", "text": "개인기로 돌파에 성공했을 때" },
+      { "type": "P", "text": "패스 정확성이 꽤 높았을 때" }
+    ],
+    "scale": {
+      "min": "T",
+      "max": "P"
+    }
+  },
+  {
+    "id": 3,
+    "category": "플레이 스타일",
+    "situation": "하프라인 밑에서 공을 점유했을 때",
+    "options": [
+      { "type": "T", "text": "치고 달려 돌파한다" },
+      { "type": "P", "text": "천천히 빌드업한다" }
+    ],
+    "scale": {
+      "min": "T",
+      "max": "P"
+    }
+  },
+  {
+    "id": 4,
+    "category": "플레이 스타일",
+    "situation": "경기에 임하는 나의 태도",
+    "options": [
+      { "type": "T", "text": "한 번이라도 연습한 걸 써보겠다" },
+      { "type": "P", "text": "패스 플레이가 잘 됐으면 좋겠다" }
+    ],
+    "scale": {
+      "min": "T",
+      "max": "P"
+    }
+  },
+  {
+    "id": 5,
+    "category": "플레이 스타일",
+    "situation": "노마크 찬스 키퍼와 1:1일 때",
+    "options": [
+      { "type": "T", "text": "직접 슈팅한다" },
+      { "type": "P", "text": "파포로 뛰어가는 사람한테 패스한다" }
+    ],
+    "scale": {
+      "min": "T",
+      "max": "P"
+    }
+  },
+  {
+    "id": 6,
+    "category": "목표와 우선순위",
+    "situation": "친선경기에서 가장 중요한 것은?",
+    "options": [
+      { "type": "C", "text": "대회만큼 이기는 것도 중요하다" },
+      { "type": "E", "text": "다치지 않고 행풋하는 것이 중요하다" }
+    ],
+    "scale": {
+      "min": "C",
+      "max": "E"
+    }
+  },
+  {
+    "id": 7,
+    "category": "목표와 우선순위",
+    "situation": "박스 근처 실점 위기 상황에서, 파울로 끊는 것이 중요하다",
+    "options": [
+      { "type": "C", "text": "카드를 받더라도 무실점이 중요" },
+      { "type": "E", "text": "그렇게까지?" }
+    ],
+    "scale": {
+      "min": "C",
+      "max": "E"
+    }
+  },
+  {
+    "id": 8,
+    "category": "목표와 우선순위",
+    "situation": "팀 내 분위기가 좋지 않을 때, 나는?",
+    "options": [
+      { "type": "C", "text": "분위기를 전환하기 위해 강하게 이끌어간다" },
+      { "type": "E", "text": "분위기가 좋아야 좋은 경기가 나오는 만큼 팀원들을 독려한다" }
+    ],
+    "scale": {
+      "min": "C",
+      "max": "E"
+    }
+  },
+  {
+    "id": 9,
+    "category": "목표와 우선순위",
+    "situation": "팀원이 실수를 반복할 때",
+    "options": [
+      { "type": "C", "text": "왜 그럴까.. 화가 난다" },
+      { "type": "E", "text": "이유가 있겠지..라고 생각한다" }
+    ],
+    "scale": {
+      "min": "C",
+      "max": "E"
+    }
+  },
+  {
+    "id": 10,
+    "category": "목표와 우선순위",
+    "situation": "대회에 참가하는 목적은?",
+    "options": [
+      { "type": "C", "text": "성과가 중요하다" },
+      { "type": "E", "text": "참여와 경험에 의의를 둔다" }
+    ],
+    "scale": {
+      "min": "C",
+      "max": "E"
+    }
+  },
+  {
+    "id": 11,
+    "category": "책임감과 주도성",
+    "situation": "다른 팀원의 플레이에 개선이 필요할 때",
+    "options": [
+      { "type": "L", "text": "직접 피드백을 주는 편이다" },
+      { "type": "S", "text": "다른 사람이 피드백 하겠지 놔둔다" }
+    ],
+    "scale": {
+      "min": "L",
+      "max": "S"
+    }
+  },
+  {
+    "id": 12,
+    "category": "책임감과 주도성",
+    "situation": "플레이가 잘 안 풀릴 때 내 생각",
+    "options": [
+      { "type": "L", "text": "내가 풀어줘야겠군" },
+      { "type": "S", "text": "1인분만 하자" }
+    ],
+    "scale": {
+      "min": "L",
+      "max": "S"
+    }
+  },
+  {
+    "id": 13,
+    "category": "책임감과 주도성",
+    "situation": "함께 플레이하고 싶은 사람은?",
+    "options": [
+      { "type": "L", "text": "최소 한골 보장 골잡이" },
+      { "type": "S", "text": "기본기 잘 된 조력자" }
+    ],
+    "scale": {
+      "min": "L",
+      "max": "S"
+    }
+  },
+  {
+    "id": 14,
+    "category": "책임감과 주도성",
+    "situation": "팀원들이 나를 어떤 유형의 플레이어로 기억해 주었으면 좋겠는지",
+    "options": [
+      { "type": "L", "text": "해결사, 골잡이" },
+      { "type": "S", "text": "조율자, 살림꾼" }
+    ],
+    "scale": {
+      "min": "L",
+      "max": "S"
+    }
+  },
+  {
+    "id": 15,
+    "category": "책임감과 주도성",
+    "situation": "내가 교체 투입될 때, 나의 생각은?",
+    "options": [
+      { "type": "L", "text": "분위기/흐름을 바꾸겠어" },
+      { "type": "S", "text": "팀 밸런스를 높이려면 뭘 해야 하지" }
+    ],
+    "scale": {
+      "min": "L",
+      "max": "S"
+    }
+  },
+  {
+    "id": 16,
+    "category": "팀에서의 역할",
+    "situation": "강한 상대팀을 만났을 때",
+    "options": [
+      { "type": "A", "text": "골 넣어야 이기지! 무조건 골" },
+      { "type": "D", "text": "무실점이 이기는 것" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  },
+  {
+    "id": 17,
+    "category": "팀에서의 역할",
+    "situation": "우리 팀원이 상대팀 볼을 탈취하여 우리가 역습하는 상황일 때",
+    "options": [
+      { "type": "A", "text": "전방으로 뛰어나가 상대의 뒷공간을 점유한다" },
+      { "type": "D", "text": "뒤, 사이드로 빠져서 안전하게 패스를 받아준다" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  },
+  {
+    "id": 18,
+    "category": "팀에서의 역할",
+    "situation": "난 이게 조금이라도 더 낫다고 생각한다.",
+    "options": [
+      { "type": "A", "text": "상대 진영에서 공격 시도" },
+      { "type": "D", "text": "상대방의 공격을 차단하는 것" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  },
+  {
+    "id": 19,
+    "category": "팀에서의 역할",
+    "situation": "우리 팀이 2:1로 앞서고 있을 때 경기 막바지 나는?",
+    "options": [
+      { "type": "A", "text": "추가 득점을 위해 계속해서 공격을 시도한다" },
+      { "type": "D", "text": "수비에 집중해 실점을 방지한다" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  },
+  {
+    "id": 20,
+    "category": "팀에서의 역할",
+    "situation": "우리 팀이 1:0으로 앞서고 있는 경기 막바지, 당신의 행동은?",
+    "options": [
+      { "type": "A", "text": "추가 득점을 위해 공격에 집중한다" },
+      { "type": "D", "text": "수비를 강화해 실점을 막는다" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  },
+  {
+    "id": 21,
+    "category": "팀에서의 역할",
+    "situation": "경기가 끝난 후 더 속상하게 느끼는 상황은?",
+    "options": [
+      { "type": "A", "text": "완벽한 골 찬스를 놓쳤을 때" },
+      { "type": "D", "text": "대박 실수로 실점했을 때" }
+    ],
+    "scale": {
+      "min": "A",
+      "max": "D"
+    }
+  }
+]
