@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   const handleStart = () => {
-    router.push('/quiz');
+    router.push('/question');
   };
 
   return (
