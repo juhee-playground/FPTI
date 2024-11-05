@@ -23,14 +23,7 @@
       "@/*": ["./*"]
     }
   },
-  "types": ["@types/styled-components", "@types/testing-library__jest-dom"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/lib/placeholder-data.ts",
-    "scripts/seed.js"
-  ],
+  "types": [".next/types/**/*.ts", "jest", "@testing-library/jest-dom"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
