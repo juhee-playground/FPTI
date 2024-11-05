@@ -20,7 +20,10 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./app/*"],
+      "@/constants/*": ["./constants/*"],
+      "@/data/*": ["./data/*"],
+      "@/utils/*": ["./utils/*"]
     }
   },
   "types": ["jest", "@testing-library/jest-dom"],
