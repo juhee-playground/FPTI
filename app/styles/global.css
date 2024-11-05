@@ -321,11 +321,14 @@ input[type='submit'] {
 }
 
 @layer components {
-  .button {
-    @apply bg-gray-100 text-gray-900 px-6 py-2.5 text-lg rounded-full min-w-[48%] border border-gray-900 cursor-pointer transition-colors duration-300;
+  .button-outline {
+    @apply bg-button-basic text-text-default px-6 py-2.5 text-button-text rounded-button min-w-[48%] border border-black cursor-pointer transition-colors duration-300;
   }
-  .button:hover {
-    @apply bg-gray-700 text-gray-50;
+  .button-outline:hover:not(:disabled) {
+    @apply bg-button-hover text-text-white;
+  }
+  .button-outline:disabled {
+    @apply opacity-80 cursor-not-allowed;
   }
 }
 
