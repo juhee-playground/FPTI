@@ -24,8 +24,8 @@ const CircleSelector = ({ selectedValue, onSelect }: ICircleSelectorProps) => {
             key={index}
             onClick={() => handleClick(index)}
             className={`flex items-center justify-center rounded-full cursor-pointer transition-colors duration-300 ${
-              isSelected ? 'bg-transparent' : 'bg-gray-200'
-            } hover:bg-green-500 border border-gray-800`}
+              isSelected ? 'bg-transparent' : 'bg-button-basic'
+            } hover:bg-primary-default border border-black`}
             style={{
               width: `${size}px`,
               height: `${size}px`,

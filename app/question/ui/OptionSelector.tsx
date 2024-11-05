@@ -10,8 +10,8 @@ const OptionSelector = ({ selectedValue, onSelect, options }: IOptionSelectorPro
   <>
     <CircleSelector selectedValue={selectedValue} onSelect={onSelect} />
     <div className='flex items-start justify-between gap-4'>
-      <h4 className='text-gray-800 text-lg font-normal max-w-[120px] min-h-[100px] text-left'>{options[0].text}</h4>
-      <h4 className='text-gray-800 text-lg font-normal max-w-[120px] min-h-[100px] text-right'>{options[1].text}</h4>
+      <h4 className='text-text-default text-lg max-w-[130px] min-h-[100px] text-left'>{options[0].text}</h4>
+      <h4 className='text-text-default text-lg max-w-[130px] min-h-[100px] text-right'>{options[1].text}</h4>
     </div>
   </>
 );

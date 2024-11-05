@@ -16,7 +16,7 @@ export default function Home() {
           <p className='text-lg font-medium text-white text-center mb-8 px-4'>
             풋살스타일로 알아보는 나의 풋살 성향은??
           </p>
-          <button onClick={handleStart} className='button'>
+          <button onClick={handleStart} className='button-outline'>
             START
           </button>
         </div>
