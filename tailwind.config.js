@@ -12,11 +12,11 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: '#73ce9e',
+          default: '#73ce9e',
           opacity: '#73ce9e94',
         },
         secondary: {
-          DEFAULT: '#ff4500',
+          default: '#ff4500',
           dark: '#cc3700',
           light: '#fd9363',
           opacity: 'rgba(255, 69, 0, 0.5)',
@@ -50,7 +50,7 @@ export default {
 
         // Text Colors
         text: {
-          basic: '#262626',
+          default: '#262626',
           white: '#f4f4f4',
           placeholder: '#757575',
           error: '#e91e63',
@@ -58,26 +58,43 @@ export default {
 
         // Status Colors
         success: {
-          DEFAULT: '#4caf50',
+          default: '#4caf50',
           lighter: '#d4edda',
         },
         error: {
-          DEFAULT: '#e91e63',
+          default: '#e91e63',
           lighter: '#f8d7da',
         },
         warning: {
-          DEFAULT: '#ffc107',
+          default: '#ffc107',
           lighter: '#fff3cd',
         },
         info: {
-          DEFAULT: '#2196f3',
+          default: '#2196f3',
           lighter: '#cce5ff',
         },
         cancel: {
-          DEFAULT: '#bdbdbd',
+          default: '#bdbdbd',
           lighter: '#f4f4f4',
         },
         'font-color': 'rgba(0, 0, 0, 1)',
+      },
+      fontSize: {
+        xs: '0.75rem', // 12px
+        sm: '0.875rem', // 14px
+        base: '1rem', // 16px
+        lg: '1.125rem', // 18px
+        xl: '1.25rem', // 20px
+        '2xl': '1.5rem', // 24px
+        '3xl': '1.875rem', // 30px
+        '4xl': '2.25rem', // 36px
+        '5xl': '3rem', // 48px
+        '6xl': '4rem', // 64px
+        'button-text': '1.125rem',
+        title: '2.5rem',
+      },
+      borderRadius: {
+        button: '1.25rem', // 20px
       },
     },
   },
