@@ -21,6 +21,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
+      "@/ui/*": ["./app/ui/*"],
+      "@/question/*": ["./app/question/ui/*"],
+      "@/result/*": ["./app/result/[id]/ui/*"],
+      "@/api/*": ["./api/*"],
       "@/constants/*": ["./constants/*"],
       "@/data/*": ["./data/*"],
       "@/utils/*": ["./utils/*"]
