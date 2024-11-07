@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import QUESTIONS from '@/data/DB_QUESTIONS.json';
-import QuestionContainer from '@/question/ui/QuestionContainer';
+import QuestionContainer from '@/question/QuestionContainer';
 import { calculateFinalResult, getTopTypesSorted, sortFinalResult } from '@/utils/calculateResult';
 import { generateQueryStringFromNestedResult } from '@/utils/queryString';
 
@@ -52,7 +52,8 @@ export default function QuizPage() {
       const fpti = getTopTypesSorted(result);
       const sortedFinalResult = sortFinalResult(result);
       const queryString = generateQueryStringFromNestedResult(sortedFinalResult);
-      router.push(`/result/${fpti}?finalResult=${queryString}`);
+      const encodedFinalResult = encodeURIComponent(queryString);
+      router.push(`/result/${fpti}?finalResult=${encodedFinalResult}`);
     }
   };
 
