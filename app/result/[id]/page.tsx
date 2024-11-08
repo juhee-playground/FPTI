@@ -51,7 +51,7 @@ export default function ResultPage() {
     }
   };
   return (
-    <div className='flex flex-col items-center bg-background overflow-y-auto p-6 gap-3'>
+    <div className='flex flex-col items-center bg-background text-white overflow-y-auto py-6 gap-3'>
       <ImageBox topTypes={fpti as string} width={300} height={300} />
       <h3 className='flex flex-col items-center gap-1 text-text-basic'>
         <span className='w-40 h-8 bg-primary text-center rounded-lg font-medium text-lg border border-black'>
