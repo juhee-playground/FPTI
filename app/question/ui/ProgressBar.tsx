@@ -5,8 +5,11 @@ interface IProgressBarProps {
 }
 
 const ProgressBar = ({ percentage }: IProgressBarProps) => (
-  <div className='w-full h-2 bg-gray-200 relative'>
-    <div className='h-full bg-orange-300 transition-all duration-300 ease-in-out' style={{ width: `${percentage}%` }} />
+  <div className='w-full h-2 bg-border-basic relative'>
+    <div
+      className='h-full bg-secondary-light transition-all duration-300 ease-in-out'
+      style={{ width: `${percentage}%` }}
+    />
   </div>
 );
 

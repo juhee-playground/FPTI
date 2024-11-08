@@ -19,7 +19,7 @@ export default {
         secondary: {
           default: '#ff4500',
           dark: '#cc3700',
-          light: '#fd9363',
+          light: '#fdba74',
           opacity: 'rgba(255, 69, 0, 0.5)',
         },
         background: '#4ac390',
