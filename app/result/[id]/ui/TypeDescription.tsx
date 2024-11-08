@@ -35,27 +35,27 @@ const TypeDescription = ({ content }: ITypeDescriptionProps) => {
   return (
     <article className='select-none p-5 rounded-lg max-w-2xl mx-auto'>
       <section className='flex flex-col items-start'>
-        <p className='text-left text-gray-800 text-sm leading-relaxed'>{content?.description}</p>
+        <p className='text-left text-text-default text-sm leading-relaxed'>{content?.description}</p>
       </section>
 
       <section className='flex flex-col items-start mt-4'>
         <h3 className='text-lg mb-2 font-semibold'>팀 내 역할</h3>
-        <p className='text-left text-gray-800 text-sm'>{content?.roleWithinTeam}</p>
+        <p className='text-left text-text-default text-sm'>{content?.roleWithinTeam}</p>
       </section>
 
       <section className='flex flex-col items-start mt-4'>
         <h3 className='text-lg mb-2 font-semibold'>추천 전술</h3>
-        <p className='text-left text-gray-800 text-sm'>{content?.recommendedTactics}</p>
+        <p className='text-left text-text-default text-sm'>{content?.recommendedTactics}</p>
       </section>
 
       <section className='flex flex-col items-start mt-4'>
         <h3 className='text-lg mb-2 font-semibold'>잘 맞는 팀</h3>
-        <p className='text-left text-gray-800 text-sm'>{content?.compatibility}</p>
+        <p className='text-left text-text-default text-sm'>{content?.compatibility}</p>
       </section>
 
       <section className='flex flex-col items-start mt-4'>
         <h3 className='text-lg mb-2 font-semibold'>비슷한 유형의 선수</h3>
-        <p className='text-left text-gray-800 text-sm'>{content?.roleModel}</p>
+        <p className='text-left text-text-default text-sm'>{content?.roleModel}</p>
       </section>
 
       <section className='flex flex-col items-start mt-4'>
