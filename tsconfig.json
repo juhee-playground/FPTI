@@ -28,9 +28,9 @@
       "@/constants/*": ["./constants/*"],
       "@/data/*": ["./data/*"],
       "@/utils/*": ["./utils/*"]
-    }
+    },
+    "types": ["jest", "@testing-library/jest-dom"]
   },
-  "types": ["jest", "@testing-library/jest-dom"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
