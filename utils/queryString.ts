@@ -13,8 +13,12 @@ export const generateQueryStringFromNestedResult = (result: { [group: string]: {
 };
 
 export const reconstructResultFromQueryString = (queryString: string) => {
+  console.log('queryString', queryString);
   const params = new URLSearchParams(queryString);
   const finalResult: { [group: string]: IScaleValue } = {};
+
+  console.log('params', params);
+  console.log(finalResult);
 
   params.forEach((value, key) => {
     const group = getGroupByKey(key);

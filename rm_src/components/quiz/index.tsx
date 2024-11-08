@@ -49,6 +49,7 @@ const Quiz = () => {
       const fpti = getTopTypesSorted(result);
       const sortedFinalResult = sortFinalResult(result);
       const queryString = generateQueryStringFromNestedResult(sortedFinalResult);
+
       navigate(`/result/${fpti}?finalResult=${queryString}`);
     }
   };

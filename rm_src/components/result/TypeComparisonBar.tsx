@@ -8,7 +8,7 @@ import {
   PercentageText,
 } from './TypeComparisonBar.styles';
 
-import { PERSONALITY_TYPES } from '@/_rm_src/constants/PersonalityType';
+import { PERSONALITY_TYPES } from '@/constants/PersonalityType';
 
 interface ITypeComparisonBarProps {
   startLabel: string;
