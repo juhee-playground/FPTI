@@ -1,0 +1,1634 @@
+[
+  {
+    "name": "Tyrannosaurus",
+    "koreaName": "티라노사우루스",
+    "type": "전투의 리더형",
+    "alias": "압도적인 전사",
+    "summary": "공격적인 플레이를 주도하며, 개인기로 승부를 걸어 이기려는 전투적인 리더",
+    "description": "티라노사우루스는 강력한 힘과 공격력을 자랑하는 대표적인 육식 공룡이야. 전투의 리더형은 공격적이며, 개인기로 승부를 결정짓고, 팀을 승리로 이끄는 역할.",
+    "roleWithinTeam": "주공격수로 팀의 득점력을 책임지며, 중요한 순간에 리더십을 발휘.",
+    "recommendedTactics": "빠르고 강력한 공격 전개를 통해 상대 수비를 무너뜨리는 전략이 유효.",
+    "roleModel": "크리스티아누 호날두 - 강력한 득점력과 리더십으로 팀을 승리로 이끄는 공격수.",
+    "fit": [
+      {
+        "koreaName": "딜로포사우루스",
+        "name": "Dilophosaurus",
+        "type": "전략의 스프린터형",
+        "reason": "전술적인 플레이와 빠른 공격 지원으로 티라노사우루스의 공격성을 보완.",
+        "fpti": "SATC"
+      },
+      {
+        "koreaName": "알로사우루스",
+        "name": "Allosaurus",
+        "type": "전략적 공격형",
+        "reason": "팀의 흐름을 조율하며 공격을 보조할 수 있는 능력으로 티라노사우루스의 리더십과 조화로움.",
+        "fpti": "LAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "공격 중심의 플레이와 상반되는 수비적인 성향으로 티라노사우루스의 스타일과 충돌.",
+        "fpti": "LDPC"
+      },
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적 리더십과 공격적 리더십의 차이로 인해 팀 내에서 충돌 가능성이 높음.",
+        "fpti": "LDTC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "폭발적인 속도 훈련",
+          "description": "티라노사우루스의 빠른 움직임과 공격 전개를 강화하기 위해 스프린트와 가속 훈련에 집중."
+        },
+        {
+          "name": "피니싱 연습",
+          "description": "결정적인 순간에 득점을 극대화하기 위한 다양한 슈팅 연습을 진행."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "포지셔닝 훈련",
+          "description": "공격 시 최적의 위치 선정을 통해 수비수 사이에서 더 나은 득점 기회를 창출하기 위한 훈련."
+        },
+        {
+          "name": "수비 회복 훈련",
+          "description": "공격 후 수비로 전환하는 속도를 높이고, 공을 잃은 후 빠르게 수비로 복귀하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "공격적이고 승부욕이 강한 팀과 잘 어울리며, 수비적인 팀과는 상호작용이 어려움.",
+    "fpti": "LATC",
+    "id": "FTI-1"
+  },
+  {
+    "name": "Dilophosaurus",
+    "koreaName": "딜로포사우루스",
+    "type": "전략의 스프린터형",
+    "alias": "전략의 암살자",
+    "summary": "승부를 걸어 이기려 하지만, 팀을 지원하며 전략적으로 움직이는 공격수",
+    "description": "딜로포사우루스는 빠르고 날렵한 공룡으로, 뛰어난 속도와 기동성을 자랑해. 전략의 스프린터형은 개인기를 활용해 상대를 돌파하며, 팀과의 협력으로 승리를 목표.",
+    "roleWithinTeam": "공격과 팀워크의 균형을 맞추며, 팀의 전략적 목표를 달성하는 역할.",
+    "recommendedTactics": "적절한 타이밍의 움직임과 패스를 통해 상대 수비를 무너뜨리는 전략이 효과적.",
+    "roleModel": "손흥민 – 빠른 스프린트와 지능적인 플레이로 팀을 지원하며 득점을 책임지는 공격수.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "화려한 개인기와 빠른 플레이로 딜로포사우루스의 전술적 움직임을 보완.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "강력한 공격 주도로 딜로포사우루스의 전술적 움직임에 힘을 실음.",
+        "fpti": "LATC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비에 집중하는 성향이 딜로포사우루스의 공격적인 스타일과 상충.",
+        "fpti": "LDPC"
+      },
+      {
+        "koreaName": "스테고사우루스",
+        "name": "Stegosaurus",
+        "type": "즐기는 디펜더",
+        "reason": "경기를 즐기는 수비 성향이 딜로포사우루스의 전략적 공격 성향과 안 맞음.",
+        "fpti": "SDTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "속도와 민첩성 훈련",
+          "description": "딜로포사우루스의 강점을 극대화하기 위해 빠른 스프린트와 방향 전환 훈련에 집중."
+        },
+        {
+          "name": "전술적 움직임 훈련",
+          "description": "전술적 플레이를 더욱 강화하기 위한 패스 타이밍과 팀워크 연습."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "피니싱 훈련",
+          "description": "결정적인 순간에 득점을 보완하기 위해 슈팅의 정확성과 강도를 높이는 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 실패 후 빠르게 수비로 전환하는 훈련을 통해 약점을 보완."
+        }
+      ]
+    },
+    "compatibility": "전술적 사고가 뛰어난 팀과 잘 어울리며, 높은 수준의 협력이 필요한 상황에서 강점을 발휘.",
+    "fpti": "SATC",
+    "id": "FTI-2"
+  },
+  {
+    "name": "Velociraptor",
+    "koreaName": "벨로시랩터",
+    "type": "쇼맨의 리더형",
+    "alias": "쇼맨쉽의 마술사",
+    "summary": "공격적인 스타일로 관중을 즐겁게 하면서 팀을 이끄는 리더",
+    "description": "벨로시랩터는 민첩하고 영리한 공룡으로, 빠른 속도와 날렵한 움직임이 특징이야. 쇼맨의 리더형은 화려한 플레이와 리더십을 결합해 팀을 주도.",
+    "roleWithinTeam": "팀의 화려한 공격을 주도하며, 관중과 팀원의 사기를 동시에 끌어올림.",
+    "recommendedTactics": "빠르고 화려한 개인기를 활용해 상대의 수비를 무너뜨리고, 빠르게 득점 기회를 창출하는 전략이 효과적.",
+    "roleModel": "킬리안 음바페 – 민첩한 속도와 화려한 개인기로 공격을 주도하고 경기의 흐름을 바꾸는 선수.",
+    "fit": [
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "창의적인 공격과 화려한 드리블로 벨로시랩터의 쇼맨십을 더욱 강화.",
+        "fpti": "SMTE"
+      },
+      {
+        "koreaName": "갈리미무스",
+        "name": "Gallimimus",
+        "type": "승부의 조율형",
+        "reason": "빠른 속도와 민첩성으로 벨로시랩터의 공격력을 보완하고 조율함.",
+        "fpti": "SMTC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "브라키오사우루스",
+        "name": "Brachiosaurus",
+        "type": "조율하는 수비형",
+        "reason": "안정적인 수비 플레이가 벨로시랩터의 공격적이고 창의적인 성향과 충돌.",
+        "fpti": "LDPE"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비적 성향이 벨로시랩터의 공격적 리더십과 조화가 어려움.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 훈련",
+          "description": "벨로시랩터의 화려한 드리블과 개인기를 더 발전시키기 위한 기술 연습."
+        },
+        {
+          "name": "스피드 업 훈련",
+          "description": "빠른 스프린트와 민첩성을 강화하여 속도에서 강점을 더 키우는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "포지셔닝 훈련",
+          "description": "팀워크 향상을 위해 공격 시 최적의 위치 선정을 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 실패 후 빠르게 수비로 전환하는 능력을 키우는 훈련."
+        }
+      ]
+    },
+    "compatibility": "공격적이고 창의적인 팀 환경에서 빛을 발하며, 정적이고 수비적인 팀과는 조화가 어려움.",
+    "fpti": "LATE",
+    "id": "FTI-3"
+  },
+  {
+    "name": "Spinosaurus",
+    "koreaName": "스피노사우루스",
+    "type": "창의적 공격형",
+    "alias": "파괴의 아티스트",
+    "summary": "개인기를 활용하여 팀을 지원하고 경기를 창의적으로 이끄는 플레이어",
+    "description": "스피노사우루스는 강력한 발톱과 민첩함을 자랑하는 공룡이야. 창의적 공격형은 창의적인 플레이와 개인기로 경기를 이끌어가는 역할.",
+    "roleWithinTeam": "공격과 중원에서의 창의적인 연결고리로, 팀의 전술을 다채롭게 만드는 역할.",
+    "recommendedTactics": "기술적인 플레이를 바탕으로 상대 수비를 흔드는 창의적인 전개가 효과적.",
+    "roleModel": "리오넬 메시 - 뛰어난 개인기와 창의성으로 팀의 공격을 이끄는 플레이메이커.",
+    "fit": [
+      {
+        "koreaName": "파키케팔로사우루스",
+        "name": "Pachycephalosaurus",
+        "type": "협력의 공격형",
+        "reason": "팀원과의 협력으로 스피노사우루스의 창의적인 공격이 더 효과적.",
+        "fpti": "SAPC"
+      },
+      {
+        "koreaName": "딜로포사우루스",
+        "name": "Dilophosaurus",
+        "type": "전략의 스프린터형",
+        "reason": "전술적인 움직임으로 창의적인 공격 전개를 돕는 역할.",
+        "fpti": "SATC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비에 집중하는 성향이 창의적인 공격 스타일과 충돌.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "철저한 수비 성향이 스피노사우루스의 공격적이고 창의적인 성향과 맞지 않음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "창의적 드리블 훈련",
+          "description": "스피노사우루스의 창의적인 드리블을 더욱 발전시키기 위한 기술 연습."
+        },
+        {
+          "name": "공격 전개 훈련",
+          "description": "개인기의 효율성을 극대화하는 공격 전개 및 패스 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "위치 선정 훈련",
+          "description": "창의적인 공격과 함께 최적의 위치에서 플레이할 수 있도록 포지셔닝 연습."
+        },
+        {
+          "name": "수비 회복 훈련",
+          "description": "수비로 빠르게 전환할 수 있도록 수비 전환 속도 향상을 위한 훈련."
+        }
+      ]
+    },
+    "compatibility": "공격적인 팀과의 시너지 효과가 크며, 개인 플레이를 중시하는 환경에서 더욱 빛을 발함.",
+    "fpti": "SATE",
+    "id": "FTI-4"
+  },
+  {
+    "name": "Allosaurus",
+    "koreaName": "알로사우루스",
+    "type": "전략적 공격형",
+    "alias": "전장의 감독",
+    "summary": "패스를 통해 경기를 조율하며 승리를 목표로 하는 공격의 리더",
+    "description": "알로사우루스는 매우 민첩한 대형 포식자로, 전략적인 사고방식과 공격력을 갖춘 공룡이야. 전략적 공격형는 팀 플레이를 중시하며, 적절한 패스를 통해 득점.",
+    "roleWithinTeam": "경기의 흐름을 읽고 결정적인 순간에 득점을 책임지는 공격수 역할.",
+    "recommendedTactics": "패스와 움직임을 통해 상대 수비를 분산시키고, 결정적인 찬스를 노리는 전술이 효과적.",
+    "roleModel": "로베르트 레반도프스키 - 뛰어난 위치 선정과 마무리 능력으로 득점을 책임지는 스트라이커.",
+    "fit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "티라노사우루스의 공격적인 리더십이 알로사우루스의 전략적 움직임을 더욱 강화.",
+        "fpti": "LATC"
+      },
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 리더형",
+        "reason": "창의적인 리더십이 알로사우루스의 전략적 공격을 보완해 팀을 더 유연하게 함.",
+        "fpti": "LAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 리더십과 공격적 리더십이 충돌하여 팀 내 역할 갈등을 유발할 수 있음.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "협력적인 수비 성향이 알로사우루스의 공격적이고 전략적인 성향과 맞지 않음.",
+        "fpti": "SAPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "전략적 패스 훈련",
+          "description": "알로사우루스의 강력한 패스를 더 날카롭게 만들기 위한 훈련."
+        },
+        {
+          "name": "포지셔닝 훈련",
+          "description": "공격 흐름에서 최적의 위치 선정을 위한 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "슈팅 훈련",
+          "description": "패스 후 결정적인 순간에 득점을 올릴 수 있도록 슈팅 능력을 보완하는 훈련."
+        },
+        {
+          "name": "수비 지원 훈련",
+          "description": "공격 후 수비로 전환할 수 있는 능력을 보완하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "전략적인 팀과 잘 어울리며, 팀플레이가 강조된 전술에서 최고의 성과를 냄.",
+    "fpti": "LAPC",
+    "id": "FTI-5"
+  },
+  {
+    "name": "Pachycephalosaurus",
+    "koreaName": "파키케팔로사우루스",
+    "type": "협력의 공격형",
+    "alias": "충돌의 장인",
+    "summary": "공격과 승리를 목표로 하지만, 팀원들과 협력하여 기회를 창출하는 플레이어",
+    "description": "파키케팔로사우루스는 두꺼운 두개골을 가진 소형 공룡으로, 팀워크와 협력을 통해 경기를 이끌어가는 성향을 가진 플레이어. 협력적 스트라이커는 팀과의 조화를 통해 최적의 득점 기회를 창출.",
+    "roleWithinTeam": "공격에서 팀원들과의 협력을 통해 최적의 득점 기회를 만들어내는 역할.",
+    "recommendedTactics": "동료와의 빠른 연계 플레이를 통해 상대 수비를 무너뜨리고, 최적의 득점 기회를 창출하는 전술이 효과적.",
+    "roleModel": "해리 케인 – 강력한 팀워크와 협력 플레이로 득점 기회를 창출하는 스트라이커.",
+    "fit": [
+      {
+        "koreaName": "이구아노돈",
+        "name": "Iguanodon",
+        "type": "지원형 크리에이터",
+        "reason": "팀워크를 중시하며 협력적인 공격 전개를 통해 파키케팔로사우루스의 스타일을 보완.",
+        "fpti": "SAPE"
+      },
+      {
+        "koreaName": "알로사우루스",
+        "name": "Allosaurus",
+        "type": "전략적 공격형",
+        "reason": "전술적 사고와 팀플레이 중심의 협력적 공격 전개로 파키케팔로사우루스와 잘 맞음.",
+        "fpti": "LAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 성향이 협력적 공격 전개와 맞지 않음.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "철저한 수비 성향이 공격에 집중하는 파키케팔로사우루스와 상충.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "팀워크 강화 훈련",
+          "description": "팀원들과의 협력을 강화하여 팀 플레이를 최적화하는 훈련."
+        },
+        {
+          "name": "패스 연계 훈련",
+          "description": "동료와의 패스 플레이를 더욱 매끄럽게 하기 위한 연계 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "슈팅 훈련",
+          "description": "득점 기회에서의 정확한 마무리를 위한 슈팅 능력 보완 훈련."
+        },
+        {
+          "name": "위치 선정 훈련",
+          "description": "공격 시 더 나은 위치 선정으로 팀을 지원하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "팀워크를 중시하는 환경에서 뛰어난 성과를 보이며, 개인 플레이 위주의 팀에서는 부적합.",
+    "fpti": "SAPC",
+    "id": "FTI-6"
+  },
+  {
+    "name": "Parasaurolophus",
+    "koreaName": "파라사우롤로푸스",
+    "type": "창의적 리더형",
+    "alias": "음악적인 전략가",
+    "summary": "창의적인 플레이로 팀을 이끌며, 경기를 즐기는 리더",
+    "description": "파라사우롤로푸스는 독특한 머리 장식과 소리를 통해 소통하는 공룡으로, 창의적인 플레이와 리더십을 결합해 팀을 이끔.",
+    "roleWithinTeam": "중원에서 창의적인 전개를 통해 팀의 공격을 이끌며, 전체 경기 흐름을 조율함.",
+    "recommendedTactics": "빠르고 창의적인 패스 플레이를 통해 상대 수비를 무너뜨리고, 팀의 공격력을 극대화하는 전술이 효과적.",
+    "roleModel": "케빈 더 브라위너 - 창의적인 패스와 경기 조율로 팀의 공격을 이끄는 미드필더.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "창의적이고 화려한 플레이 스타일이 파라사우롤로푸스의 창의적 리더십과 잘 맞음.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스피노사우루스",
+        "name": "Spinosaurus",
+        "type": "창의적 공격형",
+        "reason": "창의적인 공격 전개를 통해 팀을 이끌 수 있으며 파라사우롤로푸스의 리더십을 강화.",
+        "fpti": "SATE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적 리더십과 창의적 리더십이 충돌하여 팀 내에서 갈등을 유발",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비 위주의 플레이 스타일이 파라사우롤로푸스의 창의적 성향과 맞지 않음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "창의적 패스 훈련",
+          "description": "파라사우롤로푸스의 창의적인 패스 능력을 극대화하기 위한 훈련."
+        },
+        {
+          "name": "전술적 움직임 훈련",
+          "description": "팀 리더로서 팀 전체의 움직임을 조율하는 전술적 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "슈팅 훈련",
+          "description": "결정적인 순간에 득점을 올리기 위한 슈팅 능력 보완."
+        },
+        {
+          "name": "수비 지원 훈련",
+          "description": "공격 후 수비로 전환하는 능력을 보완하기 위한 훈련."
+        }
+      ]
+    },
+    "compatibility": "공격적이고 창의적인 팀과 시너지를 발휘하며, 정적이고 수비적인 팀과는 조화가 어려움.",
+    "fpti": "LAPE",
+    "id": "FTI-7"
+  },
+  {
+    "name": "Iguanodon",
+    "koreaName": "이구아노돈",
+    "type": "지원형 크리에이터",
+    "alias": "팀워크 장인",
+    "summary": "공격적인 패스를 통해 팀을 지원하고 경기를 창의적으로 이끄는 플레이어",
+    "description": "이구아노돈은 안정적인 생활과 공동체 의식을 가진 공룡으로, 팀워크와 협동을 중요시. 지원형 크리에이터는 창의적인 패스를 통해 팀을 돕고 경기를 이끔.",
+    "roleWithinTeam": "중원에서 창의적인 패스를 통해 팀의 흐름을 이끌고, 공격과 수비를 연결하는 역할.",
+    "recommendedTactics": "정확한 패스를 통해 팀의 흐름을 조율하고, 빠른 전개를 통해 상대 수비를 무너뜨리는 전략이 효과적.",
+    "roleModel": "안드레스 이니에스타 - 뛰어난 시야와 패스로 팀을 조율하고 지원하는 미드필더.",
+    "fit": [
+      {
+        "koreaName": "파키케팔로사우루스",
+        "name": "Pachycephalosaurus",
+        "type": "협력의 공격형",
+        "reason": "팀워크를 중시하며 협력적인 플레이로 이구아노돈의 지원 능력을 강화.",
+        "fpti": "SAPC"
+      },
+      {
+        "koreaName": "알로사우루스",
+        "name": "Allosaurus",
+        "type": "전략적 공격형",
+        "reason": "전략적인 공격 전개가 이구아노돈의 창의적인 패스 플레이를 보완.",
+        "fpti": "LAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 성향이 이구아노돈의 창의적 플레이와 상충.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "스테고사우루스",
+        "name": "Stegosaurus",
+        "type": "즐기는 디펜더",
+        "reason": "수비에 중점을 둔 플레이 스타일이 창의적인 지원형 플레이와 맞지 않음.",
+        "fpti": "SDTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 플레이 훈련",
+          "description": "이구아노돈의 패스 정확성을 극대화하기 위한 훈련."
+        },
+        {
+          "name": "창의적인 전술 훈련",
+          "description": "팀 전체의 흐름을 조율하기 위한 창의적 전술 연습."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "슈팅 훈련",
+          "description": "공격적 패스 후 득점을 위한 슈팅 능력 보완 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 후 빠르게 수비로 전환할 수 있는 능력을 보완하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "팀워크를 중시하는 플레이어들과의 협업에서 강점을 발휘하며, 패스 플레이를 중시하는 전술에 적합.",
+    "fpti": "SAPE",
+    "id": "FTI-8"
+  },
+  {
+    "name": "Triceratops",
+    "koreaName": "트리케라톱스",
+    "type": "방어의 리더형",
+    "alias": "철벽의 수호자",
+    "summary": "수비에서 개인기를 활용하여 팀을 지키며 승리를 이끄는 리더",
+    "description": "트리케라톱스는 강력한 뿔과 방어적인 성향으로 유명한 초식 공룡이야. 방어의 리더형은 수비를 주도하며, 팀을 안전하게 보호하고 승리를 이끔.",
+    "roleWithinTeam": "팀의 수비를 책임지고, 강력한 리더십으로 수비 라인을 안정화시킴.",
+    "recommendedTactics": "수비 라인을 견고히 하고, 빠른 역습으로 상대 공격을 무력화하는 전략이 효과적.",
+    "roleModel": "루벤 디아스 – 뛰어난 수비력과 리더십으로 팀을 철저히 방어하고 지휘하는 수비수.",
+    "fit": [
+      {
+        "koreaName": "스테고사우루스",
+        "name": "Stegosaurus",
+        "type": "즐기는 디펜더",
+        "reason": "방어적인 성향을 공유하며 팀의 수비를 안정화시킴.",
+        "fpti": "SDTE"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비를 중시하는 팀워크로 트리케라톱스와 함께 강력한 방어 라인을 구축",
+        "fpti": "LDPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "공격적인 리더십과 수비적인 리더십이 충돌하여 팀 내에서 갈등을 일으킴.",
+        "fpti": "LATC"
+      },
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적인 스타일과 수비적인 스타일이 충돌하여 팀 내 조화가 어려움.",
+        "fpti": "LATE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "수비 강화 훈련",
+          "description": "트리케라톱스의 방어 능력을 극대화하기 위해 1대1 수비와 조직적인 수비 훈련에 집중."
+        },
+        {
+          "name": "리더십 훈련",
+          "description": "팀의 수비를 조율하고 안정감을 더하기 위한 리더십 강화 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 강화 훈련",
+          "description": "수비 시 더 빠른 속도로 상대를 차단하기 위한 스피드 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 빠르게 공격으로 전환할 수 있는 전환 훈련."
+        }
+      ]
+    },
+    "compatibility": "조직적이고 방어적인 팀에서 뛰어난 성과를 보이며, 공격 위주의 팀과는 조화가 어려움.",
+    "fpti": "LDTC",
+    "id": "FTI-9"
+  },
+  {
+    "name": "Ceratosaurus",
+    "koreaName": "케라토사우루스",
+    "type": "기술적 수비형",
+    "alias": "우아한 수비수",
+    "summary": "수비에서 개인기를 활용하여 팀을 지원하고 승리를 추구하는 플레이어",
+    "description": "케라토사우루스는 육식 공룡으로, 강력한 턱과 발톱을 자랑해. 기술적 수비형은 수비에서 개인기를 발휘하여 팀을 지원하고 상대의 공격을 막음.",
+    "roleWithinTeam": "강력하고 우아한 수비로 팀을 지키며, 빠른 대응력으로 상대의 공격을 차단.",
+    "recommendedTactics": "개인기를 활용해 상대 공격을 차단하고, 역습을 통해 빠르게 공격으로 전환하는 전술이 효과적.",
+    "roleModel": "마르퀴뇨스 – 민첩하고 우아한 수비력으로 상대 공격을 차단하며 팀을 지키는 수비수.",
+    "fit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "강력한 수비력을 갖춘 두 선수의 조합이 수비 라인을 견고하게 만듦.",
+        "fpti": "LDPC"
+      },
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "민첩한 수비와 협력적인 플레이로 케라토사우루스의 기술적 수비를 보완.",
+        "fpti": "SAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적이고 화려한 스타일이 케라토사우루스의 수비적 성향과 맞지 않음.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "공격을 중시하는 스타일과 수비적인 플레이가 충돌.",
+        "fpti": "SMTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 훈련",
+          "description": "케라토사우루스의 개인기를 더 날카롭게 만들어 상대 공격을 효과적으로 차단하는 훈련."
+        },
+        {
+          "name": "위치 선정 훈련",
+          "description": "수비 시 최적의 위치에 자리해 공격을 막는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "팀워크 강화 훈련",
+          "description": "수비와 팀 간의 협력을 극대화하기 위한 팀워크 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 빠르게 공격으로 전환할 수 있도록 지원하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "강력한 수비 라인을 구축하는 팀에서 최상의 성과를 보이며, 창의적인 플레이를 중시하는 팀과는 조화가 어려움.",
+    "fpti": "SDTC",
+    "id": "FTI-10"
+  },
+  {
+    "name": "Carcharodontosaurus",
+    "koreaName": "카르카로돈토사우루스",
+    "type": "테크니컬 리더형",
+    "alias": "전장의 지휘관",
+    "summary": "수비에서도 개인기를 활용하며, 경기를 즐기면서 팀을 이끄는 리더",
+    "description": "카르카로돈토사우루스는 대형 육식 공룡으로, 강력한 리더십과 기술을 자랑해. 테크니컬 리더형은 수비에서 개인기를 활용하여 팀을 이끌며, 경기를 조율.",
+    "roleWithinTeam": "수비와 공격에서 모두 활약하며, 팀의 리더로서 전체적인 경기를 조율.",
+    "recommendedTactics": "개인기를 활용한 수비와 빠른 역습 전개를 통해 경기를 주도하는 전술이 효과적.",
+    "roleModel": "조슈아 키미히 – 뛰어난 수비와 경기 조율 능력으로 팀을 이끄는 만능 플레이어.",
+    "fit": [
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "수비와 공격을 모두 지원하는 플레이 스타일이 카르카로돈토사우루스의 기술적 리더십을 보완.",
+        "fpti": "SAPC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "전략적인 수비 능력이 카르카로돈토사우루스의 리더십과 잘 맞음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적 리더십과 수비적 리더십이 충돌하여 팀 내에서 조화가 어려움.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "공격적인 플레이와 기술적인 수비 스타일이 조화롭게 맞지 않음.",
+        "fpti": "SMTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 수비 훈련",
+          "description": "카르카로돈토사우루스의 개인기를 강화하여 상대 공격을 효과적으로 막는 훈련."
+        },
+        {
+          "name": "리더십 훈련",
+          "description": "팀의 수비를 이끌고 조직적으로 조율하는 리더십 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "수비 시 더 빠르게 대응할 수 있도록 속도를 강화하는 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 빠르게 공격으로 전환하여 팀의 공격을 돕는 훈련."
+        }
+      ]
+    },
+    "compatibility": "기술적인 팀과 잘 어울리며, 공격과 수비를 연결하는 전술에 적합.",
+    "fpti": "LDTE",
+    "id": "FTI-11"
+  },
+  {
+    "name": "Stegosaurus",
+    "koreaName": "스테고사우루스",
+    "type": "즐기는 디펜더",
+    "alias": "차분한 요새",
+    "summary": "수비에서 개인기를 활용하며 경기를 즐기고 팀을 지원하는 플레이어",
+    "description": "스테고사우루스는 등에 큰 판을 지니고 있으며, 방어적이고 차분한 성향을 가진 공룡이야. 즐기는 디펜더는 수비를 하면서도 경기를 즐기고, 팀을 지원하는 역할.",
+    "roleWithinTeam": "수비에서 팀의 균형을 유지하며, 경기를 즐기면서 수비 라인을 안정화.",
+    "recommendedTactics": "안정적인 수비와 경기 조율을 통해 상대의 공격을 차단하고, 팀의 흐름을 조절하는 전술이 효과적.",
+    "roleModel": "버질 반 다이크 – 차분하고 강력한 수비로 팀을 안정적으로 지휘하는 수비수.",
+    "fit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "방어적인 성향을 공유하며 팀의 수비 라인을 안정화.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "민첩한 수비와 협력적인 플레이로 스테고사우루스의 수비를 더욱 강화.",
+        "fpti": "SAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적이고 화려한 플레이 스타일이 스테고사우루스의 수비적 성향과 맞지 않음.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "딜로포사우루스",
+        "name": "Dilophosaurus",
+        "type": "전략의 스프린터형",
+        "reason": "공격적인 플레이 성향과 수비적인 성향이 맞지 않아 팀 조화가 어려움.",
+        "fpti": "SATC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 수비 훈련",
+          "description": "스테고사우루스의 개인기를 더욱 정교하게 만들어 상대 공격을 차단하는 훈련."
+        },
+        {
+          "name": "리더십 훈련",
+          "description": "수비 라인의 균형을 유지하고 조율하는 리더십 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "더 빠르게 상대를 막기 위한 스피드 강화 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 공격으로 빠르게 전환하는 능력을 강화하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "조직적이고 안정적인 수비를 구축하는 팀에서 최상의 성과를 보이며, 공격 위주의 팀과는 조화가 어려움.",
+    "fpti": "SDTE",
+    "id": "FTI-12"
+  },
+  {
+    "name": "Ankylosaurus",
+    "koreaName": "안킬로사우루스",
+    "type": "전략적 수비형",
+    "alias": "무적의 방패",
+    "summary": "철저한 수비와 패스를 통해 팀의 승리를 이끄는 리더",
+    "description": "안킬로사우루스는 견고한 갑옷과 강력한 방어력으로 적에게 저항하는 공룡이야. 전략적 수비형은 수비를 철저히 하며, 패스를 통해 팀의 경기를 조율.",
+    "roleWithinTeam": "팀의 수비를 책임지고, 강력한 수비력으로 상대 공격을 차단.",
+    "recommendedTactics": "견고한 수비와 빠른 패스 전개를 통해 상대 공격을 차단하고, 반격을 준비하는 전술이 효과적.",
+    "roleModel": "조르조 키엘리니 - 강력한 수비력으로 상대 공격을 무력화하는 철벽 수비수.",
+    "fit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적인 리더십과 전략적 수비 스타일이 잘 맞아 강력한 수비 라인을 구축.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "협력적인 수비 플레이가 안킬로사우루스의 전략적 방어에 큰 도움을 줌.",
+        "fpti": "SAPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "공격적인 성향과 수비적인 성향이 충돌하여 팀 내 역할 분담이 어려움.",
+        "fpti": "LATC"
+      },
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적이고 화려한 스타일이 안킬로사우루스의 수비적 성향과 상충.",
+        "fpti": "LATE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "전략적 수비 훈련",
+          "description": "안킬로사우루스의 수비 전략을 더욱 강화하고 상대 공격을 차단하는 훈련."
+        },
+        {
+          "name": "수비 조율 훈련",
+          "description": "팀의 수비 라인을 조율하여 상대 공격을 효과적으로 막는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "빠르게 수비 위치를 잡아 상대를 차단하는 스피드 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 공격으로의 빠른 전환을 위한 훈련."
+        }
+      ]
+    },
+    "compatibility": "수비 중심의 팀에서 최상의 성과를 보이며, 공격적인 팀과는 조화가 어려움.",
+    "fpti": "LDPC",
+    "id": "FTI-13"
+  },
+  {
+    "name": "Plesiosaurus",
+    "koreaName": "플레시오사우루스",
+    "type": "협력적 수비형",
+    "alias": "바다의 수호자",
+    "summary": "수비와 패스를 통해 팀의 승리를 도우며 협력하는 플레이어",
+    "description": "플레시오사우루스는 긴 목과 유선형의 몸을 가진 해양 파충류로, 민첩한 수영과 기민한 사냥 능력을 자랑해. 협력적 수비형은 빠른 수비와 패스로 팀을 지원.",
+    "roleWithinTeam": "수비와 중원에서 신속한 움직임과 협력을 통해 팀의 수비를 강화하고, 빠른 전환 플레이를 지원.",
+    "recommendedTactics": "민첩한 움직임과 협력적인 수비를 통해 상대의 공격을 차단하고, 빠르게 공격으로 전환하는 전술이 효과적.",
+    "roleModel": "카일 워커 - 뛰어난 속도와 협력적인 플레이로 팀의 수비와 공격을 지원하는 수비수.",
+    "fit": [
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "강력한 수비력을 바탕으로 협력적 플레이를 통해 수비를 더욱 강화.",
+        "fpti": "LDPC"
+      },
+      {
+        "koreaName": "스테고사우루스",
+        "name": "Stegosaurus",
+        "type": "즐기는 디펜더",
+        "reason": "안정적인 수비를 통해 팀의 수비 라인을 더욱 견고하게 만듬.",
+        "fpti": "SDTE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "공격적인 성향이 플레시오사우루스의 수비적 성향과 조화를 이루기 어려움.",
+        "fpti": "LATC"
+      },
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격 중심의 화려한 스타일이 협력적 수비 플레이와 상충.",
+        "fpti": "LATE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "협력적 수비 훈련",
+          "description": "플레시오사우루스의 협력적 수비 능력을 강화하기 위한 팀플레이 훈련."
+        },
+        {
+          "name": "패스 플레이 훈련",
+          "description": "정확한 패스를 통해 팀의 공격 전개를 돕는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "더 빠른 수비 전환을 위해 스피드를 강화하는 훈련."
+        },
+        {
+          "name": "위치 선정 훈련",
+          "description": "더 나은 수비 위치를 선정하여 상대 공격을 차단하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "속도와 민첩성을 중시하는 팀에서 최고의 성과를 보이며, 느리고 수비적인 팀과는 조화가 어려움.",
+    "fpti": "SDPC",
+    "id": "FTI-14"
+  },
+  {
+    "name": "Brachiosaurus",
+    "koreaName": "브라키오사우루스",
+    "type": "조율하는 수비형",
+    "alias": "높이 보는 전략가",
+    "summary": "안정적인 수비와 패스로 팀을 조율하며, 경기를 즐기는 리더",
+    "description": "브라키오사우루스는 긴 목을 가지고 있으며, 넓은 시야로 팀의 흐름을 조율해. 조율형 수비수는 수비를 안정적으로 유지하며 팀을 조율하는 역할.",
+    "roleWithinTeam": "수비의 중심에서 팀의 안정감을 제공하고, 경기를 조율하는 역할을 수행.",
+    "recommendedTactics": "공격을 지연시키며 상대의 허점을 파고드는 포지셔닝 전략이 효과적.",
+    "roleModel": "세르히오 라모스 - 뛰어난 수비력과 리더십으로 팀을 조율하는 중앙 수비수.",
+    "fit": [
+      {
+        "koreaName": "플레시오사우루스",
+        "name": "Plesiosaurus",
+        "type": "협력적 수비형",
+        "reason": "브라키오사우루스의 수비 조율 능력과 플레시오사우루스의 협력적 수비가 잘 어울림.",
+        "fpti": "SAPC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비 전략을 기반으로 브라키오사우루스의 조율 능력을 강화.",
+        "fpti": "LDPC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적 리더십과 수비적 리더십이 충돌하여 팀 내에서 조화가 어려움.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "공격 중심의 스타일과 브라키오사우루스의 조율형 수비 스타일이 상충.",
+        "fpti": "SMTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "조율 수비 훈련",
+          "description": "브라키오사우루스의 안정적인 수비와 경기 조율 능력을 강화하는 훈련."
+        },
+        {
+          "name": "리더십 훈련",
+          "description": "수비에서 팀을 이끌고 경기를 조율하는 리더십 강화 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "수비 시 빠르게 대응할 수 있는 속도를 강화하는 훈련."
+        },
+        {
+          "name": "공격 전환 훈련",
+          "description": "수비 후 빠르게 공격으로 전환하는 능력을 보완하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "수비적이고 조직적인 팀에서 뛰어난 성과를 보이며, 공을 점유하는 전술에 적합.",
+    "fpti": "LDPE",
+    "id": "FTI-15"
+  },
+  {
+    "name": "Pteranodon",
+    "koreaName": "프테라노돈",
+    "type": "안정적 지원형",
+    "alias": "하늘의 사령관",
+    "summary": "수비와 패스를 통해 팀의 안정감을 제공하며, 전술적 유연성을 지닌 플레이어",
+    "description": "프테라노돈은 날개를 펼치면 매우 큰 크기를 자랑하는 익룡으로, 넓은 시야와 민첩함으로 팀을 지원해. 안정적 지원자는 팀의 안정감을 유지하며, 전술적 유연성을 통해 팀을 돕는 역할.",
+    "roleWithinTeam": "팀의 중심에서 협력과 조율을 담당하며, 공중과 지상에서 다양한 역할을 수행.",
+    "recommendedTactics": "높은 시야와 빠른 반응을 활용해 팀의 흐름을 조율하고, 패스 플레이로 상대를 공략하는 전술이 효과적.",
+    "roleModel": "테오 에르난데스 – 넓은 시야와 빠른 대응력을 갖춘 다재다능한 풀백으로 팀을 지원.",
+    "fit": [
+      {
+        "koreaName": "이구아노돈",
+        "name": "Iguanodon",
+        "type": "지원형 크리에이터",
+        "reason": "안정적인 지원 능력과 창의적인 패스 플레이가 서로 보완.",
+        "fpti": "SAPE"
+      },
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 리더형",
+        "reason": "창의적인 플레이가 프테라노돈의 안정적인 지원 플레이를 보완하여 팀을 더 유연하게 만듦.",
+        "fpti": "LAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적이고 화려한 스타일이 프테라노돈의 안정적 지원 성향과 상충.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "공격적인 플레이 성향이 프테라노돈의 안정적이고 지원적인 성향과 맞지 않음.",
+        "fpti": "SMTE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 훈련",
+          "description": "프테라노돈의 패스 능력을 강화하여 팀의 공격 전개를 돕는 훈련."
+        },
+        {
+          "name": "전술적 유연성 훈련",
+          "description": "다양한 상황에서 유연하게 대응할 수 있는 전술 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "속도 향상 훈련",
+          "description": "더 빠르게 수비와 공격을 전환할 수 있는 속도 강화 훈련."
+        },
+        {
+          "name": "리더십 훈련",
+          "description": "팀을 이끌고 조율하는 리더십 강화 훈련."
+        }
+      ]
+    },
+    "compatibility": "팀워크를 중시하는 플레이어들과의 협업에서 강점을 발휘하며, 패스 플레이를 중시하는 전술에 적합.",
+    "fpti": "SDPE",
+    "id": "FTI-16"
+  },
+  {
+    "name": "Therizinosaurus",
+    "koreaName": "테리지노사우루스",
+    "type": "창의적 조율형",
+    "alias": "예리한 지휘자",
+    "summary": "팀의 중심에서 창의적이고 유연한 플레이로 경기를 조율하며, 승리를 향한 열정이 강한 선수.",
+    "description": "테리지노사우루스는 긴 앞다리와 날카로운 발톱을 가진 대형 공룡으로, 유연하고 창의적인 플레이 스타일을 보여줍니다. 중원의 중심에서 팀을 조율하며, 공격과 수비의 균형을 맞춤.",
+    "roleWithinTeam": "팀의 핵심으로 경기의 흐름을 조율하고, 창의적인 공격 전개를 이끔.",
+    "recommendedTactics": "빠르고 정확한 패스 플레이와 창의적인 전개를 통해 상대 수비를 무너뜨리는 전술이 효과적",
+    "roleModel": "페드리 – 창의적이고 유연한 플레이로 중원을 장악하며 경기의 흐름을 주도하는 젊은 플레이메이커.",
+    "fit": [
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 리더형",
+        "reason": "창의적인 리더십과 조율 능력이 잘 어우러져 팀의 유연성을 극대화.",
+        "fpti": "LAPE"
+      },
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "화려한 개인기를 통해 창의적인 조율이 더욱 빛을 발함.",
+        "fpti": "LATE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 리더십과 창의적 리더십이 충돌하여 팀 내 조화가 어려움.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비 중심의 스타일이 테리지노사우루스의 창의적 조율 성향과 상충.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 조율 훈련",
+          "description": "테리지노사우루스의 창의적인 패스 능력을 강화하기 위한 훈련."
+        },
+        {
+          "name": "위치 선정 훈련",
+          "description": "중원에서 경기의 흐름을 주도할 수 있는 위치 선정 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 후 수비로 빠르게 전환할 수 있도록 훈련."
+        },
+        {
+          "name": "체력 강화 훈련",
+          "description": "오랜 시간 동안 경기를 주도할 수 있는 체력 보완 훈련."
+        }
+      ]
+    },
+    "compatibility": "창의적이고 팀 중심의 플레이를 선호하는 팀에서 뛰어난 성과를 발휘하며, 수비에 집중하는 팀과는 조화가 어려움",
+    "fpti": "LMTC",
+    "id": "FTI-17"
+  },
+  {
+    "name": "Ornitholestes",
+    "koreaName": "오르니톨레스테스",
+    "type": "창의적 엔터테이너형",
+    "alias": "빠른 교란자",
+    "summary": "중원에서 창의적인 개인기를 통해 팀을 이끌며, 경기에서 즐거움을 추구하는 엔터테이너.",
+    "description": "오르니톨레스테스는 날렵하고 빠른 움직임을 자랑하며, 창의적인 개인기로 팀을 이끄는 선수.",
+    "roleWithinTeam": "중원에서 창의적인 드리블과 개인기로 팀을 공격적으로 이끌며 경기를 즐김.",
+    "recommendedTactics": "유연한 움직임과 창의적인 개인기로 상대 수비를 돌파하는 전술이 효과적.",
+    "roleModel": "부카요 사카 – 창의적이고 화려한 플레이로 팬들을 즐겁게 하는 선수.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "창의적이고 화려한 플레이로 팀을 더욱 활기차게 만듬.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "창의적인 드리블과 공격 전개가 오르니톨레스테스의 플레이 스타일과 잘 맞음.",
+        "fpti": "SMTE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적인 성향이 오르니톨레스테스의 창의적이고 공격적인 성향과 상충.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "브라키오사우루스",
+        "name": "Brachiosaurus",
+        "type": "조율하는 수비형",
+        "reason": "수비 중심의 성향이 오르니톨레스테스의 공격적 성향과 맞지 않음.",
+        "fpti": "LDPE"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 훈련",
+          "description": "오르니톨레스테스의 창의적인 개인기를 더욱 강화하기 위한 훈련."
+        },
+        {
+          "name": "속도 강화 훈련",
+          "description": "빠르게 상대를 교란할 수 있는 속도 강화 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 강화 훈련",
+          "description": "더 오랫동안 경기에서 활약할 수 있도록 체력을 보완하는 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 후 수비로 빠르게 전환하는 능력을 보완하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "창의적이고 공격적인 팀에서 활약하며, 수비에 집중하는 팀에서는 성과를 내기 어려움.",
+    "fpti": "LMTE",
+    "id": "FTI-18"
+  },
+  {
+    "name": "Compsognathus",
+    "koreaName": "콤프소그나투스",
+    "type": "패스 조율형",
+    "alias": "정확한 패스 마스터",
+    "summary": "작지만 민첩하게 움직이며, 정확한 패스로 중원에서 팀을 조율하는 선수.",
+    "description": "콤프소그나투스는 작은 크기에도 불구하고 빠르고 민첩하게 움직이며, 중원에서 정확한 패스로 팀을 이끄는 플레이어.",
+    "roleWithinTeam": "정확한 패스로 팀의 공격을 전개하며, 중원의 중심에서 경기를 조율.",
+    "recommendedTactics": "빠르고 정확한 패스를 통해 공격을 전개하고 상대의 허점을 공략하는 전술이 효과적.",
+    "roleModel": "마르틴 외데고르 – 넓은 시야와 정확한 패스로 팀을 조율하는 동시에 강한 승부욕을 발휘하는 선수.",
+    "fit": [
+      {
+        "koreaName": "이구아노돈",
+        "name": "Iguanodon",
+        "type": "지원형 크리에이터",
+        "reason": "창의적이고 정확한 패스 플레이로 팀의 공격 전개를 보조.",
+        "fpti": "SAPE"
+      },
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 리더형",
+        "reason": "창의적 패스를 통해 팀의 리더십을 강화.",
+        "fpti": "LAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "공격적인 스타일이 콤프소그나투스의 패스 중심의 플레이와 맞지 않음.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "티라노사우루스",
+        "name": "Tyrannosaurus",
+        "type": "전투의 리더형",
+        "reason": "개인적인 공격을 중시하는 스타일이 콤프소그나투스의 팀 중심 패스 플레이와 상충.",
+        "fpti": "LATC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 훈련",
+          "description": "콤프소그나투스의 정확한 패스 능력을 강화하는 훈련."
+        },
+        {
+          "name": "경기 조율 훈련",
+          "description": "중원에서 경기 흐름을 조율할 수 있는 능력을 강화하는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 보완 훈련",
+          "description": "경기 내내 움직일 수 있도록 체력을 강화하는 훈련."
+        },
+        {
+          "name": "속도 향상 훈련",
+          "description": "빠른 속도로 경기 상황에 대응할 수 있는 스피드 강화 훈련."
+        }
+      ]
+    },
+    "compatibility": "팀워크 중심의 플레이를 선호하는 팀과 잘 어울리며, 공격 중심의 전술에서 빛을 발함.",
+    "fpti": "LMPC",
+    "id": "FTI-19"
+  },
+  {
+    "name": "Archaeopteryx",
+    "koreaName": "아르카이옵테릭스",
+    "type": "창의적 패스형",
+    "alias": "조율하는 플레이메이커",
+    "summary": "팀의 중심에서 정확한 패스를 통해 팀을 조율하고, 창의적인 플레이로 경기를 즐기는 선수.",
+    "description": "아르카이옵테릭스는 공중과 지상 모두에서 활동 가능한 유연한 플레이어로, 정확한 패스로 팀을 조율.",
+    "roleWithinTeam": "중원에서 창의적인 패스로 팀의 흐름을 주도하며, 경기 템포를 조절.",
+    "recommendedTactics": "빠르고 정확한 패스를 활용해 상대의 수비를 공략하고, 공격을 이끄는 전술이 효과적.",
+    "roleModel": "브루노 페르난데스 – 창의적이고 유쾌한 플레이로 경기 흐름을 지배하는 선수.",
+    "fit": [
+      {
+        "koreaName": "갈리미무스",
+        "name": "Gallimimus",
+        "type": "승부의 조율형",
+        "reason": "창의적인 패스와 민첩한 움직임이 조화를 이루며 공격 전개를 더 유연하게 만듦.",
+        "fpti": "SMTC"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "창의적인 드리블과 빠른 전환이 아르카이옵테릭스의 패스 플레이를 더 효과적.",
+        "fpti": "SMTE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 성향이 창의적 패스 플레이와 상충.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "전략적 수비 성향이 공격 중심의 패스 플레이와 맞지 않음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 훈련",
+          "description": "정확한 패스와 창의적인 전개를 위한 훈련."
+        },
+        {
+          "name": "경기 조율 훈련",
+          "description": "중원에서 팀의 흐름을 이끄는 능력을 강화하는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 강화 훈련",
+          "description": "오랜 시간 동안 경기를 주도할 수 있는 체력 보완 훈련."
+        },
+        {
+          "name": "속도 향상 훈련",
+          "description": "더 빠르게 경기를 조율할 수 있는 스피드 강화 훈련."
+        }
+      ]
+    },
+    "compatibility": "중원에서 팀을 조율하는 역할이 필요할 때 빛을 발휘하며, 공격적인 팀에 적합.",
+    "fpti": "LMPE",
+    "id": "FTI-20"
+  },
+  {
+    "name": "Gallimimus",
+    "koreaName": "갈리미무스",
+    "type": "승부의 조율형",
+    "alias": "스피드의 조율자",
+    "summary": "팀을 지원하며 창의적인 개인기로 상대를 돌파하고 승리를 목표로 하는 선수.",
+    "description": "갈리미무스는 빠르고 민첩한 움직임으로 팀을 조율하며, 중원에서의 활약을 통해 경기를 이끄는 선수.",
+    "roleWithinTeam": "창의적인 개인기와 민첩한 움직임으로 팀의 공격을 주도.",
+    "recommendedTactics": "상대 수비를 민첩하게 돌파하고, 빠른 속도로 공격을 전개하는 전술이 효과적.",
+    "roleModel": "카이 하베르츠 – 민첩한 움직임과 창의적인 개인기로 팀의 공격을 주도하는 플레이메이커.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "화려한 개인기와 빠른 움직임이 갈리미무스의 공격 조율 능력을 보완.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "스트루티오미무스",
+        "name": "Struthiomimus",
+        "type": "즐기는 공격형",
+        "reason": "창의적이고 공격적인 스타일이 갈리미무스의 플레이 스타일과 잘 맞음.",
+        "fpti": "SMTE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적인 리더십과 공격적 조율 스타일이 충돌.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비 중심의 스타일이 공격적 조율 스타일과 맞지 않음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "개인기 훈련",
+          "description": "갈리미무스의 창의적인 개인기를 더욱 강화하는 훈련."
+        },
+        {
+          "name": "속도 훈련",
+          "description": "빠른 스피드로 상대 수비를 돌파할 수 있는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 보완 훈련",
+          "description": "빠른 속도를 오래 유지할 수 있도록 체력 보완 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 후 빠르게 수비로 전환할 수 있는 훈련."
+        }
+      ]
+    },
+    "compatibility": "창의적이고 공격적인 팀 환경에서 빛을 발휘하며, 수비 중심의 전술과는 조화가 어려움.",
+    "fpti": "SMTC",
+    "id": "FTI-21"
+  },
+  {
+    "name": "Struthiomimus",
+    "koreaName": "스트루티오미무스",
+    "type": "즐기는 공격형",
+    "alias": "즐거움의 창조자",
+    "summary": "중원에서 창의적이고 유연한 플레이로 팀을 지원하며, 관중을 즐겁게 하는 선수.",
+    "description": "스트루티오미무스는 속도와 민첩성을 활용하여 팀의 공격을 주도하며, 중원에서 창의적인 플레이를 선보입니다.",
+    "roleWithinTeam": "빠르고 창의적인 드리블과 개인기로 팀의 공격을 지원합니다.",
+    "recommendedTactics": "속도를 활용한 빠른 전환 플레이와 민첩한 드리블로 상대 수비를 공략하는 전술이 효과적.",
+    "roleModel": "필 포든 – 창의적인 드리블과 플레이로 팀을 즐겁게 이끄는 공격형 미드필더.",
+    "fit": [
+      {
+        "koreaName": "벨로시랩터",
+        "name": "Velociraptor",
+        "type": "쇼맨의 리더형",
+        "reason": "창의적이고 화려한 공격 스타일이 스트루티오미무스의 즐기는 공격 성향과 잘 맞음.",
+        "fpti": "LATE"
+      },
+      {
+        "koreaName": "갈리미무스",
+        "name": "Gallimimus",
+        "type": "승부의 조율형",
+        "reason": "빠른 움직임과 창의적인 공격 전개가 스트루티오미무스의 스타일을 보완.",
+        "fpti": "SMTC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적인 리더십과 창의적인 공격 스타일이 맞지 않음.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "전략적 수비 성향이 공격 중심의 플레이와 상충.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "창의적 공격 훈련",
+          "description": "스트루티오미무스의 창의적인 공격력을 강화하기 위한 훈련."
+        },
+        {
+          "name": "속도 훈련",
+          "description": "빠르게 상대 수비를 돌파할 수 있는 속도 강화 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 보완 훈련",
+          "description": "빠른 움직임을 오래 지속할 수 있도록 체력을 강화하는 훈련."
+        },
+        {
+          "name": "수비 전환 훈련",
+          "description": "공격 후 수비로 빠르게 전환하는 능력을 보완하는 훈련."
+        }
+      ]
+    },
+    "compatibility": "공격적인 전술을 선호하는 팀에서 성과를 발휘하며, 방어 중심의 팀에서는 효과적이지 않을 수 있습니다.",
+    "fpti": "SMTE",
+    "id": "FTI-22"
+  },
+  {
+    "name": "Hypsilophodon",
+    "koreaName": "히프실로포돈",
+    "type": "경쟁적 조율형",
+    "alias": "결정적인 조율가",
+    "summary": "정확한 패스로 중원에서 팀을 지원하며, 강한 승부욕으로 경기를 이끄는 선수.",
+    "description": "히프실로포돈은 빠르고 정확한 패스로 중원에서 팀을 지원하며, 승리를 위해 헌신하는 플레이어.",
+    "roleWithinTeam": "중원에서 정확한 패스로 팀을 지원하며, 경기를 조율하는 역할을 수행합니다.",
+    "recommendedTactics": "정확한 패스를 통해 상대의 수비를 흔들고, 빠른 공격 전개를 이끄는 전술이 효과적.",
+    "roleModel": "로드리 – 뛰어난 패스와 경기 조율 능력으로 팀을 이끄는 수비형 미드필더.",
+    "fit": [
+      {
+        "koreaName": "갈리미무스",
+        "name": "Gallimimus",
+        "type": "승부의 조율형",
+        "reason": "경쟁적인 성향과 민첩한 움직임이 히프실로포돈의 공격 조율 능력을 보완.",
+        "fpti": "SMTC"
+      },
+      {
+        "koreaName": "이구아노돈",
+        "name": "Iguanodon",
+        "type": "지원형 크리에이터",
+        "reason": "창의적인 패스 플레이로 히프실로포돈의 조율 능력을 강화.",
+        "fpti": "SAPE"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비적인 리더십과 경쟁적인 성향이 충돌하여 팀 조화가 어려움.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비적인 플레이 스타일이 공격 중심의 조율 플레이와 맞지 않음.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 훈련",
+          "description": "정확한 패스와 경기 조율 능력을 강화하는 훈련."
+        },
+        {
+          "name": "위치 선정 훈련",
+          "description": "최적의 위치에서 경기를 주도할 수 있는 위치 선정 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 강화 훈련",
+          "description": "경기 내내 에너지를 유지할 수 있는 체력 보완 훈련."
+        },
+        {
+          "name": "속도 향상 훈련",
+          "description": "빠른 움직임으로 상대 수비를 돌파할 수 있는 스피드 훈련."
+        }
+      ]
+    },
+    "compatibility": "창의적이고 패스를 중시하는 전술을 선호하는 팀에서 빛을 발휘하며, 공격 중심의 팀에 적합.",
+    "fpti": "SMPC",
+    "id": "FTI-23"
+  },
+  {
+    "name": "Maiasaura",
+    "koreaName": "마이아사우라",
+    "type": "창의적 지원형",
+    "alias": "경기의 설계자",
+    "summary": "팀을 지원하며 정확한 패스 플레이로 경기를 조율하고, 창의적인 플레이를 즐기는 선수.",
+    "description": "마이아사우라는 공동체적 성향을 지닌 공룡으로, 팀을 지원하고 정확한 패스 플레이로 경기를 조율.",
+    "roleWithinTeam": "중원에서 팀의 흐름을 조율하고, 창의적인 패스로 공격을 이끔.",
+    "recommendedTactics": "패스 플레이와 유연한 전술을 통해 상대 수비를 무너뜨리는 전술이 효과적.",
+    "roleModel": "메이슨 마운트 – 창의적인 패스와 팀워크를 바탕으로 경기를 설계하는 미드필더.",
+    "fit": [
+      {
+        "koreaName": "파라사우롤로푸스",
+        "name": "Parasaurolophus",
+        "type": "창의적 리더형",
+        "reason": "창의적인 리더십이 마이아사우라의 창의적 패스 플레이를 더 효과적.",
+        "fpti": "LAPE"
+      },
+      {
+        "koreaName": "테리지노사우루스",
+        "name": "Therizinosaurus",
+        "type": "창의적 조율형",
+        "reason": "창의적인 조율 능력이 마이아사우라의 지원형 플레이를 보완하여 팀의 공격을 강화.",
+        "fpti": "LMTC"
+      }
+    ],
+    "doNotFit": [
+      {
+        "koreaName": "트리케라톱스",
+        "name": "Triceratops",
+        "type": "방어의 리더형",
+        "reason": "수비 중심의 리더십과 창의적인 지원 플레이가 맞지 않음.",
+        "fpti": "LDTC"
+      },
+      {
+        "koreaName": "안킬로사우루스",
+        "name": "Ankylosaurus",
+        "type": "전략적 수비형",
+        "reason": "수비 위주의 플레이 스타일이 마이아사우라의 창의적인 성향과 상충.",
+        "fpti": "LDPC"
+      }
+    ],
+    "training": {
+      "strengthen": [
+        {
+          "name": "패스 조율 훈련",
+          "description": "마이아사우라의 창의적인 패스 능력을 강화하는 훈련."
+        },
+        {
+          "name": "팀워크 훈련",
+          "description": "팀과의 협력을 통해 경기 흐름을 주도하는 훈련."
+        }
+      ],
+      "supplement": [
+        {
+          "name": "체력 보완 훈련",
+          "description": "경기 내내 에너지를 유지할 수 있는 체력 강화 훈련."
+        },
+        {
+          "name": "속도 향상 훈련",
+          "description": "빠르게 수비와 공격을 전환할 수 있는 스피드 훈련."
+        }
+      ]
+    },
+    "compatibility": "팀워크 중심의 플레이를 중시하는 팀에서 뛰어난 성과를 발휘하며, 창의적인 패스를 선호하는 팀에 적합.",
+    "fpti": "SMPE",
+    "id": "FTI-24"
+  }
+]

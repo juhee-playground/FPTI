@@ -1,0 +1,293 @@
+{
+  "bestTeams": [
+    {
+      "teamName": "공격형 리더팀",
+      "players": [
+        {
+          "name": "Allosaurus",
+          "koreaName": "알로사우루스",
+          "alias": "전략적 공격형",
+          "fpti": "LAPC",
+          "desc": "티라노와 협력하여 팀의 전술적인 공격을 조율."
+        },
+        {
+          "name": "Dilophosaurus",
+          "koreaName": "딜로포사우루스",
+          "alias": "전략의 스프린터형",
+          "fpti": "SATC",
+          "desc": "티라노의 공격 지원."
+        },
+        {
+          "name": "Tyrannosaurus",
+          "koreaName": "티라노사우루스",
+          "alias": "전투의 리더형",
+          "fpti": "LATC",
+          "desc": "강력한 공격을 주도."
+        },
+        {
+          "name": "Iguanodon",
+          "koreaName": "이구아노돈",
+          "alias": "지원형 크리에이터",
+          "fpti": "SAPE",
+          "desc": "미드필드에서 창의적 패스 플레이."
+        },
+        {
+          "name": "Ankylosaurus",
+          "koreaName": "안킬로사우루스",
+          "alias": "전략적 수비형",
+          "fpti": "LDPC",
+          "desc": "수비를 철저히 담당하며 팀을 보호."
+        }
+      ],
+      "description": "티라노사우루스의 공격을 딜로포사우루스가 전략적으로 지원하고, 알로사우루스가 중간에서 경기를 조율합니다. 이구아노돈이 창의적인 패스로 공격 전개를 돕고, 트리케라톱스가 수비를 견고하게 지킵니다."
+    },
+    {
+      "teamName": "창의적 미드필드팀",
+      "players": [
+        {
+          "name": "Parasaurolophus",
+          "koreaName": "파라사우롤로푸스",
+          "alias": "창의적 리더형",
+          "fpti": "LAPE",
+          "desc": "창의적인 리더십으로 팀의 공격을 이끎."
+        },
+        {
+          "name": "Spinosaurus",
+          "koreaName": "스피노사우루스",
+          "alias": "창의적 공격형",
+          "fpti": "SATE",
+          "desc": "공격에서 창의적 움직임을 선보임."
+        },
+        {
+          "name": "Iguanodon",
+          "koreaName": "이구아노돈",
+          "alias": "지원형 크리에이터",
+          "fpti": "SAPE",
+          "desc": "미드필드에서 팀을 조율."
+        },
+        {
+          "name": "Therizinosaurus",
+          "koreaName": "테리지노사우루스",
+          "alias": "창의적 조율형",
+          "fpti": "LMTC",
+          "desc": "중앙에서 창의적인 패스로 경기를 조율."
+        },
+        {
+          "name": "Velociraptor",
+          "koreaName": "벨로시랩터",
+          "alias": "쇼맨의 리더형",
+          "fpti": "LATE",
+          "desc": "화려한 개인기로 팀의 공격력을 더함."
+        }
+      ],
+      "description": "파라사우롤로푸스와 스피노사우루스가 창의적인 공격을 주도하며, 이구아노돈과 테리지노사우루스가 미드필드에서 경기를 조율합니다. 벨로시랩터는 화려한 개인기로 공격력을 극대화합니다."
+    },
+    {
+      "teamName": "강력한 수비팀",
+      "players": [
+        {
+          "name": "Triceratops",
+          "koreaName": "트리케라톱스",
+          "alias": "방어의 리더형",
+          "fpti": "LDTC",
+          "desc": "수비를 철저히 담당하며 팀을 보호."
+        },
+        {
+          "name": "Ankylosaurus",
+          "koreaName": "안킬로사우루스",
+          "alias": "전략적 수비형",
+          "fpti": "LDPC",
+          "desc": "강력한 방어로 팀을 지킴."
+        },
+        {
+          "name": "Plesiosaurus",
+          "koreaName": "플레시오사우루스",
+          "alias": "협력적 수비형",
+          "fpti": "SAPC",
+          "desc": "협력적인 수비로 팀을 돕음."
+        },
+        {
+          "name": "Brachiosaurus",
+          "koreaName": "브라키오사우루스",
+          "alias": "조율하는 수비형",
+          "fpti": "LDPE",
+          "desc": "수비를 조율하며 팀의 균형을 맞춤."
+        },
+        {
+          "name": "Stegosaurus",
+          "koreaName": "스테고사우루스",
+          "alias": "즐기는 디펜더",
+          "fpti": "SDTE",
+          "desc": "차분하게 수비를 즐기며 팀을 안정시킴."
+        }
+      ],
+      "description": "트리케라톱스와 안킬로사우루스가 수비의 중심을 잡아주며, 플레시오사우루스와 브라키오사우루스가 협력하여 팀을 조율하고 수비를 강화합니다. 스테고사우루스는 안정된 수비 라인에서 활약합니다."
+    },
+    {
+      "teamName": "민첩한 공격팀",
+      "players": [
+        {
+          "name": "Gallimimus",
+          "koreaName": "갈리미무스",
+          "alias": "승부의 조율형",
+          "fpti": "SMTC",
+          "desc": "민첩한 움직임으로 공격을 주도."
+        },
+        {
+          "name": "Velociraptor",
+          "koreaName": "벨로시랩터",
+          "alias": "쇼맨의 리더형",
+          "fpti": "LATE",
+          "desc": "화려한 플레이로 공격을 선도."
+        },
+        {
+          "name": "Compsognathus",
+          "koreaName": "콤프소그나투스",
+          "alias": "패스 조율형",
+          "fpti": "LMPC",
+          "desc": "정확한 패스로 공격 전개를 지원."
+        },
+        {
+          "name": "Struthiomimus",
+          "koreaName": "스트루티오미무스",
+          "alias": "즐기는 공격형",
+          "fpti": "SMTE",
+          "desc": "공격에서 창의적인 드리블로 활약."
+        },
+        {
+          "name": "Pachycephalosaurus",
+          "koreaName": "파키케팔로사우루스",
+          "alias": "협력의 공격형",
+          "fpti": "SAPC",
+          "desc": "팀워크를 통해 공격 기회를 창출."
+        }
+      ],
+      "description": "갈리미무스와 벨로시랩터가 빠르고 민첩한 움직임으로 공격을 주도하며, 콤프소그나투스가 정확한 패스로 지원합니다. 스트루티오미무스는 창의적인 드리블로 상대 수비를 돌파하고, 파키케팔로사우루스가 팀과 협력하여 득점 기회를 만듭니다."
+    },
+    {
+      "teamName": "창의적 지원팀",
+      "players": [
+        {
+          "name": "Parasaurolophus",
+          "koreaName": "파라사우롤로푸스",
+          "alias": "창의적 리더형",
+          "fpti": "LAPE",
+          "desc": "창의적인 리더십으로 팀을 지원."
+        },
+        {
+          "name": "Maiasaura",
+          "koreaName": "마이아사우라",
+          "alias": "창의적 지원형",
+          "fpti": "SMPE",
+          "desc": "창의적인 패스로 팀을 조율."
+        },
+        {
+          "name": "Hypsilophodon",
+          "koreaName": "히프실로포돈",
+          "alias": "경쟁적 조율형",
+          "fpti": "SMPC",
+          "desc": "경기 조율을 통해 공격을 지원."
+        },
+        {
+          "name": "Pteranodon",
+          "koreaName": "프테라노돈",
+          "alias": "안정적 지원형",
+          "fpti": "SDPE",
+          "desc": "팀의 안정감을 유지하며 경기를 돕음."
+        },
+        {
+          "name": "Therizinosaurus",
+          "koreaName": "테리지노사우루스",
+          "alias": "창의적 조율형",
+          "fpti": "LMTC",
+          "desc": "창의적으로 팀의 흐름을 주도."
+        }
+      ],
+      "description": "파라사우롤로푸스가 팀의 리더로 창의적인 플레이를 주도하고, 마이아사우라와 히프실로포돈이 경기를 조율하며 지원합니다. 프테라노돈은 안정적으로 팀을 보호하며, 테리지노사우루스는 창의적인 전개로 공격을 이끕니다."
+    }
+  ],
+  "worstTeams": [
+    {
+      "teamName": "방향성 상실 팀",
+      "players": [
+        {
+          "name": "Spinosaurus",
+          "koreaName": "스피노사우루스",
+          "alias": "창의적 공격형",
+          "fpti": "SATE",
+          "desc": "창의적인 공격 스타일로 수비적인 팀원들과 조화가 어려움."
+        },
+        {
+          "name": "Ankylosaurus",
+          "koreaName": "안킬로사우루스",
+          "alias": "전략적 수비형",
+          "fpti": "LDPC",
+          "desc": "철저한 수비 성향으로 공격 중심 팀과 갈등."
+        },
+        {
+          "name": "Brachiosaurus",
+          "koreaName": "브라키오사우루스",
+          "alias": "조율하는 수비형",
+          "fpti": "LDPE",
+          "desc": "안정적인 수비를 중시하며 공격적인 팀과 조화가 안 됨."
+        },
+        {
+          "name": "Velociraptor",
+          "koreaName": "벨로시랩터",
+          "alias": "쇼맨의 리더형",
+          "fpti": "LATE",
+          "desc": "공격적이고 화려한 플레이가 수비 중심 팀과 충돌."
+        },
+        {
+          "name": "Triceratops",
+          "koreaName": "트리케라톱스",
+          "alias": "방어의 리더형",
+          "fpti": "LDTC",
+          "desc": "수비 중심의 리더로, 공격 성향과 전혀 맞지 않음."
+        }
+      ],
+      "description": "스피노사우루스와 벨로시랩터의 창의적 공격이 안킬로사우루스, 브라키오사우루스, 트리케라톱스의 철저한 수비 성향과 충돌하여, 팀이 전술적으로 방향을 잃게 됩니다."
+    },
+    {
+      "teamName": "개인주의 팀",
+      "players": [
+        {
+          "name": "Velociraptor",
+          "koreaName": "벨로시랩터",
+          "alias": "쇼맨의 리더형",
+          "fpti": "LATE",
+          "desc": "화려한 개인기 중심으로 팀플레이와 맞지 않음."
+        },
+        {
+          "name": "Dilophosaurus",
+          "koreaName": "딜로포사우루스",
+          "alias": "전략의 스프린터형",
+          "fpti": "SATC",
+          "desc": "전술적으로 혼자 플레이하는 성향."
+        },
+        {
+          "name": "Spinosaurus",
+          "koreaName": "스피노사우루스",
+          "alias": "창의적 공격형",
+          "fpti": "SATE",
+          "desc": "개인기에 의존하는 공격 스타일로 팀워크 부족."
+        },
+        {
+          "name": "Allosaurus",
+          "koreaName": "알로사우루스",
+          "alias": "전략적 공격형",
+          "fpti": "LAPC",
+          "desc": "팀플레이보다는 전략적 개인 플레이에 치중."
+        },
+        {
+          "name": "Pachycephalosaurus",
+          "koreaName": "파키케팔로사우루스",
+          "alias": "협력의 공격형",
+          "fpti": "SAPC",
+          "desc": "협력에 약점을 보이는 다른 팀원들과 맞지 않음."
+        }
+      ],
+      "description": "벨로시랩터와 스피노사우루스가 개인적인 공격에 치중하고, 딜로포사우루스와 알로사우루스 역시 팀워크보다는 개인 전략을 중시하며 파키케팔로사우루스의 협력적인 성향과 충돌하는 팀입니다."
+    }
+  ]
+}
