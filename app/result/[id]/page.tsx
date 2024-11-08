@@ -25,7 +25,7 @@ export default function ResultPage() {
   const reconstructedResult = reconstructResultFromQueryString(finalResult);
 
   const handleRetry = () => {
-    router.push('/landing');
+    router.push('/');
   };
 
   console.log(reconstructedResult);
