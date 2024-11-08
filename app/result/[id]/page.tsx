@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { findResultById } from '@/api/result';
 import TypeComparisonBar from '@/result/TypeComparisonBar';
@@ -13,11 +13,16 @@ import { reconstructResultFromQueryString } from '@/utils/queryString';
 export default function ResultPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-  const fpti = searchParams.get('fpti');
-  const finalResult = searchParams.get('finalResult');
+  const fpti = pathname.split('/').pop();
+  // const fpti = searchParams.get('fpti');
+  const finalResultRaw = searchParams.get('finalResult');
+  console.log('finalResultRaw =>', finalResultRaw);
+
+  const finalResult = finalResultRaw ? decodeURIComponent(finalResultRaw) : '';
   const resultDescription = fpti ? findResultById(fpti) : null;
-  const reconstructedResult = finalResult ? reconstructResultFromQueryString(finalResult) : null;
+  const reconstructedResult = reconstructResultFromQueryString(finalResult);
 
   const handleRetry = () => {
     router.push('/landing');
@@ -45,9 +50,8 @@ export default function ResultPage() {
       console.error('공유 중 오류 발생:', error);
     }
   };
-
   return (
-    <div className='flex flex-col items-center p-6 bg-background text-white overflow-y-auto shadow-md gap-3'>
+    <div className='flex flex-col items-center bg-background overflow-y-auto p-6 gap-3'>
       <ImageBox topTypes={fpti as string} width={300} height={300} />
       <h3 className='flex flex-col items-center gap-1 text-text-basic'>
         <span className='w-40 h-8 bg-primary text-center rounded-lg font-medium text-lg border border-black'>
