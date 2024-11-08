@@ -1,4 +1,5 @@
 import { PERSONALITY_TYPES } from '@/constants/PersonalityType';
+import { getColorByType } from '@/utils/color';
 
 interface ITypeComparisonBarProps {
   startLabel: string;
@@ -23,34 +24,53 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
   const startTypeInfo = getPersonalityName(finalStartLabel);
   const endTypeInfo = getPersonalityName(endLabel);
 
+  const startTypeText = isReverse ? endLabel : startLabel;
+  const endTypeText = isReverse ? startLabel : endLabel;
+
   return (
-    <div className='flex items-center justify-between w-full p-4 bg-white rounded-md shadow-lg'>
-      <div className={`flex flex-col items-center ${isReverse ? 'order-2' : ''}`}>
-        <p className={`text-lg font-bold ${isStartLabelMain ? 'text-primary' : 'text-gray-700'}`}>{finalStartLabel}</p>
-        <span className='text-sm text-gray-500'>{startTypeInfo}</span>
+    <section className='flex justify-center items-center w-full gap-3 px-4'>
+      <div className={`flex flex-row-reverse items-center w-[190px] gap-1`}>
+        <h2
+          className={`flex justify-center items-center m-0 h-[28px] w-[28px] rounded-full border border-black text-base text-text-default`}
+          style={{
+            backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : 'inherit',
+          }}
+        >
+          {finalStartLabel}
+        </h2>
+        <p className='text-xs text-text-default'>{startTypeInfo}</p>
       </div>
 
-      <div className={`relative flex-grow mx-4 ${isReverse ? 'flex-row-reverse' : ''}`}>
-        <div className='w-full h-4 bg-gray-200 rounded-full'>
-          <div
-            className={`h-4 rounded-full ${isReverse ? 'bg-secondary' : 'bg-primary'}`}
-            style={{ width: `${percentage}%` }}
-          >
-            <span
-              className={`absolute top-0 text-white text-xs font-bold ${isReverse ? 'right-1' : 'left-1'}`}
-              style={{ width: `${percentage}%` }}
-            >
-              {`${Math.ceil(percentage)}%`}
-            </span>
-          </div>
+      <div
+        className={`flex items-center w-full h-6 bg-primary-darken rounded-xl ${isReverse ? 'flex-row-reverse text-right' : 'row text-left'}`}
+      >
+        <div
+          className={`h-6 flex items-center px-3 transition-all duration-300 ${
+            isReverse ? 'justify-start' : 'justify-end'
+          } rounded-lg border border-black`}
+          style={{
+            width: `${percentage}%`,
+            backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : getColorByType(endTypeText),
+          }}
+        >
+          <span className={`text-border-black text-xs}`} style={{ width: `${percentage}%` }}>
+            {`${Math.ceil(percentage)}%`}
+          </span>
         </div>
       </div>
 
-      <div className='flex flex-col items-center'>
-        <p className={`text-lg font-bold ${isEndLabelMain ? 'text-primary' : 'text-gray-700'}`}>{endLabel}</p>
-        <span className='text-sm text-gray-500'>{endTypeInfo}</span>
+      <div className='flex flex-row items-center w-[190px] gap-1'>
+        <h2
+          className={`flex justify-center items-center m-0 h-[28px] w-[28px] rounded-full border border-black text-base text-text-default`}
+          style={{
+            backgroundColor: isEndLabelMain ? getColorByType(endTypeText) : 'inherit',
+          }}
+        >
+          {endLabel}
+        </h2>
+        <p className='text-xs text-text-default'>{endTypeInfo}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
