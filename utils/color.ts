@@ -1,4 +1,4 @@
-import { colors } from '@/styles/colors';
+// import { colors } from '@/styles/colors';
 
 export const darkenColor = (color: string, amount: number) => {
   const [r, g, b] = color.match(/\w\w/g)!.map(c => parseInt(c, 16));
@@ -13,23 +13,23 @@ export const getBrightness = (color: string) => {
 export const getCustomColor = (color?: string) => {
   switch (color) {
     case 'primary':
-      return colors.primary;
+      return 'bg-primary';
     case 'secondary':
-      return colors.secondary;
+      return 'bg-secondary';
     case 'error':
-      return colors.error.default;
+      return 'bg-error-default';
     case 'warning':
-      return colors.warning.default;
+      return 'bg-warning-default';
     case 'success':
-      return colors.success.default;
+      return 'bg-success-default';
     case 'info':
-      return colors.info.default;
+      return 'bg-info-default';
     case 'cancel':
-      return colors.cancel.lighter;
+      return 'bg-cancel-lighter';
     case 'default':
-      return colors.text.basic;
+      return 'bg-text-basic';
     default:
-      return color || colors.primary;
+      return color || 'bg-primary';
   }
 };
 
@@ -70,5 +70,5 @@ export const getColorByType = (type: string) => {
     E: '#FFD95A',
   };
 
-  return typeColors[type] || colors.black;
+  return typeColors[type] || 'bg-black';
 };

@@ -13,6 +13,7 @@ export default {
       colors: {
         primary: {
           default: '#73ce9e',
+          darken: '#57a17a',
           opacity: '#73ce9e94',
         },
         secondary: {
@@ -77,6 +78,15 @@ export default {
           default: '#bdbdbd',
           lighter: '#f4f4f4',
         },
+        leader: '#F7A4A4',
+        supporter: '#F95959',
+        attacker: '#1CC5DC',
+        midfielder: '#defede',
+        defender: '#14B1AB',
+        trickster: '#86A7FC',
+        passer: '#A63EC5',
+        competitor: '#FF9F29',
+        entertainer: '#FFD95A',
         'font-color': 'rgba(0, 0, 0, 1)',
       },
       fontSize: {
