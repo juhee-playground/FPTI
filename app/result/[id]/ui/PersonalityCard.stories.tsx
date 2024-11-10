@@ -6,7 +6,6 @@ const meta = {
   title: 'Card',
   component: PersonalityCard,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
 } satisfies Meta<typeof PersonalityCard>;
