@@ -1,4 +1,4 @@
-import CircleSelector from '@/question/ui/CircleSelector';
+import CircleSelector from '@/question/CircleSelector';
 
 interface IOptionSelectorProps {
   selectedValue: number | null;
