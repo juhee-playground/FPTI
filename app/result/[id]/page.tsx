@@ -5,9 +5,8 @@ import React from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { findResultById } from '@/api/result';
-import TypeComparisonBar from '@/result/TypeComparisonBar';
+import PersonalityCard from '@/result/PersonalityCard';
 import TypeDescription from '@/result/TypeDescription';
-import ImageBox from '@/ui/ImageBox';
 import { reconstructResultFromQueryString } from '@/utils/queryString';
 
 export default function ResultPage() {
@@ -16,9 +15,7 @@ export default function ResultPage() {
   const pathname = usePathname();
 
   const fpti = pathname.split('/').pop();
-  // const fpti = searchParams.get('fpti');
   const finalResultRaw = searchParams.get('finalResult');
-  console.log('finalResultRaw =>', finalResultRaw);
 
   const finalResult = finalResultRaw ? decodeURIComponent(finalResultRaw) : '';
   const resultDescription = fpti ? findResultById(fpti) : null;
@@ -27,8 +24,6 @@ export default function ResultPage() {
   const handleRetry = () => {
     router.push('/');
   };
-
-  console.log(reconstructedResult);
 
   const handleShare = async () => {
     const currentUrl = window.location.href;
@@ -50,39 +45,10 @@ export default function ResultPage() {
       console.error('공유 중 오류 발생:', error);
     }
   };
+
   return (
     <div className='flex flex-col items-center bg-background text-white overflow-y-auto py-6 gap-3'>
-      <ImageBox topTypes={fpti as string} width={300} height={300} />
-      <h3 className='flex flex-col items-center gap-1 text-text-basic'>
-        <span className='w-40 h-8 bg-primary text-center rounded-lg font-medium text-lg border border-black'>
-          {fpti}
-        </span>
-        <span className='text-xl'>{resultDescription?.type}</span>
-      </h3>
-      {reconstructedResult &&
-        Object.entries(reconstructedResult).map(([group, values]) => {
-          // values가 유효한지 확인
-          if (!values || Object.entries(values).length < 2) {
-            return null; // values가 유효하지 않으면 렌더링하지 않음
-          }
-
-          const [type1, percentage1] = Object.entries(values)[0];
-          const [type2, percentage2] = Object.entries(values)[1];
-
-          const midLabel = values.M ? 'M' : undefined;
-          const isReverse = percentage2 > percentage1;
-          return (
-            <React.Fragment key={group}>
-              <TypeComparisonBar
-                startLabel={type1}
-                midLabel={midLabel}
-                endLabel={type2}
-                percentage={Math.max(percentage1, percentage2)}
-                isReverse={isReverse}
-              />
-            </React.Fragment>
-          );
-        })}
+      <PersonalityCard fpti={fpti} type={resultDescription?.type} result={reconstructedResult} />
       <TypeDescription content={resultDescription} />
       <div className='flex justify-between items-center w-full'>
         <button

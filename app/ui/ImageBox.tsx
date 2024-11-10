@@ -19,7 +19,7 @@ const ImageBox = ({ topTypes, width, height }: IImageBoxProps) => {
       alt={`${topTypes} 공룡 이미지`}
       width={width}
       height={height}
-      className='border border-black rounded-lg'
+      className='rounded-lg'
       style={{ width, height }}
     />
   );
