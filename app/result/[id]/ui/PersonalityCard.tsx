@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TypeComparisonBar from '@/result/TypeComparisonBar';
-import ImageBox from '@/ui/ImageBox';
+import TypeComparisonBar from '@/app/result/[id]/ui/TypeComparisonBar';
+import ImageBox from '@/app/ui/ImageBox';
 
 interface IPersonalityCardProps {
   fpti: string | undefined;

@@ -5,8 +5,8 @@ import React from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { findResultById } from '@/api/result';
-import PersonalityCard from '@/result/PersonalityCard';
-import TypeDescription from '@/result/TypeDescription';
+import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
+import TypeDescription from '@/app/result/[id]/ui/TypeDescription';
 import { reconstructResultFromQueryString } from '@/utils/queryString';
 
 export default function ResultPage() {

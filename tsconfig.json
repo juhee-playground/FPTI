@@ -20,17 +20,23 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"],
-      "@/ui/*": ["./app/ui/*"],
-      "@/question/*": ["./app/question/ui/*"],
-      "@/result/*": ["./app/result/[id]/ui/*"],
-      "@/api/*": ["./api/*"],
-      "@/constants/*": ["./constants/*"],
-      "@/data/*": ["./data/*"],
-      "@/utils/*": ["./utils/*"]
+      "@/*": ["./*"]
     },
     "types": ["jest", "@testing-library/jest-dom"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "global.d.ts",
+    ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "api/**/*.ts",
+    "api/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "constants/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

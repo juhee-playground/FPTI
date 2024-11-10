@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import OptionSelector from '@/question/OptionSelector';
-import Progress from '@/question/ProgressBar';
+import OptionSelector from '@/app/question/ui/OptionSelector';
+import Progress from '@/app/question/ui/ProgressBar';
 
 interface IQuestionContainerProps {
   questionId: number;

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 import { useRouter } from 'next/navigation';
 
+import QuestionContainer from '@/app/question/ui/QuestionContainer';
 import QUESTIONS from '@/data/DB_QUESTIONS.json';
-import QuestionContainer from '@/question/QuestionContainer';
 import { calculateFinalResult, getTopTypesSorted, sortFinalResult } from '@/utils/calculateResult';
 import { generateQueryStringFromNestedResult } from '@/utils/queryString';
 
