@@ -12,12 +12,12 @@ interface IPersonalityCardProps {
 const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   return (
     <div className='bg-white w-[90%] p-3 border border-text-placeholder rounded-xl text-text-default'>
-      <div className='flex flex-col items-center bg-background py-4 gap-3 w-full border border-text-placeholder rounded-xl'>
+      <div className='flex flex-col items-center bg-background py-3 gap-3 w-full border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
           <ImageBox topTypes={fpti as string} width={240} height={240} />
         </div>
         <h3 className='flex flex-col items-center gap-1 text-text-basic m-0'>
-          <span className='w-40 h-7 bg-primary text-center rounded-lg font-medium text-md border border-black'>
+          <span className='w-40 h-7 bg-primary text-center rounded-lg font-medium text-lg border border-black'>
             {fpti}
           </span>
           <span className='text-lg'>{type}</span>
