@@ -1,6 +1,6 @@
 'use client';
 
-import useMouse from '@/hooks/useMouse';
+import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
   children: React.ReactNode;
@@ -9,7 +9,8 @@ interface IRotatorProps {
 }
 
 const Rotator = ({ children, rotationProps }: IRotatorProps) => {
-  const { rotation, handleMouseMove, handleMouseLeave } = useMouse();
+  const { rotation, handleMove, handleLeave } = useInteract();
+
   const rotationValue = rotationProps || rotation;
 
   const rotateStyle = {
@@ -19,8 +20,8 @@ const Rotator = ({ children, rotationProps }: IRotatorProps) => {
   return (
     <div
       className='w-full h-full relative flex flex-wrap overflow-hidden'
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
     >
       <div style={rotateStyle}>{children}</div>
     </div>
