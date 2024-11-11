@@ -9,7 +9,7 @@ const meta: Meta<typeof Rotator> = {
   title: 'animation/Rotator',
   component: Rotator,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
 };
 
