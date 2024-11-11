@@ -11,7 +11,7 @@ interface IPersonalityCardProps {
 
 const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   return (
-    <div className='bg-white w-[90%] p-3 border border-text-placeholder rounded-xl text-text-default'>
+    <div className='bg-white max-w-96 w-[90%] p-3 border border-text-placeholder rounded-xl text-text-default'>
       <div className='flex flex-col items-center bg-background py-3 gap-3 w-full border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
           <ImageBox topTypes={fpti as string} width={240} height={240} />
