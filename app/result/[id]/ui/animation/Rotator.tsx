@@ -23,7 +23,12 @@ const Rotator = ({ children, rotationProps }: IRotatorProps) => {
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
-      <div style={rotateStyle}>{children}</div>
+      <div
+        className='w-full h-full grid place-items-center transform-style-preserve-3d pointer-events-none overflow-hidden'
+        style={rotateStyle}
+      >
+        {children}
+      </div>
     </div>
   );
 };
