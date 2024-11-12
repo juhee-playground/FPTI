@@ -6,7 +6,7 @@ const meta = {
   title: 'Card',
   component: PersonalityCard,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof PersonalityCard>;
 

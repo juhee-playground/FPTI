@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Metadata } from 'next';
 
-import '@/styles/global.css';
+import '@/app/styles/global.css';
 
 export const metadata: Metadata = {
   title: 'FPTI',
