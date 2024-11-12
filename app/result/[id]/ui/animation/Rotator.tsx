@@ -5,7 +5,6 @@ import useInteract from '@/hooks/useInteract';
 interface IRotatorProps {
   children: React.ReactNode;
   rotationProps?: { x: number; y: number };
-  positionProps?: { x: number; y: number };
 }
 
 const Rotator = ({ children, rotationProps }: IRotatorProps) => {
