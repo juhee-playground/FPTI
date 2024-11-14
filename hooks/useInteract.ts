@@ -1,5 +1,7 @@
 import { useState, useCallback } from 'react';
 
+import { clamp } from '@/utils/math';
+
 // 데이터 타입 정의
 type Position = { x: number; y: number };
 type Rotation = { x: number; y: number };
@@ -8,23 +10,20 @@ const useInteract = () => {
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [rotation, setRotation] = useState<Rotation>({ x: 0, y: 0 });
   const [interacting, setInteracting] = useState(false);
+  const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [background, setBackground] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
 
-  // 터치 및 마우스 이벤트 처리 함수
   const handleMove = useCallback((e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (e.type === 'touchmove') {
-      e.preventDefault(); // 터치 이벤트 기본 동작 방지
+      e.preventDefault();
       const touch = (e as React.TouchEvent).touches[0];
-      const clientX = touch.clientX;
-      const clientY = touch.clientY;
-      processInteraction(clientX, clientY, e.currentTarget);
+      processInteraction(touch.clientX, touch.clientY, e.currentTarget);
     } else if (e.type === 'mousemove') {
-      const clientX = (e as React.MouseEvent).clientX;
-      const clientY = (e as React.MouseEvent).clientY;
-      processInteraction(clientX, clientY, e.currentTarget);
+      const mouseEvent = e as React.MouseEvent;
+      processInteraction(mouseEvent.clientX, mouseEvent.clientY, e.currentTarget);
     }
   }, []);
 
-  // 마우스 및 터치 이벤트로 위치와 회전값 계산
   const processInteraction = (clientX: number, clientY: number, target: HTMLDivElement) => {
     const { left, top, width, height } = target.getBoundingClientRect();
     const offsetX = clientX - (left + width / 2);
@@ -38,15 +37,33 @@ const useInteract = () => {
 
     setPosition({ x: leftPercent, y: topPercent });
     setRotation({ x: rotateX, y: rotateY });
+    setPositionPercent({ x: leftPercent, y: topPercent });
+    setBackground({ x: clamp(leftPercent, 0, 100), y: clamp(topPercent, 0, 100) });
     setInteracting(true);
   };
 
-  // 마우스가 카드 밖으로 나갔을 때 처리
   const handleLeave = useCallback(() => {
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
     setInteracting(false);
   }, []);
+
+  const dynamicStyles = {
+    '--pointer-x': `${positionPercent.x}%`,
+    '--pointer-y': `${positionPercent.y}%`,
+    '--pointer-from-center': clamp(
+      Math.sqrt((position.y - 50) * (position.y - 50) + (position.x - 50) * (position.x - 50)) / 50,
+      0,
+      1,
+    ),
+    '--pointer-from-top': position.y / 1000,
+    '--pointer-from-left': position.x / 1000,
+    '--card-opacity': interacting ? 1 : 0,
+    '--rotate-x': `${rotation.x}deg`,
+    '--rotate-y': `${rotation.y}deg`,
+    '--background-x': `${background.x}%`,
+    '--background-y': `${background.y}%`,
+  };
 
   return {
     position,
@@ -54,6 +71,7 @@ const useInteract = () => {
     interacting,
     handleMove,
     handleLeave,
+    dynamicStyles,
   };
 };
 

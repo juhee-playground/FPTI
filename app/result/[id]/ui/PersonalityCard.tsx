@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import CardBack from './CardBack';
 import CardFront from './CardFront';
 
 interface IPersonalityCardProps {
@@ -15,36 +14,26 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const handleToggleFlip = () => setFlipped(!flipped);
 
   return (
-    <div
-      onClick={handleToggleFlip}
-      className='relative w-96 h-96 perspective cursor-pointer'
-      style={{ perspective: '1000px' }}
-    >
+    <div onClick={handleToggleFlip} className='w-full h-full ' style={{ perspective: '1000px' }}>
       <div
-        className={`relative h-full transition-transform duration-500`}
-        style={{
-          transformStyle: 'preserve-3d',
-          transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-        }}
+        className={`w-full h-full relative transition-transform duration-500 transform-style-3d ${
+          flipped ? 'rotate-y-180' : ''
+        }`}
       >
-        {/* Front Face */}
-        <div
-          className='absolute w-full h-full'
-          style={{
-            backfaceVisibility: 'hidden',
-          }}
-        >
-          <CardFront fpti={fpti} type={type} result={result} />
-        </div>
         {/* Back Face */}
-        <div
-          className='absolute w-full h-full'
-          style={{
-            transform: 'rotateY(180deg)',
-            backfaceVisibility: 'hidden',
-          }}
-        >
-          <CardBack />
+        <div className='flex items-center justify-center absolute w-full h-full backface-hidden transform rotate-y-180'>
+          <img
+            width={345.59}
+            height={491}
+            src='/bg-back.png'
+            alt='카드 뒷면'
+            className='border border-text-placeholder rounded-xl'
+          />
+        </div>
+        {/* Front Face */}
+
+        <div className='flex items-center justify-center absolute w-full h-full backface-hidden'>
+          <CardFront fpti={fpti} type={type} result={result} />
         </div>
       </div>
     </div>
