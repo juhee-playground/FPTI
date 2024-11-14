@@ -5,7 +5,6 @@ import useInteract from '@/hooks/useInteract';
 interface IRotatorProps {
   children: React.ReactNode;
   rotationProps?: { x: number; y: number };
-  positionProps?: { x: number; y: number };
 }
 
 const Rotator = ({ children, rotationProps }: IRotatorProps) => {
@@ -23,7 +22,12 @@ const Rotator = ({ children, rotationProps }: IRotatorProps) => {
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
-      <div style={rotateStyle}>{children}</div>
+      <div
+        className='w-full h-full grid place-items-center transform-style-preserve-3d pointer-events-none overflow-hidden'
+        style={rotateStyle}
+      >
+        {children}
+      </div>
     </div>
   );
 };

@@ -356,3 +356,22 @@ input[type='submit'] {
 @media only screen and (max-width: calc(var(--mobile-width) - 1px)) {
   /* Styles for screens smaller than mobile width */
 }
+
+.shine__wrapper {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --card-opacity: 1;
+}
+
+.shine {
+  background-image: radial-gradient(
+    farthest-corner circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(255, 255, 255, 0.65) 10%,
+    rgba(0, 0, 0, 0.5) 45%
+  );
+  opacity: var(--card-opacity);
+  mix-blend-mode: overlay;
+  filter: brightness(1.2) contrast(1.5);
+  transform: translateZ(1px); /* 3D 레이어에서 빛나는 효과 유지 */
+}
