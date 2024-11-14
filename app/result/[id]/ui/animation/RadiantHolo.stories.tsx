@@ -20,8 +20,8 @@ export const Card: Story = {
   render: args => (
     <RadiantHolo {...args}>
       <PersonalityCard
-        fpti='SAPE'
-        type='지원형 크리에이터'
+        fpti='LATE'
+        type='쇼맨의 리더형'
         result={{
           목표와_우선순위: { C: 20, E: 80 },
           책임감과_주도성: { L: 40, S: 60 },
