@@ -505,3 +505,33 @@ input[type='submit'] {
   filter: brightness(0.5) contrast(2) saturate(1.75);
   mix-blend-mode: color-dodge;
 }
+
+.radiant--holo {
+  content: '';
+
+  background-image:
+    url('/pattern.webp'),
+    /* $foil 대체 */
+      repeating-linear-gradient(
+        55deg,
+        hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
+        hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
+        hsl(29, 100%, 85%) calc(var(--space, 10px) * 3),
+        hsl(160, 100%, 86%) calc(var(--space, 10px) * 4),
+        hsl(309, 94%, 87%) calc(var(--space, 10px) * 5),
+        hsl(188, 95%, 85%) calc(var(--space, 10px) * 6),
+        hsl(3, 95%, 85%) calc(var(--space, 10px) * 7)
+      );
+
+  background-size:
+    var(--imgsize, 100%),
+    400% 100%;
+  background-position:
+    center,
+    calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
+
+  filter: brightness(0.6) contrast(3) saturate(2);
+  mix-blend-mode: color-dodge;
+
+  background-blend-mode: hard-light;
+}
