@@ -1,8 +1,8 @@
+@import './animations.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './animations.css';
 
 root {
   --max-width: 1280px;
