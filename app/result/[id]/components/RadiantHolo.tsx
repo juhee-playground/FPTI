@@ -33,8 +33,6 @@ const RadiantHolo: React.FC<RadiantHoloProps> = ({ children, dynamicStylesProps,
       <Shine />
       {children}
       <Glare />
-      {/*
-       */}
     </div>
   );
 };
