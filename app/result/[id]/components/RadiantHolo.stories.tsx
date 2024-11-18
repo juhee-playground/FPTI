@@ -7,6 +7,10 @@ import RadiantHolo from '@/app/result/[id]/components/RadiantHolo';
 const meta: Meta<typeof RadiantHolo> = {
   title: 'Components/RadiantHolo',
   component: RadiantHolo,
+  argTypes: {
+    radiant: { control: 'boolean', defaultValue: true },
+    holo: { control: 'boolean', defaultValue: true },
+  },
 };
 
 export default meta;
@@ -27,6 +31,10 @@ const SampleCard = () => (
 );
 
 export const Default: Story = {
+  args: {
+    radiant: true,
+    holo: true,
+  },
   render: args => (
     <div>
       <RadiantHolo {...args}>
@@ -37,10 +45,23 @@ export const Default: Story = {
 };
 
 export const Darken: Story = {
+  args: {
+    radiant: true,
+    holo: true,
+  },
   render: args => (
     <div>
       <RadiantHolo {...args}>
-        <div style={{ width: 346, height: 491 }}></div>
+        <div
+          style={{
+            width: 346,
+            height: 491,
+            backgroundColor: '#222' /* 어두운 배경 */,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        ></div>
       </RadiantHolo>
     </div>
   ),

@@ -10,9 +10,11 @@ import useInteract from '@/hooks/useInteract';
 interface RadiantHoloProps {
   children?: React.ReactNode;
   dynamicStylesProps?: React.CSSProperties;
+  radiant: boolean;
+  holo: boolean;
 }
 
-const RadiantHolo: React.FC<RadiantHoloProps> = ({ children, dynamicStylesProps }) => {
+const RadiantHolo: React.FC<RadiantHoloProps> = ({ children, dynamicStylesProps, radiant, holo }) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
@@ -24,11 +26,15 @@ const RadiantHolo: React.FC<RadiantHoloProps> = ({ children, dynamicStylesProps 
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      {children}
-      <Radiant />
-      <Holo />
+      <div className={styles.effectsLayer}>
+        {radiant && <Radiant />}
+        {holo && <Holo />}
+      </div>
       <Shine />
+      {children}
       <Glare />
+      {/*
+       */}
     </div>
   );
 };
