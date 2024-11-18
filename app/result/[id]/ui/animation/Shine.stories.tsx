@@ -32,3 +32,20 @@ export const Card: Story = {
     </Shine>
   ),
 };
+
+export const EmptyCard: Story = {
+  render: args => (
+    <Shine {...args}>
+      <div
+        style={{
+          width: 346,
+          height: 491,
+          backgroundColor: '#222' /* 어두운 배경 */,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      />
+    </Shine>
+  ),
+};

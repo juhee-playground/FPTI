@@ -1,8 +1,11 @@
+import { ReactNode } from 'react';
+
+import styles from '@/app/result/[id]/ui/animation/Shine.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IShineProps {
-  children: React.ReactNode;
-  dynamicStylesProps?: React.CSSProperties;
+  children: ReactNode; // 카드 내용
+  dynamicStylesProps?: React.CSSProperties; // 외부 스타일 주입 옵션
 }
 
 const Shine = ({ children, dynamicStylesProps }: IShineProps) => {
@@ -11,13 +14,13 @@ const Shine = ({ children, dynamicStylesProps }: IShineProps) => {
 
   return (
     <div
-      className='shine__wrapper w-full h-full relative flex overflow-hidden'
+      className={styles.container}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      <div className='shine absolute inset-0 pointer-events-none z-10'></div>
-      <div className='w-full h-full grid place-items-center transform-style-preserve-3d'>{children}</div>
+      <div className={styles.shine} />
+      {children}
     </div>
   );
 };

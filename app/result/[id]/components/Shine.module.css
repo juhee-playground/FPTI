@@ -10,6 +10,17 @@
   }
 }
 
+.container {
+  position: relative;
+  width: 346px;
+  height: 491px;
+  background: linear-gradient(to bottom, #222, #333); /* 어두운 배경 추가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .shine {
   position: absolute;
   top: 0;
