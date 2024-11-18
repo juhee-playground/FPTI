@@ -1,3 +1,15 @@
+@keyframes shine-effect {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 .shine {
   position: absolute;
   top: 0;
@@ -6,11 +18,14 @@
   height: 100%;
   background-image: radial-gradient(
     farthest-corner ellipse at var(--pointer-x, 50%) var(--pointer-y, 50%),
-    rgba(255, 255, 255, 0.5) 10%,
-    /* 기존 20% → 10%로 줄임 */ transparent 60% /* 기존 100% → 60%로 줄임 */
+    rgba(255, 255, 255, 0.4) 20%,
+    /* 중심부 밝기 */ transparent 80% /* 가장자리 투명 */
   );
-  mix-blend-mode: color-dodge;
+  background-size: 200% 200%; /* 부드러운 움직임 */
+  mix-blend-mode: screen; /* 배경과 자연스럽게 조화 */
+  opacity: 0.6; /* 효과 강도 조절 */
   pointer-events: none;
   z-index: 5;
-  will-change: transform, opacity, background-image;
+  will-change: background-image, opacity;
+  animation: shine-effect 6s infinite linear; /* 움직임 추가 */
 }
