@@ -1,8 +1,8 @@
+@import './animations.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './animations.css';
 
 root {
   --max-width: 1280px;
@@ -89,6 +89,51 @@ root {
   --md-break-point: 960px;
   --lg-break-point: 1264px;
   --xl-break-point: 1904px;
+
+  /* 카드 animation 관련 variables */
+
+  --card-aspect: 0.718;
+  --card-radius: 4.55% / 3.5%;
+  --card-edge: hsl(47, 100%, 78%);
+  --card-back: hsl(205, 100%, 25%);
+  --card-glow: hsl(175, 100%, 90%);
+
+  --sunpillar-1: hsl(2, 100%, 73%);
+  --sunpillar-2: hsl(53, 100%, 69%);
+  --sunpillar-3: hsl(93, 100%, 69%);
+  --sunpillar-4: hsl(176, 100%, 76%);
+  --sunpillar-5: hsl(228, 100%, 74%);
+  --sunpillar-6: hsl(283, 100%, 73%);
+
+  --sunpillar-clr-1: var(--sunpillar-1);
+  --sunpillar-clr-2: var(--sunpillar-2);
+  --sunpillar-clr-3: var(--sunpillar-3);
+  --sunpillar-clr-4: var(--sunpillar-4);
+  --sunpillar-clr-5: var(--sunpillar-5);
+  --sunpillar-clr-6: var(--sunpillar-6);
+
+  --red: #f80e35;
+  --yellow: #eedf10;
+  --green: #21e985;
+  --blue: #0dbde9;
+  --violet: #c929f1;
+
+  --clip: inset(9.85% 8% 52.85% 8%);
+
+  --scanlines-space: 1px;
+  --scanlines-light: #666;
+  --scanlines-dark: black;
+
+  --bars: 3%;
+  --bar-color: hsla(0, 0%, 70%, 1);
+  --bar-bg: hsla(0, 0%, 0%, 1);
+
+  --barwidth: 1.2%;
+  --space: 200px;
+  --hue: 50;
+  --imgsize: cover;
+
+  /* --foil: url('/public/foil_LATE.jpg'); */
 }
 
 /* 기본 스타일 */
@@ -374,4 +419,119 @@ input[type='submit'] {
   mix-blend-mode: overlay;
   filter: brightness(1.2) contrast(1.5);
   transform: translateZ(1px); /* 3D 레이어에서 빛나는 효과 유지 */
+}
+
+.radiant {
+  display: grid;
+  position: absolute;
+  border-radius: 20px;
+
+  /* width: 100%;
+  height: 100%; */
+  width: 384px;
+  height: 491px;
+  z-index: 1;
+
+  background-image: url('/pattern.webp'),
+    radial-gradient(
+      farthest-corner ellipse at calc(((var(--pointer-x)) * 0.5) + 25%) calc(((var(--pointer-y)) * 0.5) + 25%),
+      hsl(0, 0%, 95%) 20%,
+      var(--card-glow, hsl(50, 100%, 70%)) 130%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      hsl(0, 0%, 10%) 0%,
+      hsl(0, 0%, 10%) 1%,
+      hsl(0, 0%, 10%) var(--barwidth, 10%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 2),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 4),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 6),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 7),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 8),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 9),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 10)
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      hsl(0, 0%, 10%) 0%,
+      hsl(0, 0%, 10%) 1%,
+      hsl(0, 0%, 10%) var(--barwidth, 10%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 2),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 4),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 6),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 7),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 8),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 9),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 10)
+    );
+
+  /* background-size:
+    cover,
+    10% 10%,
+    20% 20%; */
+  background-size:
+    cover,
+    100% 100%,
+    50% 50%;
+  background-position:
+    center,
+    calc(((var(--background-x, 50%) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%),
+    calc(((var(--background-x, 50%) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%);
+
+  background-blend-mode: exclusion, darken, color-dodge;
+
+  filter: brightness(0.5) contrast(2) saturate(1.75);
+  mix-blend-mode: color-dodge;
+}
+
+.radiant--holo {
+  content: '';
+
+  background-image:
+    url('/pattern.webp'),
+    /* $foil 대체 */
+      repeating-linear-gradient(
+        55deg,
+        hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
+        hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
+        hsl(29, 100%, 85%) calc(var(--space, 10px) * 3),
+        hsl(160, 100%, 86%) calc(var(--space, 10px) * 4),
+        hsl(309, 94%, 87%) calc(var(--space, 10px) * 5),
+        hsl(188, 95%, 85%) calc(var(--space, 10px) * 6),
+        hsl(3, 95%, 85%) calc(var(--space, 10px) * 7)
+      );
+
+  background-size:
+    var(--imgsize, 100%),
+    400% 100%;
+  background-position:
+    center,
+    calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
+
+  filter: brightness(0.6) contrast(3) saturate(2);
+  mix-blend-mode: color-dodge;
+
+  background-blend-mode: hard-light;
 }

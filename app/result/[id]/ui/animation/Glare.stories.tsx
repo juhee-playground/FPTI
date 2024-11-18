@@ -1,13 +1,11 @@
-import React from 'react';
-
 import { Meta, StoryObj } from '@storybook/react';
 
+import Glare from './Glare';
 import PersonalityCard from '../PersonalityCard';
-import Shine from './Shine';
 
-const meta: Meta<typeof Shine> = {
-  title: 'animation/Shine',
-  component: Shine,
+const meta: Meta<typeof Glare> = {
+  title: 'animation/Glare',
+  component: Glare,
   parameters: {
     layout: 'fullscreen',
   },
@@ -18,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Card: Story = {
   render: args => (
-    <Shine {...args}>
+    <Glare {...args}>
       <PersonalityCard
         fpti='LATE'
         type='쇼맨의 리더형'
@@ -29,13 +27,13 @@ export const Card: Story = {
           플레이_스타일: { T: 52, P: 48 },
         }}
       />
-    </Shine>
+    </Glare>
   ),
 };
 
 export const EmptyCard: Story = {
   render: args => (
-    <Shine {...args}>
+    <Glare {...args}>
       <div
         style={{
           width: 346,
@@ -46,6 +44,6 @@ export const EmptyCard: Story = {
           alignItems: 'center',
         }}
       />
-    </Shine>
+    </Glare>
   ),
 };
