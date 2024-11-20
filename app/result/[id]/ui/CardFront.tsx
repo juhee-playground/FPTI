@@ -11,7 +11,7 @@ interface ICardFrontProps {
 
 const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
   return (
-    <div className='bg-white w-full max-w-96 p-3 border border-text-placeholder rounded-xl text-text-default'>
+    <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-default'>
       <div className='flex flex-col items-center bg-background py-3 gap-3 border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
           <ImageBox topTypes={fpti as string} width={240} height={240} />

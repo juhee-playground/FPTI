@@ -14,14 +14,14 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const handleToggleFlip = () => setFlipped(!flipped);
 
   return (
-    <div onClick={handleToggleFlip} className='w-full h-full ' style={{ perspective: '1000px' }}>
+    <article onClick={handleToggleFlip} className='w-full max-w-md mx-auto relative' style={{ perspective: '1000px' }}>
       <div
-        className={`w-full h-full relative transition-transform duration-500 transform-style-3d ${
+        className={`relative w-full h-[491px] transition-transform duration-500 transform-style-3d ${
           flipped ? 'rotate-y-180' : ''
         }`}
       >
         {/* Back Face */}
-        <div className='flex items-center justify-center absolute w-full h-full backface-hidden transform rotate-y-180'>
+        <div className='absolute inset-0 flex items-center justify-center backface-hidden transform rotate-y-180'>
           <img
             width={345.59}
             height={491}
@@ -30,13 +30,13 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
             className='border border-text-placeholder rounded-xl'
           />
         </div>
-        {/* Front Face */}
 
-        <div className='flex items-center justify-center absolute w-full h-full backface-hidden'>
+        {/* Front Face */}
+        <div className='absolute inset-0 flex items-center justify-center backface-hidden'>
           <CardFront fpti={fpti} type={type} result={result} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
