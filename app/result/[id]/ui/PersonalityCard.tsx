@@ -23,7 +23,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
         {/* Back Face */}
         <div className='absolute inset-0 flex items-center justify-center backface-hidden transform rotate-y-180'>
           <img
-            width={345.59}
+            width={320}
             height={491}
             src='/bg-back.png'
             alt='카드 뒷면'
