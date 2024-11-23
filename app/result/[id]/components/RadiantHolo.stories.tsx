@@ -2,6 +2,8 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import PersonalityCard from '../ui/PersonalityCard';
 
+import Holo from '@/app/result/[id]/components/Holo';
+import Radiant from '@/app/result/[id]/components/Radiant';
 import RadiantHolo from '@/app/result/[id]/components/RadiantHolo';
 
 const meta: Meta<typeof RadiantHolo> = {
@@ -63,6 +65,22 @@ export const Darken: Story = {
           }}
         ></div>
       </RadiantHolo>
+    </div>
+  ),
+};
+
+export const RadiantEx: Story = {
+  render: () => (
+    <div>
+      <Radiant />
+    </div>
+  ),
+};
+
+export const HoloEx: Story = {
+  render: () => (
+    <div>
+      <Holo />
     </div>
   ),
 };
