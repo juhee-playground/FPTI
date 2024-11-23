@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  width: 346px;
+  width: 320px;
   height: 491px;
   background: linear-gradient(to bottom, #222, #333); /* 어두운 배경 추가 */
   display: flex;
