@@ -1,5 +1,6 @@
 'use client';
 
+import styles from '@/app/result/[id]/ui/animation/RadiantHolo.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
@@ -15,13 +16,13 @@ const RadiantHolo = ({ children, dynamicStylesProps, radiant = true, holo = true
 
   return (
     <div
-      className='w-full h-full relative flex flex-wrap justify-center items-center overflow-hidden'
+      className={styles.container}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      {radiant && <div className='radiant' />}
-      {holo && <div className='radiant radiant--holo' />}
+      {radiant && <div className={styles.radiant} />}
+      {holo && <div className={`${styles.radiant} ${styles['radiant--holo']}`} />}
       {children}
     </div>
   );
