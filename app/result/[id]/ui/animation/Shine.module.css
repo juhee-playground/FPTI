@@ -1,12 +1,11 @@
 .container {
   position: relative;
-  width: 346px; /* 카드 크기 */
+  width: 320px;
   height: 491px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111; /* 카드 배경 */
 }
 
 .shine {
