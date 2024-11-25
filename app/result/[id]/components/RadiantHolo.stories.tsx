@@ -70,17 +70,35 @@ export const Darken: Story = {
 };
 
 export const RadiantEx: Story = {
-  render: () => (
-    <div>
-      <Radiant />
-    </div>
+  render: args => (
+    <Radiant {...args}>
+      <div
+        style={{
+          width: 346,
+          height: 491,
+          backgroundColor: '#222' /* 어두운 배경 */,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      />
+    </Radiant>
   ),
 };
 
 export const HoloEx: Story = {
-  render: () => (
-    <div>
-      <Holo />
-    </div>
+  render: args => (
+    <Holo {...args}>
+      <div
+        style={{
+          width: 346,
+          height: 491,
+          backgroundColor: '#222' /* 어두운 배경 */,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      />
+    </Holo>
   ),
 };
