@@ -1,14 +1,13 @@
-@keyframes radiant-effect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.container {
+  position: relative;
+  width: 320px;
+  height: 491px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .radiant {
   position: absolute;
   top: 0;
@@ -17,9 +16,9 @@
   height: 100%;
   background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 20%, #47cf73 40%, #24c6dc 60%, #845ec2 80%, #ff5f6d 100%);
   background-size: 400% 400%;
-  mix-blend-mode: overlay; /* 부드러운 조합 방식 */
-  opacity: 0.6; /* 투명도를 약간 높임 */
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  mix-blend-mode: overlay;
+  opacity: 0.6;
   pointer-events: none;
   z-index: 3;
-  animation: radiant-effect 5s infinite linear;
 }
