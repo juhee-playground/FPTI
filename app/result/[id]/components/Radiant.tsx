@@ -4,16 +4,14 @@ import styles from './Radiant.module.css';
 
 import useInteract from '@/hooks/useInteract';
 
-interface IHoloProps {
+interface IRadiantProps {
   children: ReactNode;
   dynamicStylesProps?: React.CSSProperties;
 }
 
-const Radiant = ({ children, dynamicStylesProps }: IHoloProps) => {
+const Radiant = ({ children, dynamicStylesProps }: IRadiantProps) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
-  const appliedStyles = dynamicStylesProps || dynamicStyles;
-
-  console.log(appliedStyles);
+  const appliedStyles = dynamicStylesProps || (dynamicStyles as React.CSSProperties);
 
   return (
     <div
