@@ -63,6 +63,8 @@ const useInteract = () => {
     '--rotate-y': `${rotation.y}deg`,
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
+    width: '100%',
+    height: '100%',
   };
 
   return {
