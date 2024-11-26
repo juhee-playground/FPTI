@@ -47,7 +47,7 @@ export default function ResultPage() {
   };
 
   return (
-    <div className='flex flex-col items-center bg-background text-white overflow-y-auto py-6 gap-3'>
+    <div className='flex flex-col items-center bg-background text-white overflow-y-auto py-6 gap-3 h-screen'>
       <PersonalityCard fpti={fpti} type={resultDescription?.type} result={reconstructedResult} />
       <TypeDescription content={resultDescription} />
       <div className='flex justify-between items-center w-full'>
