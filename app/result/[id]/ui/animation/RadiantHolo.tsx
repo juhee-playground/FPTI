@@ -1,10 +1,10 @@
 import React from 'react';
 
 // import Glare from '@/app/result/[id]/components/Glare';
-import styles from '@/app/result/[id]/components/RadiantHolo.module.css';
 import Holo from '@/app/result/[id]/ui/animation/Holo';
 import Radiant from '@/app/result/[id]/ui/animation/Radiant';
-// import Shine from '@/app/result/[id]/components/Shine';
+import styles from '@/app/result/[id]/ui/animation/RadiantHolo.module.css';
+// import Shine from '@/app/result/[id]/ui/animation/Shine';
 import useInteract from '@/hooks/useInteract';
 
 interface RadiantHoloProps {
