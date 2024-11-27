@@ -2,8 +2,9 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import PersonalityCard from '../PersonalityCard';
 import RadiantHolo from './RadiantHolo';
+
+import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
 
 const meta: Meta<typeof RadiantHolo> = {
   title: 'animation/RadiantHolo',
