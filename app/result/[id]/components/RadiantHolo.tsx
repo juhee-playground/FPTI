@@ -1,36 +1,29 @@
-import React from 'react';
+'use client';
 
-// import Glare from '@/app/result/[id]/components/Glare';
-import Holo from '@/app/result/[id]/components/Holo';
-import Radiant from '@/app/result/[id]/components/Radiant';
-import styles from '@/app/result/[id]/components/RadiantHolo.module.css';
-// import Shine from '@/app/result/[id]/components/Shine';
+import styles from '@/app/result/[id]/ui/animation/RadiantHolo.module.css';
 import useInteract from '@/hooks/useInteract';
 
-interface RadiantHoloProps {
-  children?: React.ReactNode;
+interface IRotatorProps {
+  children: React.ReactNode;
   dynamicStylesProps?: React.CSSProperties;
   radiant: boolean;
   holo: boolean;
 }
 
-const RadiantHolo: React.FC<RadiantHoloProps> = ({ children, dynamicStylesProps, radiant, holo }) => {
+const RadiantHolo = ({ children, dynamicStylesProps, radiant = true, holo = true }: IRotatorProps) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
-  const appliedStyles = dynamicStylesProps || (dynamicStyles as React.CSSProperties);
-
-  let wrappedChildren = <>{children}</>;
-
-  if (holo) {
-    wrappedChildren = <Holo>{wrappedChildren}</Holo>;
-  }
-
-  if (radiant) {
-    wrappedChildren = <Radiant dynamicStylesProps={appliedStyles}>{wrappedChildren}</Radiant>;
-  }
+  const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
-    <div className={styles.container} onMouseMove={handleMove} onTouchMove={handleMove} onMouseLeave={handleLeave}>
-      {wrappedChildren}
+    <div
+      className={styles.container}
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+      style={appliedStyles as React.CSSProperties}
+    >
+      {radiant && <div className={styles.radiant} />}
+      {holo && <div className={`${styles.radiant} ${styles['radiant--holo']}`} />}
+      {children}
     </div>
   );
 };
