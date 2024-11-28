@@ -14,12 +14,11 @@
   position: absolute;
   border-radius: 20px;
 
-  width: 320px;
-  height: 491px;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 
-  background-image: url('/pattern.webp'),
-    radial-gradient(
+  background-image: radial-gradient(
       farthest-corner ellipse at calc(((var(--pointer-x)) * 0.5) + 25%) calc(((var(--pointer-y)) * 0.5) + 25%),
       hsl(0, 0%, 95%) 20%,
       var(--card-glow, hsl(50, 100%, 70%)) 130%
@@ -28,63 +27,62 @@
       45deg,
       hsl(0, 0%, 10%) 0%,
       hsl(0, 0%, 10%) 1%,
-      hsl(0, 0%, 10%) var(--barwidth, 10%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) + 0.01%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 2),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 2 + 0.01%),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 3),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 3 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 4),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 4 + 0.01%),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 5),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 5 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 6),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 6 + 0.01%),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 7),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 7 + 0.01%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 8),
-      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 8 + 0.01%),
-      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 9),
-      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 9 + 0.01%),
-      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 10)
+      hsl(0, 0%, 10%) var(--radiantbarwidth, 1.2%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 2),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 4),
+      hsl(0, 0%, 50%) calc(var(--radiantbarwidth, 1.2%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--radiantbarwidth, 1.2%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 6),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 7),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 8),
+      hsl(0, 0%, 10%) calc(var(--radiantbarwidth, 1.2%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--radiantbarwidth, 1.2%) * 9),
+      hsl(0, 0%, 0%) calc(var(--radiantbarwidth, 1.2%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--radiantbarwidth, 1.2%) * 10)
     ),
     repeating-linear-gradient(
       -45deg,
       hsl(0, 0%, 10%) 0%,
       hsl(0, 0%, 10%) 1%,
-      hsl(0, 0%, 10%) var(--barwidth, 10%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) + 0.01%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 2),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 2 + 0.01%),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 3),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 3 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 4),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 4 + 0.01%),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 10%) * 5),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 5 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 10%) * 6),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 6 + 0.01%),
-      hsl(0, 0%, 35%) calc(var(--barwidth, 10%) * 7),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 7 + 0.01%),
-      hsl(0, 0%, 20%) calc(var(--barwidth, 10%) * 8),
-      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 8 + 0.01%),
-      hsl(0, 0%, 10%) calc(var(--barwidth, 10%) * 9),
-      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 9 + 0.01%),
-      hsl(0, 0%, 0%) calc(var(--barwidth, 10%) * 10)
+      hsl(0, 0%, 10%) var(--radiantbarwidth, 1.2%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 2),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 4),
+      hsl(0, 0%, 50%) calc(var(--radiantbarwidth, 1.2%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--radiantbarwidth, 1.2%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--radiantbarwidth, 1.2%) * 6),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--radiantbarwidth, 1.2%) * 7),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--radiantbarwidth, 1.2%) * 8),
+      hsl(0, 0%, 10%) calc(var(--radiantbarwidth, 1.2%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--radiantbarwidth, 1.2%) * 9),
+      hsl(0, 0%, 0%) calc(var(--radiantbarwidth, 1.2%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--radiantbarwidth, 1.2%) * 10)
     );
 
-  /* background-size:
-      cover,
-      10% 10%,
-      20% 20%; */
   background-size:
     cover,
-    100% 100%,
-    50% 50%;
+    210% 210%,
+    210% 210%;
   background-position:
     center,
-    calc(((var(--background-x, 50%) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%),
-    calc(((var(--background-x, 50%) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%);
+    calc(((var(--background-x) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%),
+    calc(((var(--background-x) - 50%) * 1.5) + 50%) calc(((var(--background-y, 50%) - 50%) * 1.5) + 50%);
+
+  /* calc( ((var(--background-x) - 50%) * 1.5) + 50% ) calc( ((var(--background-y) - 50%) * 1.5) + 50% ), 
+    calc( ((var(--background-x) - 50%) * 1.5) + 50% ) calc( ((var(--background-y) - 50%) * 1.5) + 50% ); */
 
   background-blend-mode: exclusion, darken, color-dodge;
 
