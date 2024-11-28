@@ -7,7 +7,7 @@ import RadiantHolo from './RadiantHolo';
 import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
 
 const meta: Meta<typeof RadiantHolo> = {
-  title: 'animation/RadiantHolo',
+  title: 'components/RadiantHolo',
   component: RadiantHolo,
   parameters: {
     layout: 'fullscreen',

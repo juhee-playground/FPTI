@@ -7,7 +7,7 @@ import Radiant from '@/app/result/[id]/ui/animation/Radiant';
 import RadiantHolo from '@/app/result/[id]/ui/animation/RadiantHolo';
 
 const meta: Meta<typeof RadiantHolo> = {
-  title: 'Components/RadiantHolo',
+  title: 'animation/RadiantHolo',
   component: RadiantHolo,
   argTypes: {
     radiant: { control: 'boolean', defaultValue: true },
