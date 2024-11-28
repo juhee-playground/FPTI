@@ -4,8 +4,8 @@ import styles from '@/app/result/[id]/ui/animation/Shine.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IShineProps {
-  children: ReactNode; // 카드 내용
-  dynamicStylesProps?: React.CSSProperties; // 외부 스타일 주입 옵션
+  children: ReactNode;
+  dynamicStylesProps?: React.CSSProperties;
 }
 
 const Shine = ({ children, dynamicStylesProps }: IShineProps) => {

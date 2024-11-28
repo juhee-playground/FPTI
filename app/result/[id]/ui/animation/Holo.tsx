@@ -5,15 +5,13 @@ import styles from './Holo.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IHoloProps {
-  children: ReactNode; // 카드 내용
-  dynamicStylesProps?: React.CSSProperties; // 외부 스타일 주입 옵션
+  children: ReactNode;
+  dynamicStylesProps?: React.CSSProperties;
 }
 
 const Holo = ({ children, dynamicStylesProps }: IHoloProps) => {
-  const { handleMove, handleLeave, dynamicStyles } = useInteract(); // 마우스 위치 정보 가져오기
+  const { handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
-
-  console.log(appliedStyles);
 
   return (
     <div

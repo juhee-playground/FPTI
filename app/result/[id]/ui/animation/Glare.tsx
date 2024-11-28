@@ -4,12 +4,12 @@ import styles from '@/app/result/[id]/ui/animation/Glare.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IGlareProps {
-  children: ReactNode; // 카드 내용
-  dynamicStylesProps?: React.CSSProperties; // 외부 스타일 주입 옵션
+  children: ReactNode;
+  dynamicStylesProps?: React.CSSProperties;
 }
 
 const Glare = ({ children, dynamicStylesProps }: IGlareProps) => {
-  const { handleMove, handleLeave, dynamicStyles } = useInteract(); // 마우스 위치 정보 가져오기
+  const { handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
