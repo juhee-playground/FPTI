@@ -12,7 +12,7 @@ interface IPersonalityCardProps {
 
 const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const [flipped, setFlipped] = useState(false);
-  const { rotation, handleMove, handleLeave } = useInteract();
+  const { rotation, transition, handleMove, handleLeave } = useInteract();
 
   const handleToggleFlip = () => setFlipped(!flipped);
 
@@ -20,12 +20,14 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
     transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
       flipped ? 'rotateY(180deg)' : ''
     }`,
+    transition,
   };
 
   const rotateStyleB = {
     transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
       flipped ? 'rotateY(0deg)' : ''
     }`,
+    transition,
   };
 
   //TODO: card 뒷면 맞추기...
