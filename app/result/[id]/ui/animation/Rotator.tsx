@@ -4,17 +4,10 @@ import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
   children: React.ReactNode;
-  rotationProps?: { x: number; y: number };
 }
 
-const Rotator = ({ children, rotationProps }: IRotatorProps) => {
-  const { rotation, handleMove, handleLeave } = useInteract();
-
-  const rotationValue = rotationProps || rotation;
-
-  const rotateStyle = {
-    transform: `perspective(450px) rotateX(${rotationValue.x}deg) rotateY(${rotationValue.y}deg)`,
-  };
+const Rotator = ({ children }: IRotatorProps) => {
+  const { handleMove, handleLeave } = useInteract();
 
   return (
     <div
@@ -22,10 +15,7 @@ const Rotator = ({ children, rotationProps }: IRotatorProps) => {
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
-      <div
-        className='w-full h-full grid place-items-center transform-style-preserve-3d pointer-events-none overflow-hidden'
-        style={rotateStyle}
-      >
+      <div className='w-full h-full grid place-items-center transform-style-preserve-3d pointer-events-none overflow-hidden'>
         {children}
       </div>
     </div>
