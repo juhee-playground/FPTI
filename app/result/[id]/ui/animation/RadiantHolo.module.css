@@ -2,7 +2,7 @@
   position: relative;
   width: 320px;
   height: 491px;
-  background: linear-gradient(to bottom, #222, #333);
+  /* background: linear-gradient(to bottom, #222, #333); */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -12,13 +12,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 20%, #47cf73 40%, #24c6dc 60%, #845ec2 80%, #ff5f6d 100%);
-  background-size: 400% 400%;
+  width: 320px;
+  height: 491px;
+  background: linear-gradient(
+    90deg,
+    #f80808 0%,
+    #ff9307 17%,
+    #f2f202 33%,
+    #00ff00 50%,
+    #0000ff 67%,
+    #4b0082 83%,
+    #9400d3 100%
+  );
+  background-size: 800% 800%; /* 크기를 더 키워 극대화 */
   background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
-  mix-blend-mode: overlay;
-  opacity: 0.6;
+  mix-blend-mode: overlay; /* 강한 혼합 모드 */
+  opacity: 0.75; /* 투명도를 조금 높임 */
   pointer-events: none;
   z-index: 3;
 }
