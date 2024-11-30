@@ -31,14 +31,14 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
     <section className='flex justify-center items-center w-full gap-2 px-2'>
       <div className={`flex flex-row-reverse items-center w-[190px] gap-1`}>
         <h2
-          className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-black text-xs text-text-default`}
+          className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-basic text-xs text-text-white`}
           style={{
             backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : 'inherit',
           }}
         >
           {finalStartLabel}
         </h2>
-        <p className='text-xs text-text-default'>{startTypeInfo}</p>
+        <p className='text-xs text-text-white'>{startTypeInfo}</p>
       </div>
 
       <div
@@ -47,13 +47,13 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
         <div
           className={`h-5 flex items-center px-3 transition-all duration-300 ${
             isReverse ? 'justify-start' : 'justify-end'
-          } rounded-lg border border-black`}
+          } rounded-lg border border-darken`}
           style={{
             width: `${percentage}%`,
             backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : getColorByType(endTypeText),
           }}
         >
-          <span className={`text-border-black text-xs`} style={{ width: `${percentage}%` }}>
+          <span className={`text-border-basic text-xs`} style={{ width: `${percentage}%` }}>
             {`${Math.ceil(percentage)}%`}
           </span>
         </div>
@@ -61,14 +61,14 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
 
       <div className='flex flex-row items-center w-[190px] gap-1'>
         <h2
-          className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-black text-xs text-text-default`}
+          className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-basic text-xs text-text-white`}
           style={{
             backgroundColor: isEndLabelMain ? getColorByType(endTypeText) : 'inherit',
           }}
         >
           {endLabel}
         </h2>
-        <p className='text-xs text-text-default'>{endTypeInfo}</p>
+        <p className='text-xs text-text-white'>{endTypeInfo}</p>
       </div>
     </section>
   );

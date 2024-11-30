@@ -11,13 +11,13 @@ interface ICardFrontProps {
 
 const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
   return (
-    <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-default'>
-      <div className='flex flex-col items-center bg-background py-3 gap-3 border border-text-placeholder rounded-xl'>
+    <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
+      <div className='flex flex-col items-center bg-backgroundDarken py-3 gap-3 border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
           <ImageBox topTypes={fpti as string} width={240} height={240} />
         </div>
-        <h3 className='flex flex-col items-center gap-1 text-text-basic m-0'>
-          <span className='w-40 h-7 bg-primary text-center rounded-lg font-medium text-lg border border-black'>
+        <h3 className='flex flex-col items-center gap-1 text-text-white m-0'>
+          <span className='w-40 h-7 bg-backgroundDarken2 text-center rounded-lg font-medium text-lg border border-basic'>
             {fpti}
           </span>
           <span className='text-lg'>{type}</span>
