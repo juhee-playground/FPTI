@@ -10,7 +10,7 @@ interface IRotatorProps {
   holo: boolean;
 }
 
-const RadiantHolo = ({ children, dynamicStylesProps, radiant = true, holo = true }: IRotatorProps) => {
+const RadiantHoloPattern = ({ children, dynamicStylesProps, radiant = true, holo = true }: IRotatorProps) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
@@ -28,4 +28,4 @@ const RadiantHolo = ({ children, dynamicStylesProps, radiant = true, holo = true
   );
 };
 
-export default RadiantHolo;
+export default RadiantHoloPattern;

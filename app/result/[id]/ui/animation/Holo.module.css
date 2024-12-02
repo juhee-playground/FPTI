@@ -1,3 +1,13 @@
+.container {
+  position: relative;
+  width: 320px;
+  height: 491px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .holo {
   position: absolute;
   top: 0;
@@ -19,8 +29,8 @@
       rgba(255, 255, 255, 0.15) 100%
     );
   background-size: 200% 200%;
-  mix-blend-mode: screen; /* 화면에서 빛 반사가 자연스럽게 보이도록 설정 */
-  opacity: 0.7; /* 빛 효과의 투명도 */
+  mix-blend-mode: screen;
+  opacity: 0.7;
   pointer-events: none;
   will-change: background-image, opacity;
   z-index: 4;
