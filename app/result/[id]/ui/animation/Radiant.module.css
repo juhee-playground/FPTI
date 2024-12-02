@@ -24,8 +24,7 @@
     #4b0082 83%,
     #9400d3 100%
   ); */
-  background:
-    /* $foil 대체 */ repeating-linear-gradient(
+  background: repeating-linear-gradient(
     55deg,
     hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
     hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
