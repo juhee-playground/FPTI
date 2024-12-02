@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import CardFront from './CardFront';
 
+import useInteract from '@/hooks/useInteract';
+
 interface IPersonalityCardProps {
   fpti: string | undefined;
   type: string | undefined;
@@ -10,18 +12,31 @@ interface IPersonalityCardProps {
 
 const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const [flipped, setFlipped] = useState(false);
+  const { rotation, transition, handleMove, handleLeave } = useInteract();
 
   const handleToggleFlip = () => setFlipped(!flipped);
 
+  const rotateStyleF = {
+    transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
+      flipped ? 'rotateY(180deg)' : ''
+    }`,
+    transition,
+  };
+
+  const rotateStyleB = {
+    transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
+      flipped ? 'rotateY(0deg)' : ''
+    }`,
+    transition,
+  };
+
+  //TODO: card 뒷면 맞추기...
+
   return (
-    <article onClick={handleToggleFlip} className='w-full max-w-md mx-auto relative' style={{ perspective: '1000px' }}>
-      <div
-        className={`relative w-full h-[491px] transition-transform duration-500 transform-style-3d ${
-          flipped ? 'rotate-y-180' : ''
-        }`}
-      >
+    <article onClick={handleToggleFlip} className='card-container'>
+      <div className={`card ${flipped ? 'rotate-y-180' : ''}`} onMouseMove={handleMove} onMouseLeave={handleLeave}>
         {/* Back Face */}
-        <div className='absolute inset-0 flex items-center justify-center backface-hidden transform rotate-y-180'>
+        <div className='card__back' style={rotateStyleB}>
           <img
             width={320}
             height={491}
@@ -32,7 +47,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
         </div>
 
         {/* Front Face */}
-        <div className='absolute inset-0 flex items-center justify-center backface-hidden'>
+        <div className='card__front' style={rotateStyleF}>
           <CardFront fpti={fpti} type={type} result={result} />
         </div>
       </div>

@@ -9,6 +9,7 @@ type Rotation = { x: number; y: number };
 const useInteract = () => {
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [rotation, setRotation] = useState<Rotation>({ x: 0, y: 0 });
+  const [transition, setTransition] = useState(''); // 애니메이션 전환 속성
   const [interacting, setInteracting] = useState(false);
   const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [background, setBackground] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
@@ -37,12 +38,14 @@ const useInteract = () => {
 
     setPosition({ x: leftPercent, y: topPercent });
     setRotation({ x: rotateX, y: rotateY });
+    setTransition('');
     setPositionPercent({ x: leftPercent, y: topPercent });
     setBackground({ x: clamp(leftPercent, 0, 100), y: clamp(topPercent, 0, 100) });
     setInteracting(true);
   };
 
   const handleLeave = useCallback(() => {
+    setTransition('transform 2s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
     setInteracting(false);
@@ -63,13 +66,14 @@ const useInteract = () => {
     '--rotate-y': `${rotation.y}deg`,
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
-    width: '100%',
+    width: '320px',
     height: '100%',
   };
 
   return {
     position,
     rotation,
+    transition,
     interacting,
     handleMove,
     handleLeave,

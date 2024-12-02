@@ -20,7 +20,7 @@
     /* 중심부 강한 빛 */ rgba(255, 255, 255, 0.3) 30%,
     /* 부드럽게 확장 */ transparent 70% /* 가장자리로 투명 */
   );
-  background-size: 200% 200%; /* 배경 크기 조정 */
+  background-size: 120% 120%; /* 배경 크기 조정 */
   mix-blend-mode: screen; /* 배경과 조화롭게 섞임 */
   opacity: 0.7; /* 빛 반사 강도 */
   pointer-events: none; /* 상호작용 차단 */

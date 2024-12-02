@@ -24,6 +24,8 @@ export default {
           opacity: 'rgba(255, 69, 0, 0.5)',
         },
         background: '#4ac390',
+        backgroundDarken: '#1e4030',
+        backgroundDarken2: '#265b43',
 
         // Utility Colors
         hover: 'rgba(34, 139, 34, 0.7)',
