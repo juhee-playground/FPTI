@@ -30,12 +30,9 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
     transition,
   };
 
-  //TODO: card 뒷면 맞추기...
-
   return (
     <article onClick={handleToggleFlip} className='card-container'>
       <div className={`card ${flipped ? 'rotate-y-180' : ''}`} onMouseMove={handleMove} onMouseLeave={handleLeave}>
-        {/* Back Face */}
         <div className='card__back' style={rotateStyleB}>
           <img
             width={320}
@@ -46,7 +43,6 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
           />
         </div>
 
-        {/* Front Face */}
         <div className='card__front' style={rotateStyleF}>
           <CardFront fpti={fpti} type={type} result={result} />
         </div>
