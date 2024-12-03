@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   description: 'FPTI Card List',
 };
 
-export default function QuizLayout({ children }: { children: React.ReactNode }) {
+export default function ListLayout({ children }: { children: React.ReactNode }) {
   return <div>{children}</div>;
 }
