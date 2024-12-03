@@ -42,5 +42,41 @@ declare global {
       [type: string]: number;
     };
   }
+
+  interface IFit {
+    koreaName: string;
+    name: string;
+    type: string;
+    reason: string;
+    fpti: string;
+  }
+
+  interface ITrainingItem {
+    name: string;
+    description: string;
+  }
+
+  interface ITraining {
+    strengthen: ITrainingItem[];
+    supplement: ITrainingItem[];
+  }
+
+  interface IDinosaurCard {
+    id: string;
+    name: string;
+    koreaName: string;
+    type: string;
+    alias: string;
+    summary: string;
+    description: string;
+    roleWithinTeam: string;
+    recommendedTactics: string;
+    roleModel: string;
+    fit: IFit[];
+    doNotFit: IFit[];
+    training: ITraining;
+    compatibility: string;
+    fpti: string;
+  }
 }
 export {};
