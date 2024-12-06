@@ -7,7 +7,7 @@ interface IImageBoxProps {
 }
 
 const ImageBox = ({ topTypes, width, height }: IImageBoxProps) => {
-  const imageSrc = topTypes ? `/images/${topTypes}.webp` : null;
+  const imageSrc = topTypes ? `${topTypes}.webp` : null;
 
   if (!imageSrc) {
     return <div>이미지를 찾을 수 없습니다.</div>;
