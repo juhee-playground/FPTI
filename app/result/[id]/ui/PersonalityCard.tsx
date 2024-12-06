@@ -31,7 +31,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   };
 
   return (
-    <div onClick={handleToggleFlip} className='card-container'>
+    <article onClick={handleToggleFlip} className='card-container'>
       <div className={`card ${flipped ? 'rotate-y-180' : ''}`} onMouseMove={handleMove} onMouseLeave={handleLeave}>
         <div className='card__back' style={rotateStyleB}>
           <img
@@ -47,7 +47,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
           <CardFront fpti={fpti} type={type} result={result} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
