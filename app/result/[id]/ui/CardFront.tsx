@@ -10,12 +10,12 @@ interface ICardFrontProps {
 }
 
 const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
-  //TODO: https://juhee100bucket.s3.ap-northeast-2.amazonaws.com/image-fpti/
+  const imageUrl = `${process.env.NEXT_PUBLIC_IMAGE_URL}/image-fpti/${fpti}-black`;
   return (
     <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
       <div className='flex flex-col items-center bg-backgroundDarken py-3 gap-3 border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
-          <ImageBox topTypes={`${fpti}-black` as string} width={240} height={240} />
+          <ImageBox topTypes={imageUrl as string} width={240} height={240} />
         </div>
         <h3 className='flex flex-col items-center gap-1 text-text-white m-0'>
           <span className='w-40 h-7 bg-backgroundDarken2 text-center rounded-lg font-medium text-lg border border-basic'>
