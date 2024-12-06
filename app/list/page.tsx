@@ -4,6 +4,7 @@ import React from 'react';
 
 import PersonalityCard from '../result/[id]/ui/PersonalityCard';
 
+import styles from '@/app/list/page.module.css';
 import dataResult from '@/data/DB_RESULTS.json';
 
 export default function ListPage() {
@@ -33,9 +34,9 @@ export default function ListPage() {
   };
 
   return (
-    <main className='p-4 mx-auto max-w-full'>
+    <main className={styles['page-main']}>
       <h1>Card List</h1>
-      <div className='mx-auto flex flex-wrap gap-20'>
+      <div className={styles.container}>
         {cards.map(card => {
           const result = generateResult(card);
           return <PersonalityCard key={card.id} fpti={card.fpti} type={card.type} result={result} />;
