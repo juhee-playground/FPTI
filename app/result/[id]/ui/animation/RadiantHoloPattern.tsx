@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/app/result/[id]/components/_rm/RadiantHolo.module.css';
+import styles from '@/app/result/[id]/ui/animation/RadiantHoloPattern.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
