@@ -67,7 +67,7 @@ const useInteract = () => {
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
     width: '320px',
-    height: '100%',
+    height: '491px',
   };
 
   return {
