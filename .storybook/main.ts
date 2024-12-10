@@ -22,12 +22,15 @@ const config: StorybookConfig = {
           '@': path.resolve(__dirname, '../'),
         },
       },
+      define: {
+        'process.env': {
+          NEXT_PUBLIC_IMAGE_URL: JSON.stringify(
+            process.env.NEXT_PUBLIC_IMAGE_URL || 'https://juhee100bucket.s3.ap-northeast-2.amazonaws.com',
+          ),
+        },
+      },
     });
   },
-  env: config => ({
-    ...config,
-    NEXT_PUBLIC_IMAGE_URL: 'https://juhee100bucket.s3.ap-northeast-2.amazonaws.com',
-  }),
   docs: {
     autodocs: 'tag',
   },
