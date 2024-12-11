@@ -43,7 +43,7 @@ export default function ListPage() {
           const result = generateResult(card);
           if (index < 3) {
             return (
-              <RadiantHoloPattern key={card.id} radiant holo>
+              <RadiantHoloPattern key={card.id} radiant holo fpti={card.fpti}>
                 <PersonalityCard key={card.id} fpti={card.fpti} type={card.type} result={result} />
               </RadiantHoloPattern>
             );

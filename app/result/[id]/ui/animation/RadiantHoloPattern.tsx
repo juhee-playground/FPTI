@@ -8,10 +8,16 @@ interface IRotatorProps {
   dynamicStylesProps?: React.CSSProperties;
   radiant: boolean;
   holo: boolean;
+  fpti: string;
 }
 
-const RadiantHoloPattern = ({ children, dynamicStylesProps, radiant = true, holo = true }: IRotatorProps) => {
+const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true, holo = true }: IRotatorProps) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
+  if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
+    throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
+  }
+  const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
+  const imagePath = `${imageUrl}/image-fpti/${fpti}-foil-black`;
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
@@ -22,7 +28,16 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, radiant = true, holo
       style={appliedStyles as React.CSSProperties}
     >
       {radiant && <div className={styles.radiant} />}
-      {holo && <div className={`${styles.radiant} ${styles['radiant--holo']}`} />}
+      {holo && (
+        <div
+          className={`${styles.radiant} ${styles['radiant--holo']}`}
+          style={
+            {
+              '--dynamic-background': `url(${imagePath}.webp)`,
+            } as React.CSSProperties
+          }
+        />
+      )}
       {children}
     </div>
   );
