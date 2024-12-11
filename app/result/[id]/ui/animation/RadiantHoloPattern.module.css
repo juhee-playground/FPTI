@@ -87,7 +87,7 @@
 .radiant--holo {
   content: '';
 
-  background-image: url('/pattern.webp'),
+  background-image: var(--dynamic-background, url('/pattern.webp')),
     repeating-linear-gradient(
       55deg,
       hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
