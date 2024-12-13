@@ -101,7 +101,7 @@
 
   background-size:
     var(--imgsize, 100%),
-    400% 100%;
+    100% 100%;
   background-position:
     center,
     calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
