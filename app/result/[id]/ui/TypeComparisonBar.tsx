@@ -34,6 +34,7 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
           className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-basic text-xs text-text-white`}
           style={{
             backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : 'inherit',
+            color: isStartLabelMain ? 'black' : 'white',
           }}
         >
           {finalStartLabel}
@@ -53,7 +54,7 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
             backgroundColor: isStartLabelMain ? getColorByType(startTypeText) : getColorByType(endTypeText),
           }}
         >
-          <span className={`text-border-basic text-xs`} style={{ width: `${percentage}%` }}>
+          <span className={`text-xs text-text-default`} style={{ width: `${percentage}%` }}>
             {`${Math.ceil(percentage)}%`}
           </span>
         </div>
@@ -64,6 +65,7 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
           className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-basic text-xs text-text-white`}
           style={{
             backgroundColor: isEndLabelMain ? getColorByType(endTypeText) : 'inherit',
+            color: isStartLabelMain ? 'black' : 'white',
           }}
         >
           {endLabel}
