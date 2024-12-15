@@ -65,7 +65,7 @@ const TypeComparisonBar = ({ startLabel, midLabel, endLabel, percentage, isRever
           className={`flex justify-center items-center m-0 h-[20px] w-[20px] rounded-full border border-basic text-xs text-text-white`}
           style={{
             backgroundColor: isEndLabelMain ? getColorByType(endTypeText) : 'inherit',
-            color: isStartLabelMain ? 'black' : 'white',
+            color: isEndLabelMain ? 'black' : 'white',
           }}
         >
           {endLabel}
