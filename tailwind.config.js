@@ -23,7 +23,7 @@ export default {
           opacity: 'rgba(255, 69, 0, 0.5)',
         },
         background: '#4ac390',
-        backgroundDarken: '#111111',
+        backgroundDarken: '#284631',
         backgroundDarken2: '#265b43',
 
         // Utility Colors
