@@ -44,7 +44,7 @@ const useInteract = () => {
   };
 
   const handleLeave = useCallback(() => {
-    setTransition('transform 2s ease');
+    setTransition('transform 1.5s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
     setInteracting(false);
