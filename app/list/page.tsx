@@ -44,7 +44,7 @@ export default function ListPage() {
           if (index < 3) {
             return (
               <RadiantHoloPattern key={card.id} radiant holo fpti={card.fpti}>
-                <PersonalityCard key={card.id} fpti={card.fpti} type={card.type} result={result} />
+                <PersonalityCard fpti={card.fpti} type={card.type} result={result} />
               </RadiantHoloPattern>
             );
           } else {
