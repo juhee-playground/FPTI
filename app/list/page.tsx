@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-// import RadiantHolo from '../result/[id]/ui/animation/RadiantHolo';
 import RadiantHoloPattern from '../result/[id]/ui/animation/RadiantHoloPattern';
 import PersonalityCard from '../result/[id]/ui/PersonalityCard';
 
