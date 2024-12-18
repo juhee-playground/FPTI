@@ -14,7 +14,7 @@ const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
   const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
-  const imagePath = `${imageUrl}/image-fpti/${fpti}-black`;
+  const imagePath = `${imageUrl}/image-fpti/${fpti}`;
   return (
     <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
       <div className='flex flex-col items-center bg-backgroundDarken py-3 gap-3 border border-text-placeholder rounded-xl'>
