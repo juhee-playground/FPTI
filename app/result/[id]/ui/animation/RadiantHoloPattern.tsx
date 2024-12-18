@@ -18,7 +18,7 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
   const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
-  const imagePath = `${imageUrl}/image-fpti/${fpti}-foil-black`;
+  const imagePath = `${imageUrl}/image-fpti/${fpti}_foil-card`;
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
@@ -41,8 +41,6 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true
               }
             />
           )}
-          <div className={styles.glare} />
-          <div className={styles.shine} />
         </React.Fragment>
       ) : null}
 
