@@ -15,7 +15,7 @@
   border-radius: 20px;
 
   width: 100%;
-  height: 100%;
+  height: 99%;
   z-index: 1;
 
   background-image: radial-gradient(
@@ -87,7 +87,7 @@
 .radiant--holo {
   content: '';
 
-  background-image: url('/pattern.webp'),
+  background-image: var(--dynamic-background, url('/pattern.webp')),
     repeating-linear-gradient(
       55deg,
       hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
@@ -101,7 +101,7 @@
 
   background-size:
     var(--imgsize, 100%),
-    400% 100%;
+    100% 100%;
   background-position:
     center,
     calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
@@ -110,4 +110,40 @@
   mix-blend-mode: color-dodge;
 
   background-blend-mode: hard-light;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    /* 마우스 위치에 따라 빛이 발생 */ rgba(255, 255, 255, 0.6) 20%,
+    /* 중심부 밝기 */ transparent 80% /* 가장자리 투명 */
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.5) 10%,
+    /* 중심부 강한 빛 */ rgba(255, 255, 255, 0.3) 30%,
+    /* 부드럽게 확장 */ transparent 70% /* 가장자리로 투명 */
+  );
+  background-size: 120% 120%; /* 배경 크기 조정 */
+  mix-blend-mode: screen; /* 배경과 조화롭게 섞임 */
+  opacity: 0.7; /* 빛 반사 강도 */
+  pointer-events: none; /* 상호작용 차단 */
+  will-change: background-image, opacity;
+  z-index: 5;
 }

@@ -22,11 +22,9 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
   quizResult.answers.forEach(answer => {
     for (const [key, value] of Object.entries(answer.scale)) {
       const group = getGroupByKey(key);
-
       if (!finalScale[group]) {
         finalScale[group] = { [key]: 0 };
       }
-
       if (finalScale[group][key]) {
         finalScale[group][key] += value;
       } else {
@@ -37,17 +35,6 @@ export const calculateFinalResult = (quizResult: IQuizResult): { [group: string]
 
   for (const group in finalScale) {
     const total = Object.values(finalScale[group]).reduce((acc, curr) => acc + curr, 0);
-
-    if (group === '팀에서의 역할' && finalScale[group].A && finalScale[group].D) {
-      const attackerScore = finalScale[group].A;
-      const defenderScore = finalScale[group].D;
-      const balanceThreshold = 10;
-
-      if (Math.abs(attackerScore - defenderScore) <= balanceThreshold) {
-        finalScale[group].M = (attackerScore + defenderScore) / 2;
-      }
-    }
-
     for (const key in finalScale[group]) {
       finalScale[group][key] = (finalScale[group][key] / total) * 100;
     }

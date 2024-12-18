@@ -19,6 +19,8 @@ export default function Home() {
           <button onClick={handleStart} className='button-outline'>
             START
           </button>
+
+          <a href='/list'>card_list</a>
         </div>
       </div>
     </main>

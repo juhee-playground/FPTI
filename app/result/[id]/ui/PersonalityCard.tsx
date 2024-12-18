@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import CardFront from './CardFront';
 
+import Rotator from '@/app/result/[id]/ui/animation/Rotator';
+import Shine from '@/app/result/[id]/ui/animation/Shine';
 import useInteract from '@/hooks/useInteract';
 
 interface IPersonalityCardProps {
@@ -12,7 +14,7 @@ interface IPersonalityCardProps {
 
 const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const [flipped, setFlipped] = useState(false);
-  const { rotation, transition, handleMove, handleLeave } = useInteract();
+  const { rotation, transition, dynamicStyles, handleMove, handleLeave } = useInteract();
 
   const handleToggleFlip = () => setFlipped(!flipped);
 
@@ -30,28 +32,26 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
     transition,
   };
 
-  //TODO: card 뒷면 맞추기...
-
   return (
-    <article onClick={handleToggleFlip} className='card-container'>
-      <div className={`card ${flipped ? 'rotate-y-180' : ''}`} onMouseMove={handleMove} onMouseLeave={handleLeave}>
-        {/* Back Face */}
-        <div className='card__back' style={rotateStyleB}>
-          <img
-            width={320}
-            height={491}
-            src='/bg-back.png'
-            alt='카드 뒷면'
-            className='border border-text-placeholder rounded-xl'
-          />
-        </div>
+    <div onClick={handleToggleFlip} className='card-container' onMouseMove={handleMove} onMouseLeave={handleLeave}>
+      <Rotator rotationProps={rotation} isFlipped={flipped}>
+        <Shine dynamicStylesProps={dynamicStyles}>
+          <div className='card__back' style={rotateStyleB}>
+            <img
+              width={320}
+              height={491}
+              src='/bg-back.png'
+              alt='카드 뒷면'
+              className='border border-text-placeholder rounded-xl'
+            />
+          </div>
 
-        {/* Front Face */}
-        <div className='card__front' style={rotateStyleF}>
-          <CardFront fpti={fpti} type={type} result={result} />
-        </div>
-      </div>
-    </article>
+          <div className='card__front' style={rotateStyleF}>
+            <CardFront fpti={fpti} type={type} result={result} />
+          </div>
+        </Shine>
+      </Rotator>
+    </div>
   );
 };
 

@@ -1,6 +1,8 @@
 declare global {
   type TPersonalityType = 'T' | 'P' | 'C' | 'E' | 'L' | 'S' | 'A' | 'M' | 'D';
   type TButtonVariant = 'text' | 'contained' | 'outlined' | 'fab';
+  type TPosition = { x: number; y: number };
+  type TRotation = { x: number; y: number };
 
   interface IOption {
     type: TPersonalityType;
@@ -41,6 +43,42 @@ declare global {
     [group: string]: {
       [type: string]: number;
     };
+  }
+
+  interface IFit {
+    koreaName: string;
+    name: string;
+    type: string;
+    reason: string;
+    fpti: string;
+  }
+
+  interface ITrainingItem {
+    name: string;
+    description: string;
+  }
+
+  interface ITraining {
+    strengthen: ITrainingItem[];
+    supplement: ITrainingItem[];
+  }
+
+  interface IDinosaurCard {
+    id: string;
+    name: string;
+    koreaName: string;
+    type: string;
+    alias: string;
+    summary: string;
+    description: string;
+    roleWithinTeam: string;
+    recommendedTactics: string;
+    roleModel: string;
+    fit: IFit[];
+    doNotFit: IFit[];
+    training: ITraining;
+    compatibility: string;
+    fpti: string;
   }
 }
 export {};
