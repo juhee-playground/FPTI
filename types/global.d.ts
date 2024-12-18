@@ -1,6 +1,8 @@
 declare global {
   type TPersonalityType = 'T' | 'P' | 'C' | 'E' | 'L' | 'S' | 'A' | 'M' | 'D';
   type TButtonVariant = 'text' | 'contained' | 'outlined' | 'fab';
+  type TPosition = { x: number; y: number };
+  type TRotation = { x: number; y: number };
 
   interface IOption {
     type: TPersonalityType;

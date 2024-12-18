@@ -2,9 +2,6 @@ import { useState, useCallback } from 'react';
 
 import { clamp } from '@/utils/math';
 
-type TPosition = { x: number; y: number };
-type TRotation = { x: number; y: number };
-
 const useInteract = () => {
   const [position, setPosition] = useState<TPosition>({ x: 0, y: 0 });
   const [rotation, setRotation] = useState<TRotation>({ x: 0, y: 0 });
