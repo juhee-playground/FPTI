@@ -1,21 +1,26 @@
 'use client';
 
+import styles from '@/app/result/[id]/ui/animation/Shine.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
   children: React.ReactNode;
+  rotationProps: TRotation;
+  isFlipped: boolean;
 }
 
-const Rotator = ({ children }: IRotatorProps) => {
-  const { handleMove, handleLeave } = useInteract();
+const Rotator = ({ children, rotationProps, isFlipped }: IRotatorProps) => {
+  const { handleMove, handleLeave, rotation, transition } = useInteract();
+  const rotationValue = rotationProps || rotation;
+
+  const rotateStyle = {
+    transform: `perspective(450px) rotateX(${rotationValue.x}deg) rotateY(${rotationValue.y}deg)`,
+    transition,
+  };
 
   return (
-    <div
-      className='w-full h-full relative flex flex-wrap overflow-hidden'
-      onMouseMove={handleMove}
-      onMouseLeave={handleLeave}
-    >
-      <div className='w-full h-full grid place-items-center transform-style-preserve-3d pointer-events-none overflow-hidden'>
+    <div className={styles.container} onMouseMove={handleMove} onMouseLeave={handleLeave}>
+      <div style={rotateStyle} className={`${isFlipped ? 'rotate-y-180' : ''}`}>
         {children}
       </div>
     </div>

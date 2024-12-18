@@ -4,7 +4,6 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './app/styles/**/*.css',
-    './**/*.stories.{ts,tsx}',
   ],
   theme: {
     extend: {
@@ -24,10 +23,9 @@ export default {
           opacity: 'rgba(255, 69, 0, 0.5)',
         },
         background: '#4ac390',
-        backgroundDarken: '#1e4030',
+        backgroundDarken: '#284631',
         backgroundDarken2: '#265b43',
 
-        // Utility Colors
         hover: 'rgba(34, 139, 34, 0.7)',
         disabled: {
           border: '#cccccc',
@@ -35,24 +33,20 @@ export default {
           background: '#f0f0f0',
         },
 
-        // Basic Shades
         white: '#ffffff',
         black: '#000000',
 
-        // Button Colors
         button: {
           basic: '#f4f4f4',
           hover: '#434343',
         },
 
-        // Border Colors
         border: {
           basic: '#efefef',
           darken: '#cccccc',
           black: '#242424',
         },
 
-        // Text Colors
         text: {
           default: '#262626',
           white: '#f4f4f4',
@@ -60,7 +54,6 @@ export default {
           error: '#e91e63',
         },
 
-        // Status Colors
         success: {
           default: '#4caf50',
           lighter: '#d4edda',
@@ -93,22 +86,22 @@ export default {
         'font-color': 'rgba(0, 0, 0, 1)',
       },
       fontSize: {
-        xs: '0.6875rem', // 11px
-        sm: '0.75rem', // 12px
-        md: '0.8125rem', // 13px
-        base: '1rem', // 16px
-        lg: '1.125rem', // 18px
-        xl: '1.25rem', // 20px
-        '2xl': '1.5rem', // 24px
-        '3xl': '1.875rem', // 30px
-        '4xl': '2.25rem', // 36px
-        '5xl': '3rem', // 48px
-        '6xl': '4rem', // 64px
+        xs: '0.6875rem',
+        sm: '0.75rem',
+        md: '0.8125rem',
+        base: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '4rem',
         'button-text': '1.125rem',
         title: '2.5rem',
       },
       borderRadius: {
-        button: '1.25rem', // 20px
+        button: '1.25rem',
       },
     },
   },

@@ -2,14 +2,10 @@ import { useState, useCallback } from 'react';
 
 import { clamp } from '@/utils/math';
 
-// 데이터 타입 정의
-type Position = { x: number; y: number };
-type Rotation = { x: number; y: number };
-
 const useInteract = () => {
-  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
-  const [rotation, setRotation] = useState<Rotation>({ x: 0, y: 0 });
-  const [transition, setTransition] = useState(''); // 애니메이션 전환 속성
+  const [position, setPosition] = useState<TPosition>({ x: 0, y: 0 });
+  const [rotation, setRotation] = useState<TRotation>({ x: 0, y: 0 });
+  const [transition, setTransition] = useState('');
   const [interacting, setInteracting] = useState(false);
   const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [background, setBackground] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
@@ -45,7 +41,7 @@ const useInteract = () => {
   };
 
   const handleLeave = useCallback(() => {
-    setTransition('transform 2s ease');
+    setTransition('transform 1.5s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
     setInteracting(false);
@@ -67,7 +63,7 @@ const useInteract = () => {
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
     width: '320px',
-    height: '100%',
+    height: '491px',
   };
 
   return {

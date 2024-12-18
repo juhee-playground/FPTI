@@ -1,6 +1,7 @@
 'use client';
+import React from 'react';
 
-import styles from '@/app/result/[id]/components/_rm/RadiantHolo.module.css';
+import styles from '@/app/result/[id]/ui/animation/RadiantHoloPattern.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
@@ -8,10 +9,16 @@ interface IRotatorProps {
   dynamicStylesProps?: React.CSSProperties;
   radiant: boolean;
   holo: boolean;
+  fpti: string;
 }
 
-const RadiantHoloPattern = ({ children, dynamicStylesProps, radiant = true, holo = true }: IRotatorProps) => {
-  const { handleMove, handleLeave, dynamicStyles } = useInteract();
+const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true, holo = true }: IRotatorProps) => {
+  const { handleMove, handleLeave, dynamicStyles, interacting } = useInteract();
+  if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
+    throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
+  }
+  const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
+  const imagePath = `${imageUrl}/image-fpti/${fpti}_foil-card`;
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
@@ -21,8 +28,22 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, radiant = true, holo
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      {radiant && <div className={styles.radiant} />}
-      {holo && <div className={`${styles.radiant} ${styles['radiant--holo']}`} />}
+      {interacting ? (
+        <React.Fragment>
+          {radiant && <div className={styles.radiant} />}
+          {holo && (
+            <div
+              className={`${styles.radiant} ${styles['radiant--holo']}`}
+              style={
+                {
+                  '--dynamic-background': `url(${imagePath}.webp)`,
+                } as React.CSSProperties
+              }
+            />
+          )}
+        </React.Fragment>
+      ) : null}
+
       {children}
     </div>
   );
