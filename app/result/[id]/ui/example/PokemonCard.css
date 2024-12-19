@@ -1,0 +1,32 @@
+.pcard-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  width: 320px;
+  height: 491px;
+  position: relative;
+}
+
+.pcard {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg));
+  transition: transform 0.1s ease-out;
+}
+
+.pcard__front,
+.pcard__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+
+.pcard__front {
+  background: white;
+}
+
+.pcard__back {
+  background: #ccc;
+  transform: rotateY(180deg);
+}
