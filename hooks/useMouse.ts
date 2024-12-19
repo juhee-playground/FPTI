@@ -12,6 +12,13 @@ const useMouse = (sensitivity: number) => {
     config: quickSettings,
   }));
 
+  const [glareSpring, apiGlare] = useSpring(() => ({
+    x: 50,
+    y: 50,
+    o: 0,
+    config: quickSettings,
+  }));
+
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
       const rect = e.currentTarget.getBoundingClientRect();
@@ -22,26 +29,38 @@ const useMouse = (sensitivity: number) => {
       const rotateX = (-offsetY / rect.height) * sensitivity;
       const rotateY = (offsetX / rect.width) * sensitivity;
 
+      const pointerX = ((e.clientX - rect.left) / rect.width) * 100;
+      const pointerY = ((e.clientY - rect.top) / rect.height) * 100;
+
       apiRotate.start({
         x: rotateX,
         y: rotateY,
         config: quickSettings,
       });
+
+      console.log('????', pointerX, pointerY);
+
+      apiGlare.start({
+        x: pointerX,
+        y: pointerY,
+        o: 1,
+      });
     },
-    [apiRotate, quickSettings],
+    [apiRotate, apiGlare, quickSettings],
   );
 
   const handleMouseLeave = useCallback(() => {
-    // 마우스가 나가면 popover 설정으로 돌아가기
     apiRotate.start({
       x: 0,
       y: 0,
       config: resetSettings,
     });
-  }, [apiRotate, resetSettings]);
+    apiGlare.start({ x: 50, y: 50, o: 0, config: resetSettings });
+  }, [apiRotate, apiGlare, resetSettings]);
 
   return {
     rotateSpring,
+    glareSpring,
     handleMouseMove,
     handleMouseLeave,
   };
