@@ -26,7 +26,7 @@ const PokemonCard = () => {
     },
   };
   return (
-    <Rotator className='pcard-container' sensitivity={50}>
+    <Rotator className='pcard-container' sensitivity={60}>
       <div className='pcard'>
         <div className='pcard__front'>
           <CardFront fpti={fpti} type={type} result={result} />
