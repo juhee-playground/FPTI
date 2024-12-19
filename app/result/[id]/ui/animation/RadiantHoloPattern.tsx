@@ -12,13 +12,14 @@ interface IRotatorProps {
   fpti: string;
 }
 
-const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true, holo = true }: IRotatorProps) => {
+const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true, holo = false }: IRotatorProps) => {
   const { handleMove, handleLeave, dynamicStyles, interacting } = useInteract();
   if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
   const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
-  const imagePath = `${imageUrl}/image-fpti/${fpti}_foil-card`;
+  const foilCardPath = `${imageUrl}/image-fpti/${fpti}-foil-card.webp`;
+  // const imagePath = `${imageUrl}/image-fpti/${fpti}-foil-black.webp`;
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
@@ -36,7 +37,7 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true
               className={`${styles.radiant} ${styles['radiant--holo']}`}
               style={
                 {
-                  '--dynamic-background': `url(${imagePath}.webp)`,
+                  '--dynamic-background': `url(${foilCardPath})`,
                 } as React.CSSProperties
               }
             />
