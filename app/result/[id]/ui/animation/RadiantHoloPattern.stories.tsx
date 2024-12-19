@@ -4,13 +4,13 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import HoloPattern from './HoloPattern';
 import Radiant from './Radiant';
-import RadiantHolo from './RadiantHoloPattern';
+import RadiantHoloPattern from './RadiantHoloPattern';
 
 import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
 
-const meta: Meta<typeof RadiantHolo> = {
+const meta: Meta<typeof RadiantHoloPattern> = {
   title: 'components/RadiantHolo',
-  component: RadiantHolo,
+  component: RadiantHoloPattern,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,10 +20,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Card: Story = {
+  args: {
+    fpti: 'SAPC',
+    radiant: true,
+    holo: true,
+  },
   render: args => (
-    <RadiantHolo {...args}>
+    <RadiantHoloPattern {...args}>
       <PersonalityCard
-        fpti='LATE'
+        fpti='SAPC'
         type='쇼맨의 리더형'
         result={{
           목표와_우선순위: { C: 20, E: 80 },
@@ -32,11 +37,15 @@ export const Card: Story = {
           플레이_스타일: { T: 0, P: 100 },
         }}
       />
-    </RadiantHolo>
+    </RadiantHoloPattern>
   ),
 };
 
 export const RadiantEx: Story = {
+  args: {
+    radiant: true,
+    holo: false,
+  },
   render: args => (
     <Radiant {...args}>
       <div
@@ -54,6 +63,10 @@ export const RadiantEx: Story = {
 };
 
 export const HoloEx: Story = {
+  args: {
+    radiant: false,
+    holo: true,
+  },
   render: args => (
     <HoloPattern {...args}>
       <div
