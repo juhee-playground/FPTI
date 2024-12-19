@@ -20,7 +20,7 @@ const HoloPattern = ({ children, dynamicStylesProps }: IHoloProps) => {
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      <div className={`${styles.radiant} ${styles['radiant--holo']}`} />
+      <div className={`${styles['radiant--holo']}`} />
       {children}
     </div>
   );

@@ -17,3 +17,38 @@
   pointer-events: none;
   z-index: 2;
 }
+
+.radiant--holo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 491px;
+  background: repeating-linear-gradient(
+    55deg,
+    hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
+    hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
+    hsl(29, 100%, 85%) calc(var(--space, 10px) * 3),
+    hsl(160, 100%, 86%) calc(var(--space, 10px) * 4),
+    hsl(309, 94%, 87%) calc(var(--space, 10px) * 5),
+    hsl(188, 95%, 85%) calc(var(--space, 10px) * 6),
+    hsl(3, 95%, 85%) calc(var(--space, 10px) * 7)
+  );
+  background-size: 800% 800%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  mix-blend-mode: overlay;
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* background: linear-gradient(
+    90deg,
+    #f80808 0%,
+    #ff9307 17%,
+    #f2f202 33%,
+    #00ff00 50%,
+    #0000ff 67%,
+    #4b0082 83%,
+    #9400d3 100%
+  ); */

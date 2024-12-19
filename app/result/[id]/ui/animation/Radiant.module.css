@@ -9,36 +9,76 @@
 }
 
 .radiant {
+  display: grid;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 491px;
-  /* background: linear-gradient(
-    90deg,
-    #f80808 0%,
-    #ff9307 17%,
-    #f2f202 33%,
-    #00ff00 50%,
-    #0000ff 67%,
-    #4b0082 83%,
-    #9400d3 100%
-  ); */
-  background: repeating-linear-gradient(
-    55deg,
-    hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
-    hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
-    hsl(29, 100%, 85%) calc(var(--space, 10px) * 3),
-    hsl(160, 100%, 86%) calc(var(--space, 10px) * 4),
-    hsl(309, 94%, 87%) calc(var(--space, 10px) * 5),
-    hsl(188, 95%, 85%) calc(var(--space, 10px) * 6),
-    hsl(3, 95%, 85%) calc(var(--space, 10px) * 7)
-  );
+  border-radius: 20px;
 
-  background-size: 800% 800%; /* 크기를 더 키워 극대화 */
-  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
-  mix-blend-mode: overlay; /* 강한 혼합 모드 */
-  opacity: 0.75; /* 투명도를 조금 높임 */
-  pointer-events: none;
-  z-index: 3;
+  width: 100%;
+  height: 99%;
+  z-index: 1;
+
+  background-image: radial-gradient(
+      farthest-corner ellipse at calc(((var(--pointer-x)) * 0.5) + 25%) calc(((var(--pointer-y)) * 0.5) + 25%),
+      hsl(0, 0%, 95%) 20%,
+      var(--card-glow, hsl(50, 100%, 70%)) 130%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      hsl(0, 0%, 10%) 0%,
+      hsl(0, 0%, 10%) 1%,
+      hsl(0, 0%, 10%) var(--barwidth, 1.2%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 2),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 4),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 6),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 7),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 8),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 1.2%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 1.2%) * 9),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 1.2%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 1.2%) * 10)
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      hsl(0, 0%, 10%) 0%,
+      hsl(0, 0%, 10%) 1%,
+      hsl(0, 0%, 10%) var(--barwidth, 1.2%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 2),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 2 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 3),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 3 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 4),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 4 + 0.01%),
+      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 5),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 5 + 0.01%),
+      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 6),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 6 + 0.01%),
+      hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 7),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 7 + 0.01%),
+      hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 8),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 1.2%) * 8 + 0.01%),
+      hsl(0, 0%, 10%) calc(var(--barwidth, 1.2%) * 9),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 1.2%) * 9 + 0.01%),
+      hsl(0, 0%, 0%) calc(var(--barwidth, 1.2%) * 10)
+    );
+
+  background-size: 300% 300%;
+  background-position:
+    center,
+    calc(((var(--background-x) - 50%) * 0.9) + 50%) calc(((var(--background-y, 50%) - 50%) * 0.9) + 50%),
+    calc(((var(--background-x) - 50%) * 0.9) + 50%) calc(((var(--background-y, 50%) - 50%) * 0.9) + 50%);
+
+  background-blend-mode: exclusion, darken, color-dodge;
+
+  filter: brightness(0.5) contrast(2) saturate(1.75);
+  mix-blend-mode: color-dodge;
 }
