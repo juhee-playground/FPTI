@@ -19,7 +19,6 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true
   }
   const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
   const foilCardPath = `${imageUrl}/image-fpti/${fpti}-foil-card.webp`;
-  // const imagePath = `${imageUrl}/image-fpti/${fpti}-foil-black.webp`;
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
