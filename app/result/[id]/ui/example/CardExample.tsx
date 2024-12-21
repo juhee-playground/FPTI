@@ -4,7 +4,6 @@ import { useSpring, animated, Interpolation } from '@react-spring/web';
 
 import { clamp, round, adjust } from '../../../../../utils/math';
 
-// Custom CSS Properties to allow CSS variables
 interface CustomCSSProperties extends React.CSSProperties {
   '--rotate-x'?: string | Interpolation<number>;
   '--rotate-y'?: string | Interpolation<number>;
@@ -62,7 +61,6 @@ const PokemonCardExample = ({
   const [loading, setLoading] = useState(true);
   const thisCardRef = useRef<HTMLDivElement | null>(null); // Add proper ref type
 
-  // Springs for animation
   const [rotateSpring, apiRotate] = useSpring(() => ({
     x: 0,
     y: 0,
@@ -87,7 +85,6 @@ const PokemonCardExample = ({
     config: { tension: 150, friction: 15 },
   }));
 
-  // Handle interaction
   const handleInteract = (e: MouseEvent<HTMLDivElement>) => {
     if (!thisCardRef.current) return;
 

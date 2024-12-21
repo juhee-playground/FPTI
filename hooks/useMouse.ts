@@ -25,7 +25,6 @@ const useMouse = (sensitivity: number) => {
       const offsetX = e.clientX - rect.left - rect.width / 2;
       const offsetY = e.clientY - rect.top - rect.height / 2;
 
-      // 감도 조정: 증폭 비율
       const rotateX = (-offsetY / rect.height) * sensitivity;
       const rotateY = (offsetX / rect.width) * sensitivity;
 

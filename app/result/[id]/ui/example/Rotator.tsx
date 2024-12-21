@@ -6,7 +6,7 @@ import useMouse from '../../../../../hooks/useMouse';
 import './PokemonCard.css';
 
 interface IRotatorProps extends React.ComponentPropsWithoutRef<'div'> {
-  sensitivity?: number; // 감도를 조정할 수 있는 옵션
+  sensitivity?: number;
 }
 
 interface ICustomCSSProperties extends CSSProperties {
@@ -42,8 +42,8 @@ const Rotator: React.FC<IRotatorProps> = ({ sensitivity = 50, style, children, .
         className='shine'
         style={
           {
-            '--pointer-x': `${glareSpring.x.get()}%`, // 숫자로 전달
-            '--pointer-y': `${glareSpring.y.get()}%`, // 숫자로 전달
+            '--pointer-x': `${glareSpring.x.get()}%`,
+            '--pointer-y': `${glareSpring.y.get()}%`,
           } as ICustomCSSProperties
         }
       ></div>
