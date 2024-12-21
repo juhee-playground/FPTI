@@ -35,7 +35,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
 
   return (
     <div onClick={handleToggleFlip} className='card-container' onMouseMove={handleMove} onMouseLeave={handleLeave}>
-      <Rotator rotationProps={rotation} isFlipped={flipped}>
+      <Rotator rotationProps={rotation}>
         <Shine dynamicStylesProps={dynamicStyles}>
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className='card__back' style={rotateStyleB}>
