@@ -38,15 +38,7 @@ const Rotator: React.FC<IRotatorProps> = ({ sensitivity = 50, style, children, .
         } as ICustomCSSProperties
       }
     >
-      <div
-        className='shine'
-        style={
-          {
-            '--pointer-x': `${glareSpring.x.get()}%`,
-            '--pointer-y': `${glareSpring.y.get()}%`,
-          } as ICustomCSSProperties
-        }
-      ></div>
+      <div className='shine'></div>
       {children}
     </animated.div>
   );
