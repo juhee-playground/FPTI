@@ -37,8 +37,6 @@ const useMouse = (sensitivity: number) => {
         config: quickSettings,
       });
 
-      console.log('????', pointerX, pointerY);
-
       apiGlare.start({
         x: pointerX,
         y: pointerY,
