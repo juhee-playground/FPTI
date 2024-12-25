@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react';
 
 import { animated, Interpolation } from '@react-spring/web';
 
-import useMouse from '../../../../../hooks/useMouse';
+import useMouse from '@/hooks/useMouse';
 import './PokemonCard.css';
 
 interface IRotatorProps extends React.ComponentPropsWithoutRef<'div'> {
