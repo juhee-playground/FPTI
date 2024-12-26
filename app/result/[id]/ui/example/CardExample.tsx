@@ -37,19 +37,12 @@ interface PokemonCardProps {
 }
 
 const PokemonCardExample = ({
-  id = '',
   name = '',
-  number = '',
-  set = '',
   types = '',
-  subtypes = 'basic',
-  supertype = 'pokémon',
-  rarity = 'common',
   img = '',
   back = 'https://tcg.pokemon.com/assets/img/global/tcg-card-back-2x.jpg',
   foil = '',
   mask = '',
-  showcase = false,
 }: PokemonCardProps) => {
   const randomSeed = { x: Math.random(), y: Math.random() };
   const cosmosPosition = {
