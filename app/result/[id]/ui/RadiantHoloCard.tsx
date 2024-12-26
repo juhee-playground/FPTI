@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 import CardFront from './CardFront';
 
-// import Glare from '@/app/result/[id]/ui/animation/Glare';
+import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
-import Shine from '@/app/result/[id]/ui/animation/Shine';
+// import Shine from '@/app/result/[id]/ui/animation/Shine';
 import useInteract from '@/hooks/useInteract';
 
 interface IPersonalityCardProps {
@@ -33,8 +33,8 @@ const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   return (
     <div onClick={handleToggleFlip} className='card-container' onMouseMove={handleMove} onMouseLeave={handleLeave}>
       <Rotator rotationProps={rotation}>
-        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={false} fpti={fpti}>
-          <Shine dynamicStylesProps={dynamicStyles}>
+        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={true} fpti={fpti}>
+          <Glare dynamicStylesProps={dynamicStyles}>
             <div className='card__back' style={rotateStyleB}>
               <img
                 width={320}
@@ -48,7 +48,7 @@ const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
             <div className='card__front' style={rotateStyleF}>
               <CardFront fpti={fpti} type={type} result={result} />
             </div>
-          </Shine>
+          </Glare>
         </RadiantHoloPattern>
       </Rotator>
     </div>

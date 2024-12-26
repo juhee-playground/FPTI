@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Card: Story = {
   args: {
-    fpti: 'LATE',
+    fpti: 'SAPC',
     type: '쇼맨의 리더형',
     result: {
       '책임감과 주도성': {
