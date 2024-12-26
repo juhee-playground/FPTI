@@ -5,7 +5,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import PokemonCard from './PokemonCard';
 
 const meta: Meta<typeof PokemonCard> = {
-  title: 'Components/PocketmonCard',
+  title: 'Components/PockemonCard',
   component: PokemonCard,
   parameters: {
     layout: 'fullscreen',
