@@ -20,16 +20,12 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const handleToggleFlip = () => setFlipped(!flipped);
 
   const rotateStyleF = {
-    transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
-      flipped ? 'rotateY(180deg)' : ''
-    }`,
+    transform: `perspective(1000px) ${flipped ? 'rotateY(180deg)' : ''}`,
     transition,
   };
 
   const rotateStyleB = {
-    transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) ${
-      flipped ? 'rotateY(0deg)' : ''
-    }`,
+    transform: `perspective(1000px) ${flipped ? 'rotateY(0deg)' : ''}`,
     transition,
   };
 
