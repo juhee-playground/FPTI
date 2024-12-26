@@ -4,32 +4,16 @@ import CardFront from '../CardFront';
 import Rotator from './Rotator';
 import './PokemonCard.css';
 
+import { RESULT_EXAMPLE } from '@/constants/Example';
+
 const PokemonCard = () => {
-  const fpti = 'SAPE';
-  const type = '리더형';
-  const result = {
-    '책임감과 주도성': {
-      L: 57,
-      S: 43,
-    },
-    '팀에서의 역할': {
-      A: 100,
-      D: 0,
-    },
-    '플레이 스타일': {
-      T: 52,
-      P: 48,
-    },
-    '목표와 우선순위': {
-      C: 40,
-      E: 60,
-    },
-  };
+  const cardInfo = { fpti: 'SAPE', type: '리더형', result: RESULT_EXAMPLE };
+
   return (
-    <Rotator className='pcard-container' sensitivity={60}>
+    <Rotator className='pcard-container'>
       <div className='pcard'>
         <div className='pcard__front'>
-          <CardFront fpti={fpti} type={type} result={result} />
+          <CardFront fpti={cardInfo.fpti} type={cardInfo.type} result={cardInfo.result} />
         </div>
         <div className='pcard__back'>
           <img
