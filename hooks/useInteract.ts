@@ -34,7 +34,7 @@ const useInteract = () => {
 
     setPosition({ x: leftPercent, y: topPercent });
     setRotation({ x: rotateX, y: rotateY });
-    setTransition('');
+    setTransition('transform 0.1s linear');
     setPositionPercent({ x: leftPercent, y: topPercent });
     setBackground({ x: clamp(leftPercent, 0, 100), y: clamp(topPercent, 0, 100) });
     setInteracting(true);
