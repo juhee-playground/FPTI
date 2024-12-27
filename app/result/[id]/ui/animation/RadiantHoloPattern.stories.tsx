@@ -17,7 +17,7 @@ const meta: Meta<typeof RadiantHoloPattern> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Card: Story = {
+export const RadiantHoloEx: Story = {
   args: {
     fpti: 'SAPC',
     radiant: true,

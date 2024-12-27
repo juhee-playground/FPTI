@@ -5,7 +5,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import PokemonCardExample from './CardExample';
 
 const meta: Meta<typeof PokemonCardExample> = {
-  title: 'Components/CardExample',
+  title: 'Example/Card',
   component: PokemonCardExample,
   parameters: {
     layout: 'fullscreen',
@@ -15,6 +15,6 @@ const meta: Meta<typeof PokemonCardExample> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Card: Story = {
+export const Example: Story = {
   render: () => <PokemonCardExample />,
 };

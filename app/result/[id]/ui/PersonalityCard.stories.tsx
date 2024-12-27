@@ -3,7 +3,7 @@ import PersonalityCard from './PersonalityCard';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Components/Card',
+  title: 'Components/ShineGlareCard',
   component: PersonalityCard,
   parameters: {
     layout: 'fullscreen',
@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Card: Story = {
+export const ShineGlare: Story = {
   args: {
     fpti: 'LATE',
     type: '쇼맨의 리더형',
