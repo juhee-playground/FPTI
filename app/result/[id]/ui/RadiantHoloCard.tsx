@@ -5,7 +5,6 @@ import CardFront from './CardFront';
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
-// import Shine from '@/app/result/[id]/ui/animation/Shine';
 import useInteract from '@/hooks/useInteract';
 
 interface IPersonalityCardProps {
