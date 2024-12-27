@@ -3,7 +3,7 @@ import RadiantHoloCard from './RadiantHoloCard';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'RadiantHoloCard----',
+  title: 'Components/RadiantHoloGlareCard',
   component: RadiantHoloCard,
   parameters: {
     layout: 'fullscreen',
