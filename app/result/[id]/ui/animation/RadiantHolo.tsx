@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import styles from '@/app/result/[id]/ui/animation/RadiantHoloPattern.module.css';
+import styles from '@/app/result/[id]/ui/animation/RadiantHolo.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
@@ -12,7 +12,7 @@ interface IRotatorProps {
   fpti: string;
 }
 
-const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true, holo = false }: IRotatorProps) => {
+const RadiantHolo = ({ children, dynamicStylesProps, fpti, radiant = true, holo = false }: IRotatorProps) => {
   const { handleMove, handleLeave, dynamicStyles, interacting } = useInteract();
   if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
@@ -49,4 +49,4 @@ const RadiantHoloPattern = ({ children, dynamicStylesProps, fpti, radiant = true
   );
 };
 
-export default RadiantHoloPattern;
+export default RadiantHolo;
