@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import HoloPattern from './HoloPattern';
+import Holo from './Holo';
 import Radiant from './Radiant';
 import RadiantHoloPattern from './RadiantHoloPattern';
 
 import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
 
 const meta: Meta<typeof RadiantHoloPattern> = {
-  title: 'components/RadiantHolo',
+  title: 'animation/RadiantHolo',
   component: RadiantHoloPattern,
   parameters: {
     layout: 'fullscreen',
@@ -68,7 +68,7 @@ export const HoloEx: Story = {
     holo: true,
   },
   render: args => (
-    <HoloPattern {...args}>
+    <Holo {...args}>
       <div
         style={{
           width: 346,
@@ -79,6 +79,6 @@ export const HoloEx: Story = {
           alignItems: 'center',
         }}
       />
-    </HoloPattern>
+    </Holo>
   ),
 };

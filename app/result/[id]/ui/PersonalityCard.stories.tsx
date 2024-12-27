@@ -3,7 +3,7 @@ import PersonalityCard from './PersonalityCard';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Card',
+  title: 'Components/Card',
   component: PersonalityCard,
   parameters: {
     layout: 'fullscreen',
