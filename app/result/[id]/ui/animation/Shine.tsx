@@ -14,7 +14,7 @@ const Shine = ({ children, dynamicStylesProps }: IShineProps) => {
 
   return (
     <div
-      className={styles.container}
+      className={styles['wrapper-shine']}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}

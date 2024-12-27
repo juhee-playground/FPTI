@@ -1,15 +1,14 @@
 'use client';
 
-import styles from '@/app/result/[id]/ui/animation/Shine.module.css';
+import styles from '@/app/result/[id]/ui/animation/Rotator.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRotatorProps {
   children: React.ReactNode;
   rotationProps: TRotation;
-  isFlipped: boolean;
 }
 
-const Rotator = ({ children, rotationProps, isFlipped }: IRotatorProps) => {
+const Rotator = ({ children, rotationProps }: IRotatorProps) => {
   const { handleMove, handleLeave, rotation, transition } = useInteract();
   const rotationValue = rotationProps || rotation;
 
@@ -19,10 +18,13 @@ const Rotator = ({ children, rotationProps, isFlipped }: IRotatorProps) => {
   };
 
   return (
-    <div className={styles.container} onMouseMove={handleMove} onMouseLeave={handleLeave}>
-      <div style={rotateStyle} className={`${isFlipped ? 'rotate-y-180' : ''}`}>
-        {children}
-      </div>
+    <div
+      className={`${styles['wrapper-rotator']}`}
+      style={rotateStyle}
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+    >
+      {children}
     </div>
   );
 };

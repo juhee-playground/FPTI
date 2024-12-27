@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import RadiantHoloPattern from '../result/[id]/ui/animation/RadiantHoloPattern';
 import PersonalityCard from '../result/[id]/ui/PersonalityCard';
+import RadiantHoloCard from '../result/[id]/ui/RadiantHoloCard';
 
 import styles from '@/app/list/page.module.css';
 import dataResult from '@/data/DB_RESULTS.json';
@@ -41,11 +41,7 @@ export default function ListPage() {
         {cards.map((card, index) => {
           const result = generateResult(card);
           if (index < 3) {
-            return (
-              <RadiantHoloPattern key={card.id} radiant holo fpti={card.fpti}>
-                <PersonalityCard fpti={card.fpti} type={card.type} result={result} />
-              </RadiantHoloPattern>
-            );
+            return <RadiantHoloCard key={card.id} fpti={card.fpti} type={card.type} result={result} />;
           } else {
             return <PersonalityCard key={card.id} fpti={card.fpti} type={card.type} result={result} />;
           }
