@@ -9,7 +9,7 @@ interface IHoloProps {
   dynamicStylesProps?: React.CSSProperties;
 }
 
-const Holo = ({ children, dynamicStylesProps }: IHoloProps) => {
+const HoloPattern = ({ children, dynamicStylesProps }: IHoloProps) => {
   const { handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
@@ -20,10 +20,10 @@ const Holo = ({ children, dynamicStylesProps }: IHoloProps) => {
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      <div className={styles.holo} />
+      <div className={`${styles['holo']}`} />
       {children}
     </div>
   );
 };
 
-export default Holo;
+export default HoloPattern;

@@ -1,21 +1,21 @@
-import PersonalityCard from './PersonalityCard';
+import RadiantHoloCard from './RadiantHoloCard';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Components/ShineGlareCard',
-  component: PersonalityCard,
+  title: 'Components/RadiantHoloGlareCard',
+  component: RadiantHoloCard,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof PersonalityCard>;
+} satisfies Meta<typeof RadiantHoloCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ShineGlare: Story = {
+export const RadiantHoloGlare: Story = {
   args: {
-    fpti: 'LATE',
+    fpti: 'SAPC',
     type: '쇼맨의 리더형',
     result: {
       '책임감과 주도성': {

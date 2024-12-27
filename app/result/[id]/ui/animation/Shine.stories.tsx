@@ -33,7 +33,7 @@ export const Card: Story = {
   ),
 };
 
-export const EmptyCard: Story = {
+export const ShineEx: Story = {
   render: args => (
     <Shine {...args}>
       <div

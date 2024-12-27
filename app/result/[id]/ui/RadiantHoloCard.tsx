@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import CardFront from './CardFront';
 
 import Glare from '@/app/result/[id]/ui/animation/Glare';
+import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
-import Shine from '@/app/result/[id]/ui/animation/Shine';
 import useInteract from '@/hooks/useInteract';
 
 interface IPersonalityCardProps {
-  fpti: string | undefined;
+  fpti: string;
   type: string | undefined;
   result: { [group: string]: IScaleValue };
 }
 
-const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
+const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const { rotation, transition, dynamicStyles, handleMove, handleLeave } = useInteract();
 
@@ -32,7 +32,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
   return (
     <div onClick={handleToggleFlip} className='card-container' onMouseMove={handleMove} onMouseLeave={handleLeave}>
       <Rotator rotationProps={rotation}>
-        <Shine dynamicStylesProps={dynamicStyles}>
+        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={true} fpti={fpti}>
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className='card__back' style={rotateStyleB}>
               <img
@@ -48,10 +48,10 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
               <CardFront fpti={fpti} type={type} result={result} />
             </div>
           </Glare>
-        </Shine>
+        </RadiantHoloPattern>
       </Rotator>
     </div>
   );
 };
 
-export default PersonalityCard;
+export default RadiantHoloCard;
