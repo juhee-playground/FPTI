@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import styles from '@/app/result/[id]/ui/animation/RadiantHoloPattern.module.css';
+import styles from '@/app/result/[id]/ui/animation/Radiant.module.css';
 import useInteract from '@/hooks/useInteract';
 
 interface IRadiantProps {
