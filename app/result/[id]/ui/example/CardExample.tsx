@@ -13,11 +13,6 @@ interface CustomCSSProperties extends React.CSSProperties {
   '--background-x'?: string | Interpolation<number>;
   '--background-y'?: string | Interpolation<number>;
   '--card-scale'?: number | string | Interpolation<number>;
-  '--seedx'?: number;
-  '--seedy'?: number;
-  '--cosmosbg'?: string;
-  '--mask'?: string;
-  '--foil'?: string;
 }
 
 interface PokemonCardProps {
@@ -31,8 +26,6 @@ interface PokemonCardProps {
   rarity?: string; // 카드 희귀도 (기본값: 'common')
   img?: string; // 카드 이미지 URL
   back?: string; // 카드 뒷면 이미지 URL (기본값 제공)
-  foil?: string; // 카드 호일 이미지 URL
-  mask?: string; // 카드 마스크 URL
   showcase?: boolean; // 쇼케이스 모드 활성화 여부
 }
 
@@ -41,16 +34,15 @@ const PokemonCardExample = ({
   types = '',
   img = '',
   back = 'https://tcg.pokemon.com/assets/img/global/tcg-card-back-2x.jpg',
-  foil = '',
-  mask = '',
 }: PokemonCardProps) => {
-  const randomSeed = { x: Math.random(), y: Math.random() };
-  const cosmosPosition = {
-    x: Math.floor(randomSeed.x * 734),
-    y: Math.floor(randomSeed.y * 1280),
-  };
+  // const randomSeed = { x: Math.random(), y: Math.random() };
+  // const cosmosPosition = {
+  //   x: Math.floor(randomSeed.x * 734),
+  //   y: Math.floor(randomSeed.y * 1280),
+  // };
 
   const [interacting, setInteracting] = useState(false);
+  console.log(interacting);
   const [loading, setLoading] = useState(true);
   const thisCardRef = useRef<HTMLDivElement | null>(null); // Add proper ref type
 
@@ -73,10 +65,10 @@ const PokemonCardExample = ({
     config: { tension: 200, friction: 20 },
   }));
 
-  const [scaleSpring, apiScale] = useSpring(() => ({
-    scale: 1,
-    config: { tension: 150, friction: 15 },
-  }));
+  // const [scaleSpring, apiScale] = useSpring(() => ({
+  //   scale: 1,
+  //   config: { tension: 150, friction: 15 },
+  // }));
 
   const handleInteract = (e: MouseEvent<HTMLDivElement>) => {
     if (!thisCardRef.current) return;
@@ -134,7 +126,7 @@ const PokemonCardExample = ({
     '--pointer-opacity': glareSpring.o.to(o => o),
     '--background-x': backgroundSpring.x.to(x => `${x}%`),
     '--background-y': backgroundSpring.y.to(y => `${y}%`),
-    '--card-scale': scaleSpring.scale,
+    // '--card-scale': scaleSpring.scale,
   };
 
   return (
@@ -155,15 +147,7 @@ const PokemonCardExample = ({
             width='660'
             height='921'
           />
-          <div
-            className='card__front'
-            style={{
-              '--seedx': randomSeed.x,
-              '--seedy': randomSeed.y,
-              '--cosmosbg': `${cosmosPosition.x}px ${cosmosPosition.y}px`,
-              ...(mask || foil ? { '--mask': `url(${mask})`, '--foil': `url(${foil})` } : {}),
-            }}
-          >
+          <div className='card__front'>
             <img
               src={img}
               alt={`Front design of the ${name} Pokemon Card`}
