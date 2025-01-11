@@ -1,12 +1,14 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 interface IImageBoxProps {
   topTypes: string | undefined;
   width: number;
   height: number;
 }
 
-const ImageBox = ({ topTypes, width, height }: IImageBoxProps) => {
+const ImageBox = ({ topTypes, width = 240, height = 240 }: IImageBoxProps) => {
   const imageSrc = topTypes ? `${topTypes}.webp` : null;
 
   if (!imageSrc) {
@@ -14,13 +16,13 @@ const ImageBox = ({ topTypes, width, height }: IImageBoxProps) => {
   }
 
   return (
-    <img
+    <Image
       src={imageSrc}
       alt={`${topTypes} 공룡 이미지`}
+      className='rounded-lg'
       width={width}
       height={height}
-      className='rounded-lg'
-      style={{ width, height }}
+      priority={false}
     />
   );
 };

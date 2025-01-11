@@ -8,7 +8,7 @@ const useInteract = () => {
   const [transition, setTransition] = useState('');
   const [interacting, setInteracting] = useState(false);
   const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [background, setBackground] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
+  const [background, setBackground] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const handleMove = useCallback((e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (e.type === 'touchmove') {
@@ -34,20 +34,21 @@ const useInteract = () => {
 
     setPosition({ x: leftPercent, y: topPercent });
     setRotation({ x: rotateX, y: rotateY });
-    setTransition('transform 0.1s linear');
+    setTransition('transform 0.4s linear');
     setPositionPercent({ x: leftPercent, y: topPercent });
     setBackground({ x: clamp(leftPercent, 0, 100), y: clamp(topPercent, 0, 100) });
     setInteracting(true);
   };
 
   const handleLeave = useCallback(() => {
-    setTransition('transform 1.5s ease');
+    setTransition('transform 1s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
+    setPositionPercent({ x: -300, y: -300 });
     setInteracting(false);
   }, []);
 
-  const dynamicStyles = {
+  const dynamicStyles: IExtendedCSSProperties = {
     '--pointer-x': `${positionPercent.x}%`,
     '--pointer-y': `${positionPercent.y}%`,
     '--pointer-from-center': clamp(
@@ -62,8 +63,6 @@ const useInteract = () => {
     '--rotate-y': `${rotation.y}deg`,
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
-    width: '320px',
-    height: '491px',
   };
 
   return {

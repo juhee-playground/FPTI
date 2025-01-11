@@ -9,7 +9,7 @@ interface IShineProps {
 }
 
 const Shine = ({ children, dynamicStylesProps }: IShineProps) => {
-  const { handleMove, handleLeave, dynamicStyles } = useInteract();
+  const { interacting, handleMove, handleLeave, dynamicStyles } = useInteract();
   const appliedStyles = dynamicStylesProps || dynamicStyles;
 
   return (
@@ -19,7 +19,14 @@ const Shine = ({ children, dynamicStylesProps }: IShineProps) => {
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      <div className={styles.shine} />
+      <div
+        key={interacting ? 'active' : 'inactive'}
+        className={styles.shine}
+        style={{
+          opacity: interacting ? 1 : 0.7,
+          transform: interacting ? 'scale(1)' : 'scale(1.1)',
+        }}
+      />
       {children}
     </div>
   );

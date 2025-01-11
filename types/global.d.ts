@@ -4,6 +4,19 @@ declare global {
   type TPosition = { x: number; y: number };
   type TRotation = { x: number; y: number };
 
+  interface IExtendedCSSProperties extends React.CSSProperties {
+    '--pointer-x'?: string;
+    '--pointer-y'?: string;
+    '--pointer-from-center'?: number;
+    '--pointer-from-top'?: number;
+    '--pointer-from-left'?: number;
+    '--card-opacity'?: number;
+    '--rotate-x'?: string;
+    '--rotate-y'?: string;
+    '--background-x'?: string;
+    '--background-y'?: string;
+  }
+
   interface IOption {
     type: TPersonalityType;
     text: string;

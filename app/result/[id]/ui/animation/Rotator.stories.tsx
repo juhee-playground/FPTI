@@ -22,7 +22,7 @@ export const RotatorEx: Story = {
         style={{
           width: 346,
           height: 491,
-          backgroundColor: '#222' /* 어두운 배경 */,
+          backgroundColor: '#222',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
