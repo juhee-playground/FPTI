@@ -47,7 +47,7 @@ const useInteract = () => {
     setInteracting(false);
   }, []);
 
-  const dynamicStyles = {
+  const dynamicStyles: IExtendedCSSProperties = {
     '--pointer-x': `${positionPercent.x}%`,
     '--pointer-y': `${positionPercent.y}%`,
     '--pointer-from-center': clamp(
@@ -62,8 +62,6 @@ const useInteract = () => {
     '--rotate-y': `${rotation.y}deg`,
     '--background-x': `${background.x}%`,
     '--background-y': `${background.y}%`,
-    width: '320px',
-    height: '491px',
   };
 
   return {
