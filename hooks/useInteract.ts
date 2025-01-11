@@ -34,17 +34,17 @@ const useInteract = () => {
 
     setPosition({ x: leftPercent, y: topPercent });
     setRotation({ x: rotateX, y: rotateY });
-    setTransition('transform 0.1s linear');
+    setTransition('transform 0.4s linear');
     setPositionPercent({ x: leftPercent, y: topPercent });
     setBackground({ x: clamp(leftPercent, 0, 100), y: clamp(topPercent, 0, 100) });
     setInteracting(true);
   };
 
   const handleLeave = useCallback(() => {
-    setTransition('transform 1.5s ease');
+    setTransition('transform 1s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
-    setPositionPercent({ x: -300, y: -300 }); // Pointer 위치 초기화
+    setPositionPercent({ x: -300, y: -300 });
     setInteracting(false);
   }, []);
 
