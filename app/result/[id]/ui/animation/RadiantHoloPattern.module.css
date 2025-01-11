@@ -1,4 +1,6 @@
 .container {
+  width: 320px;
+  height: 491px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -54,12 +56,12 @@
       hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 2),
       hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 2 + 0.01%),
       hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 3),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 3 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 4),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 4 + 0.01%),
-      hsl(0, 0%, 50%) calc(var(--barwidth, 1.2%) * 5),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 5 + 0.01%),
-      hsl(0, 0%, 42.5%) calc(var(--barwidth, 1.2%) * 6),
+      hsl(0, 0%, 40%) calc(var(--barwidth, 1.2%) * 3 + 0.01%),
+      hsl(0, 0%, 40%) calc(var(--barwidth, 1.2%) * 4),
+      hsl(0, 0%, 45%) calc(var(--barwidth, 1.2%) * 4 + 0.01%),
+      hsl(0, 0%, 45%) calc(var(--barwidth, 1.2%) * 5),
+      hsl(0, 0%, 40%) calc(var(--barwidth, 1.2%) * 5 + 0.01%),
+      hsl(0, 0%, 40%) calc(var(--barwidth, 1.2%) * 6),
       hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 6 + 0.01%),
       hsl(0, 0%, 35%) calc(var(--barwidth, 1.2%) * 7),
       hsl(0, 0%, 20%) calc(var(--barwidth, 1.2%) * 7 + 0.01%),
@@ -87,14 +89,14 @@
 
   background-image: var(--dynamic-background, url('/pattern.webp')),
     repeating-linear-gradient(
-      55deg,
-      hsl(3, 95%, 85%) calc(var(--space, 10px) * 1),
-      hsl(207, 100%, 84%) calc(var(--space, 10px) * 2),
-      hsl(29, 100%, 85%) calc(var(--space, 10px) * 3),
-      hsl(160, 100%, 86%) calc(var(--space, 10px) * 4),
-      hsl(309, 94%, 87%) calc(var(--space, 10px) * 5),
-      hsl(188, 95%, 85%) calc(var(--space, 10px) * 6),
-      hsl(3, 95%, 85%) calc(var(--space, 10px) * 7)
+      90deg,
+      #f80808 0%,
+      #ff9307 17%,
+      #f2f202 33%,
+      #00ff00 50%,
+      #0000ff 67%,
+      #4b0082 83%,
+      #9400d3 100%
     );
 
   background-size: 320px, 491px;
