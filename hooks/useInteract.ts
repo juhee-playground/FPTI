@@ -8,7 +8,7 @@ const useInteract = () => {
   const [transition, setTransition] = useState('');
   const [interacting, setInteracting] = useState(false);
   const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const [background, setBackground] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
+  const [background, setBackground] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const handleMove = useCallback((e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (e.type === 'touchmove') {
@@ -44,6 +44,7 @@ const useInteract = () => {
     setTransition('transform 1.5s ease');
     setPosition({ x: 0, y: 0 });
     setRotation({ x: 0, y: 0 });
+    setPositionPercent({ x: -300, y: -300 }); // Pointer 위치 초기화
     setInteracting(false);
   }, []);
 
