@@ -16,8 +16,8 @@ const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
   const imageUrl = process.env.NEXT_PUBLIC_IMAGE_URL.replace(/^"|"$/g, '');
   const imagePath = `${imageUrl}/image-fpti/${fpti}`;
   return (
-    <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
-      <div className='flex flex-col items-center bg-backgroundDarken py-3 gap-3 border border-text-placeholder rounded-xl'>
+    <div className='bg-white w-full h-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
+      <div className='flex flex-col items-center bg-backgroundDarken h-full py-3 gap-y-2 border border-text-placeholder rounded-xl'>
         <div className='flex justify-center bg-inherit w-full align-middle'>
           <ImageBox topTypes={imagePath as string} width={240} height={240} />
         </div>

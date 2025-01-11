@@ -12,6 +12,7 @@ interface ITraining {
 
 interface IContent {
   name: string;
+  fpti: string;
   koreaName: string;
   type: string;
   description: string;
@@ -34,6 +35,10 @@ interface ITypeDescriptionProps {
 const TypeDescription = ({ content }: ITypeDescriptionProps) => {
   return (
     <article className='select-none p-5 rounded-lg max-w-2xl mx-auto'>
+      <section className='flex flex-row justify-center items-center gap-4'>
+        <h3 className='text-lg text-text-default font-semibold'>{content?.fpti}</h3>
+        <span className='text-center text-text-default leading-relaxed'>{content?.type}</span>
+      </section>
       <section className='flex flex-col items-start'>
         <p className='text-left text-text-default text-sm leading-relaxed'>{content?.description}</p>
       </section>
