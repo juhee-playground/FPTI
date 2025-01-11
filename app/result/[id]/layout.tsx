@@ -4,11 +4,10 @@ import { findResultById } from '@/api/result';
 
 interface IMetaDataProps {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export async function generateMetadata({ params }: IMetaDataProps): Promise<Metadata> {
-  const resultData = findResultById(params.id);
+  const resultData = await findResultById(params.id);
 
   if (!resultData) {
     return {
