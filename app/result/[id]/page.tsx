@@ -5,7 +5,7 @@ import React from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { findResultById } from '@/api/result';
-import ShineGlareCard from '@/app/result/[id]/ui/ShineGlareCard';
+import ResultCard from '@/app/result/[id]/ui/ResltCard';
 import TypeDescription from '@/app/result/[id]/ui/TypeDescription';
 import { reconstructResultFromQueryString } from '@/utils/queryString';
 
@@ -48,7 +48,7 @@ export default function ResultPage() {
 
   return (
     <div className='flex flex-col items-center bg-background text-white overflow-y-auto py-6 gap-3 h-screen'>
-      <ShineGlareCard fpti={fpti} type={resultDescription?.type} result={reconstructedResult} />
+      <ResultCard fpti={fpti} type={resultDescription?.type} result={reconstructedResult} />
       <TypeDescription content={resultDescription} />
       <div className='flex justify-between items-center w-full'>
         <button
