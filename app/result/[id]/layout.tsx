@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 import { findResultById } from '@/api/result';
 
-interface Props {
-  params: { id: string }; // 동적 경로 (예: /result/[id])
-  searchParams: { [key: string]: string | string[] | undefined }; // URL 쿼리 파라미터
+interface IMetaDataProps {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: IMetaDataProps): Promise<Metadata> {
   const resultData = findResultById(params.id);
 
   if (!resultData) {
@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${resultData.type} - FPTI 결과`,
+    title: `FPTI 결과 - ${resultData.type}`,
     description: resultData.description,
     openGraph: {
-      title: `${resultData.type} - FPTI 결과`,
+      title: `FPTI 결과 - ${resultData.type}`,
       description: resultData.description,
       images: [
         {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${resultData.type} - FPTI 결과`,
+      title: `FPTI 결과 - ${resultData.type}`,
       description: resultData.description,
       images: [`/images/${params.id}.webp`],
     },
