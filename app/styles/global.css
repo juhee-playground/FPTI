@@ -13,18 +13,15 @@
   --font-size-sm: 1rem;
   --font-family: Arial, sans-serif;
 
-  /* Heading styles */
   --font-heading1-size: 32px;
   --font-heading1-weight: bold;
 
   --font-heading2-size: 24px;
   --font-heading2-weight: bold;
 
-  /* Body text styles */
   --font-body-size: 16px;
   --font-body-weight: normal;
 
-  /* Caption text styles */
   --font-caption-size: 12px;
   --font-caption-weight: normal;
 
@@ -36,32 +33,26 @@
   --color-secondary-opacity: rgba(255, 69, 0, 0.5);
   --color-background: #4ac390;
 
-  /* Utility Colors */
   --color-hover: rgba(34, 139, 34, 0.7);
   --color-disabled-border: #cccccc;
   --color-disabled-text: #999999;
   --color-disabled-background: #f0f0f0;
 
-  /* Basic Shades */
   --color-white: #ffffff;
   --color-black: #000000;
 
-  /* Button Colors */
   --color-button-basic: #f4f4f4;
   --color-button-hover: #434343;
 
-  /* Border Colors */
   --color-border-basic: #efefef;
   --color-border-darken: #cccccc;
   --color-border-black: #242424;
 
-  /* Text Colors */
   --color-text-basic: #262626;
   --color-text-white: #f4f4f4;
   --color-text-placeholder: #757575;
   --color-text-error: #e91e63;
 
-  /* Status Colors */
   --color-success: #4caf50;
   --color-success-lighter: #d4edda;
   --color-error: #e91e63;
@@ -73,6 +64,7 @@
   --color-cancel: #bdbdbd;
   --color-cancel-lighter: #f4f4f4;
   --font-color: rgba(0, 0, 0, 1);
+
   /*
   - xs : mobile min-width(320px)
   - sm : ipad 세로 ( portrait )
@@ -89,8 +81,6 @@
   --md-break-point: 960px;
   --lg-break-point: 1264px;
   --xl-break-point: 1904px;
-
-  /* 카드 animation 관련 variables */
 
   --card-aspect: 0.718;
   --card-radius: 4.55% / 3.5%;
@@ -133,11 +123,8 @@
   --space: 200px;
   --hue: 50;
   --imgsize: cover;
-
-  /* --foil: url('/public/foil_LATE.jpg'); */
 }
 
-/* 기본 스타일 */
 * {
   box-sizing: border-box;
   padding: 0;

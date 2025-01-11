@@ -16,32 +16,14 @@
   height: 100%;
   background-image: radial-gradient(
     circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
-    rgba(255, 255, 255, 0.5) 10%,
-    /* 중심부 강한 빛 */ rgba(255, 255, 255, 0.3) 30%,
-    /* 부드럽게 확장 */ transparent 70% /* 가장자리로 투명 */
+    rgba(255, 255, 255, 0.5) 10% /* 중심부 강한 빛 */,
+    rgba(255, 255, 255, 0.3) 30% /* 부드럽게 확장 */,
+    transparent 70% /* 가장자리로 투명 */
   );
-  background-size: 120% 120%; /* 배경 크기 조정 */
-  mix-blend-mode: screen; /* 배경과 조화롭게 섞임 */
-  opacity: 0.7; /* 빛 반사 강도 */
-  pointer-events: none; /* 상호작용 차단 */
+  background-size: 120% 120%;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  pointer-events: none;
   will-change: background-image, opacity;
   z-index: 5;
 }
-
-/* .glare {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(
-    circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
-    rgba(255, 255, 255, 0.7) 10%,
-    rgba(255, 255, 255, 0.3) 30%,
-    transparent 70%
-  );
-  mix-blend-mode: overlay;
-  opacity: 0.8;
-  pointer-events: none;
-  z-index: 5;
-} */
