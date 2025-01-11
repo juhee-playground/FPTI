@@ -9,3 +9,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[secrets_scanning]
+  enabled = true
+  omit_keys = ["NEXT_PUBLIC_IMAGE_URL"]
+  omit_paths = [".next/static/", ".storybook/"]
