@@ -7,6 +7,8 @@ interface IMetaDataProps {
 }
 
 export async function generateMetadata({ params }: IMetaDataProps): Promise<Metadata> {
+  const metadataBase = new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000');
+
   const resultData = await findResultById(params.id);
 
   if (!resultData) {
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }: IMetaDataProps): Promise<Meta
       description: resultData.description,
       images: [
         {
-          url: `/images/${params.id}.webp`,
+          url: new URL(`/images/${params.id}.webp`, metadataBase),
           width: 1200,
           height: 630,
         },
@@ -34,7 +36,7 @@ export async function generateMetadata({ params }: IMetaDataProps): Promise<Meta
       card: 'summary_large_image',
       title: `FPTI 결과 - ${resultData.type}`,
       description: resultData.description,
-      images: [`/images/${params.id}.webp`],
+      images: [new URL(`/images/${params.id}.webp`, metadataBase)],
     },
   };
 }
