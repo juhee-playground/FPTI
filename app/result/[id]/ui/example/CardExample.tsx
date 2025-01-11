@@ -126,7 +126,6 @@ const PokemonCardExample = ({
     '--pointer-opacity': glareSpring.o.to(o => o),
     '--background-x': backgroundSpring.x.to(x => `${x}%`),
     '--background-y': backgroundSpring.y.to(y => `${y}%`),
-    // '--card-scale': scaleSpring.scale,
   };
 
   return (
