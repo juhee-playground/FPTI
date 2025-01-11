@@ -2240,10 +2240,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:^5.8.1":
-  version: 5.8.1
-  resolution: "@netlify/plugin-nextjs@npm:5.8.1"
-  checksum: 10c0/867e891533551ff47fbd04a1e6a375c56887edb49664fb9b2cf96bde030663143f280b35d469d51903805923e3c49099636d404adc2c54fb68e3fe09fa8375aa
+"@netlify/plugin-nextjs@npm:^5.9.3":
+  version: 5.9.3
+  resolution: "@netlify/plugin-nextjs@npm:5.9.3"
+  checksum: 10c0/11d63a758ac906b27f32501f5e187c7c6b34230de54078abd60170bdf3e44aa33c351e1406e39120ffdf4ad4997de0b6039e16f1fb0e6b91e5f19539eca8e7db
   languageName: node
   linkType: hard
 
@@ -17380,7 +17380,7 @@ __metadata:
   resolution: "vite-react-ts@workspace:."
   dependencies:
     "@chromatic-com/storybook": "npm:^1.3.3"
-    "@netlify/plugin-nextjs": "npm:^5.8.1"
+    "@netlify/plugin-nextjs": "npm:^5.9.3"
     "@react-spring/web": "npm:^9.7.5"
     "@reduxjs/toolkit": "npm:^2.2.3"
     "@storybook/addon-essentials": "npm:^8.0.8"
