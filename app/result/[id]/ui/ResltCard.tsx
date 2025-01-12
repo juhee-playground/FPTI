@@ -37,7 +37,7 @@ const ResultCard = ({ fpti = 'SAPE', type, result }: IResultCardProps) => {
       onMouseLeave={handleLeave}
     >
       <Rotator rotationProps={rotation}>
-        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={false} holo={true} fpti={fpti}>
+        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={true} fpti={fpti}>
           <div className={styles['card']}>
             <div className={styles['card__back']} style={rotateStyleB}>
               <img
