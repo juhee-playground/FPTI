@@ -33,7 +33,7 @@ const CircleSelector = ({ selectedValue, onSelect }: ICircleSelectorProps) => {
           >
             {isSelected && (
               <Image
-                src='/images/icon-ball.png'
+                src='/apple-icon-60x60.png'
                 alt='Selected'
                 width={size}
                 height={size}
