@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['fpti-test.netlify.app'],
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
