@@ -2,7 +2,7 @@
   width: 320px;
   height: 491px;
   position: relative;
-  overflow: hidden; /* Glare 효과가 카드 바깥으로 넘치지 않도록 */
+  overflow: hidden;
 }
 
 .glare {
@@ -21,12 +21,9 @@
   height: 100%;
   background-image: radial-gradient(
     circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
-    /* rgba(255, 255, 255, 0.5) 40%,
-    rgba(255, 255, 255, 0.3) 30%,
-    transparent 70% */ rgba(255, 255, 255, 0.145)
-      10%,
-    /* 중심부 더 어둡게 */ rgba(255, 255, 255, 0.15) 30%,
-    /* 부드럽게 확장하며 어두움 */ transparent 30% /* 가장자리 투명 */
+    rgba(255, 255, 255, 0.305) 10% /* 중심부 더 어둡게 */,
+    rgba(255, 255, 255, 0.15) 30% /* 부드럽게 확장하며 어두움 */,
+    transparent 80% /* 가장자리 투명 */
   );
   mix-blend-mode: screen;
   opacity: 0.7;
