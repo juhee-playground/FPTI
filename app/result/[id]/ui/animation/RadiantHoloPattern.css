@@ -1,4 +1,4 @@
-.container {
+.radinat-container {
   width: 320px;
   height: 491px;
   position: relative;
@@ -104,50 +104,5 @@
 @media only screen and (max-width: 768px) {
   .radiant--holo {
     animation: holo-shift 6s infinite ease-in-out;
-  }
-}
-@keyframes holo-shift {
-  0% {
-    --background-x: 20%;
-    --background-y: 35%;
-  }
-  25% {
-    --background-x: 50%;
-    --background-y: 45%;
-  }
-  50% {
-    --background-x: 80%;
-    --background-y: 75%;
-  }
-  75% {
-    --background-x: 40%;
-    --background-y: 50%;
-  }
-  100% {
-    --background-x: 20%;
-    --background-y: 35%;
-  }
-}
-
-@keyframes radiant-move {
-  0% {
-    --pointer-x: 0%;
-    --pointer-y: 0%;
-  }
-  25% {
-    --pointer-x: 50%;
-    --pointer-y: 0%;
-  }
-  50% {
-    --pointer-x: 100%;
-    --pointer-y: 100%;
-  }
-  75% {
-    --pointer-x: 50%;
-    --pointer-y: 100%;
-  }
-  100% {
-    --pointer-x: 0%;
-    --pointer-y: 0%;
   }
 }
