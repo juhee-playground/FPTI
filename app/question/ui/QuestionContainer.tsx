@@ -64,7 +64,7 @@ const Question = ({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isNotSelected, currentSelectedValue]);
+  }, [isNotSelected]);
 
   return (
     <div className='w-full h-full flex flex-col justify-between bg-background text-white shadow-md overflow-y-auto'>

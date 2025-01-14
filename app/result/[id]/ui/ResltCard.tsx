@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from './Card.module.css';
-import CardFront from './CardFront';
-
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
+import CardFront from '@/app/result/[id]/ui/CardFront';
 import useInteract from '@/hooks/useInteract';
+
+import styles from './Card.module.css';
 
 interface IResultCardProps {
   fpti?: string;

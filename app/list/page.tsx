@@ -2,10 +2,9 @@
 
 import React from 'react';
 
-import PersonalityCard from '../result/[id]/ui/PersonalityCard';
-import RadiantHoloCard from '../result/[id]/ui/RadiantHoloCard';
-
 import styles from '@/app/list/page.module.css';
+import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
+import RadiantHoloCard from '@/app/result/[id]/ui/RadiantHoloCard';
 import dataResult from '@/data/DB_RESULTS.json';
 
 export default function ListPage() {

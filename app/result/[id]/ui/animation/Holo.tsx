@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import styles from './Holo.module.css';
-
 import useInteract from '@/hooks/useInteract';
+
+import styles from './Holo.module.css';
 
 interface IHoloProps {
   children: ReactNode;
