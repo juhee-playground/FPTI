@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from './Card.module.css';
-import CardFront from './CardFront';
-
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
 import Shine from '@/app/result/[id]/ui/animation/Shine';
+import CardFront from '@/app/result/[id]/ui/CardFront';
 import useInteract from '@/hooks/useInteract';
+
+import styles from './Card.module.css';
 
 interface IPersonalityCardProps {
   fpti: string | undefined;

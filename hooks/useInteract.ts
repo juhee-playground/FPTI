@@ -1,8 +1,9 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import { clamp } from '@/utils/math';
 
 const useInteract = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const [position, setPosition] = useState<TPosition>({ x: 0, y: 0 });
   const [rotation, setRotation] = useState<TRotation>({ x: 0, y: 0 });
   const [transition, setTransition] = useState('');
@@ -10,16 +11,17 @@ const useInteract = () => {
   const [positionPercent, setPositionPercent] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [background, setBackground] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
-  const handleMove = useCallback((e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-    if (e.type === 'touchmove') {
-      e.preventDefault();
-      const touch = (e as React.TouchEvent).touches[0];
-      processInteraction(touch.clientX, touch.clientY, e.currentTarget);
-    } else if (e.type === 'mousemove') {
-      const mouseEvent = e as React.MouseEvent;
-      processInteraction(mouseEvent.clientX, mouseEvent.clientY, e.currentTarget);
-    }
-  }, []);
+  const handleMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+      if (isMobile) return; // 모바일에서는 움직임 제거
+
+      if (e.type === 'mousemove') {
+        const mouseEvent = e as React.MouseEvent;
+        processInteraction(mouseEvent.clientX, mouseEvent.clientY, e.currentTarget);
+      }
+    },
+    [isMobile, interacting],
+  );
 
   const processInteraction = (clientX: number, clientY: number, target: HTMLDivElement) => {
     const { left, top, width, height } = target.getBoundingClientRect();
@@ -46,6 +48,7 @@ const useInteract = () => {
     setRotation({ x: 0, y: 0 });
     setPositionPercent({ x: -300, y: -300 });
     setInteracting(false);
+    setIsMobile(false);
   }, []);
 
   const dynamicStyles: IExtendedCSSProperties = {
@@ -65,11 +68,24 @@ const useInteract = () => {
     '--background-y': `${background.y}%`,
   };
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(pointer: coarse)');
+    const handleChange = () => setIsMobile(mediaQuery.matches);
+
+    mediaQuery.addEventListener('change', handleChange);
+    setIsMobile(mediaQuery.matches);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
+
   return {
     position,
     rotation,
     transition,
     interacting,
+    isMobile,
     handleMove,
     handleLeave,
     dynamicStyles,

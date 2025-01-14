@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from './Card.module.css';
-import CardFront from './CardFront';
-
+import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
+import CardFront from '@/app/result/[id]/ui/CardFront';
 import useInteract from '@/hooks/useInteract';
+
+import styles from './Card.module.css';
 
 interface IResultCardProps {
   fpti?: string;
@@ -37,22 +38,30 @@ const ResultCard = ({ fpti = 'SAPE', type, result }: IResultCardProps) => {
       onMouseLeave={handleLeave}
     >
       <Rotator rotationProps={rotation}>
-        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={false} holo={true} fpti={fpti}>
-          <div className={styles['card']}>
-            <div className={styles['card__back']} style={rotateStyleB}>
-              <img
-                width={320}
-                height={491}
-                src='/bg_back.png'
-                alt='카드 뒷면'
-                className='border border-text-placeholder rounded-xl'
-              />
-            </div>
+        <RadiantHoloPattern
+          dynamicStylesProps={dynamicStyles}
+          isFlipped={flipped}
+          radiant={false}
+          holo={true}
+          fpti={fpti}
+        >
+          <Glare dynamicStylesProps={dynamicStyles}>
+            <div className={styles['card']}>
+              <div className={styles['card__back']} style={rotateStyleB}>
+                <img
+                  width={320}
+                  height={491}
+                  src='/bg_back.png'
+                  alt='카드 뒷면'
+                  className='border border-text-placeholder rounded-xl'
+                />
+              </div>
 
-            <div className={styles['card__front']} style={rotateStyleF}>
-              <CardFront fpti={fpti} type={type} result={result} />
+              <div className={styles['card__front']} style={rotateStyleF}>
+                <CardFront fpti={fpti} type={type} result={result} />
+              </div>
             </div>
-          </div>
+          </Glare>
         </RadiantHoloPattern>
       </Rotator>
     </div>

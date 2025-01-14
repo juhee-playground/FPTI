@@ -1,6 +1,15 @@
+import Rotator from './animation/Rotator';
+import Shine from './animation/Shine';
 import PersonalityCard from './PersonalityCard';
 
 import type { Meta, StoryObj } from '@storybook/react';
+
+interface IEffectsStoryProps {
+  rotationProps: TRotation;
+  fpti?: string;
+  type?: string;
+  result?: { [group: string]: IScaleValue };
+}
 
 const meta = {
   title: 'Components/ShineGlareCard',
@@ -11,7 +20,7 @@ const meta = {
 } satisfies Meta<typeof PersonalityCard>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IEffectsStoryProps>;
 
 export const ShineGlare: Story = {
   args: {
@@ -36,4 +45,29 @@ export const ShineGlare: Story = {
       },
     },
   },
+};
+
+export const EmptyDivWithInteractiveEffects: Story = {
+  args: {
+    rotationProps: { x: 0, y: 0 },
+  },
+  render: ({ rotationProps }) => (
+    <Rotator rotationProps={rotationProps}>
+      <Shine>
+        <div
+          style={{
+            width: 320,
+            height: 491,
+            backgroundColor: '#444',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: '#fff',
+            borderRadius: '15px',
+            border: '1px solid #ccc',
+          }}
+        />
+      </Shine>
+    </Rotator>
+  ),
 };
