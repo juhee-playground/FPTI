@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 
-import '@/app/result/[id]/ui/animation/RadiantHoloPattern.css';
 import useInteract from '@/hooks/useInteract';
+
+import styles from './RadiantHoloPattern.module.css';
 
 interface IRotatorProps {
   children: React.ReactNode;
@@ -31,22 +32,22 @@ const RadiantHoloPattern = ({
 
   return (
     <div
-      className='radinat-container'
+      className={styles['radinat-container']}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
       {(interacting || isMobile) && !isFlipped ? (
         <React.Fragment>
-          {radiant && <div className='radiant' />}
+          {radiant && <div className={styles['radinat']} />}
           {holo && (
             <div
-              className='radiant radiant--holo'
               style={
                 {
                   '--dynamic-background': `url(${foilCardPath})`,
                 } as React.CSSProperties
               }
+              className={`${styles['radinat']} ${styles['radinat--holo']}`}
             />
           )}
         </React.Fragment>
