@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 
-import '@/app/result/[id]/ui/animation/RadiantHoloPattern.css';
 import useInteract from '@/hooks/useInteract';
+
+import styles from './RadiantHoloPattern.module.css';
 
 interface IRotatorProps {
   children: React.ReactNode;
@@ -17,11 +18,11 @@ const RadiantHoloPattern = ({
   children,
   dynamicStylesProps,
   fpti = 'SAPE',
-  radiant = true,
-  holo = false,
+  radiant = false,
+  holo = true,
   isFlipped,
 }: IRotatorProps) => {
-  const { handleMove, handleLeave, dynamicStyles, interacting, isMobile } = useInteract();
+  const { handleMove, handleLeave, dynamicStyles } = useInteract();
   if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
@@ -31,22 +32,22 @@ const RadiantHoloPattern = ({
 
   return (
     <div
-      className='radinat-container'
+      className={styles['radinat-container']}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      {(interacting || isMobile) && !isFlipped ? (
+      {!isFlipped ? (
         <React.Fragment>
-          {radiant && <div className='radiant' />}
+          {radiant && <div className={styles['radiant']} />}
           {holo && (
             <div
-              className='radiant radiant--holo'
               style={
                 {
                   '--dynamic-background': `url(${foilCardPath})`,
                 } as React.CSSProperties
               }
+              className={`${styles['radiant']} ${styles['radiant--holo']}`}
             />
           )}
         </React.Fragment>

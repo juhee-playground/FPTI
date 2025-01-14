@@ -130,29 +130,6 @@
   animation: dotPulse 1.5s infinite;
 }
 
-@keyframes holo-shift {
-  0% {
-    --background-x: 20%;
-    --background-y: 35%;
-  }
-  25% {
-    --background-x: 50%;
-    --background-y: 45%;
-  }
-  50% {
-    --background-x: 80%;
-    --background-y: 75%;
-  }
-  75% {
-    --background-x: 40%;
-    --background-y: 50%;
-  }
-  100% {
-    --background-x: 20%;
-    --background-y: 35%;
-  }
-}
-
 @keyframes radiant-move {
   0% {
     --pointer-x: 0%;

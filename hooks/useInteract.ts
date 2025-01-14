@@ -13,14 +13,13 @@ const useInteract = () => {
 
   const handleMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-      if (isMobile) return; // 모바일에서는 움직임 제거
-
-      if (e.type === 'mousemove') {
+      if (!isMobile && e.type === 'mousemove') {
+        console.log('데스크탑: 마우스가 움직이고 있습니다.');
         const mouseEvent = e as React.MouseEvent;
         processInteraction(mouseEvent.clientX, mouseEvent.clientY, e.currentTarget);
       }
     },
-    [isMobile, interacting],
+    [isMobile],
   );
 
   const processInteraction = (clientX: number, clientY: number, target: HTMLDivElement) => {

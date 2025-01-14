@@ -9,7 +9,7 @@ interface IRotatorProps {
 }
 
 const Rotator = ({ children, rotationProps }: IRotatorProps) => {
-  const { handleMove, handleLeave, rotation, transition } = useInteract();
+  const { handleMove, handleLeave, rotation, transition, isMobile } = useInteract();
   const rotationValue = rotationProps || rotation;
 
   const rotateStyle = {
@@ -20,7 +20,7 @@ const Rotator = ({ children, rotationProps }: IRotatorProps) => {
   return (
     <div
       className={`${styles['wrapper-rotator']}`}
-      style={rotateStyle}
+      style={!isMobile ? rotateStyle : {}}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >

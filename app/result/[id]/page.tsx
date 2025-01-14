@@ -5,7 +5,7 @@ import React from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { findResultById } from '@/api/result';
-import ResultCard from '@/app/result/[id]/ui/ResltCard';
+import ResultCard from '@/app/result/[id]/ui/ResultCard';
 import TypeDescription from '@/app/result/[id]/ui/TypeDescription';
 import { reconstructResultFromQueryString } from '@/utils/queryString';
 

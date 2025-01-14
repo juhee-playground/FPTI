@@ -87,7 +87,7 @@
 .radiant--holo {
   content: '';
 
-  background-image: var(--dynamic-background, url('/pattern.webp')),
+  background-image: var(--dynamic-background, url('/LAPC_rr.webp')),
     repeating-linear-gradient(90deg, #e95b5b 0%, #f8a73e 24%, #efef44 45%, #4ff44f 67%, #5e5eff 83%, #b34bfc 100%);
 
   background-size: 320px, 491px;
@@ -95,8 +95,8 @@
     center,
     calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
 
-  filter: brightness(0.6) contrast(3) saturate(2);
-  mix-blend-mode: color-dodge;
+  filter: brightness(0.5) contrast(3) saturate(2);
+  mix-blend-mode: screen;
 
   background-blend-mode: hard-light;
 }
@@ -104,5 +104,28 @@
 @media only screen and (max-width: 768px) {
   .radiant--holo {
     animation: holo-shift 6s infinite ease-in-out;
+  }
+}
+
+@keyframes holo-shift {
+  0% {
+    --background-x: 20%;
+    --background-y: 35%;
+  }
+  25% {
+    --background-x: 50%;
+    --background-y: 45%;
+  }
+  50% {
+    --background-x: 80%;
+    --background-y: 75%;
+  }
+  75% {
+    --background-x: 40%;
+    --background-y: 50%;
+  }
+  100% {
+    --background-x: 20%;
+    --background-y: 35%;
   }
 }

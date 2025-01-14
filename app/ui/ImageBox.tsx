@@ -23,6 +23,7 @@ const ImageBox = ({ topTypes, width = 240, height = 240 }: IImageBoxProps) => {
       width={width}
       height={height}
       priority={false}
+      style={{ width: width, height: height }}
     />
   );
 };
