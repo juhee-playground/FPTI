@@ -129,26 +129,3 @@
 .dot-pulse {
   animation: dotPulse 1.5s infinite;
 }
-
-@keyframes radiant-move {
-  0% {
-    --pointer-x: 0%;
-    --pointer-y: 0%;
-  }
-  25% {
-    --pointer-x: 50%;
-    --pointer-y: 0%;
-  }
-  50% {
-    --pointer-x: 100%;
-    --pointer-y: 100%;
-  }
-  75% {
-    --pointer-x: 50%;
-    --pointer-y: 100%;
-  }
-  100% {
-    --pointer-x: 0%;
-    --pointer-y: 0%;
-  }
-}

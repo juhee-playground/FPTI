@@ -87,18 +87,18 @@
 .radiant--holo {
   content: '';
 
-  background-image: var(--dynamic-background, url('/LAPC_rr.webp')),
+  background-image: var(--dynamic-background),
     repeating-linear-gradient(90deg, #e95b5b 0%, #f8a73e 24%, #efef44 45%, #4ff44f 67%, #5e5eff 83%, #b34bfc 100%);
 
-  background-size: 320px, 491px;
+  background-size: 330px, 491px;
   background-position:
     center,
     calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
 
-  filter: brightness(0.5) contrast(3) saturate(2);
-  mix-blend-mode: screen;
+  filter: brightness(0.6) contrast(3) saturate(2);
+  mix-blend-mode: color-dodge;
 
-  background-blend-mode: hard-light;
+  background-blend-mode: multiply;
 }
 
 @media only screen and (max-width: 768px) {

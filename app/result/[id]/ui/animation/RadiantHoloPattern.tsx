@@ -22,7 +22,7 @@ const RadiantHoloPattern = ({
   holo = true,
   isFlipped,
 }: IRotatorProps) => {
-  const { handleMove, handleLeave, dynamicStyles } = useInteract();
+  const { handleMove, handleLeave, dynamicStyles, isMobile } = useInteract();
   if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
@@ -37,7 +37,7 @@ const RadiantHoloPattern = ({
       onMouseLeave={handleLeave}
       style={appliedStyles as React.CSSProperties}
     >
-      {!isFlipped ? (
+      {!isFlipped && !isMobile ? (
         <React.Fragment>
           {radiant && <div className={styles['radiant']} />}
           {holo && (
