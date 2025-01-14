@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['fpti-test.netlify.app'],
     unoptimized: true,
     remotePatterns: [
       {
@@ -9,6 +8,12 @@ const nextConfig = {
         hostname: 'juhee100bucket.s3.ap-northeast-2.amazonaws.com',
         port: '',
         pathname: '/image-fpti/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'fpti-test.netlify.app',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
