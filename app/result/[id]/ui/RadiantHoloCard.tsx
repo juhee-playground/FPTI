@@ -38,7 +38,7 @@ const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
       onMouseLeave={handleLeave}
     >
       <Rotator rotationProps={rotation}>
-        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={true} fpti={fpti}>
+        <RadiantHoloPattern dynamicStylesProps={dynamicStyles} radiant={true} holo={true} fpti={fpti} isFlipped={false}>
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className={styles['card']}>
               <div className={styles['card__back']} style={rotateStyleB}>
