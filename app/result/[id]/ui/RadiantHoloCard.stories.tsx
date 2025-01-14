@@ -1,3 +1,6 @@
+import RadiantHoloPattern from './animation/RadiantHoloPattern';
+import Rotator from './animation/Rotator';
+import Shine from './animation/Shine';
 import RadiantHoloCard from './RadiantHoloCard';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -36,4 +39,28 @@ export const RadiantHoloGlare: Story = {
       },
     },
   },
+};
+
+export const EmptyDivWithInteractiveEffects = {
+  render: () => (
+    <Rotator rotationProps={{ x: 0, y: 0 }}>
+      <RadiantHoloPattern fpti='SAPC' radiant holo isFlipped={false}>
+        <Shine>
+          <div
+            style={{
+              width: 320,
+              height: 491,
+              backgroundColor: '#444',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              color: '#fff',
+              borderRadius: '15px',
+              border: '1px solid #ccc',
+            }}
+          />
+        </Shine>
+      </RadiantHoloPattern>
+    </Rotator>
+  ),
 };
