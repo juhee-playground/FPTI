@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
 import CardFront from '@/app/result/[id]/ui/CardFront';
@@ -40,25 +41,27 @@ const ResultCard = ({ fpti = 'SAPE', type, result }: IResultCardProps) => {
         <RadiantHoloPattern
           dynamicStylesProps={dynamicStyles}
           isFlipped={flipped}
-          radiant={true}
+          radiant={false}
           holo={true}
           fpti={fpti}
         >
-          <div className={styles['card']}>
-            <div className={styles['card__back']} style={rotateStyleB}>
-              <img
-                width={320}
-                height={491}
-                src='/bg_back.png'
-                alt='카드 뒷면'
-                className='border border-text-placeholder rounded-xl'
-              />
-            </div>
+          <Glare dynamicStylesProps={dynamicStyles}>
+            <div className={styles['card']}>
+              <div className={styles['card__back']} style={rotateStyleB}>
+                <img
+                  width={320}
+                  height={491}
+                  src='/bg_back.png'
+                  alt='카드 뒷면'
+                  className='border border-text-placeholder rounded-xl'
+                />
+              </div>
 
-            <div className={styles['card__front']} style={rotateStyleF}>
-              <CardFront fpti={fpti} type={type} result={result} />
+              <div className={styles['card__front']} style={rotateStyleF}>
+                <CardFront fpti={fpti} type={type} result={result} />
+              </div>
             </div>
-          </div>
+          </Glare>
         </RadiantHoloPattern>
       </Rotator>
     </div>
