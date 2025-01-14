@@ -1,4 +1,4 @@
-.container {
+.radinat-container {
   width: 320px;
   height: 491px;
   position: relative;
@@ -99,4 +99,10 @@
   mix-blend-mode: color-dodge;
 
   background-blend-mode: hard-light;
+}
+
+@media only screen and (max-width: 768px) {
+  .radiant--holo {
+    animation: holo-shift 6s infinite ease-in-out;
+  }
 }

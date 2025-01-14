@@ -7,7 +7,7 @@ interface IMetaDataProps {
 }
 
 export async function generateMetadata({ params }: IMetaDataProps): Promise<Metadata> {
-  const metadataBase = new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000');
+  const metadataBase = new URL('https://fpti-test.netlify.app');
 
   const resultData = await findResultById(params.id);
 
@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: IMetaDataProps): Promise<Meta
   }
 
   return {
+    metadataBase,
     title: `FPTI 결과 - ${resultData.type}`,
     description: resultData.description,
     openGraph: {

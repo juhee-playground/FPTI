@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import '@/app/styles/global.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fpti-test.netlify.app'),
   title: '풋피티아이 FPTI!!',
   description: '풋살에서 당신의 플레이 스타일은? FPTI 테스트로 나의 성향을 알아보고 최적의 팀 역할을 찾아보세요',
   icons: {
