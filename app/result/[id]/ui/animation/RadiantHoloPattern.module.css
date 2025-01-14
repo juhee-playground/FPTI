@@ -93,13 +93,10 @@
   background-size: 320px, 491px;
   background-position:
     center,
-    calc(var(--background-x, 50%) * -2.5 + 50%) calc(var(--background-y, 50%) * -2.5 + 50%);
+    calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%);
 
-  /* center,
-    calc(((var(--background-x, 50%) - 50%) * -2.5) + 50%) calc(((var(--background-y, 50%) - 50%) * -2.5) + 50%); */
-
-  filter: brightness(0.6) contrast(3) saturate(2);
-  mix-blend-mode: color-dodge;
+  filter: brightness(0.5) contrast(3) saturate(2);
+  mix-blend-mode: screen;
 
   background-blend-mode: hard-light;
 }
@@ -112,15 +109,23 @@
 
 @keyframes holo-shift {
   0% {
-    --background-x: 0%;
-    --background-y: 0%;
+    --background-x: 20%;
+    --background-y: 35%;
+  }
+  25% {
+    --background-x: 50%;
+    --background-y: 45%;
   }
   50% {
-    --background-x: 100%;
-    --background-y: 100%;
+    --background-x: 80%;
+    --background-y: 75%;
+  }
+  75% {
+    --background-x: 40%;
+    --background-y: 50%;
   }
   100% {
-    --background-x: 0%;
-    --background-y: 0%;
+    --background-x: 20%;
+    --background-y: 35%;
   }
 }
