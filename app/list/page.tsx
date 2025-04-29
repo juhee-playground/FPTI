@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 import styles from '@/app/list/page.module.css';
 import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
@@ -35,7 +36,10 @@ export default function ListPage() {
 
   return (
     <main className={styles['page-main']}>
-      <h1>Card List</h1>
+      <Link href="/" className={styles['home-link']}>
+        홈으로 돌아가기
+      </Link>
+
       <div className={styles.container}>
         {cards.map((card, index) => {
           const result = generateResult(card);
