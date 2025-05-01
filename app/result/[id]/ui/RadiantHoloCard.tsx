@@ -8,13 +8,14 @@ import useInteract from '@/hooks/useInteract';
 
 import styles from './Card.module.css';
 
-interface IPersonalityCardProps {
+interface IRadiantHoloCardProps {
   fpti: string;
-  type: string | undefined;
+  type: string;
   result: { [group: string]: IScaleValue };
+  holoType?: 'pokemon-v' | 'gold-star' | 'rainbow';
 }
 
-const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
+const RadiantHoloCard = ({ fpti, type, result }: IRadiantHoloCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const { rotation, transition, dynamicStyles, handleMove, handleLeave } = useInteract();
 
