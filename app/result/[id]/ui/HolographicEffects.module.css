@@ -1,0 +1,214 @@
+/* 기본 카드 스타일 */
+.holo-card {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* 포켓몬 V 카드 스타일 */
+.holo-pokemon-v::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) 0%,
+      hsl(0, 0%, 100%) 5%,
+      hsl(215, 13%, 55%) 10%,
+      hsl(180, 29%, 66%) 15%,
+      hsl(215, 13%, 55%) 20%,
+      hsl(0, 0%, 100%) 25%,
+      hsl(0, 0%, 100%) 30%
+    ),
+    repeating-linear-gradient(
+      133deg,
+      #0e152e 0%,
+      hsl(180, 10%, 60%) 3.8%,
+      hsl(180, 29%, 66%) 4.5%,
+      hsl(180, 10%, 60%) 5.2%,
+      #0e152e 10%,
+      #0e152e 12%
+    ),
+    radial-gradient(
+      farthest-corner circle at 50% 50%,
+      hsla(0, 0%, 0%, 0.1) 12%,
+      hsla(0, 0%, 0%, 0.15) 20%,
+      hsla(0, 0%, 0%, 0.25) 120%
+    );
+  background-blend-mode: soft-light, hue, hard-light;
+  background-size:
+    200% 700%,
+    300% 100%,
+    200% 100%;
+  animation: holographic 8s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+  filter: brightness(0.7) contrast(1.4) saturate(2.25);
+  mix-blend-mode: color-dodge;
+}
+
+.holo-pokemon-v::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    farthest-corner circle at 50% 50%,
+    hsl(0, 0%, 75%) 5%,
+    hsl(200, 5%, 35%) 60%,
+    hsl(320, 40%, 10%) 150%
+  );
+  background-size: 120% 150%;
+  background-position: center;
+  mix-blend-mode: hard-light;
+  opacity: 0.75;
+  z-index: 3;
+}
+
+/* 골드 스타 스타일 */
+.holo-gold-star::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      45deg,
+      hsl(45, 100%, 50%) 0%,
+      hsl(45, 100%, 65%) 5%,
+      hsl(45, 100%, 50%) 10%,
+      hsl(45, 80%, 45%) 15%,
+      hsl(45, 100%, 50%) 20%
+    ),
+    radial-gradient(
+      farthest-corner circle at 50% 50%,
+      hsla(45, 100%, 50%, 0.3) 0%,
+      hsla(45, 100%, 50%, 0.2) 50%,
+      hsla(45, 100%, 50%, 0.1) 100%
+    );
+  background-blend-mode: color-dodge, overlay;
+  background-size:
+    300% 300%,
+    200% 200%;
+  animation: holographic 3s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+  filter: brightness(1.2) contrast(1.2) saturate(1.5);
+  mix-blend-mode: color-dodge;
+}
+
+/* 레인보우 레어 스타일 */
+.holo-rainbow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    hsl(0, 100%, 50%) 10%,
+    hsl(60, 100%, 50%) 20%,
+    hsl(120, 100%, 50%) 30%,
+    hsl(180, 100%, 50%) 40%,
+    hsl(240, 100%, 50%) 50%,
+    hsl(300, 100%, 50%) 60%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: holographic 3s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+  filter: brightness(0.8) contrast(1.2) saturate(1.5);
+  mix-blend-mode: color-dodge;
+  opacity: 0.5;
+}
+
+@keyframes holographic {
+  0% {
+    background-position:
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+  100% {
+    background-position:
+      100% 100%,
+      100% 100%,
+      100% 100%;
+  }
+}
+
+/* 섬세한 V 카드 효과 */
+.variant-subtle-v::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.15) 42%,
+    rgba(255, 255, 255, 0.1) 44%,
+    transparent 49%,
+    transparent 100%
+  );
+  background-size: 400% 400%;
+  animation: subtleShine 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+}
+
+/* 부드러운 골드 효과 */
+.variant-soft-gold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    45deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 215, 0, 0.1) 40%,
+    rgba(255, 215, 0, 0.15) 42%,
+    rgba(255, 215, 0, 0.1) 44%,
+    transparent 49%,
+    transparent 100%
+  );
+  background-size: 400% 400%;
+  animation: subtleShine 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: color-dodge;
+  opacity: 0.8;
+}
+
+/* 은은한 레인보우 효과 */
+.variant-gentle-rainbow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 0, 0, 0.05) 40%,
+    rgba(255, 255, 0, 0.05) 42%,
+    rgba(0, 255, 255, 0.05) 44%,
+    transparent 49%,
+    transparent 100%
+  );
+  background-size: 400% 400%;
+  animation: subtleShine 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: color-dodge;
+  opacity: 0.6;
+}
+
+@keyframes subtleShine {
+  0% {
+    background-position: 400% 400%;
+  }
+  100% {
+    background-position: -400% -400%;
+  }
+}
