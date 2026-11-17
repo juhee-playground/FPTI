@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+import Image from 'next/image';
 
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
@@ -43,7 +45,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className={styles['card']}>
               <div className={styles['card__back']} style={rotateStyleB}>
-                <img
+                <Image
                   width={320}
                   height={491}
                   src='/bg_back.png'
