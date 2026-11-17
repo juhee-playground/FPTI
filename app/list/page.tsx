@@ -5,10 +5,9 @@ import React from 'react';
 import Link from 'next/link';
 
 import styles from '@/app/list/page.module.css';
-import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
-import RadiantHoloCard from '@/app/result/[id]/ui/RadiantHoloCard';
-import dataResult from '@/data/DB_RESULTS.json';
 import CardFrontPlayer from '@/app/result/[id]/ui/CardFrontPlayer';
+import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
+import dataResult from '@/data/DB_RESULTS.json';
 
 export default function ListPage() {
   const cards = dataResult;
