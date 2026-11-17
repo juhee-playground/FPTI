@@ -1,10 +1,10 @@
-import React, { useState, useRef, MouseEvent } from 'react';
+import { useState, useRef, MouseEvent, type CSSProperties } from 'react';
 
 import { useSpring, animated, Interpolation } from '@react-spring/web';
 
 import { clamp, round, adjust } from '../../../../../utils/math';
 
-interface CustomCSSProperties extends React.CSSProperties {
+interface CustomCSSProperties extends CSSProperties {
   '--rotate-x'?: string | Interpolation<number>;
   '--rotate-y'?: string | Interpolation<number>;
   '--pointer-x'?: string | Interpolation<number>;
@@ -138,6 +138,8 @@ const PokemonCardExample = ({
     >
       <div className='card__translater'>
         <button className='card__rotator' aria-label={`Expand the Pokemon Card; ${name}.`}>
+          {/* External demo URLs — next/image remotePatterns not configured for this host */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className='card__back'
             src={back}
@@ -147,6 +149,7 @@ const PokemonCardExample = ({
             height='921'
           />
           <div className='card__front'>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img}
               alt={`Front design of the ${name} Pokemon Card`}

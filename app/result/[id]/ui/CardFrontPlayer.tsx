@@ -3,28 +3,43 @@ import React from 'react';
 import TypeComparisonBar from '@/app/result/[id]/ui/TypeComparisonBar';
 
 import styles from './CardPlayer.module.css';
+import holoStyles from './HolographicEffects.module.css';
 
-interface ICardFrontProps {
+interface ICardFrontPlayerProps {
   fpti: string | undefined;
   type: string | undefined;
   result: { [group: string]: IScaleValue };
+  holoType?: 'pokemon-v' | 'gold-star' | 'rainbow' | 'pokemon-vmax' | 'rare-shiny-vmax';
 }
 
-const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
+const CardFrontPlayer = ({ fpti, type, result, holoType = 'pokemon-v' }: ICardFrontPlayerProps) => {
   if (!process.env.NEXT_PUBLIC_IMAGE_URL) {
     throw new Error('NEXT_PUBLIC_IMAGE_URL is not defined!');
   }
   const imagePath = `/player_${fpti}`;
+
+  // 홀로그램 클래스 적용
+  const cardClasses = [styles.card, holoStyles['holo-card'], holoStyles[`holo-${holoType}`]].filter(Boolean).join(' ');
+
   return (
-    <div className='bg-white w-full max-w-80 p-3 border border-text-placeholder rounded-xl text-text-white'>
+    <div
+      className='bg-blue-100 w-full max-w-80 p-3 rounded-xl text-text-white'
+      style={{
+        background: '#1a1a1a',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+      }}
+    >
       <div
-        className={styles.card}
+        className={cardClasses}
         style={{
           width: '295px',
-          height: '460px',
+          height: '464px',
           backgroundImage: `url("${imagePath}.webp")`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
         <div className={styles.bgBoard}>
@@ -61,4 +76,4 @@ const CardFront = ({ fpti, type, result }: ICardFrontProps) => {
   );
 };
 
-export default CardFront;
+export default CardFrontPlayer;

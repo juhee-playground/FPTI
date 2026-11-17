@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'FPTI',
     images: [
       {
-        url: '/bg-landing.webp',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: '풋살 MBTI 테스트',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '내 풋살 성향 MBTI 테스트 - FPTI',
     description: '풋살에서 당신의 플레이 스타일은? FPTI 테스트로 나의 성향을 알아보고 최적의 팀 역할을 찾아보세요',
-    images: ['/bg-landing.webp'],
+    images: ['/og-image.jpg'],
   },
 };
 

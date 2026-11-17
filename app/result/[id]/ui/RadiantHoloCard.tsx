@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+import Image from 'next/image';
 
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import RadiantHoloPattern from '@/app/result/[id]/ui/animation/RadiantHoloPattern';
@@ -8,13 +10,14 @@ import useInteract from '@/hooks/useInteract';
 
 import styles from './Card.module.css';
 
-interface IPersonalityCardProps {
+interface IRadiantHoloCardProps {
   fpti: string;
-  type: string | undefined;
+  type: string;
   result: { [group: string]: IScaleValue };
+  holoType?: 'pokemon-v' | 'gold-star' | 'rainbow';
 }
 
-const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
+const RadiantHoloCard = ({ fpti, type, result }: IRadiantHoloCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const { rotation, transition, dynamicStyles, handleMove, handleLeave } = useInteract();
 
@@ -42,7 +45,7 @@ const RadiantHoloCard = ({ fpti, type, result }: IPersonalityCardProps) => {
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className={styles['card']}>
               <div className={styles['card__back']} style={rotateStyleB}>
-                <img
+                <Image
                   width={320}
                   height={491}
                   src='/bg_back.png'

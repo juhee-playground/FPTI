@@ -2,9 +2,11 @@
 
 import React from 'react';
 
+import Link from 'next/link';
+
 import styles from '@/app/list/page.module.css';
+import CardFrontPlayer from '@/app/result/[id]/ui/CardFrontPlayer';
 import PersonalityCard from '@/app/result/[id]/ui/PersonalityCard';
-import RadiantHoloCard from '@/app/result/[id]/ui/RadiantHoloCard';
 import dataResult from '@/data/DB_RESULTS.json';
 
 export default function ListPage() {
@@ -35,14 +37,32 @@ export default function ListPage() {
 
   return (
     <main className={styles['page-main']}>
-      <h1>Card List</h1>
+      <Link href='/' className={styles['home-link']}>
+        홈으로 돌아가기
+      </Link>
+
       <div className={styles.container}>
         {cards.map((card, index) => {
           const result = generateResult(card);
           if (index < 3) {
-            return <RadiantHoloCard key={card.id} fpti={card.fpti} type={card.type} result={result} />;
+            return (
+              <CardFrontPlayer
+                key={card.id}
+                fpti={card.fpti}
+                type={card.type}
+                result={result}
+                holoType={index === 0 ? "pokemon-v" : index === 1 ? "gold-star" : "rainbow"}
+              />
+            );
           } else {
-            return <PersonalityCard key={card.id} fpti={card.fpti} type={card.type} result={result} />;
+            return (
+              <PersonalityCard
+                key={card.id}
+                fpti={card.fpti}
+                type={card.type}
+                result={result}
+              />
+            );
           }
         })}
       </div>

@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+import Image from 'next/image';
 
 import Glare from '@/app/result/[id]/ui/animation/Glare';
 import Rotator from '@/app/result/[id]/ui/animation/Rotator';
 import Shine from '@/app/result/[id]/ui/animation/Shine';
-import CardFront from '@/app/result/[id]/ui/CardFront';
+// import CardFront from '@/app/result/[id]/ui/CardFront';
+import CardFrontPlayer from '@/app/result/[id]/ui/CardFrontPlayer';
 import useInteract from '@/hooks/useInteract';
 
 import styles from './Card.module.css';
@@ -42,7 +45,7 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
           <Glare dynamicStylesProps={dynamicStyles}>
             <div className={styles['card']}>
               <div className={styles['card__back']} style={rotateStyleB}>
-                <img
+                <Image
                   width={320}
                   height={491}
                   src='/bg_back.png'
@@ -52,7 +55,8 @@ const PersonalityCard = ({ fpti, type, result }: IPersonalityCardProps) => {
               </div>
 
               <div className={styles['card__front']} style={rotateStyleF}>
-                <CardFront fpti={fpti} type={type} result={result} />
+                <CardFrontPlayer fpti={fpti} type={type} result={result} />
+                {/* <CardFront fpti={fpti} type={type} result={result} /> */}
               </div>
             </div>
           </Glare>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import OptionSelector from '@/app/question/ui/OptionSelector';
 import Progress from '@/app/question/ui/ProgressBar';
@@ -33,15 +33,17 @@ const Question = ({
     setCurrentSelectedValue(value);
   };
 
-  const handleSubmit = () => {
-    if (!isNotSelected) {
-      const scaleValue = {
-        [scale.min]: 100 - currentSelectedValue,
-        [scale.max]: currentSelectedValue,
-      };
-      onAnswer(questionId, scaleValue);
+  const handleSubmit = useCallback(() => {
+    if (currentSelectedValue === null) {
+      return;
     }
-  };
+
+    const scaleValue = {
+      [scale.min]: 100 - currentSelectedValue,
+      [scale.max]: currentSelectedValue,
+    };
+    onAnswer(questionId, scaleValue);
+  }, [currentSelectedValue, onAnswer, questionId, scale.max, scale.min]);
 
   useEffect(() => {
     if (selectedValue) {
@@ -64,7 +66,7 @@ const Question = ({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isNotSelected]);
+  }, [handleSubmit, isNotSelected]);
 
   return (
     <div className='w-full h-full flex flex-col justify-between bg-background text-white shadow-md overflow-y-auto'>
