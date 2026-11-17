@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: IMetaDataProps): Promise<Meta
       description: resultData.description,
       images: [
         {
-          url: new URL(`/images/${params.id}.webp`, metadataBase),
+          url: new URL(`/images/${params.id}.jpg`, metadataBase),
           width: 1200,
           height: 630,
         },
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: IMetaDataProps): Promise<Meta
       card: 'summary_large_image',
       title: `FPTI 결과 - ${resultData.type}`,
       description: resultData.description,
-      images: [new URL(`/images/${params.id}.webp`, metadataBase)],
+      images: [new URL(`/images/${params.id}.jpg`, metadataBase)],
     },
   };
 }
